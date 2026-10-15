@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Remy Vasseur - Halcyon Racing (clean-room study)</title>
+  <meta name="description" content="Fictional driver site: a clean-room motion study of an award-winning athlete portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gloock&family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap" rel="stylesheet">
+  <script type="module" src="./src/home.js"></script>
+</head>
+<body class="home">
+  <!-- fixed WebGL topo canvas; everything else scrolls above it -->
+  <canvas class="topo" data-topo aria-hidden="true"></canvas>
+
+  <main>
+    <!-- ================= HERO (pinned; canvas shrinks into the message frame) ================= -->
+    <section class="hero" data-hero data-theme="dark">
+      <h1 class="visually-hidden">Remy Vasseur, driver #27, Halcyon Racing</h1>
+
+      <div class="hero__next" aria-label="Next race">
+        <svg class="notch notch--top" viewBox="0 0 100 205" preserveAspectRatio="none" aria-hidden="true"><path d="M10 0H44c6 0 8 3 11 7s6 7 14 7H90q10 0 10 10V195q0 10-10 10H10Q0 205 0 195V10Q0 0 10 0Z" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg>
+        <span class="hero__next-label">Next race</span>
+        <svg class="hero__track" viewBox="0 0 40 24" aria-hidden="true"><path d="M3 12l14-8 8 4 12-3-7 7 3 4-12 1-6 6-4-4 5-4-13-3Z" fill="none" stroke="currentColor" stroke-width=".8" stroke-linejoin="round"/></svg>
+        <span class="hero__next-name">Solenza GP</span>
+        <hr>
+        <div class="hero__badge" data-laurel></div>
+        <span class="hero__next-team">Halcyon Racing<br>since 2021</span>
+      </div>
+
+      <button class="hero__tap" type="button" data-tap aria-label="Tap to look around"><small>Tap to look</small><svg viewBox="0 0 24 24"><path d="M9 11V5a1.5 1.5 0 0 1 3 0v5m0-1a1.5 1.5 0 0 1 3 0v2m0-1a1.5 1.5 0 0 1 3 0v6c0 3-2 5-5 5h-2c-2 0-3-1-4-2l-3-4a1.5 1.5 0 0 1 2-2l2 2" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+
+      <!-- message frame (the shader mask follows this element's box) -->
+      <div class="msg" data-msg>
+        <span class="msg__mark" data-mark></span>
+        <span class="msg__label">Message from Remy</span>
+      </div>
+      <div class="rails" aria-hidden="true">
+        <div class="rail rail--lime"><span>I did it all weekend long &nbsp; I did it all weekend long &nbsp; I did it all weekend long</span></div>
+        <div class="rail rail--white"><span>Rebuilt every weekend &nbsp; Rebuilt every weekend &nbsp; Rebuilt every weekend</span></div>
+      </div>
+      <div class="frame" data-frame>
+        <div class="frame__video"></div>
+        <svg class="sig" viewBox="0 0 300 160" aria-hidden="true"><path data-sig pathLength="1" d="M20 118C80 138 170 126 255 70C275 55 280 40 262 42C225 46 150 98 112 138C100 150 98 126 108 104C118 80 150 20 168 6M118 108C150 106 190 96 216 86M178 100C190 70 220 60 250 72"/></svg>
+      </div>
+    </section>
+
+    <!-- ================= STATEMENT ================= -->
+    <section class="statement" data-theme="dark" data-header="light">
+      <div class="statement__badge"><span data-laurel></span><small>Halcyon Racing since 2021</small></div>
+      <p class="statement__text" data-reveal="headline"><em>Redefining</em> limits, fighting for <em>wins</em>, bringing it all in all ways. Defining a <em>legacy</em> in Formula&nbsp;1 on and off the track.</p>
+    </section>
+
+    <!-- ================= HORIZONTAL GALLERY (pinned, track translates 1:1 with scroll) ================= -->
+    <section class="gallery" id="gallery" data-gallery data-theme="dark" data-theme-scrub data-header="light">
+      <div class="gallery__track" data-track>
+        <p class="g-quote" style="--x:54.5; --y:6.6">It doesn't matter <b>where</b> you start, it's <b>how</b> you progress from there.<svg class="g-sig" viewBox="0 0 60 24"><use href="#sig-small"/></svg></p>
+
+        <figure class="g-item" style="--x:13.5;--y:6.6;--w:18.2;--h:22.6"><figcaption>Aurelia, 2024</figcaption><img src="./img/g-walk.webp" alt="Driver walking through the paddock with a backpack" loading="lazy"></figure>
+        <figure class="g-item duo" style="--x:23.2;--y:39.6;--w:19.7;--h:19.8"><figcaption>Prize giving, 2024</figcaption><img src="./img/g-prize.webp" alt="Driver in a tuxedo holding a glass trophy" loading="lazy"></figure>
+        <figure class="g-item g-item--main" style="--x:54.5;--y:24.9;--w:44.3;--h:40.1"><figcaption>Marlow GP, 2024</figcaption><img src="./img/g-main.webp" alt="Driver pointing up while holding a trophy" loading="lazy"></figure>
+        <figure class="g-item duo" style="--x:109.4;--y:6.6;--w:14.9;--h:14.2"><figcaption>Palmera, 2023</figcaption><img src="./img/g-golf.webp" alt="Driver mid golf swing among palm trees" loading="lazy"></figure>
+        <figure class="g-item" style="--x:120;--y:35.8;--w:21.5;--h:19.4"><figcaption>Brackley, 2025</figcaption><img src="./img/g-helmet.webp" alt="Lime helmet seen from above in a cockpit" loading="lazy">
+          <div class="g-count"><span>1</span><span><svg viewBox="0 0 28 18"><path d="M2 4l12-2 12 2v10l-12-2-12 2Z M14 2v10M8 3v10M20 3v10" fill="none" stroke="currentColor" stroke-width="1"/></svg></span></div></figure>
+        <figure class="g-item" style="--x:152;--y:46.4;--w:14.4;--h:17.8"><figcaption>Battersea, 2024</figcaption><img src="./img/g-smile.webp" alt="Driver laughing with two small dogs" loading="lazy"></figure>
+        <figure class="g-item duo" style="--x:166.5;--y:12;--w:14;--h:14"><figcaption>High performance gala, 2024</figcaption><img src="./img/g-gala.webp" alt="Driver in a dark suit" loading="lazy"></figure>
+        <figure class="g-item g-item--main" style="--x:191;--y:7.9;--w:41.1;--h:41.2"><figcaption>Barcelona, 2024</figcaption><img src="./img/g-camera.webp" alt="Driver photographing out of a jet window" loading="lazy"></figure>
+        <p class="g-quote g-quote--b" style="--x:191;--y:55.9">Since I was 7 years old and had my first experience with kart racing, I've worked tirelessly to make that dream come true.<svg class="g-sig" viewBox="0 0 60 24"><use href="#sig-small"/></svg></p>
+        <figure class="g-item duo" style="--x:243;--y:45.7;--w:18.5;--h:16.8"><figcaption>Solenza, 2024</figcaption><img src="./img/g-main.webp" alt="" loading="lazy" style="object-position:30% 20%"></figure>
+        <figure class="g-item" style="--x:254;--y:16.6;--w:17.4;--h:20.8"><figcaption>Vienna, 2020</figcaption><img src="./img/g-walk.webp" alt="" loading="lazy" style="object-position:60% 40%"></figure>
+      </div>
+    </section>
+
+    <!-- ================= ON / OFF TRACK ================= -->
+    <section class="split" data-theme="cream" data-header="dark">
+      <figure class="split__img split__img--l" data-parallax="-6"><img src="./img/split-helmet.webp" alt="Lime blob-pattern helmet in profile"></figure>
+      <figure class="split__img split__img--r" data-parallax="-10"><img src="./img/split-face.webp" alt="Profile of the driver"></figure>
+      <div class="split__inner">
+        <div class="split__col split__col--on">
+          <h2 class="impact"><span class="serif">On</span><span>Track</span>
+            <svg class="split__scribble" viewBox="0 0 330 200" aria-hidden="true"><path data-scribble pathLength="1" d="M78 128C40 168 6 130 28 86C50 44 116 54 106 104C98 140 56 160 30 132M138 172L176 44L200 150L256 34"/></svg>
+          </h2>
+          <p data-reveal="body">Most recent results, career stats and photos from trackside.</p>
+          <a class="btn btn--sq" href="on-track.html" data-transition aria-label="On track"><svg viewBox="0 0 20 20"><path d="M6 14l8-8M8 6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+        <div class="split__col split__col--off">
+          <h2 class="impact"><span class="serif">Off</span><span>Track</span></h2>
+          <p data-reveal="body">Campaigns, shoots and other such promotional materials for fans.</p>
+          <a class="btn btn--sq" href="#gallery" aria-label="Off track"><svg viewBox="0 0 20 20"><path d="M6 14l8-8M8 6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= HELMETS ================= -->
+    <section class="helmets" id="helmets" data-theme="none" data-header="light">
+      <figure class="helmets__hero" data-parallax-img><img src="./img/helmets-hero.webp" alt="Driver sitting beside his lime helmet"></figure>
+      <div class="helmets__body">
+        <div class="helmets__head">
+          <h2 data-reveal="headline">Helmets<br><span class="serif">Hall of fame</span></h2>
+          <p data-reveal="body">From his iconic blobs to innovative one-off designs, Remy has always been passionate about designing innovative and memorable helmets.</p>
+        </div>
+        <div class="helmets__grid" data-helmets></div>
+        <div class="helmets__cta">
+          <span class="helmets__icon" data-laurel-lime></span>
+          <p class="serif" data-reveal="headline">See more helmets and highlights<br>from Remy on the track</p>
+          <a class="btn btn--lime btn--cta" href="on-track.html" data-transition><span>View on track</span><svg viewBox="0 0 20 20"><path d="M6 14l8-8M8 6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= STORE ================= -->
+    <section class="store" id="store" data-theme="cream" data-header="dark">
+      <div class="store__copy">
+        <span class="eyebrow"><svg viewBox="0 0 20 20"><path d="M5 7h10l1 10H4L5 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7.5 7V5.5a2.5 2.5 0 0 1 5 0V7" fill="none" stroke="currentColor" stroke-width="1.6"/></svg>Remy store</span>
+        <h2 class="store__title" data-reveal="headline">World drivers'<br><span class="serif">Champion</span></h2>
+        <p data-reveal="body">Celebrate this incredible moment with a collection designed for the fans who never stopped believing. Wear it, frame it, treasure it forever.</p>
+        <a class="btn btn--lime btn--cta" href="#"><span>Visit the store</span><svg viewBox="0 0 20 20"><path d="M6 14l8-8M8 6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <figure class="store__hoodie" data-reveal="image"><img src="./img/store-hoodie.webp" alt="Black hoodie with a gold helmet print" loading="lazy"></figure>
+      <figure class="store__gold" data-parallax="-8"><img src="./img/store-gold.webp" alt="" loading="lazy"><figcaption>Champion<br><small>Collection</small></figcaption></figure>
+      <figure class="store__tee store__tee--dark" data-parallax="-5"><img src="./img/store-tee-dark.webp" alt="" loading="lazy"></figure>
+      <figure class="store__tee store__tee--white" data-parallax="-12"><img src="./img/store-tee-white.webp" alt="" loading="lazy"></figure>
+      <span class="store__sticker" data-parallax="-16">R27</span>
+    </section>
+
+    <!-- ================= PARTNERS ================= -->
+    <section class="partners" id="calendar" data-theme="cream" data-header="dark">
+      <svg class="partners__scribble" viewBox="0 0 1500 640" aria-hidden="true"><g data-collabs fill="none" stroke="#d2ff00" stroke-width="46" stroke-linecap="round" stroke-linejoin="round"><path pathLength="1" d="M200 470C60 520 20 380 120 290C190 230 280 280 250 360"/><path pathLength="1" d="M360 300C330 380 300 450 340 500C390 450 400 380 420 330"/><path pathLength="1" d="M520 250C500 340 470 420 500 470C560 400 590 320 600 250"/><path pathLength="1" d="M700 380C640 360 600 420 660 450C730 460 740 360 690 310"/><path pathLength="1" d="M850 120C830 250 800 380 790 470C860 420 900 400 930 440C900 320 850 300 800 360"/></g></svg>
+      <div class="partners__head">
+        <h2 data-reveal="headline">Partners<br><span class="serif">&amp;Campaigns</span></h2>
+        <p data-reveal="body">Remy is proud to collaborate with a range of partners, who share his passion for performance across a range of industries.</p>
+      </div>
+      <div class="marquee" data-marquee><div class="marquee__row"></div></div>
+    </section>
+
+    <!-- ================= SOCIAL FAN ================= -->
+    <section class="socials" data-theme="cream" data-header="dark">
+      <svg class="socials__icon" viewBox="0 0 40 52" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="1.4"><ellipse cx="18" cy="17" rx="13" ry="15"/><path d="M8 8c6 2 14 2 20 0M6 15c8 3 18 3 24 0M7 23c8 3 16 3 22 0M18 2v30"/><path d="M27 29l9 17" stroke-width="3" stroke-linecap="round"/></g></svg>
+      <h2 data-reveal="headline">What's up<br><span class="serif">on socials</span></h2>
+      <div class="fan" data-fan></div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="footer" data-header="dark">
+      <div class="footer__panel" data-footer-panel>
+        <canvas class="footer__topo" data-footer-topo aria-hidden="true"></canvas>
+        <svg class="notch notch--panel" viewBox="0 0 400 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 40H120C150 40 150 0 190 0H210C250 0 250 40 280 40H400V41H0Z" fill="currentColor"/></svg>
+        <h2 class="footer__title"><svg class="footer__sig" viewBox="0 0 300 160" aria-hidden="true"><path data-footer-sig pathLength="1" d="M20 118C80 138 170 126 255 70C275 55 280 40 262 42C225 46 150 98 112 138C100 150 98 126 108 104C118 80 150 20 168 6M118 108C150 106 190 96 216 86M178 100C190 70 220 60 250 72"/></svg>Always <span class="serif">bringing</span><br>the <span class="serif">fight</span>.</h2>
+        <img class="footer__figure" src="./img/footer-figure.webp" alt="" loading="lazy">
+        <nav class="footer__col footer__col--l"><small>Pages</small><a href="index.html" data-transition>Home</a><a href="on-track.html" data-transition>On Track</a><a href="#gallery">Off Track</a><a href="#calendar">Calendar</a><a class="lime" href="#store">Store</a></nav>
+        <nav class="footer__col footer__col--r"><small>Follow on</small><a href="#">TikTok</a><a href="#">Instagram</a><a href="#">YouTube</a><a href="#">Twitch</a></nav>
+        <div class="marquee marquee--dark" data-marquee><div class="marquee__row"></div></div>
+        <a class="btn btn--lime btn--cta footer__biz" href="#"><span>Business enquiries</span><svg viewBox="0 0 20 20"><path d="M6 14l8-8M8 6h6v6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+      <div class="footer__legal"><span>&copy; 2026 Remy Vasseur. A fictional clean-room study.</span><span><a href="#">Privacy policy</a><a href="#">Terms</a></span></div>
+    </footer>
+  </main>
+
+  <!-- tiny signature used by the gallery quotes -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="sig-small" viewBox="0 0 60 24"><path d="M3 18C14 22 30 18 46 9c4-2 4-5 0-4C38 7 24 15 17 22M22 16c8 0 14-2 20-4M32 15c2-5 8-7 14-5" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round"/></symbol></defs></svg>
+</body>
+</html>
