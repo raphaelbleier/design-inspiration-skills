@@ -27,6 +27,7 @@ const hash = f => createHash('sha256').update(readFileSync(f)).digest('hex');
 
 // `captures`: local-only folder with downloaded original files; any byte-identical file in the rebuild is a copy.
 export function validateStudy(dir, { captures } = {}) {
+  if (!existsSync(join(dir, 'README.md'))) return ['missing README.md'];
   const md = readFileSync(join(dir, 'README.md'), 'utf8');
   const meta = parseFrontmatter(md);
   const rebuild = join(dir, 'rebuild');
@@ -69,9 +70,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     const errors = validateStudy(join(skill, path), { captures: join(root, 'captures', path.split('/').pop()) });
     for (const e of errors) console.error(`${path}: ${e}`);
     failed ||= errors.length > 0;
-    return { path, ...parseFrontmatter(readFileSync(join(skill, path, 'README.md'), 'utf8')) };
+    return errors.includes('missing README.md') ? null : { path, ...parseFrontmatter(readFileSync(join(skill, path, 'README.md'), 'utf8')) };
   });
-  writeFileSync(join(skill, 'INDEX.md'), buildIndex(studies));
+  writeFileSync(join(skill, 'INDEX.md'), buildIndex(studies.filter(Boolean)));
   console.log(`${studies.length} studies, ${failed ? 'FAILED' : 'ok'}`);
   process.exit(failed ? 1 : 0);
 }

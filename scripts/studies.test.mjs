@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { mkdtempSync, mkdirSync, writeFileSync } from 'node:fs';
+import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { validateStudy, buildIndex } from './studies.mjs';
@@ -92,4 +92,10 @@ test('the index lists studies by category and by technique', () => {
 - [A](studies/design-agencies/a/README.md)
 - [B](studies/fashion/b/README.md)
 `);
+});
+
+test('a study without a README is reported, not crashed on', () => {
+  const dir = study();
+  rmSync(join(dir, 'README.md'));
+  assert.deepEqual(validateStudy(dir), ['missing README.md']);
 });
