@@ -1,10 +1,11 @@
 #!/usr/bin/env bash
 # Screenshot a page at 3 breakpoints x 5 scroll positions.
-# Usage: scripts/capture.sh <url> <out-dir>
+# Usage: scripts/capture.sh <url> <out-dir> [playwright-session]
 # Used for both the original (out-dir under captures/, gitignored) and the rebuild.
 set -euo pipefail
-url=$1; out=$2; mkdir -p "$out"
-pw(){ playwright-cli --raw "$@" 2>/dev/null | grep -v -e '║' -e '╔' -e '╚' || true; }
+url=$1; out=$2; session=${3:-default}; mkdir -p "$out"
+pw(){ playwright-cli -s="$session" --raw "$@" 2>/dev/null | grep -v -e '║' -e '╔' -e '╚' || true; }
+pw open >/dev/null
 for size in 1440x900 768x1024 390x844; do
   pw resize ${size%x*} ${size#*x}
   pw goto "$url"; sleep 6
@@ -23,3 +24,4 @@ for size in 1440x900 768x1024 390x844; do
   done
 done
 ls "$out" | wc -l
+pw close >/dev/null
