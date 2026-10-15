@@ -46,7 +46,7 @@ const CLEAN_ROOM = `Clean-room rules (hard):
 - Never open captures/<slug>/bundles/ (original source) while building. Write all code from scratch.
 - No original images, fonts, logos, videos or copy. No names or likeness of real people, real teams, real clients or real brands (incl. the studio's own client list) — invent fictional equivalents in the same tone and length.
 - Fonts: closest free Google Fonts substitute for each original font.
-- Images: generate with Codex CLI: \`codex exec --skip-git-repo-check -s workspace-write -C <dir> "Generate an image with your image generation tool: <prompt>. Save it as <name>.png. Reply only with the path."\`. If Codex hits a usage limit, use the ComfyUI MCP (mcp__comfyui__generate_image via ToolSearch; checkpoint flux1-schnell-fp8.safetensors, steps 4, cfg 1, size matching the slot; download the returned URL with curl), else Unsplash/Pexels with an ATTRIBUTION.md. Convert to WebP <= 200 KB (python3 PIL), delete PNGs. ~10-25 images, reuse where sensible.
+- Images: generate ONLY with \`${REPO}/scripts/genimage.sh "<prompt>" <abs-path.png> <aspect>\` (Gemini Nano Banana via agy, Codex gpt-6-luna/gpt-image fallback; run up to 4 in parallel). Never use ComfyUI, stock photos, downloads or canvas-drawn fakes. If it exits 1, retry that image later in your run; if images still fail at the end, report which slots are missing. Convert to WebP <= 200 KB (python3 PIL), delete PNGs. ~10-25 images, reuse where sensible.
 - The rebuild must not mention the original domain anywhere.`
 
 function analysePrompt(s) {
