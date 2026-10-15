@@ -1,0 +1,63 @@
+@import './tokens.css';
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--black); color: var(--white);
+  font: 400 20px/1.3em var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img { display: block; max-width: 100%; }
+.sr { position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+ol, ul { list-style: none; }
+
+/* Pages with Lenis scroll vs. pages with the custom slide controller. */
+html.is-locked, html.is-locked body { overflow: hidden; height: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+/* ---- type roles ---- */
+.display { font-family: var(--font-display); font-weight: 800; font-variation-settings: 'wdth' 80; text-transform: uppercase; letter-spacing: -.03em; line-height: .77em; }
+.eyebrow { font-family: var(--font-eyeb, var(--font-eyebrow)); font-weight: 600; font-size: var(--text-eyeb-small); letter-spacing: .35em; text-transform: uppercase; line-height: 1; }
+.small { font-size: 8px; letter-spacing: .12em; text-transform: uppercase; }
+
+/* ---- stage layers: grain (CSS) over the persistent GL canvas ---- */
+.gl { position: fixed; inset: 0; z-index: 0; pointer-events: none; }
+.gl canvas { width: 100%; height: 100%; display: block; }
+.grain {
+  position: fixed; inset: -50%; z-index: 90; pointer-events: none; opacity: .09; mix-blend-mode: overlay;
+  /* feTurbulence noise as an inline SVG: a looping procedural grain, no image asset. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: grain 1s steps(6) infinite;
+}
+@keyframes grain { 0%{transform:translate(0,0)} 17%{transform:translate(-5%,3%)} 33%{transform:translate(4%,-6%)} 50%{transform:translate(-3%,5%)} 67%{transform:translate(6%,2%)} 83%{transform:translate(-4%,-3%)} 100%{transform:translate(0,0)} }
+
+.app { position: relative; z-index: 1; }
+.view { position: relative; }
+.view[data-fixed] { position: fixed; inset: 0; overflow: hidden; height: 100svh; }
+
+/* ---- ticket-style pill button (EXPLORE / ENTER / WHO WE ARE) ---- */
+.btn-ticket {
+  --c: var(--white); display: inline-flex; align-items: stretch; height: 2.6rem; color: var(--c);
+  font: 500 .7rem/1 var(--font-body); letter-spacing: .2em; text-transform: uppercase; position: relative;
+}
+.btn-ticket > span { display: flex; align-items: center; justify-content: center; border: 1px solid currentColor; }
+.btn-ticket .bt-l { padding: 0 1.15rem; border-radius: 6px 0 0 6px; border-right-style: dashed; transition: background .5s var(--easeOutQuint), color .5s var(--easeOutQuint); }
+.btn-ticket .bt-r { width: 2.5rem; border-radius: 0 6px 6px 0; border-left: 0; }
+.btn-ticket svg { width: 14px; height: 14px; transition: transform .6s var(--easeOutQuint); }
+.btn-ticket:hover .bt-l { background: var(--c); color: var(--black); }
+.btn-ticket:hover svg { transform: translateX(3px); }
+.btn-ticket.solid { --c: var(--black); }
+.btn-ticket.cream .bt-l, .btn-ticket.cream .bt-r { background: var(--white); color: var(--black); border-color: var(--white); }
+.btn-ticket.cream:hover .bt-l { background: transparent; color: var(--white); }
+
+/* ---- lines revealed by gsap (clip wrapper) ---- */
+.clip { overflow: hidden; display: block; }
+
+@media (prefers-reduced-motion: reduce) {
+  .grain { animation: none; }
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

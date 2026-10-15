@@ -1,0 +1,134 @@
+/*
+ * FIXED CHROME: logo, ticket nav, CSS-only menu, cursor.
+ * The menu is driven only by two checkboxes (#menu-toggle, #list-toggle) and :has(), no JS.
+ * Timings: panels .9s on --customEase (grid-template-rows 0fr -> 1fr), link text .8s translate3d(0,150%,0) -> 0
+ * staggered by --d, burger 1.1s, chevron 0.8s, hover fill 1.1s on --easeOutQuint (desktop only).
+ */
+
+/* ---- logo ---- */
+.logo {
+  position: fixed; z-index: 100; top: var(--nav-top); left: var(--sgx); color: var(--white);
+  display: flex; flex-direction: column; gap: 4px; width: 6.4rem; transition: color .5s var(--customEase), opacity .4s;
+}
+.logo.is-dark { color: var(--black); }
+.logo-main { font: 800 2.6rem/.78 var(--font-display); font-variation-settings: 'wdth' 76; letter-spacing: -.02em; }
+.logo-sub { display: flex; justify-content: space-between; font: 500 5px/1 var(--font-body); white-space: nowrap; }
+.logo-sub i { font-style: normal; }
+
+/* ---- ticket ---- */
+.nav { position: fixed; z-index: 100; top: var(--nav-top); right: var(--sgx); width: 21.25rem; color: var(--black); }
+.ticket { position: relative; height: 6.44rem; display: grid; grid-template-columns: 1fr 6.4rem; }
+.ticket-bg, .panel-in {
+  --r: 8px;
+  background: var(--white);
+  -webkit-mask:
+    radial-gradient(circle var(--r) at 0 0, #0000 97%, #000) top left / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 100% 0, #0000 97%, #000) top right / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 0 100%, #0000 97%, #000) bottom left / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 100% 100%, #0000 97%, #000) bottom right / 51% 51% no-repeat;
+          mask:
+    radial-gradient(circle var(--r) at 0 0, #0000 97%, #000) top left / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 100% 0, #0000 97%, #000) top right / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 0 100%, #0000 97%, #000) bottom left / 51% 51% no-repeat,
+    radial-gradient(circle var(--r) at 100% 100%, #0000 97%, #000) bottom right / 51% 51% no-repeat;
+}
+.ticket-bg { position: absolute; inset: 0; }
+.t-left { position: relative; display: block; cursor: pointer; border-right: 1px dashed var(--black); }
+.t-burger { position: relative; display: grid; place-items: center; cursor: pointer; }
+.hole { position: absolute; right: 6.4rem; width: var(--hole); height: var(--hole); border-radius: 50%; background: var(--black); transform: translate(50%, -50%); }
+.hole-t { top: 2px; } .hole-b { top: calc(100% - 2px); }
+
+.t-film { position: absolute; left: .75rem; top: .95rem; right: .85rem; display: flex; align-items: flex-start; gap: .55rem; }
+.t-thumb { width: 40px; height: 40px; object-fit: cover; border-radius: 4px; flex: none; margin-top: 0; }
+.t-title { flex: 1; font: 800 16px/24px var(--font-display); font-variation-settings: 'wdth' 80; text-transform: uppercase; letter-spacing: -.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.t-chev { margin-top: 8px; transition: transform .8s var(--customEase); }
+.t-meta { position: absolute; left: 0; right: 0; bottom: 0; height: 25px; display: flex; border-top: 1px solid var(--black); }
+.t-meta i { flex: 1; display: grid; place-items: center; font: 400 8px/1 var(--font-body); font-style: normal; letter-spacing: .14em; text-transform: uppercase; border-left: 1px solid var(--black); }
+.t-meta i:first-child { border-left: 0; flex: 1.15; }
+.t-meta i:nth-child(2) { flex: .75; }
+
+.t-talk { display: none; position: absolute; inset: 0; align-items: center; gap: .9rem; padding-left: 1.35rem; color: var(--red); }
+.t-mail { color: var(--black); }
+.t-talk-text { display: flex; flex-direction: column; gap: 6px; }
+.t-talk-text b { font: 800 18px/1 var(--font-display); font-variation-settings: 'wdth' 80; color: var(--black); letter-spacing: -.02em; }
+.t-talk-text i { font: 600 6px/1 var(--font-body); font-style: normal; letter-spacing: .12em; display: flex; align-items: center; gap: 6px; }
+.t-talk-text u { text-decoration: none; display: grid; place-items: center; width: 14px; height: 14px; border-radius: 50%; background: var(--red); color: var(--white); font-size: 8px; }
+
+/* page-dependent ticket content (body[data-page] is set by the router) */
+body[data-page="about"] .t-film, body[data-page="contact"] .t-film { display: none; }
+body[data-page="contact"] .t-talk { display: flex; }
+body[data-page="contact"] .t-meta, body[data-page="contact"] .t-chev { display: none; }
+body[data-page="about"] .t-chev, body[data-page="policy"] .t-film, body[data-page="policy"] .t-chev, body[data-page="404"] .t-film, body[data-page="404"] .t-chev { display: none; }
+body[data-page="about"] .t-left, body[data-page="contact"] .t-left, body[data-page="policy"] .t-left, body[data-page="case"] .t-left { cursor: default; }
+
+/* burger */
+.t-burger b { position: absolute; left: 50%; top: 50%; width: 2.6rem; height: 2px; margin: -1px 0 0 -1.3rem; background: var(--black); transition: transform 1.1s var(--customEase); transition-delay: calc(var(--i) * .05s); }
+.t-burger b:nth-child(1) { --i: 0; transform: translateY(-5px); }
+.t-burger b:nth-child(2) { --i: 1; }
+.t-burger b:nth-child(3) { --i: 2; transform: translateY(5px); }
+body:has(#menu-toggle:checked) .t-burger b:nth-child(1) { transform: rotate(-45deg) scaleX(.8); }
+body:has(#menu-toggle:checked) .t-burger b:nth-child(2) { transform: scaleX(0); }
+body:has(#menu-toggle:checked) .t-burger b:nth-child(3) { transform: rotate(45deg) scaleX(.8); }
+body:has(#list-toggle:checked) .t-chev { transform: rotate(180deg); }
+
+/* ---- panels ---- */
+.panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows var(--panels-duration) var(--customEase); position: relative; z-index: -1; }
+.panel-in { min-height: 0; overflow: hidden; --r: 8px; }
+.panel-list { width: calc(100% - 6.4rem - 1px); position: absolute; left: 0; top: 100%; }
+.panel-menu { position: absolute; left: 0; right: 0; top: 100%; }
+body:has(#menu-toggle:checked) .panel-menu, body:has(#list-toggle:checked) .panel-list { grid-template-rows: 1fr; }
+body:has(#menu-toggle:checked) .panel-list { grid-template-rows: 0fr; }
+body:has(#menu-toggle:checked) #list-toggle { }
+
+.film-item { display: flex; align-items: center; gap: .6rem; padding: 0 .75rem; height: 2.7rem; border-bottom: 1px dashed var(--black); position: relative; font: 800 13px/1 var(--font-display); font-variation-settings: 'wdth' 80; letter-spacing: -.02em; text-transform: uppercase; overflow: hidden; }
+.film-item:last-child { border-bottom: 0; }
+.film-item img { width: 16px; height: 16px; object-fit: cover; border-radius: 2px; }
+.film-item[aria-current="true"]::after { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--black); margin-left: auto; margin-right: .25rem; }
+.film-item > * { position: relative; }
+
+.menu-links li a { position: relative; display: flex; align-items: baseline; gap: .85rem; height: 2.6rem; padding: .35rem 1.35rem 0; overflow: hidden; font: 800 32px/28.8px var(--font-display); font-variation-settings: 'wdth' 80; letter-spacing: -.02em; }
+.menu-links ol, .menu-links { padding: 1.2rem 0 .75rem; counter-reset: n; }
+.menu-links em { font: 400 11px/1 var(--font-body); font-style: normal; opacity: .5; }
+.menu-links .tx { display: block; transform: translate3d(0, 150%, 0); transition: transform .2s; position: relative; }
+.menu-row { border-top: 1px dashed var(--black); padding: 0 1.35rem; display: flex; align-items: center; gap: 1.5rem; height: 4.1rem; transform-origin: left; }
+.menu-legal a, .menu-copy { font: 400 11px/1 var(--font-body); letter-spacing: .1em; }
+.menu-legal { gap: 2.4rem; height: 4.1rem; padding-left: 1.5rem; }
+.menu-social { gap: 1.1rem; height: 4rem; }
+.menu-copy { height: 3.1rem; }
+.menu-row { transform: scaleX(0); transition: transform .2s; }
+body:has(#menu-toggle:checked) .menu-row { transform: none; transition: transform 1.1s var(--customEase) .15s; }
+body:has(#menu-toggle:checked) .menu-links .tx { transform: none; transition: transform .8s var(--customEase) var(--d); }
+
+/* hover fill: desktop only */
+@media (min-width: 768px) {
+  [data-hover="bggrow"]::before, .film-item::before { content: ''; position: absolute; inset: 0; background: var(--hover); transform: scaleY(0); transform-origin: bottom; transition: transform 1.1s var(--easeOutQuint); }
+  [data-hover="bggrow"]:hover::before, .film-item:hover::before { transform: scaleY(1); }
+  [data-hover="bggrow"] > *, .film-item > * { position: relative; }
+}
+
+/* ---- overlay-menu rule: hide fixed decorative marks while the menu is open ---- */
+body:has(#menu-toggle:checked) .cursor { opacity: 0 !important; }
+
+/* ---- custom cursor: 100px outlined ring + label; only on fine pointers ---- */
+.cursor { position: fixed; left: 0; top: 0; z-index: 120; pointer-events: none; opacity: 0; transition: opacity .3s; }
+.cursor.is-on { opacity: 1; }
+.cursor.is-hidden { opacity: 0; }
+.cursor-ring { position: absolute; left: -50px; top: -50px; width: 100px; height: 100px; border-radius: 50%; border: 1px solid #faf7ef80; display: grid; place-items: center; transition: transform .5s var(--customEase), background .3s; }
+.cursor-label { font: 400 11px/1 var(--font-body); color: var(--white); opacity: .85; }
+.cursor.is-down .cursor-ring { transform: scale(.82); background: #faf7ef14; }
+@media (hover: none), (pointer: coarse) { .cursor { display: none; } }
+
+/* ---- mobile: ticket collapses to the burger square ---- */
+@media (max-width: 767px) {
+  .nav { width: 2.9rem; }
+  .ticket { height: 3rem; grid-template-columns: 1fr; }
+  .t-left, .hole { display: none; }
+  .ticket-bg { --r: 5px; border-radius: 4px; }
+  .t-burger b { width: 1.1rem; margin-left: -.55rem; }
+  .t-burger b:nth-child(1) { transform: translateY(-4px); } .t-burger b:nth-child(3) { transform: translateY(4px); }
+  .panel-list { display: none; }
+  .panel-menu { left: auto; right: 0; width: calc(100vw - 2 * var(--sgx)); }
+  .panel-menu .panel-in { margin-top: 8px; }
+  body:has(#menu-toggle:checked) .logo { opacity: 0; }
+  .logo-main { font-size: 2rem; } .logo { width: 4.9rem; }
+}

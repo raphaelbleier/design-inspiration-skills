@@ -1,0 +1,69 @@
+/* HOME: roll of slides. Geometry numbers measured on the original at 1440x900. */
+.home { background: transparent; }
+.roll { position: absolute; inset: 0; }
+.slide { position: absolute; inset: 0; will-change: transform; }
+.slide-media { position: absolute; left: var(--roll-gx); right: var(--roll-gx); top: var(--roll-gy); bottom: var(--roll-gy); }
+.slide-media img { width: 100%; height: 100%; object-fit: cover; opacity: 0; }
+.no-gl .slide-media img { opacity: 1; border-radius: 40px; filter: brightness(.8); }
+
+.slide-ui {
+  position: absolute; left: var(--roll-gx); right: var(--roll-gx); top: var(--roll-gy); bottom: var(--roll-gy);
+  display: flex; justify-content: space-between; padding: 3.55rem 0 2.5rem 3rem; pointer-events: none; color: var(--white);
+}
+.slide-ui a { pointer-events: auto; }
+.ui-left { display: flex; flex-direction: column; justify-content: space-between; width: 24.2rem; }
+.ui-right { display: flex; flex-direction: column; justify-content: space-between; align-items: center; width: 17.25rem; }
+
+.award { display: flex; flex-direction: column; align-items: center; width: 8.2rem; text-align: center; }
+.award-year { font: 700 2rem/1 var(--font-display); font-variation-settings: 'wdth' 90; letter-spacing: -.02em; }
+.award-fest { font: 800 16.8px/15.9px var(--font-display); font-variation-settings: 'wdth' 80; letter-spacing: -.02em; text-transform: uppercase; margin-top: 1rem; }
+.laurel { margin-top: 1.7rem; opacity: .85; }
+
+.title-block { text-align: center; display: flex; flex-direction: column; align-items: center; }
+.title-block .eyebrow { margin-bottom: 1.5rem; }
+.roll-title { font-size: var(--title-fs, var(--text-h1)); width: 100%; text-wrap: balance; letter-spacing: -.045em; margin-bottom: 1.7rem; }
+.tbl { width: 22.8rem; }
+.tbl-row { display: grid; grid-template-columns: 1fr 1fr; height: 14px; border-top: 1px solid var(--white); text-align: center; font: 800 15px/14px var(--font-display); font-variation-settings: 'wdth' 80; letter-spacing: -.02em; text-transform: uppercase; }
+.tbl-row:last-child { border-bottom: 1px solid var(--white); }
+.tbl-row > span { display: block; }
+
+.review { display: flex; flex-direction: column; align-items: center; text-align: center; margin-bottom: 3.55rem; }
+.review:last-child { margin-bottom: 0; }
+.stars { font-size: 18px; line-height: 1; letter-spacing: .3em; margin-right: -.3em; margin-bottom: 1.5rem; }
+.review .eyebrow { margin-bottom: 1rem; }
+.review h3 { font-size: var(--text-h5); line-height: .9em; max-width: 14rem; letter-spacing: -.03em; }
+.reviews { padding-top: 0; }
+.ui-right .btn-ticket { margin-bottom: .1rem; }
+
+/* title rollover char boxes (see rollover.js) */
+.ro-word { display: inline-block; white-space: nowrap; }
+.ro-ch { display: inline-block; overflow: hidden; height: 1em; vertical-align: top; margin-top: -.12em; padding-top: .12em; margin-bottom: -.2em; }
+.ro-in { display: flex; flex-direction: column; will-change: transform; }
+.ro-in > span { display: block; height: 1em; line-height: 1em; }
+.roll-title .ro-ch { height: .86em; margin-top: 0; padding-top: 0; }
+.roll-title .ro-in > span { height: .86em; line-height: .86em; }
+.tbl-row .ro-ch { height: 14px; margin: 0; padding: 0; }
+.tbl-row .ro-in > span { height: 14px; line-height: 14px; }
+
+/* tutorial overlay */
+.tutorial { position: absolute; left: 50%; bottom: 3rem; width: 21.25rem; height: 16.6rem; margin-left: -12.1rem; background: var(--gray); border-radius: var(--rounded-md); z-index: 5; display: flex; align-items: flex-end; justify-content: space-between; padding: .45rem .4rem .45rem .4rem; }
+.tutorial p { font: 600 8px/1.1 var(--font-body); letter-spacing: .02em; width: 8.5rem; color: var(--white); padding-bottom: .55rem; }
+.tut-close { display: flex; height: 2.1rem; align-items: stretch; background: var(--black); color: var(--white); border-radius: 4px; font: 600 8px/1 var(--font-body); letter-spacing: .1em; }
+.tut-close span { display: grid; place-items: center; padding: 0 1.7rem; border-right: 1px dashed var(--white-30); }
+.tut-close i { display: grid; place-items: center; width: 2.1rem; }
+
+@media (max-width: 767px) {
+  .slide-ui { flex-direction: column; justify-content: flex-start; padding: 2.5rem 1.1rem 1.5rem; gap: 1.2rem; }
+  .ui-left, .ui-right { display: contents; }
+  .award, .review:nth-child(3) { display: none; }
+  .reviews { order: 1; display: flex; justify-content: space-between; gap: .6rem; }
+  .review { margin: 0; flex: 1; }
+  .stars { font-size: 14px; margin-bottom: .75rem; } .review .eyebrow { margin-bottom: .6rem; }
+  .review h3 { font-size: 1.2rem; max-width: 9rem; }
+  .title-block { order: 2; margin-top: auto; width: 100%; }
+  .title-block .eyebrow { margin-bottom: 1rem; }
+  .roll-title { font-size: 3rem; margin-bottom: 1rem; letter-spacing: -.04em; }
+  .tbl { width: 14.5rem; }
+  .ui-right .btn-ticket { order: 3; align-self: center; }
+  .tutorial { display: none; }
+}

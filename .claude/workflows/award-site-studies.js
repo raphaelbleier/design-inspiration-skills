@@ -4,7 +4,8 @@ export const meta = {
   whenToUse: 'Producing design-inspiration-skills studies for a batch of approved Awwwards sites',
   phases: [
     { title: 'Analyse', detail: 'capture original + extract tokens/motion' },
-    { title: 'Rebuild', detail: 'clean-room Vite rebuild from analysis only' },
+    { title: 'Rebuild', detail: 'clean-room Vite rebuild from analysis only, images as a manifest' },
+    { title: 'Images', detail: 'one sequential ComfyUI pass for every manifest' },
     { title: 'Critic', detail: 'capture rebuild, score vs original, fix loop until >= 7' },
     { title: 'Breakdown', detail: 'write study README markdown' },
   ],
@@ -46,7 +47,7 @@ const CLEAN_ROOM = `Clean-room rules (hard):
 - Never open captures/<slug>/bundles/ (original source) while building. Write all code from scratch.
 - No original images, fonts, logos, videos or copy. No names or likeness of real people, real teams, real clients or real brands (incl. the studio's own client list) — invent fictional equivalents in the same tone and length.
 - Fonts: closest free Google Fonts substitute for each original font.
-- Images: generate ONLY with \`${REPO}/scripts/genimage.sh "<prompt>" <abs-path.png> <aspect>\` (Gemini Nano Banana via agy, then Codex gpt-6-luna/gpt-image, then local ComfyUI flux as last resort; run up to 4 in parallel; it needs network, so run it outside the command sandbox). Never use stock photos, downloads or canvas-drawn fakes, and never call ComfyUI yourself. If it exits 1, retry that image later in your run; if images still fail at the end, report which slots are missing. Convert to WebP <= 200 KB (python3 PIL), delete PNGs. ~10-25 images, reuse where sensible.
+- Images: do NOT generate any images yourself (no ComfyUI, Codex, agy, downloads, stock photos or canvas-drawn fakes). Write every image slot into images.json in the rebuild root: [{"path": "public/img/<name>.webp", "prompt": "<detailed photographic/illustrative prompt, no text, no logos>", "aspect": "16:9"}]. Reference exactly those paths in the code. All images are generated later in one ComfyUI (flux) pass, so while you build they do not exist yet: give every image container an explicit aspect-ratio and a fitting background colour so layout holds without them. ~10-25 images, reuse where sensible.
 - The rebuild must not mention the original domain anywhere.`
 
 function analysePrompt(s) {
@@ -85,7 +86,7 @@ Output: ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}/ — 
 - prefers-reduced-motion respected. Responsive at 1440, 768, 390.
 - Do NOT write any README.md (another stage writes the study README).
 
-Verify: npm install && npm run build green. Run \`npx vite preview --port ${s.port} --strictPort\` in background, screenshot with your own named session -s=${s.slug}-rb at 1440/768/390, compare with the original shots, iterate until close. Stop the preview server (kill by PID, never pkill -f with a pattern that matches your own shell) and close your session.
+Verify: npm install && npm run build green. Images are missing at this stage; judge layout, type, motion and colour only. Run \`npx vite preview --port ${s.port} --strictPort\` in background, screenshot with your own named session -s=${s.slug}-rb at 1440/768/390, compare with the original shots, iterate until close. Stop the preview server (kill by PID, never pkill -f with a pattern that matches your own shell) and close your session.
 
 Return: files created, image prompts used, deviations from the original and why, anything unfinished.
 
@@ -94,7 +95,7 @@ ${analysis}`
 }
 
 function criticPrompt(s) {
-  return `You are a harsh, independent design critic. Judge how faithfully a clean-room rebuild reproduces "${s.title}" (${s.url}). Content is intentionally different (fictional names, generated images, substitute fonts) — do NOT penalise different content. Judge layout/grid, proportions, type scale & hierarchy, palette, spacing rhythm, section order, signature visual elements, motion/interaction fidelity, responsive behaviour, craft.
+  return `You are a harsh, independent design critic. Judge how faithfully a clean-room rebuild reproduces "${s.title}" (${s.url}). Content is intentionally different (fictional names, AI-generated images, substitute fonts) — do NOT penalise different content or image subject matter, only how images are framed and used. Judge layout/grid, proportions, type scale & hierarchy, palette, spacing rhythm, section order, signature visual elements, motion/interaction fidelity, responsive behaviour, craft.
 
 Steps:
 1. cd ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug} && npm install --silent && npm run build, then start \`npx vite preview --port ${s.port} --strictPort\` in background (remember its PID).
@@ -113,6 +114,8 @@ Rebuild: ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}/. Re
 ${CLEAN_ROOM}
 
 ${LESSONS}
+
+Do not generate, download or replace images (they are final); fix layout, type, colour, motion and code only.
 
 Apply these fixes, most impactful first:
 ${critic.fixes.map((f, i) => `${i + 1}. ${f}`).join('\n')}
@@ -136,14 +139,25 @@ ${analysis}`
 
 const sites = args
 
-const results = await pipeline(
+// Phase 1: code every rebuild (no images). Sites with `skipRebuild` already have a finished rebuild.
+const analyses = await pipeline(
   sites,
   s => agent(analysePrompt(s), { label: `analyse:${s.slug}`, phase: 'Analyse' }),
   async (analysis, s) => {
-    await agent(rebuildPrompt(s, analysis), { label: `rebuild:${s.slug}`, phase: 'Rebuild' })
+    if (!s.skipRebuild) await agent(rebuildPrompt(s, analysis), { label: `rebuild:${s.slug}`, phase: 'Rebuild' })
     return analysis
   },
-  async (analysis, s) => {
+)
+
+// Phase 2: one sequential ComfyUI pass for all images, with nothing else using the GPU.
+phase('Images')
+const dirs = sites.map(s => `${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}`)
+log(await agent(`Run \`python3 ${REPO}/scripts/genimages.py ${dirs.join(' ')}\` with the command sandbox disabled (it talks to ComfyUI on localhost:8188). It can take an hour; use a long timeout or run it in the background and wait for it. If it exits 1, run it again (it skips finished images), at most 3 runs in total. Do nothing else. Return one line: images generated, images still failing.`, { label: 'images', phase: 'Images', effort: 'low' }))
+
+// Phase 3: evaluate and fix, then write the breakdown.
+const results = await pipeline(
+  sites.map((s, i) => ({ s, analysis: analyses[i] })).filter(x => x.analysis),
+  async ({ s, analysis }) => {
     let critic = await agent(criticPrompt(s), { label: `critic:${s.slug}#1`, phase: 'Critic', schema: CRITIC_SCHEMA })
     const history = [critic.overall]
     for (let round = 1; critic.overall < PASS && round <= MAX_FIX_ROUNDS; round++) {
@@ -152,9 +166,9 @@ const results = await pipeline(
       history.push(critic.overall)
     }
     log(`${s.slug}: critic ${history.join(' -> ')}`)
-    return { analysis, critic, history }
+    return { s, analysis, critic, history }
   },
-  async ({ analysis, critic, history }, s) => {
+  async ({ s, analysis, critic, history }) => {
     const readme = await agent(readmePrompt(s, analysis, critic), { label: `readme:${s.slug}`, phase: 'Breakdown', schema: README_SCHEMA })
     return { slug: s.slug, category: s.category, history, critic, readme: readme.markdown }
   },

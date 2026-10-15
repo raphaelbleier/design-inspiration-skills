@@ -1,0 +1,48 @@
+/*
+ * DESIGN TOKENS
+ * -------------
+ * The original never uses a fluid root: html stays 16px at 390, 768 and 1440 and every size is a rem custom
+ * property. Mobile is handled per component (see the @media blocks in the page files), not by redefining :root.
+ *
+ * Font substitutions (all self-hosted through @fontsource, no network at runtime):
+ *   display  Neue Brucke    -> Bricolage Grotesque, wght 800, wdth 80 (a touch condensed, quirky, uppercase, tight)
+ *   body     NB International -> Inter
+ *   eyebrow  P22 Parrish    -> Cormorant Garamond 600 (letter-spaced serif small caps look)
+ */
+:root {
+  --black: #000;
+  --white: #faf7ef;          /* warm cream: text on dark, ticket + case study background */
+  --red: #ff0f00;            /* contact page */
+  --gold: #ffc700;           /* toggle highlight (+ colour-dodge tint in the home shader) */
+  --gray: #222;
+  --gray-text: #bababa;
+  --white-30: #faf7ef4d;
+  --hover: #d6d3cc;
+
+  --font-display: 'Bricolage Grotesque Variable', 'Arial Narrow', sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-eyebrow: 'Cormorant Garamond', Georgia, serif;
+
+  --text-h1: 5.6rem;  --text-h2: 3.2rem;  --text-h3: 3rem;  --text-h4: 2rem;  --text-h5: 1.6rem;
+  --text-bl: 1.05rem; --text-eyeb: .8rem; --text-eyeb-small: .6rem;
+
+  --gx: 3rem; --gy: 3rem;
+  --roll-gx: 3.8rem;        /* horizontal inset of the home roll */
+  --sgx: 2.1rem;            /* nav side padding */
+  --nav-top: 2rem;
+  --hole: 1rem;
+
+  --rounded-xs: 6px; --rounded-md: 12px; --rounded-full: 100rem;
+
+  --easeOut: cubic-bezier(.77, 0, .175, 1);
+  --easeOutQuint: cubic-bezier(.23, 1, .32, 1);
+  --customEase: cubic-bezier(.19, 1, .22, 1);   /* the hero ease, expo-out equivalent */
+  --panels-duration: .9s;
+
+  /* home roll geometry */
+  --roll-gy: 7.375rem;      /* media top/bottom inset -> media height = 100svh - 236px at 900 */
+  --roll-gap: 2.625rem;
+}
+@media (max-width: 767px) {
+  :root { --roll-gx: 1rem; --roll-gy: 3.05rem; --roll-gap: 1.45rem; --nav-top: 1.4rem; --sgx: 1.4rem; }
+}
