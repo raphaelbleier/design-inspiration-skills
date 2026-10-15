@@ -1,0 +1,51 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Thumb from '../../../components/Thumb.astro';
+import { loadStudies, renderStudy, REPO } from '../../../lib/studies.mjs';
+
+export async function getStaticPaths() {
+  const all = loadStudies();
+  return Promise.all(all.map(async (study, i) => ({
+    params: { category: study.category, slug: study.slug },
+    props: { study, ...(await renderStudy(study.md)), prev: all[i - 1], next: all[i + 1] },
+  })));
+}
+const { study: s, html, toc, prev, next } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const href = x => `${base}/studies/${x.category}/${x.slug}/`;
+const rebuild = `${base}/rebuilds/${s.category}/${s.slug}/`;
+const source = `${REPO}/tree/main/skills/design-inspiration/studies/${s.category}/${s.slug}`;
+---
+<Base title={s.title} description={`Clean-room study of ${s.title} by ${s.studio}: design tokens, motion spec and why it works.`}>
+  <div class="wrap">
+    <header class="study-head">
+      <a class="back mono" href={`${base}/#studies`}>← All studies</a>
+      <h1>{s.title}</h1>
+      <div class="facts-row mono">
+        <span>Studio <b>{s.studio}</b></span>
+        <span>Year <b>{s.year}</b></span>
+        <span>Awards <b>{s.awards.join(', ')}</b></span>
+      </div>
+      <div class="cta">
+        <a class="btn primary" href={s.url} rel="noopener" target="_blank">Visit the original <span aria-hidden="true">↗</span></a>
+        <a class="btn" href={rebuild}>Open live rebuild <span aria-hidden="true">↗</span></a>
+        <a class="btn" href={source} rel="noopener">Source on GitHub</a>
+      </div>
+      <div class="chips" aria-label="Techniques">
+        {s.techniques.map(t => <a class="chip" href={`${base}/?t=${t}#studies`}>{t}</a>)}
+      </div>
+      <Thumb study={s} eager />
+    </header>
+    <div class="study-body">
+      <aside class="toc mono" aria-label="On this page">
+        <ul>{toc.map(t => <li><a href={`#${t.id}`}>{t.text}</a></li>)}</ul>
+        {s.stack.length > 0 && <p style="margin-top:28px;color:var(--mute)">Stack<br /><span style="color:var(--ink)">{s.stack.join(', ')}</span></p>}
+      </aside>
+      <article class="prose" set:html={html} />
+    </div>
+    <nav class="pager" aria-label="More studies">
+      {prev ? <a href={href(prev)}><span class="mono" style="color:var(--mute)">Previous</span><span class="t">{prev.title}</span></a> : <span></span>}
+      {next ? <a href={href(next)}><span class="mono" style="color:var(--mute)">Next</span><span class="t">{next.title}</span></a> : <span></span>}
+    </nav>
+  </div>
+</Base>

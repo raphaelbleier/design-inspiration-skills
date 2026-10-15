@@ -1,0 +1,8 @@
+---
+const { study, eager = false } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+---
+<div class="thumb">
+  {study.hasThumb && <img src={`${base}/thumbs/${study.slug}.webp`} alt={`Screenshot of the clean-room rebuild of ${study.title}`} width="1200" height="750" onerror="this.remove()" loading={eager ? 'eager' : 'lazy'} decoding="async" />}
+  <span class="ph" aria-hidden={study.hasThumb ? 'true' : undefined}>{study.title}</span>
+</div>

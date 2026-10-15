@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+import Thumb from '../components/Thumb.astro';
+import { loadStudies } from '../lib/studies.mjs';
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const studies = loadStudies();
+const count = (list) => {
+  const m = new Map();
+  for (const k of list) m.set(k, (m.get(k) ?? 0) + 1);
+  return [...m].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0])).map(([k]) => k);
+};
+const categories = count(studies.map(s => s.category));
+const techniques = count(studies.flatMap(s => s.techniques));
+const label = c => c.replace(/-/g, ' ');
+const collage = [...studies.filter(s => s.hasThumb), ...studies.filter(s => !s.hasThumb)].slice(0, 4);
+const SHOWN = 14;
+---
+<Base>
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 class="display" aria-label="How award-winning sites are actually built.">
+          <span class="ln" data-line aria-hidden="true"><span>How award-</span></span>
+          <span class="ln" data-line aria-hidden="true"><span>winning sites</span></span>
+          <span class="ln" data-line aria-hidden="true"><span>are <em>actually</em></span></span>
+          <span class="ln" data-line aria-hidden="true"><span>built.</span></span>
+        </h1>
+        <p class="lede" data-fade>Clean-room studies of Awwwards winners: design tokens, motion specs with code, and a runnable rebuild of each.</p>
+        <div class="cta" data-fade>
+          <a class="btn primary" href="#studies">Browse the studies <span aria-hidden="true">↗</span></a>
+          <a class="btn" href="#install">Install the skills</a>
+        </div>
+      </div>
+      <div class="collage" aria-hidden="true">
+        {collage.map(s => <figure class="tile"><Thumb study={s} eager /></figure>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="intro pad">
+    <div class="wrap">
+      <div class="stick">
+        <h2>A teardown, not a template.</h2>
+        <p>Great sites are hard to describe in adjectives. Each study measures one and writes it down, so people and coding agents can reuse the thinking instead of the pixels.</p>
+      </div>
+      <ul class="facts">
+        <li><h3>Design tokens</h3><p>Colour, type, spacing and easing as values you can paste into a stylesheet.</p></li>
+        <li><h3>Motion spec</h3><p>Every effect as trigger, animation, duration and curve, with the code that drives it.</p></li>
+        <li><h3>Live rebuild</h3><p>A runnable Vite project written from scratch, with placeholder copy and open-licence assets.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="pad" id="studies" style="padding-top:0">
+    <div class="wrap">
+      <h2>The studies</h2>
+      <div class="filters" data-filters>
+        <div class="frow" role="group" aria-label="Filter by category">
+          <span class="mono">Category</span>
+          <button class="chip" type="button" data-cat="" aria-pressed="true">All</button>
+          {categories.map(c => <button class="chip" type="button" data-cat={c} aria-pressed="false">{label(c)}</button>)}
+        </div>
+        <div class="frow" role="group" aria-label="Filter by technique">
+          <span class="mono">Technique</span>
+          {techniques.map((t, i) => <button class="chip" type="button" data-tech={t} aria-pressed="false" hidden={i >= SHOWN}>{t}</button>)}
+          {techniques.length > SHOWN && <button class="chip more" type="button" data-more aria-expanded="false">Show all {techniques.length}</button>}
+        </div>
+        <div class="status mono" aria-live="polite"><span data-count>{studies.length} of {studies.length} studies</span><button class="reset" type="button" data-reset hidden>Clear filters</button></div>
+      </div>
+      <ul class="grid" data-grid>
+        {studies.map(s => (
+          <li class="card" data-cat={s.category} data-tech={s.techniques.join(' ')}>
+            <a href={`${base}/studies/${s.category}/${s.slug}/`}>
+              <Thumb study={s} />
+              <div class="meta">
+                <div>
+                  <h3>{s.title}</h3>
+                  <p class="sub">{s.studio}, {s.year}</p>
+                </div>
+                <span class="mono award">{s.awards[0]}</span>
+              </div>
+              <p class="tech mono">{s.techniques.slice(0, 3).join(', ')}</p>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <p class="empty" data-empty hidden>No study matches that mix. <button class="reset" type="button" data-reset>Clear filters</button></p>
+    </div>
+  </section>
+
+  <section class="install pad" id="install" style="padding-top:0">
+    <div class="wrap">
+      <div>
+        <h2>Install</h2>
+        <p>Two skills, so you choose how much lands in your project. <b>design-inspiration</b> holds the studies. <b>design-inspiration-rebuilds</b> adds the runnable projects and is much larger.</p>
+      </div>
+      <div>
+        <div class="term"><header class="mono"><span>Any agent</span><button class="copy" type="button" data-copy>Copy</button></header>
+<pre><span class="tag">$ </span>npx skills add raphaelbleier/design-inspiration-skills</pre></div>
+        <div class="term"><header class="mono"><span>Claude Code</span><button class="copy" type="button" data-copy>Copy</button></header>
+<pre><span class="tag">$ </span>/plugin install design-inspiration --marketplace raphaelbleier/design-inspiration-skills
+<span class="tag">$ </span>/plugin install design-inspiration-rebuilds --marketplace raphaelbleier/design-inspiration-skills</pre></div>
+      </div>
+    </div>
+  </section>
+
+  <script define:vars={{ total: studies.length }}>
+    const root = document.querySelector('[data-filters]');
+    const cards = [...document.querySelectorAll('[data-grid] .card')];
+    const state = { cat: '', tech: new Set() };
+    const qs = new URLSearchParams(location.search);
+    state.cat = qs.get('category') ?? '';
+    (qs.get('t') ?? '').split(',').filter(Boolean).forEach(t => state.tech.add(t));
+
+    const apply = () => {
+      let n = 0;
+      for (const c of cards) {
+        const techs = c.dataset.tech.split(' ');
+        const show = (!state.cat || c.dataset.cat === state.cat) && [...state.tech].every(t => techs.includes(t));
+        c.hidden = !show; n += show;
+      }
+      root.querySelectorAll('[data-cat]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.cat === state.cat)));
+      root.querySelectorAll('[data-tech]').forEach(b => {
+        const on = state.tech.has(b.dataset.tech);
+        b.setAttribute('aria-pressed', String(on));
+        if (on) b.hidden = false;
+      });
+      root.querySelector('[data-count]').textContent = `${n} of ${total} ${total === 1 ? 'study' : 'studies'}`;
+      const active = state.cat || state.tech.size;
+      document.querySelectorAll('[data-reset]').forEach(b => { if (b.closest('.status')) b.hidden = !active; });
+      document.querySelector('[data-empty]').hidden = n > 0;
+      const p = new URLSearchParams();
+      if (state.cat) p.set('category', state.cat);
+      if (state.tech.size) p.set('t', [...state.tech].join(','));
+      history.replaceState(null, '', location.pathname + (p.size ? '?' + p : '') + location.hash);
+      document.dispatchEvent(new Event('gallery:filtered'));
+    };
+
+    root.addEventListener('click', e => {
+      const b = e.target.closest('button');
+      if (!b) return;
+      if (b.dataset.more !== undefined) {
+        const open = b.getAttribute('aria-expanded') === 'true';
+        const all = [...root.querySelectorAll('[data-tech]')];
+        all.forEach((t, i) => { t.hidden = !open ? false : i >= 14 && !state.tech.has(t.dataset.tech); });
+        b.setAttribute('aria-expanded', String(!open));
+        b.textContent = open ? `Show all ${all.length}` : 'Show fewer';
+        return;
+      }
+      if ('cat' in b.dataset) state.cat = b.dataset.cat;
+      else if ('tech' in b.dataset) state.tech.has(b.dataset.tech) ? state.tech.delete(b.dataset.tech) : state.tech.add(b.dataset.tech);
+      else return;
+      apply();
+    });
+    document.querySelectorAll('[data-reset]').forEach(b => b.addEventListener('click', () => { state.cat = ''; state.tech.clear(); apply(); }));
+    if (state.cat || state.tech.size) apply();
+  </script>
+</Base>

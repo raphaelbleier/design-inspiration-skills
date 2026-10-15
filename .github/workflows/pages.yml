@@ -1,0 +1,51 @@
+name: pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Build every rebuild
+        run: |
+          for d in skills/design-inspiration-rebuilds/*/*/; do
+            [ -f "$d/package.json" ] || continue
+            (cd "$d" && npm ci && npm run build) || exit 1
+          done
+      - name: Build the site
+        working-directory: site
+        run: npm ci && npm run build
+      - name: Add rebuilds to the site output
+        run: |
+          for d in skills/design-inspiration-rebuilds/*/*/; do
+            [ -d "$d/dist" ] || continue
+            rel=${d#skills/design-inspiration-rebuilds/}
+            mkdir -p "site/dist/rebuilds/$rel"
+            cp -r "$d/dist/." "site/dist/rebuilds/$rel"
+          done
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: site/dist }
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

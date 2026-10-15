@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import { REPO, OPT_OUT } from '../lib/studies.mjs';
+const { title, description = 'Clean-room studies of award-winning websites: design tokens, motion specs with code, and a runnable rebuild of each.' } = Astro.props;
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const full = title ? `${title} | Design Inspiration` : 'Design Inspiration';
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{full}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href={`${base}/favicon.svg`} type="image/svg+xml" />
+    <meta property="og:title" content={full} />
+    <meta property="og:description" content={description} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+    <header class="site-head">
+      <div class="wrap">
+        <a class="mark" href={`${base}/`}>design<b>/</b>inspiration</a>
+        <nav aria-label="Main">
+          <ul>
+            <li><a href={`${base}/#studies`}>Studies</a></li>
+            <li><a href={`${base}/#install`}>Install</a></li>
+            <li><a href={REPO}>GitHub</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main"><slot /></main>
+    <footer class="site-foot">
+      <div class="wrap">
+        <div>
+          <p>Every study here is clean-room: written from observation and measurement, with no original code, images, fonts or copy. Each rebuild uses placeholder text and open-licence assets.</p>
+          <p>Not affiliated with Awwwards or with any studio whose work is studied. Original designs remain the property of their creators.</p>
+        </div>
+        <ul>
+          <li><a href={REPO}>Source on GitHub</a></li>
+          <li><a href={OPT_OUT}>Creator of a studied site? Request removal</a></li>
+          <li><a href={`${REPO}/blob/main/LICENSE`}>MIT licence</a> for the code</li>
+        </ul>
+      </div>
+    </footer>
+    <script>
+      import Lenis from 'lenis';
+      import { gsap } from 'gsap';
+      import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+      gsap.registerPlugin(ScrollTrigger);
+      const calm = matchMedia('(prefers-reduced-motion: reduce)');
+      if (!calm.matches) {
+        // Smooth scroll gives the parallax and reveals a continuous feel; it is driven by gsap's ticker so ScrollTrigger stays in sync.
+        const lenis = new Lenis({ lerp: 0.1, anchors: true });
+        lenis.on('scroll', ScrollTrigger.update);
+        gsap.ticker.add(t => lenis.raf(t * 1000));
+        gsap.ticker.lagSmoothing(0);
+
+        // Hero lines rise out of a mask: establishes reading order.
+        if (document.querySelector('.hero')) {
+        gsap.from('[data-line] > span', { yPercent: 110, duration: 1.1, ease: 'expo.out', stagger: 0.09, delay: 0.1 });
+        gsap.from('[data-fade]', { opacity: 0, y: 16, duration: 0.9, ease: 'power3.out', stagger: 0.1, delay: 0.5 });
+        gsap.from('.collage .tile', { opacity: 0, y: 60, duration: 1.2, ease: 'expo.out', stagger: 0.12, delay: 0.25 });
+
+        // Collage tiles drift at different speeds: depth cue that echoes the studies themselves.
+        gsap.utils.toArray('.collage .tile').forEach((el, i) => {
+          gsap.to(el, { yPercent: (i % 2 ? -1 : 1) * (8 + i * 4), ease: 'none',
+            scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
+        });
+
+        // Cards reveal as they enter so a long grid feels paced. Filtering never waits on this.
+        ScrollTrigger.batch('.card', {
+          start: 'top 92%', once: true,
+          onEnter: els => gsap.fromTo(els, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.9, ease: 'expo.out', stagger: 0.07, overwrite: true }),
+        });
+        gsap.set('.card', { opacity: 0 });
+        document.addEventListener('gallery:filtered', () => {
+          gsap.set('.card:not([hidden])', { opacity: 1, y: 0, clearProps: 'transform' });
+          ScrollTrigger.refresh();
+        });
+        }
+      }
+
+      document.querySelectorAll('[data-copy]').forEach(btn => btn.addEventListener('click', async () => {
+        const text = btn.closest('.term').querySelector('pre').innerText.replace(/^\$ /gm, '').trim();
+        try { await navigator.clipboard.writeText(text); btn.textContent = 'Copied'; } catch { btn.textContent = 'Select and copy'; }
+        setTimeout(() => (btn.textContent = 'Copy'), 1800);
+      }));
+    </script>
+  </body>
+</html>
