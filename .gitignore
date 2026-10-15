@@ -1,0 +1,7 @@
+node_modules/
+dist/
+.astro/
+# Local-only analysis captures of original sites (never published)
+captures/
+.scratch/
+.gitnexus/

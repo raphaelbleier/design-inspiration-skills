@@ -1,0 +1,21 @@
+name: Opt-out / removal request
+description: Ask for a studied site to be removed from this repository.
+title: "opt-out: <site name>"
+labels: [opt-out]
+body:
+  - type: input
+    id: site
+    attributes:
+      label: Site URL
+    validations:
+      required: true
+  - type: input
+    id: relation
+    attributes:
+      label: Your relation to the site (creator, studio, client)
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Anything else
