@@ -5,3 +5,4 @@ dist/
 captures/
 .scratch/
 .gitnexus/
+.playwright-cli/
