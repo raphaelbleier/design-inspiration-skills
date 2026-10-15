@@ -4,7 +4,33 @@ Clean-room studies of award-winning websites, packaged as an agent skill so any 
 has concrete, well-documented examples of how award-level web design is built.
 
 Each study contains a design-token sheet, a motion spec and a breakdown of *why* the site
-works, plus a runnable clean-room rebuild.
+works, with code excerpts of every key effect, plus a runnable clean-room rebuild.
+
+## Install
+
+Two skills, so you choose how much lands in your project:
+
+| Skill | Contains | Size |
+|---|---|---|
+| `design-inspiration` | Index, study READMEs: tokens, motion spec with code excerpts, why it works | a few MB |
+| `design-inspiration-rebuilds` | Runnable Vite rebuild with images for every study | large (~2 MB per study) |
+
+**Any agent ([Agent Skills](https://agentskills.io) CLI)**, pick one or both when prompted:
+
+```bash
+npx skills add raphaelbleier/design-inspiration-skills
+# or non-interactive
+npx skills add raphaelbleier/design-inspiration-skills --skill design-inspiration
+```
+
+**Claude Code plugin:**
+
+```
+/plugin install design-inspiration --marketplace raphaelbleier/design-inspiration-skills
+/plugin install design-inspiration-rebuilds --marketplace raphaelbleier/design-inspiration-skills
+```
+
+Then ask your agent for an award-level site; it looks up matching studies in `INDEX.md`.
 
 > **Status:** work in progress — pilot category in progress.
 

@@ -18,8 +18,7 @@ and no smooth-scroll library: native scroll, CSS transforms, masks, clip widths 
 Rive pieces. The brand rules are demonstrated by touchable widgets (a bezier editor, a variable-font
 playground, magnifying colour chips) instead of described.
 
-Rebuild: [`rebuild/`](rebuild/) (fictional brand "Cairn", generated images, open-source fonts).
-Run it with `npm install && npm run dev`.
+Rebuild: [`design-inspiration-rebuilds/design-agencies/dropbox-brand`](https://github.com/raphaelbleier/design-inspiration-skills/tree/main/skills/design-inspiration-rebuilds/design-agencies/dropbox-brand) (fictional content, generated images, open-source fonts; installed with the optional `design-inspiration-rebuilds` skill). Run it with `npm install && npm run dev`.
 
 ## Design Tokens
 
@@ -57,32 +56,108 @@ Run it with `npm install && npm run dev`.
 
 ## Motion Spec
 
-| What | Trigger | Animation | Duration / easing | Rebuild code |
+| What | Trigger | Animation | Duration / easing | Rebuild file |
 |---|---|---|---|---|
-| Home scroll curve | scroll | raw scroll progress is remapped by a hand-rolled bezier solver before it drives anything | `cubicBezier(1, .25, .85, 1)` | `rebuild/src/easing.js` |
-| Tile unfold | scroll over a 300vh runway | 8 tiles scale 2 to 1 and fly in along per-tile vectors; gridlines counter-scale to stay 1px; tiles become clickable above 0.95 | scrubbed, rAF-throttled | `rebuild/src/home.js`, `rebuild/src/tiles.js` |
-| Centre button states | scroll | white 800px square, then blue 500px, then linear shrink to the 90px button; the two intro headlines cross-fade | .6s `cubic-bezier(.5,0,.2,1)`; titles .2s | `rebuild/src/home.js` |
-| Logo load-in | page load | 1px stroke draws, fills, then shrinks to the bottom-left mark while blue gridlines sweep in | draw 1.25s `cubic-bezier(.4,0,.3,1)`; grid 3s `cubic-bezier(.5,0,0,1)` | `rebuild/src/home.js`, `rebuild/src/brandmark.js` |
-| Tile hover | hover | tile inverts to near-black with white text; per-tile icons animate | .35s `cubic-bezier(.4,0,.2,1)` | `rebuild/src/tiles.js`, `rebuild/src/styles/tiles.css` |
-| Rail and section colour | scroll | left rail (bottom bar at <=991px) shows page title, progress bar, and takes the colour of the section under the viewport; a luminance test picks the Partner Info colour | .2s ease | `rebuild/src/shell.js`, `rebuild/src/styles/shell.css` |
-| Menu open / close | button, Escape, wheel overscroll | tiles return from the "yeeted" pose; the button warps with a squash-and-stretch keyframe set; overscroll fills a conic ring that opens the menu at 100% | open .4s linear; tiles .5s `cubic-bezier(.6,0,0,1)` | `rebuild/src/shell.js`, `rebuild/src/tiles.js` |
-| Tile-to-page transition | tile click (desktop) | clicked tile grows to full viewport on dark, its title scales to 4x into the destination title position, other tiles fade, navigation after 600ms | .6s `cubic-bezier(.65,0,.15,1)` | `rebuild/src/shell.js`, `rebuild/src/styles/shell.css` |
-| Subpage opening load-in | fonts ready | h-lines `scaleX` in at i*200ms, v-lines at i*200+100ms, doodles, tags and title at i*80+160ms | .7s `cubic-bezier(.6,0,.6,1)` | `rebuild/src/opening.js`, `rebuild/src/openings.js` |
-| Doodles and cursor tags | static / hover | icon-like stroke doodles; collaboration-style cursor pills (10px radius, 24px badge) | colour .3s ease-in-out | `rebuild/src/fx/doodles.js`, `rebuild/src/fx/cursor-tags.js` |
-| Partner Info outro | button | panel slides in leaving a 60px strip; hovering the credits row flies in 10 random cursor tags | panel .7s `cubic-bezier(.6,0,0,1)`; tags .4s `cubic-bezier(.15,.5,.05,1)`, 0-250ms random delay | `rebuild/src/fx/outro.js` |
-| Scroll toolkit | scroll | rAF-throttled handler and sticky-section progress `-top / (height - vh)` shared by every page | n/a | `rebuild/src/fx/scroll.js` |
-| Outline to fill headline | scroll in sticky section | each word is outlined text with a masked solid copy; `mask-position` sweeps; Color page background steps through four stages | scrubbed, `easeOutQuad` | `rebuild/src/fx/mask-reveal.js`, `rebuild/src/pages/color.js` |
-| Framework: whiteboard | pointer | Canvas 2D marker (`#C8AFF0`, 7px) and 50px eraser, undo/redo capped at 20 | live | `rebuild/src/fx/whiteboard.js` |
-| Framework: photo cards | scroll in 200vh sticky | 8 cards translate in vw/dvh and rotate with `progress^2`; ellipse draws via `stroke-dashoffset` | scrubbed | `rebuild/src/pages/framework.js` |
-| Voice: Generate options | click | fake-AI line streamed word by word | 400ms start, then 30 + rand*150ms per word | `rebuild/src/pages/voice-and-tone.js` |
-| Logo: six snap states | scroll | sticky stage; state is the section at viewport centre; CSS layer cross-fade stands in for the Rive state machine | `scroll-snap-type: y mandatory` | `rebuild/src/pages/logo.js` |
-| Typography: playground and fill | click, slider, scroll | wght, wdth and slant sliders plus Randomize; per-letter scroll fill from outline to solid | scrubbed, `easeOutQuad` | `rebuild/src/pages/typography.js` |
-| Iconography: stack and marquees | click, drag | folder cards fly in and prune past 15; three marquees at 125/110/95 px/s with a 4s ease-out-quint intro; hover letter shuffle | intro 4000ms | `rebuild/src/pages/iconography.js` |
-| Drag with momentum | pointer | release velocity x50, friction .95 per frame (marquees, colour chips, customer carousel) | per frame | `rebuild/src/fx/drag-scroller.js` |
-| Color: dropper and chips | hover, click | dropper recolours the opening; magnifying chips, click copies hex | .2s | `rebuild/src/pages/color.js` |
-| Imagery: curtain wipe | scroll in 300vh sticky | cover shrinks to 0 width; carousels cross-fade every 3s with 150ms stagger | `easeInOutQuint` | `rebuild/src/pages/imagery.js` |
-| Motion: timeline and bezier | scroll, drag | word mask reveal, growing boxes, mm:ss readout over 10:00, zoom slider, live frame-time readout at 24fps | scrubbed; zoom .2s ease | `rebuild/src/pages/motion.js` |
-| Palette and spacing | n/a | tokens, grid helpers and breakpoints (991 / 767) | n/a | `rebuild/src/styles/tokens.css`, `rebuild/src/styles/base.css` |
+| Home scroll curve | scroll | raw scroll progress is remapped by a hand-rolled bezier solver before it drives anything | `cubicBezier(1, .25, .85, 1)` | `src/easing.js` |
+| Tile unfold | scroll over a 300vh runway | 8 tiles scale 2 to 1 and fly in along per-tile vectors; gridlines counter-scale to stay 1px; tiles become clickable above 0.95 | scrubbed, rAF-throttled | `src/home.js`, `src/tiles.js` |
+| Centre button states | scroll | white 800px square, then blue 500px, then linear shrink to the 90px button; the two intro headlines cross-fade | .6s `cubic-bezier(.5,0,.2,1)`; titles .2s | `src/home.js` |
+| Logo load-in | page load | 1px stroke draws, fills, then shrinks to the bottom-left mark while blue gridlines sweep in | draw 1.25s `cubic-bezier(.4,0,.3,1)`; grid 3s `cubic-bezier(.5,0,0,1)` | `src/home.js`, `src/brandmark.js` |
+| Tile hover | hover | tile inverts to near-black with white text; per-tile icons animate | .35s `cubic-bezier(.4,0,.2,1)` | `src/tiles.js`, `src/styles/tiles.css` |
+| Rail and section colour | scroll | left rail (bottom bar at <=991px) shows page title, progress bar, and takes the colour of the section under the viewport; a luminance test picks the Partner Info colour | .2s ease | `src/shell.js`, `src/styles/shell.css` |
+| Menu open / close | button, Escape, wheel overscroll | tiles return from the "yeeted" pose; the button warps with a squash-and-stretch keyframe set; overscroll fills a conic ring that opens the menu at 100% | open .4s linear; tiles .5s `cubic-bezier(.6,0,0,1)` | `src/shell.js`, `src/tiles.js` |
+| Tile-to-page transition | tile click (desktop) | clicked tile grows to full viewport on dark, its title scales to 4x into the destination title position, other tiles fade, navigation after 600ms | .6s `cubic-bezier(.65,0,.15,1)` | `src/shell.js`, `src/styles/shell.css` |
+| Subpage opening load-in | fonts ready | h-lines `scaleX` in at i*200ms, v-lines at i*200+100ms, doodles, tags and title at i*80+160ms | .7s `cubic-bezier(.6,0,.6,1)` | `src/opening.js`, `src/openings.js` |
+| Doodles and cursor tags | static / hover | icon-like stroke doodles; collaboration-style cursor pills (10px radius, 24px badge) | colour .3s ease-in-out | `src/fx/doodles.js`, `src/fx/cursor-tags.js` |
+| Partner Info outro | button | panel slides in leaving a 60px strip; hovering the credits row flies in 10 random cursor tags | panel .7s `cubic-bezier(.6,0,0,1)`; tags .4s `cubic-bezier(.15,.5,.05,1)`, 0-250ms random delay | `src/fx/outro.js` |
+| Scroll toolkit | scroll | rAF-throttled handler and sticky-section progress `-top / (height - vh)` shared by every page | n/a | `src/fx/scroll.js` |
+| Outline to fill headline | scroll in sticky section | each word is outlined text with a masked solid copy; `mask-position` sweeps; Color page background steps through four stages | scrubbed, `easeOutQuad` | `src/fx/mask-reveal.js`, `src/pages/color.js` |
+| Framework: whiteboard | pointer | Canvas 2D marker (`#C8AFF0`, 7px) and 50px eraser, undo/redo capped at 20 | live | `src/fx/whiteboard.js` |
+| Framework: photo cards | scroll in 200vh sticky | 8 cards translate in vw/dvh and rotate with `progress^2`; ellipse draws via `stroke-dashoffset` | scrubbed | `src/pages/framework.js` |
+| Voice: Generate options | click | fake-AI line streamed word by word | 400ms start, then 30 + rand*150ms per word | `src/pages/voice-and-tone.js` |
+| Logo: six snap states | scroll | sticky stage; state is the section at viewport centre; CSS layer cross-fade stands in for the Rive state machine | `scroll-snap-type: y mandatory` | `src/pages/logo.js` |
+| Typography: playground and fill | click, slider, scroll | wght, wdth and slant sliders plus Randomize; per-letter scroll fill from outline to solid | scrubbed, `easeOutQuad` | `src/pages/typography.js` |
+| Iconography: stack and marquees | click, drag | folder cards fly in and prune past 15; three marquees at 125/110/95 px/s with a 4s ease-out-quint intro; hover letter shuffle | intro 4000ms | `src/pages/iconography.js` |
+| Drag with momentum | pointer | release velocity x50, friction .95 per frame (marquees, colour chips, customer carousel) | per frame | `src/fx/drag-scroller.js` |
+| Color: dropper and chips | hover, click | dropper recolours the opening; magnifying chips, click copies hex | .2s | `src/pages/color.js` |
+| Imagery: curtain wipe | scroll in 300vh sticky | cover shrinks to 0 width; carousels cross-fade every 3s with 150ms stagger | `easeInOutQuint` | `src/pages/imagery.js` |
+| Motion: timeline and bezier | scroll, drag | word mask reveal, growing boxes, mm:ss readout over 10:00, zoom slider, live frame-time readout at 24fps | scrubbed; zoom .2s ease | `src/pages/motion.js` |
+| Palette and spacing | n/a | tokens, grid helpers and breakpoints (991 / 767) | n/a | `src/styles/tokens.css`, `src/styles/base.css` |
+
+### Key excerpts
+
+**Home scroll curve**: `src/easing.js`
+```js
+export function cubicBezier(x1, y1, x2, y2) {
+  const cx = 3 * x1, bx = 3 * (x2 - x1) - cx, ax = 1 - cx - bx;
+  const cy = 3 * y1, by = 3 * (y2 - y1) - cy, ay = 1 - cy - by;
+  const sx = (t) => ((ax * t + bx) * t + cx) * t;
+  const sy = (t) => ((ay * t + by) * t + cy) * t;
+  return (x) => {
+    if (x <= 0) return 0;
+    if (x >= 1) return 1;
+    let lo = 0, hi = 1, t = x;
+    for (let i = 0; i < 12; i++) {           // 12 subdivisions
+      t = (lo + hi) / 2;
+      sx(t) < x ? (lo = t) : (hi = t);
+    }
+    return sy(t);
+  };
+}
+export const homeCurve = cubicBezier(1, 0.25, 0.85, 1);
+```
+Raw scroll progress goes through `homeCurve` once per frame; its output drives tile scale, tile translation and the button states.
+
+**Scroll toolkit (no smooth-scroll library)**: `src/fx/scroll.js`
+```js
+export function onFrame(fn) {
+  let t = false;
+  const run = () => { t = false; fn(); };
+  const req = () => { if (!t) { t = true; requestAnimationFrame(run); } };
+  addEventListener('scroll', req, { passive: true }); addEventListener('resize', req);
+  fn();
+}
+export const stickyProgress = (el) => {
+  const r = el.getBoundingClientRect();
+  return clamp(-r.top / Math.max(1, r.height - innerHeight));
+};
+```
+
+**Outline to fill mask**: `src/styles/pages.css`, `src/fx/mask-reveal.js`
+```css
+.w { position: relative; display: inline-block; color: transparent; -webkit-text-stroke: 1.2px var(--c1-fg); }
+.w::after { content: attr(data-w); position: absolute; left: 0; top: 0; color: var(--c1-fg); -webkit-text-stroke: 0;
+  mask: linear-gradient(90deg, #000 50%, transparent 50%) 0 0 / 200% 100%;
+  mask-position: var(--mp, 100%) 0; }
+```
+```js
+// words revealed in sequence: global progress g is split by cumulative letter counts
+const p = easeOutQuad(clamp((g - a) / (b - a)));
+w.style.setProperty('--mp', `${100 * (1 - p)}%`);
+```
+The mask is a hard-edged gradient at 200% width, so moving `mask-position` from 100% to 0% wipes the solid copy across the outlined word.
+
+**Subpage opening stagger**: `src/opening.js`
+```js
+const ease = 'cubic-bezier(.6,0,.6,1)';
+const set = (el, d) => {
+  el.style.transition = `opacity .7s ${d}ms ${ease}, transform .7s ${d}ms ${ease}, background-color .3s ${d + 400}ms ease-in-out`;
+};
+op.querySelectorAll('.ol-h').forEach((el, i) => set(el, i * 200));
+op.querySelectorAll('.ol-v').forEach((el, i) => set(el, i * 200 + 100));
+op.querySelectorAll('.title-wrap, .oel').forEach((el, i) => set(el, i * 80 + 160));
+requestAnimationFrame(() => op.classList.remove('pre'));
+```
+
+**Drag with momentum**: `src/fx/drag-scroller.js`
+```js
+const tick = () => {
+  s.v *= friction;                       // .95 per frame
+  apply(s.x + s.v);
+  if (Math.abs(s.v) > 0.1) raf = requestAnimationFrame(tick);
+};
+// pointermove
+s.v = (dx / dt) * 50 / 3;                // release velocity scaled by the original's x50
+```
 
 `prefers-reduced-motion`: the tile-to-page transition, carousels, marquees and the type contrast card
 are disabled or fixed; content is simply visible. No horizontal overflow at 768 or 390 on any page.

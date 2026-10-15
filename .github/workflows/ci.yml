@@ -13,7 +13,7 @@ jobs:
         run: git diff --exit-code skills/design-inspiration/INDEX.md
       - name: Build every rebuild
         run: |
-          for d in skills/design-inspiration/studies/*/*/rebuild; do
+          for d in skills/design-inspiration-rebuilds/*/*/; do
             [ -d "$d" ] || continue
             (cd "$d" && npm ci && npm run build) || exit 1
           done

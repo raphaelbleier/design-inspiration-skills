@@ -4,7 +4,7 @@ import { join, relative } from 'node:path';
 
 const KEYS = ['title', 'url', 'studio', 'awards', 'year', 'category', 'techniques', 'stack'];
 const SECTIONS = ['Design Tokens', 'Motion Spec', 'Why Award-Worthy', 'Credits'];
-const SKIP = new Set(['node_modules', 'dist', '.astro']);
+const SKIP = new Set(['node_modules', 'dist', '.astro', '.playwright-cli']);
 
 // Flat YAML subset: `key: value` and `key: [a, b]`.
 export function parseFrontmatter(md) {
@@ -25,22 +25,24 @@ function files(dir) {
 
 const hash = f => createHash('sha256').update(readFileSync(f)).digest('hex');
 
+// `rebuild`: the study's runnable rebuild (lives in the separate rebuilds skill).
 // `captures`: local-only folder with downloaded original files; any byte-identical file in the rebuild is a copy.
-export function validateStudy(dir, { captures } = {}) {
+export function validateStudy(dir, { rebuild = join(dir, 'rebuild'), captures } = {}) {
   if (!existsSync(join(dir, 'README.md'))) return ['missing README.md'];
   const md = readFileSync(join(dir, 'README.md'), 'utf8');
   const meta = parseFrontmatter(md);
-  const rebuild = join(dir, 'rebuild');
   const host = meta.url ? new URL(meta.url).hostname.replace(/^www\./, '') : null;
   const originals = new Set(files(captures).map(hash));
   const rebuildFiles = files(rebuild);
   return [
     ...KEYS.filter(k => !meta[k]?.length).map(k => `missing frontmatter: ${k}`),
     ...SECTIONS.filter(s => !md.includes(`\n## ${s}\n`)).map(s => `missing section: ${s}`),
+    ...(md.includes('\n## Motion Spec\n') && !/\n## Motion Spec\n[\s\S]*?```/.test(md.split('\n## Why Award-Worthy\n')[0])
+      ? ['Motion Spec has no code excerpt'] : []),
     ...['package.json', 'index.html'].filter(f => !existsSync(join(rebuild, f))).map(f => `missing rebuild/${f}`),
     ...rebuildFiles.filter(f => host && readFileSync(f, 'utf8').includes(host))
-      .map(f => `original-domain reference: ${relative(dir, f)}`),
-    ...rebuildFiles.filter(f => originals.has(hash(f))).map(f => `copied from original: ${relative(dir, f)}`),
+      .map(f => `original-domain reference: rebuild/${relative(rebuild, f)}`),
+    ...rebuildFiles.filter(f => originals.has(hash(f))).map(f => `copied from original: rebuild/${relative(rebuild, f)}`),
   ];
 }
 
@@ -61,13 +63,16 @@ export function buildIndex(studies) {
 // CLI: validate every study, then regenerate the index. CI runs this and fails on a stale INDEX.md via git diff.
 if (import.meta.url === `file://${process.argv[1]}`) {
   const skill = new URL('../skills/design-inspiration/', import.meta.url).pathname;
+  const rebuilds = new URL('../skills/design-inspiration-rebuilds/', import.meta.url).pathname;
   const root = new URL('../', import.meta.url).pathname;
   const dirs = existsSync(join(skill, 'studies'))
     ? readdirSync(join(skill, 'studies')).flatMap(c => readdirSync(join(skill, 'studies', c)).map(s => join('studies', c, s)))
     : [];
   let failed = false;
   const studies = dirs.map(path => {
-    const errors = validateStudy(join(skill, path), { captures: join(root, 'captures', path.split('/').pop()) });
+    const errors = validateStudy(join(skill, path), {
+      rebuild: join(rebuilds, path.replace(/^studies\//, '')),
+      captures: join(root, 'captures', path.split('/').pop()) });
     for (const e of errors) console.error(`${path}: ${e}`);
     failed ||= errors.length > 0;
     return errors.includes('missing README.md') ? null : { path, ...parseFrontmatter(readFileSync(join(skill, path, 'README.md'), 'utf8')) };

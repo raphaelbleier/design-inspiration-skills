@@ -19,7 +19,9 @@ stack: [lenis, three]
 ## Design Tokens
 x
 ## Motion Spec
-x
+\`\`\`js
+gsap.to(el, { y: 0 });
+\`\`\`
 ## Why Award-Worthy
 x
 ## Credits
@@ -40,8 +42,22 @@ test('a complete study passes', () => {
 });
 
 test('a missing section is reported', () => {
-  const errors = validateStudy(study(VALID.replace('## Motion Spec\nx\n', '')));
+  const errors = validateStudy(study(VALID.replace(/## Motion Spec\n[\s\S]*?(?=## Why)/, '')));
   assert.deepEqual(errors, ['missing section: Motion Spec']);
+});
+
+test('a Motion Spec without a code excerpt is reported', () => {
+  const errors = validateStudy(study(VALID.replace(/```js[\s\S]*?```\n/, 'x\n')));
+  assert.deepEqual(errors, ['Motion Spec has no code excerpt']);
+});
+
+test('a rebuild outside the study folder is validated', () => {
+  const dir = study();
+  const rebuild = join(dir, 'rebuild');
+  writeFileSync(join(rebuild, 'main.js'), 'fetch("https://example-original.com/api")');
+  const moved = mkdtempSync(join(tmpdir(), 'study-'));
+  writeFileSync(join(moved, 'README.md'), VALID);
+  assert.deepEqual(validateStudy(moved, { rebuild }), ['original-domain reference: rebuild/main.js']);
 });
 
 test('a missing frontmatter key is reported', () => {

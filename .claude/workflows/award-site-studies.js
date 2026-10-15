@@ -29,11 +29,17 @@ const README_SCHEMA = {
   required: ['markdown'],
 }
 
+const README_FORMAT = s => `Rebuild link and code excerpts:
+- Intro line, exactly: Rebuild: [\`design-inspiration-rebuilds/${s.category}/${s.slug}\`](https://github.com/raphaelbleier/design-inspiration-skills/tree/main/skills/design-inspiration-rebuilds/${s.category}/${s.slug}) (fictional content, generated images, open-source fonts; installed with the optional \`design-inspiration-rebuilds\` skill). Run it with \`npm install && npm run dev\`.
+- Motion Spec table: last column "Rebuild file", paths relative to the rebuild root (e.g. \`src/scroll.js\`).
+- Right after the Motion Spec table add "### Key excerpts": 3-5 of the most instructive snippets from the rebuild source, each as **<effect>**: \`src/<file>\` followed by a fenced code block (js/glsl/css, max ~25 lines, decision-rich part only, "// ..." for elisions). Prefer the signature effect, the scroll setup, a reveal/transition with exact easing, and one shader if there is one.`
+
 const LESSONS = `Lessons from earlier studies (apply them):
 - Lenis/other smooth scrollers ignore window.scrollTo: scroll with \`playwright-cli -s=<session> mousewheel 0 <dy>\`.
 - Always use a NAMED playwright-cli session (-s=<name>); several agents run in parallel. Close it when done.
 - Hand-drawn SVG script lettering comes out illegible. For script/brush words use a free Google Font (e.g. Caveat Brush, Permanent Marker, Rock Salt, Kalam) revealed with a mask/clip animation.
 - Hide fixed decorative marks while an overlay menu is open; check scrollWidth === innerWidth at 768 and 390 on every page.
+- Run playwright-cli from ${REPO}/captures/<slug>/, never from inside the rebuild folder (it drops .playwright-cli/ snapshots where you run it).
 - Subagents cannot write report files (.md reports); return text instead. Code/project files are fine.`
 
 const CLEAN_ROOM = `Clean-room rules (hard):
@@ -72,12 +78,12 @@ ${CLEAN_ROOM}
 
 ${LESSONS}
 
-Output: ${REPO}/skills/design-inspiration/studies/${s.category}/${s.slug}/rebuild/ — self-contained Vite project:
+Output: ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}/ — self-contained Vite project:
 - package.json with exact versions, scripts dev/build/preview; Vite base './' so dist works under any sub-path; commit-ready package-lock.json; .gitignore for node_modules and dist.
 - Use the original's real stack where it is a public library (GSAP + ScrollTrigger/SplitText, Lenis, Three.js/OGL, Barba/Taxi-like transitions...). No framework unless the original's look depends on it.
 - One module per effect under src/ with header comments explaining the technique and exact values (agents learn from these files).
 - prefers-reduced-motion respected. Responsive at 1440, 768, 390.
-- Do NOT write a README.md in the study folder (another stage does).
+- Do NOT write any README.md (another stage writes the study README).
 
 Verify: npm install && npm run build green. Run \`npx vite preview --port ${s.port} --strictPort\` in background, screenshot with your own named session -s=${s.slug}-rb at 1440/768/390, compare with the original shots, iterate until close. Stop the preview server (kill by PID, never pkill -f with a pattern that matches your own shell) and close your session.
 
@@ -91,7 +97,7 @@ function criticPrompt(s) {
   return `You are a harsh, independent design critic. Judge how faithfully a clean-room rebuild reproduces "${s.title}" (${s.url}). Content is intentionally different (fictional names, generated images, substitute fonts) — do NOT penalise different content. Judge layout/grid, proportions, type scale & hierarchy, palette, spacing rhythm, section order, signature visual elements, motion/interaction fidelity, responsive behaviour, craft.
 
 Steps:
-1. cd ${REPO}/skills/design-inspiration/studies/${s.category}/${s.slug}/rebuild && npm install --silent && npm run build, then start \`npx vite preview --port ${s.port} --strictPort\` in background (remember its PID).
+1. cd ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug} && npm install --silent && npm run build, then start \`npx vite preview --port ${s.port} --strictPort\` in background (remember its PID).
 2. rm -rf ${REPO}/captures/${s.slug}/rebuild-shots && ${REPO}/scripts/capture.sh http://localhost:${s.port}/ ${REPO}/captures/${s.slug}/rebuild-shots ${s.slug}-cap
 3. Compare rebuild-shots/ against ${REPO}/captures/${s.slug}/shots/ (same naming) and shots-extra/ (headed, use for WebGL heroes). Build side-by-side composites with python3 PIL in ${REPO}/captures/${s.slug}/critic-${s.slug}/ and look at them.
 4. Check motion live with \`playwright-cli -s=${s.slug}-cr\` (scroll with mousewheel; menu; hovers; transitions; scrollWidth vs innerWidth at 768 and 390 on every page). Close the session, kill the preview by PID.
@@ -102,7 +108,7 @@ Return scores 1-10 per breakpoint and overall (weighted; >= ${PASS} = done) and 
 
 function fixPrompt(s, critic, round) {
   return `Critic round ${round} scored the clean-room rebuild of "${s.title}" ${critic.overall}/10 (1440 ${critic.score1440}, 768 ${critic.score768}, 390 ${critic.score390}); done needs >= ${PASS}.
-Rebuild: ${REPO}/skills/design-inspiration/studies/${s.category}/${s.slug}/rebuild/. Reference: ${REPO}/captures/${s.slug}/shots/, shots-extra/ and rebuild-shots/.
+Rebuild: ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}/. Reference: ${REPO}/captures/${s.slug}/shots/, shots-extra/ and rebuild-shots/.
 
 ${CLEAN_ROOM}
 
@@ -115,9 +121,10 @@ Verify with your own named session -s=${s.slug}-fx${round} on a preview at port 
 }
 
 function readmePrompt(s, analysis, critic) {
-  return `Write the study README for the clean-room study of "${s.title}". Read the rebuild source in ${REPO}/skills/design-inspiration/studies/${s.category}/${s.slug}/rebuild/src/ so every Motion Spec row points to the real file. Use ${REPO}/skills/design-inspiration/studies/design-agencies/lando-norris/README.md as the exact format template (frontmatter keys, section names, tone, length).
+  return `Write the study README for the clean-room study of "${s.title}". Read the rebuild source in ${REPO}/skills/design-inspiration-rebuilds/${s.category}/${s.slug}/src/ so every Motion Spec row points to the real file and the excerpts are real code. Use ${REPO}/skills/design-inspiration/studies/design-agencies/lando-norris/README.md as the exact format template (frontmatter keys, section names, tone, length).
 
 Frontmatter: title: ${s.title} / url: ${s.url} / studio: ${s.studio} / awards: [${s.awards}] / year: ${s.year} / category: ${s.category} / techniques: [kebab-case list] / stack: [lowercase library list].
+${README_FORMAT(s)}
 Required sections, exactly these headings: "## Design Tokens", "## Motion Spec", "## Why Award-Worthy", "## Credits". Credits must say the original is the IP of its creators, list the awards, and state that the rebuild contains no original code/assets/copy. Do not copy any Awwwards text.
 Do not write the file — return the full markdown in the schema.
 

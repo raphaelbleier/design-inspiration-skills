@@ -1,0 +1,23 @@
+{
+  "name": "design-inspiration-skills",
+  "owner": { "name": "Raphael Bleier" },
+  "metadata": {
+    "description": "Clean-room studies of award-winning websites for coding agents"
+  },
+  "plugins": [
+    {
+      "name": "design-inspiration",
+      "description": "Breakdowns of award-winning websites: design tokens, motion specs with code excerpts, and why they work. Light (a few MB).",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/design-inspiration"]
+    },
+    {
+      "name": "design-inspiration-rebuilds",
+      "description": "Runnable clean-room Vite rebuilds with images for every study. Large; install in addition to design-inspiration.",
+      "source": "./",
+      "strict": false,
+      "skills": ["./skills/design-inspiration-rebuilds"]
+    }
+  ]
+}
