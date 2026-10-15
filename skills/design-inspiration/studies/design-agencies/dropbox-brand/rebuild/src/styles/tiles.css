@@ -1,0 +1,88 @@
+/* Mosaic geometry. Every tile is positioned from the centre button outwards (a pinwheel):
+   at 1440x900 this reproduces 10px gutters/outer margin, a 90px centre slot and
+   18.61vw (268px) outer columns. Mobile (<=767) switches to a 2-column interlock. */
+.nav-tiles {
+  --g: var(--nav-tile-gap); --b: var(--button-size); --cw: 18.61vw; --H: 100dvh;
+  position: fixed; inset: 0; z-index: 20;
+}
+.unit { position: absolute; transform-origin: 50% 50%; will-change: transform; }
+.tile {
+  position: absolute; inset: 0; display: block; overflow: hidden; text-decoration: none;
+  background: var(--tile-bg); color: var(--tile-fg);
+  padding: 23px; border-radius: 0; container-type: inline-size;
+  transition: color .35s var(--nav-easing), background-color .35s var(--nav-easing), border-radius .35s, padding .35s;
+}
+@media (max-width: 991px) { .tile { padding: 23px; } }
+@media (max-width: 767px) { .tile { padding: 8px; } }
+@media (any-hover: hover) { .tile:hover { background: var(--text-base); color: #fff; } }
+.tile:focus-visible { outline: 3px solid var(--blue); outline-offset: -3px; }
+.tile-title {
+  position: relative; z-index: 2; display: block; white-space: nowrap;
+  font: 500 min(2.75vw - 6px, 1.375vw + 15px)/.8em var(--display); font-stretch: 100%; letter-spacing: -.02em;
+  font-variation-settings: 'wdth' 100;
+}
+@media (max-width: 991px) { .tile-title { font-size: 22px; line-height: 1; } }
+.tile-visual { position: absolute; inset: 0; pointer-events: none; }
+
+/* corner radii: only the four outer corners of the mosaic are rounded */
+.u-framework .tile { border-top-left-radius: 8px; }
+.u-typography .tile { border-top-right-radius: 8px; }
+.u-iconography .tile { border-bottom-left-radius: 8px; }
+.u-motion .tile { border-bottom-right-radius: 8px; }
+
+.u-framework  { left: var(--g); top: var(--g); width: var(--cw); bottom: calc(50% - var(--b) / 2); }
+.u-voice-and-tone { left: calc(2 * var(--g) + var(--cw)); right: calc(50% - var(--b) / 2); top: var(--g); bottom: calc(50% + var(--b) / 2 + var(--g)); }
+.u-logo       { left: calc(50% + var(--b) / 2 + var(--g)); right: calc(2 * var(--g) + var(--cw)); top: var(--g); bottom: calc(50% - var(--b) / 2); }
+.u-typography { right: var(--g); width: var(--cw); top: var(--g); bottom: calc(50% + var(--b) / 2 + var(--g)); }
+.u-iconography{ left: var(--g); width: var(--cw); top: calc(50% + var(--b) / 2 + var(--g)); bottom: var(--g); }
+.u-color      { left: calc(2 * var(--g) + var(--cw)); right: calc(50% + var(--b) / 2 + var(--g)); top: calc(50% - var(--b) / 2); bottom: var(--g); }
+.u-imagery    { left: calc(50% - var(--b) / 2); right: calc(2 * var(--g) + var(--cw)); top: calc(50% + var(--b) / 2 + var(--g)); bottom: var(--g); }
+.u-motion     { right: var(--g); width: var(--cw); top: calc(50% - var(--b) / 2); bottom: var(--g); }
+
+@media (max-width: 991px) {
+  .nav-tiles { --nwf: .454; --nw: calc((100vw - 3 * var(--g)) * var(--nwf)); --ww: calc(100vw - 3 * var(--g) - var(--nw));
+    --A: calc(var(--H) * .2441); --B: calc(var(--H) * .456); --F: calc(var(--H) * .7488); }
+  .tile { border-radius: 0 !important; }
+  .tile .q { width: calc(30px + 6.5vw); }
+  .tile .aa { font-size: calc(60px + 8vw); }
+  .tile .sq { width: 28%; } .tile .sq1 { right: 30%; bottom: 40%; } .tile .sq2 { right: 2%; bottom: 8%; }
+  .tile .lock { width: calc(12px + 12.7vw); min-width: 0; }
+  .tile .tile-mark { width: calc(50px + 3.5vw); max-width: none; }
+  .u-framework { left: var(--g); width: var(--nw); top: var(--g); bottom: auto; height: calc(var(--A) - var(--g)); }
+  .u-voice-and-tone { left: calc(2 * var(--g) + var(--nw)); right: var(--g); top: var(--g); bottom: auto; height: calc(var(--A) - var(--g)); }
+  .u-logo { left: var(--g); width: var(--ww); right: auto; top: calc(var(--A) + var(--g)); bottom: auto; height: calc(var(--B) - var(--A) - var(--g)); }
+  .u-typography { left: calc(2 * var(--g) + var(--ww)); width: var(--nw); right: auto; top: calc(var(--A) + var(--g)); bottom: auto; height: calc(var(--B) + var(--g) + var(--b) - var(--A) - var(--g)); }
+  .u-iconography { left: var(--g); width: var(--nw); top: calc(var(--B) + var(--g)); bottom: auto; height: calc(var(--F) - var(--B) - var(--g)); }
+  .u-color { left: calc(2 * var(--g) + var(--nw)); width: var(--ww); right: auto; top: calc(var(--B) + 2 * var(--g) + var(--b)); bottom: auto; height: calc(var(--F) - var(--B) - 2 * var(--g) - var(--b)); }
+  .u-imagery { left: var(--g); width: var(--ww); right: auto; top: calc(var(--F) + var(--g)); bottom: var(--g); }
+  .u-motion { left: calc(2 * var(--g) + var(--ww)); width: var(--nw); right: auto; top: calc(var(--F) + var(--g)); bottom: var(--g); }
+}
+@media (max-width: 767px) { .nav-tiles { --nwf: .408; } }
+
+/* hairlines that extend past each unit (home only) */
+.gl { position: absolute; background: var(--hairline); pointer-events: none; transition: opacity .3s; }
+.gl-t, .gl-b { left: -200vmax; width: 400vmax; height: 1px; transform: scaleY(var(--inv, 1)); }
+.gl-t { top: 0; } .gl-b { bottom: 0; }
+.gl-l, .gl-r { top: -200vmax; height: 400vmax; width: 1px; transform: scaleX(var(--inv, 1)); }
+.gl-l { left: 0; } .gl-r { right: 0; }
+
+/* ---- tile visuals ---- */
+.fw-n { position: absolute; width: 18px; height: 18px; margin: -9px 0 0 -9px; border-radius: 4px; background: currentColor; }
+.fw-l { position: absolute; inset: 0; width: 100%; height: 100%; }
+.q { position: absolute; width: min(7.3vw, 105px); height: auto; }
+.q1 { left: 23px; top: 33%; } .q2 { right: 23px; bottom: 6%; }
+.tile-mark { position: absolute; right: 8%; bottom: 8%; width: 30%; max-width: 120px; fill: currentColor; stroke: currentColor; stroke-width: 0; transition: fill .35s; }
+.tile:hover .tile-mark { fill: transparent; stroke-width: 3; }
+.aa { position: absolute; right: 12px; bottom: -.12em; font: 700 min(11vw, 170px)/1 var(--display); letter-spacing: -.04em; }
+.lock { position: absolute; left: 22px; bottom: 22px; width: min(5.6vw, 84px); min-width: 54px; }
+.sq { position: absolute; width: 36%; aspect-ratio: 1; border-radius: 8px; }
+.sq1 { right: 16%; bottom: 25%; background: #be4b0a; } .sq2 { right: 2%; bottom: 8%; background: #2D1202; }
+.sq1::after, .sq2::after { content: ''; position: absolute; inset: 22%; border-radius: 45%; background: #6d2e09; }
+.sq2::after { background: #be4b0a; }
+.img-card { position: absolute; right: 4%; bottom: 4%; width: min(236px, 55%); aspect-ratio: 225/180; overflow: hidden; }
+.img-card svg { width: 100%; height: 100%; display: block; }
+.sunandmoon { transition: transform 1.1s cubic-bezier(.5, 0, .1, 1); }
+.moon { transition: fill .6s; }
+.bz { position: absolute; inset: 0; width: 100%; height: 100%; }
+.bh { position: absolute; width: 17px; height: 17px; margin: -8px 0 0 -8px; border-radius: 5px; background: currentColor; }
+.v-motion { inset: 55px 23px 23px 23px; }

@@ -13,7 +13,16 @@ for size in 1440x900 768x1024 390x844; do
   pw mousemove $(( ${size%x*} / 2 )) $(( ${size#*x} / 2 ))
   max=$(pw eval "document.documentElement.scrollHeight - innerHeight" | tr -dc '0-9')
   at=0
+  # Wheel-driven sites have no native scroll range: use their window.__scrollTo(p) debug hook if present.
+  hook=$(pw eval "typeof window.__scrollTo === 'function'" | tr -dc 'a-z')
   for pct in 0 25 50 75 100; do
+    if [ "$max" = "" ] || [ "$max" -le 0 ]; then
+      if [ "$hook" = "true" ]; then
+        pw eval "window.__scrollTo($pct / 100)" >/dev/null; sleep 3
+        pw screenshot --filename="$out/${size}-${pct}.png" >/dev/null
+      fi
+      continue
+    fi
     target=$(( max * pct / 100 ))
     while [ $at -lt $target ]; do
       step=$(( target - at < 800 ? target - at : 800 ))

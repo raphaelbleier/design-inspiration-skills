@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Lumen Orchard, digital experiences studio</title>
+  <meta name="description" content="Clean-room study: an independent studio site with a cursor-reactive plaster relief, speed-driven scroll modes and ink-mask transitions.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 28'%3E%3Cpath d='M2 2h20v14c0 5-6 8-10 10C8 24 2 21 2 16z' fill='none' stroke='%23030303' stroke-width='2'/%3E%3C/svg%3E">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body data-route="home">
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <!-- Intro loader: bg #e8e8e8, same three items as the home intro so they cross-fade invisibly -->
+  <div id="loader" aria-hidden="true">
+    <div class="intro__row grid">
+      <div class="logo logo--loader" data-logo></div>
+      <p class="intro__base"><span>Innovative</span> <span>digital</span> <span>experiences</span> <span>studio</span></p>
+      <p class="intro__count"><span id="loader-count">0</span></p>
+    </div>
+    <div class="loader__line"><i></i></div>
+  </div>
+
+  <!-- Fixed UI -->
+  <header class="ui ui--top">
+    <a class="ui__back" href="#/" data-cursor="" aria-label="Back">Back</a>
+    <button class="ui__menu" id="menu" type="button" aria-expanded="false" aria-controls="about">
+      <span class="ui__menu-label">Menu</span>
+      <svg class="ui__mark" viewBox="0 0 24 28" width="18" height="21" aria-hidden="true">
+        <path class="mark__shield" d="M2 2h20v14c0 5-6 8-10 10C8 24 2 21 2 16z" fill="none" stroke="currentColor" stroke-width="1.6"/>
+        <path class="mark__stem" d="M12 2v24M12 11c4-1 7 1 8 4" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      <span class="ui__dash"></span>
+    </button>
+  </header>
+  <a class="ui ui--projects" id="allprojects" href="#/projects" data-cursor="">
+    <span>See all projects</span>
+    <svg class="dots" viewBox="0 0 8 8" width="8" height="8" aria-hidden="true"><circle cx="2" cy="2" r="1.1"/><circle cx="6" cy="2" r="1.1"/><circle cx="2" cy="6" r="1.1"/><circle cx="6" cy="6" r="1.1"/></svg>
+  </a>
+  <a class="ui ui--backstage" id="backstage" href="#" data-cursor="">
+    <span>See backstage</span><i class="dots2"><b></b><b></b></i>
+  </a>
+  <button class="ui ui--sound" id="sound" type="button" aria-pressed="false" aria-label="Sound">
+    <svg viewBox="0 0 60 60" width="60" height="60" aria-hidden="true">
+      <circle class="sound__ring" cx="30" cy="30" r="14" fill="none" stroke="currentColor" stroke-width="2" pathLength="1"/>
+      <circle class="sound__dot" cx="30" cy="30" r="1.5" fill="currentColor"/>
+    </svg>
+    <span class="sound__txt">Off</span>
+  </button>
+
+  <div id="cursor" aria-hidden="true"><i class="cursor__dot"></i><span class="cursor__label"></span></div>
+
+  <main id="view"></main>
+
+  <!-- About overlay: ink mask reveal -->
+  <section id="about" aria-label="About" aria-hidden="true">
+    <div class="about__bg" style="background-image:url(./img/about.webp)"></div>
+    <div class="about__bg about__bg--lit" style="background-image:url(./img/about.webp)"></div>
+    <nav class="about__nav">
+      <a href="#about-studio">The Studio</a>
+      <a href="#about-approach">Our approach</a>
+      <a href="#about-services">Services</a>
+      <a href="#about-awards">Awards</a>
+      <a href="#about-clients">Clients</a>
+      <a class="about__contact" href="mailto:inquiries@lumen-orchard.example">Contact us</a>
+    </nav>
+  </section>
+
+  <!-- Page-transition ink -->
+  <div id="ink" aria-hidden="true"></div>
+</body>
+</html>

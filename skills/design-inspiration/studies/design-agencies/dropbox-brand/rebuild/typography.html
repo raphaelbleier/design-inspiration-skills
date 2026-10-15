@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Typography · Cairn Brand Guidelines</title>
+  <meta name="description" content="A variable-font playground, scroll-filled type and the type scale.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%230061fe'/%3E%3C/svg%3E">
+</head>
+<body data-page="typography">
+<main>
+  <section class="opening pre" aria-label="Typography">
+    <i class="ol-h a"></i><i class="ol-h b"></i><i class="ol-v a"></i><i class="ol-v b"></i>
+    <div class="tp-bar" role="group" aria-label="Variable font playground">
+      <button class="tp-b on" data-m="wght" aria-label="Weight"><b>B</b></button><button class="tp-b" data-m="ital" aria-label="Italic"><i>I</i></button><button class="tp-b" data-m="wdth" aria-label="Width">W</button>
+      <input class="tp-r" type="range" min="0" max="100" value="45" aria-label="Axis value"><button class="tp-rand" type="button">Randomize</button>
+    </div>
+    <div class="title-wrap"><h1 class="title">Typography</h1></div>
+  </section>
+
+  <section class="sec tp1" id="tp1">
+    <span class="hair-v" style="--x:calc(var(--margin) + 2 * var(--col) + 2 * var(--gutter))"></span>
+    <div class="grid12"><div class="span" style="--a:3;--n:8"><p class="eyebrow">Why it matters</p><h2 class="h1 vf">A flexible toolkit: one typeface, many voices.</h2></div></div>
+    <div class="grid12 tp1-cols"><p class="p-large muted span" style="--a:3;--n:4">One variable family, set on five axes of mood: light to heavy, narrow to wide, upright to slanted. Every headline picks a position on that map and sticks to it.</p><p class="p-large muted span" style="--a:7;--n:4">Try it above: press B, W or I, drag the slider, then hit Randomize. The words keep their meaning no matter how far the letters stretch.</p></div>
+    <div class="grid12"><div class="tp-mosaic span" style="--a:3;--n:8">
+      <img src="/src/img/prints.webp" alt="">
+      <div class="spec lime"><span class="sp-t" style="font-weight:800;font-stretch:75%">Hamburgefonts</span><em>Condensed / 800</em></div>
+      <div class="spec yellow"><span class="sp-t" style="font-weight:600;font-stretch:90%">Aa Bb Cc 123</span><em>Regular / 600</em></div>
+      <img src="/src/img/paper-model.webp" alt="">
+      <img src="/src/img/market.webp" alt="">
+      <div class="spec cream"><span class="sp-t" style="font-weight:300;font-stretch:100%">Quiet &amp; clear</span><em>Wide / 300</em></div>
+    </div></div>
+  </section>
+  <section class="sec tp-fill stage-tall" id="tp-fill">
+    <div class="stage-sticky">
+      <span class="hair-v" style="--x:calc(var(--margin) + 2 * var(--col) + 2 * var(--gutter))"></span>
+      <h2 class="heading-fill h1" aria-label="So we partnered with the independent foundry Halden Type to craft a typeface made only for us, built on a grotesque we already loved.">So we partnered with the independent foundry Halden Type to craft a typeface made only for us, built on a grotesque we already loved.</h2>
+      <div class="fill-line"><span class="fl-label">0% complete</span><i></i></div>
+      <div class="orbit o1"></div><div class="orbit o2"></div><div class="orbit o3"></div>
+    </div>
+  </section>
+  <section class="sec subtle tp3" id="tp3">
+    <div class="grid12"><div class="span" style="--a:3;--n:5"><p class="eyebrow">Legibility</p><h2 class="h2">Contrast is a promise, not a mood.</h2><p class="p-large muted" style="margin-top:16px">Every pairing is checked at body size. Scroll to watch the same sentence flip from ink on paper to paper on ink.</p></div></div>
+    <div class="grid12"><div class="ccard span" style="--a:3;--n:8"><div class="cc-base"><span>Plain words in strong contrast stay readable at any size, on any screen.</span></div><div class="cc-over"><span>Plain words in strong contrast stay readable at any size, on any screen.</span></div></div></div>
+  </section>
+  <section class="sec tp5" id="tp5">
+    <div class="grid12"><div class="span" style="--a:3;--n:8"><p class="eyebrow">Scale</p><h2 class="h2">One ladder, four rungs.</h2></div></div>
+    <div class="grid12 ladder">
+      <div class="lr span" style="--a:3;--n:8"><span>H1 / 60 / 72</span><p class="h1">Say it big.</p></div>
+      <div class="lr span" style="--a:3;--n:8"><span>H2 / 40 / 48</span><p class="h2">Then say it again, smaller.</p></div>
+      <div class="lr span" style="--a:3;--n:8"><span>H3 / 30 / 36</span><p class="h3">Subheads carry the argument.</p></div>
+      <div class="lr span" style="--a:3;--n:8"><span>Body / 14 / 22</span><p>Body copy sits in a quieter sans so the display face can stay loud. Keep lines under 70 characters and the paragraph will read itself.</p></div>
+    </div>
+  </section>
+  <section class="sec dark end-sec"><div class="grid12"><p class="ui-label span" style="--a:3;--n:6">Keep scrolling past the end to open the menu.</p></div></section>
+</main>
+<script type="module" src="/src/pages/typography.js"></script>
+</body>
+</html>

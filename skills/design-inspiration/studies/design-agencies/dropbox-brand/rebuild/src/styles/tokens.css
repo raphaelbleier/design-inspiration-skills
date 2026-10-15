@@ -1,0 +1,63 @@
+/*
+ * Design tokens. One blue, one near-black, a handful of "identity" pairs.
+ * Everything is set in px; fluid scaling comes only from the .title clamp,
+ * the .tile-title min() and the vw maths of the 12-column grid below.
+ */
+@import '@fontsource-variable/bricolage-grotesque/wdth.css';
+@import '@fontsource-variable/inter/wght.css';
+@import '@fontsource-variable/noto-sans-mono/wght.css';
+@import '@fontsource/caveat-brush/400.css';
+
+:root {
+  --blue: #0061fe;
+  --blue-light: #3080ff;
+  --annotation: #5f9dff;
+  --hairline: #c5dbff;
+  --line: #5f9dff66;
+  --line-solid: #5f9dff;
+  --dark: #1e1919;
+  --light: #ffffff;
+  --subtle: #f7f6f5;
+  --text-base: #1a1918;
+  --text-light: #1e1919;
+  --text-subtle-light: #736c64;
+  --text-subtle-dark: #bbb5ae;
+
+  --navy: #283750; --cloud: #b4c8e1; --coconut: #f7f5f2; --crimson: #9b0032;
+  --gold: #9b6400; --lime: #b4dc19; --azalea: #cd2f7b; --canopy: #0f503c;
+  --ocean: #007891; --orchid: #c8aff0; --pink: #ffafa5; --plum: #78286e;
+  --rust: #be4b0a; --sunset: #fa551e; --tangerine: #ff8c19; --vivid: #fad24b; --zen: #14c8eb;
+
+  /* identity pairs: background / on-colour */
+  --id-blue: #b4c8e1;   --on-blue: #283750;
+  --id-cyan: #3dd3ee;   --on-cyan: #055463;
+  --id-green: #b4dc19;  --on-green: #175641;
+  --id-orange: #f9a34b; --on-orange: #6d2e09;
+  --id-pink: #ffafa5;   --on-pink: #892055;
+  --id-purple: #c8aff0; --on-purple: #682760;
+  --id-red: #fa551e;    --on-red: #4e0119;
+  --id-yellow: #fad24b; --on-yellow: #684505;
+
+  --display: 'Bricolage Grotesque Variable', 'Bricolage Grotesque', system-ui, sans-serif;
+  --body: 'Inter Variable', Inter, system-ui, sans-serif;
+  --mono: 'Noto Sans Mono Variable', 'Noto Sans Mono', ui-monospace, monospace;
+  --script: 'Caveat Brush', cursive;
+
+  --nav-easing: cubic-bezier(.4, 0, .2, 1);
+  --nav-swoop: cubic-bezier(.6, 0, 0, 1);
+
+  --rail: 60px;
+  --button-size: 90px;
+  --nav-tile-gap: 10px;
+
+  /* 12-column grid shared by openings and body sections.
+     single column = (100vw - 2*margin - 11*gutter) / 12 */
+  --margin: 120px;
+  --gutter: 24px;
+  --col: calc((100vw - 2 * var(--margin) - 11 * var(--gutter)) / 12);
+  --col-left: calc(var(--margin) + (var(--n) - 1) * (var(--col) + var(--gutter)));
+}
+@media (max-width: 991px) {
+  :root { --rail: 0px; --button-size: 64px; --nav-tile-gap: 5px; --margin: 60px; --gutter: 12px; }
+}
+@media (max-width: 767px) { :root { --margin: 32px; } }

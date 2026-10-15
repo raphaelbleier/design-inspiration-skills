@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Motion · Cairn Brand Guidelines</title>
+  <meta name="description" content="A timeline, an easing editor and keyframe lanes: motion guidelines you can touch.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 120'%3E%3Crect width='120' height='120' fill='%230061fe'/%3E%3C/svg%3E">
+</head>
+<body data-page="motion">
+<main>
+  <section class="opening pre" aria-label="Motion">
+    <i class="ol-h a"></i><i class="ol-h b"></i><i class="ol-v a"></i><i class="ol-v b"></i>
+    
+    <div class="title-wrap"><h1 class="title">Motion</h1></div>
+  </section>
+
+  <section class="sec mo2 stage-tall" id="motion-2">
+    <div class="stage-sticky">
+      <span class="hair-v" style="--x:calc(var(--margin) + 0 * var(--col))"></span><span class="hair-v" style="--x:calc(100vw - var(--margin))"></span>
+      <div class="frame"><h2 class="mo-h">Our motion has purpose and personality</h2>
+        <div class="bb b1"><i></i><i></i><i></i><i></i></div><div class="bb b2"><i></i><i></i><i></i><i></i></div><div class="bb b3"><i></i><i></i><i></i><i></i></div></div>
+      <div class="tline"><div class="tl-head"><span class="tc">00:00<em>/10:00</em></span><label class="zoom"><span aria-hidden="true">&minus;</span><input type="range" min="20" max="150" value="75" aria-label="Timeline zoom"><span aria-hidden="true">+</span></label><span class="frt">Frame render time <b>0.0 ms</b></span></div>
+        <div class="tl-body"><div class="tl-in"><div class="lane l1"><i class="blk lav"></i></div><div class="lane l2"><i class="blk cyan"></i></div><i class="marker"></i></div></div></div>
+    </div>
+  </section>
+  <section class="sec mo3" id="mo3">
+    <div class="grid12">
+      <div class="span" style="--a:3;--n:4"><p class="eyebrow">Easing</p><h2 class="h2">Every curve has a point of view.</h2><p class="muted" style="margin-top:14px">Drag the handles, then let go. The plane follows your curve for three seconds.</p><code class="bz-out">cubic-bezier(0.65, 0.00, 0.45, 1.00)</code></div>
+      <div class="bz-ed span" style="--a:7;--n:5"><svg class="bz-pad" viewBox="0 0 100 100" preserveAspectRatio="none"><path class="bz-grid" d="M0 50H100M50 0V100"/><path class="bz-ln" d="M0 100L65 100M100 0L45 0"/><path class="bz-cv" d="M0 100C65 100 45 0 100 0"/></svg><i class="hd h1"></i><i class="hd h2"></i></div>
+    </div>
+    <div class="sky" aria-hidden="true"><div class="plane"><svg class="pl" viewBox="0 0 60 40"><path d="M2 20L58 4 40 36 28 24z" fill="#0061fe"/></svg></div></div>
+  </section>
+  <section class="sec subtle mo4" id="mo4">
+    <div class="grid12"><div class="span" style="--a:3;--n:6"><p class="eyebrow">Keyframes</p><h2 class="h2">Everything arrives from somewhere and settles somewhere else.</h2></div></div>
+    <div class="grid12 lanes"><div class="span" style="--a:3;--n:8"><div class="kl"><i style="--c:#c8aff0"></i></div><div class="kl"><i style="--c:#14c8eb"></i></div><div class="kl"><i style="--c:#fa551e"></i></div><div class="kl"><i style="--c:#b4dc19"></i></div><div class="kl"><i style="--c:#ffafa5"></i></div></div></div>
+  </section>
+  <section class="sec dark mo5" id="mo5">
+    <div class="grid12"><div class="span" style="--a:3;--n:6"><p class="eyebrow">In motion</p><h2 class="h2">Three reels, one rhythm.</h2></div></div>
+    <div class="reel-ui"><div class="seg"><button class="sg on" data-r="0">Intro</button><button class="sg" data-r="1">Transition</button><button class="sg" data-r="2">Loop</button></div>
+      <div class="reel"><div class="clip c-0"><i></i><i></i><i></i></div><div class="clip c-1"><i></i><i></i></div><div class="clip c-2"><i></i><i></i><i></i><i></i></div></div></div>
+  </section>
+  <section class="sec dark end-sec"><div class="grid12"><p class="ui-label span" style="--a:3;--n:6">Keep scrolling past the end to open the menu.</p></div></section>
+</main>
+<script type="module" src="/src/pages/motion.js"></script>
+</body>
+</html>

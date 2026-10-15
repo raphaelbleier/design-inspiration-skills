@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Niveo - consumer brands for the internet's cold front</title>
+    <meta name="description" content="A fictional studio site: one fullscreen WebGL canvas, a virtual scroll loop through three worlds and a frost-wipe transition." />
+    <meta name="theme-color" content="#a0a5b1" />
+    <link rel="icon" href="data:," />
+  </head>
+  <body>
+    <div id="app">
+      <canvas id="webgl" aria-label="Niveo interactive scene"></canvas>
+    </div>
+
+    <div id="hud" aria-live="polite">
+      <a class="logo" id="logo" href="#/" aria-label="Niveo, home">NIVEO</a>
+      <div class="meta">
+        <span class="hl" id="hud-date"></span>
+        <span class="hl" id="hud-sector"></span>
+      </div>
+      <div class="late">
+      <div class="readout" id="hud-readout" aria-hidden="true">[ 71.2N / 08.4W / 000 ]</div>
+
+      <div class="manifesto" id="manifesto">
+        <h2>////// Manifesto</h2>
+        <p><span class="hl">We build playful brands for people who live online, where community, software and culture collide.</span></p>
+      </div>
+
+      <div class="foot-left">
+        <p id="scroll-hint"><span class="hl">Scroll down to discover.</span></p>
+        <p class="copy">// &copy; 2026 Niveo Labs. All rights reserved.</p>
+      </div>
+
+      <div class="foot-right">
+        <button id="sound" type="button" aria-pressed="false">Sound: <span>Off</span></button>
+        <div class="follow">
+          <span>/// Follow us</span>
+          <a href="#" tabindex="0">LinkedIn</a>
+          <a href="#" tabindex="0">X</a>
+          <a href="#" tabindex="0">Journal</a>
+        </div>
+      </div>
+
+      <div class="callout" id="callout" aria-hidden="true">
+        <div class="callout-box"><span id="callout-code">PORTFOLIO_CO_01</span><b id="callout-name">Fuzzle Collective</b></div>
+        <i class="callout-line"></i>
+      </div>
+
+      <button class="room-ui" id="room-ui" type="button" aria-label="Click to explore">
+        <span class="bracket"><em>Click to explore</em></span>
+      </button>
+      <span class="room-tick l"></span>
+      <span class="room-tick r"></span>
+      </div>
+    </div>
+
+    <section class="detail" id="detail" aria-hidden="true" hidden>
+      <div class="detail-cover"><img id="detail-img" alt="" /></div>
+      <div class="detail-col" id="detail-col">
+        <p class="kicker" id="detail-code"></p>
+        <h1 id="detail-title"></h1>
+        <h3>////// Summary</h3>
+        <div id="detail-summary"></div>
+        <h3>/// Discover</h3>
+        <p class="links"><a href="#">X</a><a href="#">IG</a><a href="#">LI</a><a href="#">TK</a></p>
+        <h3>/// Visit</h3>
+        <p class="links"><a id="detail-visit" href="https://example.com" target="_blank" rel="noopener">example.com &#8599;</a></p>
+      </div>
+      <button class="detail-close" id="detail-close" type="button">Close &#215;</button>
+    </section>
+
+    <div class="loader" id="loader"><span>NIVEO</span><i></i></div>
+    <div class="nogl" id="nogl" hidden>WebGL2 is not available in this browser. Please update it to see this site.</div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
