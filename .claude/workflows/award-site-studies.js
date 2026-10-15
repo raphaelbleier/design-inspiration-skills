@@ -46,7 +46,7 @@ const CLEAN_ROOM = `Clean-room rules (hard):
 - Never open captures/<slug>/bundles/ (original source) while building. Write all code from scratch.
 - No original images, fonts, logos, videos or copy. No names or likeness of real people, real teams, real clients or real brands (incl. the studio's own client list) — invent fictional equivalents in the same tone and length.
 - Fonts: closest free Google Fonts substitute for each original font.
-- Images: generate ONLY with \`${REPO}/scripts/genimage.sh "<prompt>" <abs-path.png> <aspect>\` (Gemini Nano Banana via agy, Codex gpt-6-luna/gpt-image fallback; run up to 4 in parallel). Never use ComfyUI, stock photos, downloads or canvas-drawn fakes. If it exits 1, retry that image later in your run; if images still fail at the end, report which slots are missing. Convert to WebP <= 200 KB (python3 PIL), delete PNGs. ~10-25 images, reuse where sensible.
+- Images: generate ONLY with \`${REPO}/scripts/genimage.sh "<prompt>" <abs-path.png> <aspect>\` (Gemini Nano Banana via agy, then Codex gpt-6-luna/gpt-image, then local ComfyUI flux as last resort; run up to 4 in parallel; it needs network, so run it outside the command sandbox). Never use stock photos, downloads or canvas-drawn fakes, and never call ComfyUI yourself. If it exits 1, retry that image later in your run; if images still fail at the end, report which slots are missing. Convert to WebP <= 200 KB (python3 PIL), delete PNGs. ~10-25 images, reuse where sensible.
 - The rebuild must not mention the original domain anywhere.`
 
 function analysePrompt(s) {
