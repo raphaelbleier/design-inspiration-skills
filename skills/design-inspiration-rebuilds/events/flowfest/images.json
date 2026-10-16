@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Candid photo of a smiling woman in her 30s with a fringe laughing at a small outdoor festival stall, bunting and string lights behind her, warm afternoon light, shallow depth of field, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Two friends clinking pint glasses at a sunny courtyard picnic table, paper lanterns, warm retro film look, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Crowd of relaxed people sitting on hay bales watching a talk in a small marquee, orange and pink bunting, golden hour, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-1.webp",
+  "prompt": "Portrait of a woman in a denim jacket holding a microphone, laughing, flat mustard-yellow background, studio-style, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-2.webp",
+  "prompt": "Portrait of a thoughtful woman in a black roll-neck jumper, chin on hand, flat pink background, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-3.webp",
+  "prompt": "Portrait of a bearded man with glasses and a baseball cap, friendly smile, flat yellow background, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-4.webp",
+  "prompt": "Portrait of a man in a salmon-pink t-shirt with a conference lanyard, grinning, flat orange background, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-5.webp",
+  "prompt": "Portrait of a young woman with curly hair and big earrings, confident smile, flat amber background, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/speaker-6.webp",
+  "prompt": "Portrait of a tall man with a beard in a green fleece, looking at camera and smiling, flat pink background, chest-up, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/avatar-1.webp",
+  "prompt": "Square headshot of a smiling young man with glasses, neutral blurred background, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/avatar-2.webp",
+  "prompt": "Square headshot of a woman with short dark hair, neutral blurred background, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/avatar-3.webp",
+  "prompt": "Square headshot of a friendly older man with grey stubble, neutral blurred background, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/crowd-left.webp",
+  "prompt": "Group of four cheerful festival-goers with lanyards hugging, waist-up, plain light-cream studio background, bright flash photography, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/crowd-right.webp",
+  "prompt": "Group of three cheerful festival-goers with lanyards and a microphone, waist-up, plain light-cream studio background, bright flash photography, no text, no logos",
+  "aspect": "16:9"
+ }
+]

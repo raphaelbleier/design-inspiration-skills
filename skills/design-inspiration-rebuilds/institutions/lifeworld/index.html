@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Glasshour - a clean-room study</title>
+<meta name="description" content="Fictional site for a fictional light artwork. Clean-room study of a scroll-driven editorial experience.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Hanken+Grotesk:wght@300;400;500&display=swap" rel="stylesheet">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<nav class="nav" aria-label="Main">
+  <div class="nav-l"><a href="#top">Index</a><span class="dim">Artwork, Shop, About</span></div>
+  <a class="nav-logo" href="#top">Glasshour</a>
+  <div class="nav-r"><a href="#credits">Next</a><button class="dim" id="clock" type="button" aria-label="Cycle city clock">Oslo 00:00:00</button></div>
+</nav>
+
+<main id="top">
+  <!-- 1. HERO: stretched wordmark settles on scroll, then black statement -->
+  <section class="hero" id="hero">
+    <div class="hero-stage">
+      <p class="headnote">An artwork created by Mara Hollin, in collaboration with Northfield and Courier</p>
+      <h1 class="wordmark" aria-label="Glasshour"><span class="wm-line"><span class="wm-word" aria-hidden="true"></span></span></h1>
+      <p class="statement" id="statement">An invitation to slow down and notice where you stand, here and now</p>
+      <button class="scroll-down" type="button" id="down">Scroll down <span aria-hidden="true">&darr;</span></button>
+    </div>
+  </section>
+
+  <!-- 2. ARTWORK: live countdown + city list with preview -->
+  <section class="artwork" id="artwork">
+    <div class="artwork-in">
+      <p class="countdown-label">Next light cycle in</p>
+      <span class="countdown" id="countdown">00:00:00</span>
+      <ul class="cities" id="cities">
+        <li class="on" data-img="city-harbor">Bergen</li>
+        <li data-img="city-crossing">Leeds</li>
+        <li data-img="city-tower">Boston</li>
+        <li data-img="city-market">Taipei</li>
+        <li data-img="city-office">Courier</li>
+      </ul>
+      <div class="preview">
+        <div class="preview-frame"><img id="prevImg" src="/img/city-harbor.webp" alt="" width="1200" height="800"></div>
+        <div class="toggle" role="group" aria-label="View"><button class="is-on" type="button">Preview</button><button type="button">Map</button></div>
+      </div>
+      <aside class="aside"><p>Glasshour is a multi-site artwork made by Mara Hollin, presented in Bergen, Leeds, Boston and Taipei, and online.</p></aside>
+    </div>
+  </section>
+
+  <!-- 3. STORY (dark) -->
+  <section class="story dark" id="story">
+    <aside class="story-aside"><p>Glasshour is a layered artwork created by artist Mara Hollin.</p><p>Commissioned by Northfield in collaboration with Courier, Glasshour is site-specific, created especially for harbour squares and crossings.</p></aside>
+    <h2 class="headline lines">Glasshour is an invitation to consider who you are and where you are, here and now.</h2>
+    <div class="story-cols">
+      <figure class="ph ph-tall"><img src="/img/story-detail.webp" alt="" width="800" height="1000"></figure>
+      <div class="body lines">
+        <p>We often treat the places we cross every day as if they were corridors. In a time defined by speed and multitasking, our attention is spread across many windows at once.</p>
+        <p>This steady stream of signals carries on while a file uploads or a message sends. It is an efficient space for sharing things with friends, colleagues and family.</p>
+        <p>In these moments of heightened activity, the artwork loosens your sense of depth and time, and shows the immediate place anew.</p>
+      </div>
+    </div>
+    <p class="big lines">On display at 20:24, screens that usually show crisp, loud advertising dissolve into the soft, slow, liminal perspectives of Glasshour.</p>
+    <figure class="ph ph-wide"><img src="/img/story-wide.webp" alt="" width="1600" height="900"></figure>
+  </section>
+
+  <!-- 4. PARTNER: fitted giant word on white -->
+  <section class="story light partner" id="partner">
+    <h2 class="fit" data-fit="NORTHFIELD" aria-label="Northfield"><span>NORTHFIELD</span></h2>
+    <p class="big lines">Northfield is redefining the intersection of art, technology, and public engagement.</p>
+  </section>
+
+  <!-- 5. SHOP: black to white gradient, letters grow, records float -->
+  <div class="shop" id="shop">
+    <div class="shop-stage">
+      <h3 class="shop-title" aria-label="The Shop"><span class="sl">T</span><span class="sl">H</span><span class="sl">E</span><span class="sp"></span><span class="sl">S</span><span class="sl">H</span><span class="sl">O</span><span class="sl">P</span></h3>
+      <img class="rec r1" src="/img/record-1.webp" alt="" width="600" height="600" data-speed="0.9" data-rot="-2">
+      <img class="rec r2" src="/img/record-2.webp" alt="" width="600" height="600" data-speed="0.4" data-rot="3">
+      <img class="rec r3" src="/img/record-3.webp" alt="" width="600" height="600" data-speed="1.2" data-rot="4">
+      <img class="rec r4" src="/img/record-4.webp" alt="" width="600" height="600" data-speed="0.3" data-rot="-3">
+      <img class="rec r5" src="/img/record-5.webp" alt="" width="600" height="600" data-speed="0.7" data-rot="2">
+    </div>
+  </div>
+  <section class="story light shop-story">
+    <h2 class="headline lines">On the occasion of her artwork Glasshour, Northfield released a limited run of printed light discs.</h2>
+  </section>
+
+  <!-- 6. CREDITS (dark) -->
+  <section class="story dark credits" id="credits">
+    <p class="credit-text lines">Designed and built in 2024 by the Courier Creative Studio, in collaboration with Courier Present. With special thanks to the lighting crews in each city.</p>
+    <ul class="logos"><li class="lg-serif">Mara Hollin</li><li class="lg-thin">COURIER<br><small>present</small></li><li class="lg-box">TOWN<br>SQUARE<br><b>ARTS</b></li><li class="lg-bold">NORTHFIELD</li></ul>
+    <h2 class="fit" data-fit="COURIER" aria-label="Courier"><span>COURIER</span></h2>
+  </section>
+</main>
+</body>
+</html>

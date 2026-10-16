@@ -1,0 +1,67 @@
+[
+ {
+  "path": "public/img/label-peach.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, twin peach, soft violet-pink gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/label-glacier.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, glacier blue gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/label-basil.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, basil lime green gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/label-orange.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, blood orange gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/label-dragon.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, dragon fruit magenta gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/label-cherry.webp",
+  "prompt": "Flat seamless wrap-around aluminium energy drink can label artwork, dark cherry red gradient with bold abstract fluid shapes and fine grain, high contrast, no text, no logos, no people, centred composition",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/mood-peach.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of twin peach, soft violet-pink, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mood-glacier.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of glacier blue, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mood-basil.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of basil lime green, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mood-orange.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of blood orange, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mood-dragon.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of dragon fruit magenta, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mood-cherry.webp",
+  "prompt": "Studio still life photograph, glossy condensation-covered aluminium can floating among splashing liquid and sliced fruit in the colour of dark cherry red, dramatic rim light, dark background, shallow depth of field, no text, no logos, no people",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/argument-poster.webp",
+  "prompt": "Abstract macro of swirling neon liquid gradients in violet, cyan and pink on black, soft bokeh bubbles, cinematic, no text, no logos, no people",
+  "aspect": "16:9"
+ }
+]

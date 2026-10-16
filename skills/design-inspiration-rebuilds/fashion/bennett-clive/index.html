@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marlow &amp; Voss - Production (clean-room study)</title>
+  <meta name="description" content="Fictional production company site: a clean-room motion study of an award-winning fashion production portfolio.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <!-- fixed wordmark row: blends against whatever is behind it -->
+  <div class="mark" aria-hidden="true"><span>Marlow</span><span>&amp;</span><span>Voss</span></div>
+  <nav class="nav" aria-label="Main">
+    <a href="#top" class="on">Home</a><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a>
+  </nav>
+
+  <main id="top">
+    <h1 class="sr">Marlow &amp; Voss, global production for brands and agencies</h1>
+
+    <section class="hero" id="work" data-hero>
+      <div class="hero-pin">
+        <div class="bgs" data-bgs aria-hidden="true"></div>
+        <div class="cur" data-cur aria-live="off"></div>
+        <div class="list" data-list></div>
+      </div>
+    </section>
+
+    <section class="services" id="about" data-services>
+      <div class="svc-pin">
+        <div class="frame" data-frame aria-hidden="true"><img src="./img/service-1.webp" alt=""><img src="./img/service-2.webp" alt=""></div>
+        <ul class="svc" data-svc>
+          <li>Casting &amp; Talent</li><li>Art Buying</li><li>Motion</li><li>Photography</li>
+          <li>Content Systems</li><li>Next-Gen Solutions</li><li>Post Production</li><li>Editorial &amp; Finishing</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="close" id="contact">
+      <div class="strip"><img src="./img/closing-strip.webp" alt=""></div>
+      <p class="big t1">Let's</p><p class="big t2">raise</p><p class="big t3">your</p><p class="big t4">idea.</p>
+      <p class="blurb">Global production for brands and agencies. Thoughtful. Precise. The opposite of chaotic.</p>
+      <div class="foot">
+        <p>New York<br>Los Angeles<br>Miami</p>
+        <p>Work with us:<br><a href="mailto:hello@example.com">hello@example.com</a></p>
+        <p><a href="#">Instagram</a><br><a href="#">LinkedIn</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

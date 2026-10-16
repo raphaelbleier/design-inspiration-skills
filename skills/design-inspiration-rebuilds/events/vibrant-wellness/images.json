@@ -1,0 +1,42 @@
+[
+ {
+  "path": "public/img/neurology.webp",
+  "prompt": "a luminous translucent brain made of lavender glass with fine blue neural filaments, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/cardiovascular.webp",
+  "prompt": "a glass anatomical heart with soft pink and blue iridescent veins, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/toxins.webp",
+  "prompt": "a glass flask with swirling pastel lavender liquid and tiny bubbles, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/gut.webp",
+  "prompt": "a coiled translucent intestine sculpture in pearly lilac glass, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/hormones.webp",
+  "prompt": "delicate glass molecules and droplets floating, iridescent lilac and blue, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/genetics.webp",
+  "prompt": "a glowing double helix of pearly glass beads, lavender and cyan, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/longevity.webp",
+  "prompt": "an hourglass of iridescent glass with pale blue sand and floating bubbles, soft studio light, pastel lavender background, glossy iridescent materials, centered, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/lab.webp",
+  "prompt": "close-up of a clean modern laboratory bench with glass vials and a microscope, soft lavender and white light, shallow depth of field, no text, no logos",
+  "aspect": "1:1"
+ }
+]

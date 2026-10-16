@@ -1,0 +1,87 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Editorial studio photograph, two men in a warm taupe seamless backdrop, one in black polo and tan chinos holding a golf bag, the other seated on a wooden chair reading a large newspaper, muted film tones, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Moody studio photograph of a man seated on a leather and wood chair in dark navy knit shirt and olive trousers, crossed legs, soft window light, warm beige wall, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Dusk golf course green with a flag, long shadows, deep green grass and dark trees, cinematic, quiet, no people, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/prod-1.webp",
+  "prompt": "Cream knit polo with navy collar trim laid flat, pale grey background, soft studio shadow, apparel catalogue, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/prod-2.webp",
+  "prompt": "Khaki pleated wide chinos laid flat on pale grey background, product photography, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/prod-3.webp",
+  "prompt": "Black pleated wide trousers laid flat on pale grey background, product photography, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/prod-4.webp",
+  "prompt": "Brown washed overshirt laid flat on pale grey background, product photography, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/prod-5.webp",
+  "prompt": "Navy six-panel cap with cream embroidered patch, pale grey background, product photography, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/prod-6.webp",
+  "prompt": "White heavy cotton tee with small embroidered chest mark, laid flat on pale grey background, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tri-products.webp",
+  "prompt": "Close crop of a hand holding a slate-blue stitched cap against a brown jacket and black trousers, a chunky silver ring, warm light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/tri-story.webp",
+  "prompt": "Lush golf green with bunker and a white flag at dusk, dark trees behind, soft light, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tri-community.webp",
+  "prompt": "Man walking away in a white oversized tee carrying a cream canvas tote on a sunny city street, tall pale buildings, low angle, no legible text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/band.webp",
+  "prompt": "Close portrait crop of a man in a navy tee leaning on his hand in a wooden armchair, embroidered gold mark on chest, warm beige wall, film grain, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/partner-1.webp",
+  "prompt": "Black and white photo of a child's hand holding a spoon over a bowl, knitted sleeve, documentary style, no text",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/partner-2.webp",
+  "prompt": "Hand holding a white paper coffee cup against a flat saturated cobalt blue background, no text",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/partner-3.webp",
+  "prompt": "Black and white photo of a small group smiling beside a vintage camper van with deck chairs, street event, no legible text",
+  "aspect": "2:1"
+ },
+ {
+  "path": "public/img/popup.webp",
+  "prompt": "Studio portrait of a person seated on a wooden chair with legs crossed, hidden behind a large open newspaper, white cap, beige backdrop, no legible text",
+  "aspect": "3:4"
+ }
+]

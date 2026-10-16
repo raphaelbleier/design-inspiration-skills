@@ -1,0 +1,79 @@
+/* Look: flat light-grey radial stage, one black ink, white pills, one serif accent.
+   Dialog type 26px / 1.1 (Inter Tight stands in for a neo-grotesk display face). */
+:root {
+  --ink: #000; --white: #fff;
+  --ease: cubic-bezier(.65, .05, 0, 1);
+  --pad: 40px;
+  --serif: 'Instrument Serif', serif;
+}
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font: 400 15px/1.2 'Inter Tight', system-ui, sans-serif; color: var(--ink);
+  background: radial-gradient(ellipse 60% 70% at 38% 55%, #e0e0e0 0%, #bdbdbd 45%, #8d8d8d 100%);
+}
+#stage { position: fixed; inset: 0; width: 100%; height: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+.head { position: fixed; inset: 0 0 auto 0; z-index: 5; display: flex; align-items: center;
+  padding: 20px var(--pad); font-size: 26px; letter-spacing: -.01em; }
+.logo sup { font-size: .45em; vertical-align: top; position: relative; top: .15em; }
+.mark { margin-left: 86px; }
+.talk { margin-left: auto; position: relative; }
+.talk::after { content: ''; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px; background: currentColor;
+  transform: scaleX(0); transform-origin: right; transition: transform .6s var(--ease); }
+.talk:hover::after { transform: scaleX(1); transform-origin: left; }
+
+.lisa { position: fixed; z-index: 4; left: var(--pad); top: 0; bottom: 0; width: min(360px, 30vw); display: flex;
+  flex-direction: column; justify-content: center; padding-bottom: 80px; }
+.dialog { position: relative; font-size: 26px; line-height: 1.1; letter-spacing: -.01em; }
+.msg { transition: filter .8s var(--ease), opacity .8s var(--ease), transform .8s var(--ease); }
+.msg + .msg { margin-top: 28px; }
+.msg.is-past { filter: blur(4px); opacity: .5; transform: scale(.7); transform-origin: 0 100%; }
+.msg.is-gone { display: none; }
+.msg em { font-family: var(--serif); font-size: 1.12em; }
+.cursor { display: inline-block; width: .45em; height: .95em; background: var(--ink); vertical-align: -.1em; margin-left: 2px;
+  animation: blink 1s steps(1) infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.controls { margin-top: 28px; display: flex; flex-wrap: wrap; gap: 8px; min-height: 40px; }
+.chip, .mail { font: inherit; font-size: 13px; line-height: 1; border: 0; cursor: pointer; border-radius: 999px;
+  background: var(--white); color: var(--ink); padding: 11px 18px;
+  transition: background .5s var(--ease), color .5s var(--ease), transform .5s var(--ease); }
+.chip:hover { background: var(--ink); color: var(--white); transform: translateY(-2px); }
+.mail { background: transparent; border: 1px solid rgba(0, 0, 0, .18); display: inline-flex; gap: 10px; align-items: center; cursor: default; }
+.mail u { cursor: pointer; }
+.mail button { all: unset; cursor: pointer; display: grid; }
+.ask { display: flex; align-items: center; gap: 12px; width: 100%; border-bottom: 1px solid var(--ink); padding-bottom: 6px; }
+.ask input { flex: 1; min-width: 0; font: inherit; font-size: 22px; background: none; border: 0; outline: 0; color: var(--ink); }
+.ask input::placeholder { color: rgba(0, 0, 0, .4); }
+.ask button { all: unset; cursor: pointer; font-size: 26px; transition: transform .5s var(--ease); }
+.ask button:hover { transform: translateX(5px); }
+
+.gallery { display: flex; gap: 8px; margin-top: 20px; width: min(340px, 100%); overflow-x: auto; scrollbar-width: none; }
+.gallery div { flex: 0 0 86px; aspect-ratio: 4 / 5; background: #a9a39f; border-radius: 6px; overflow: hidden; }
+.gallery img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+.back { position: fixed; z-index: 6; left: var(--pad); bottom: 40px; width: 40px; height: 40px; border-radius: 50%; border: 0;
+  background: var(--ink); color: var(--white); display: grid; place-items: center; cursor: pointer;
+  transition: transform .6s var(--ease); }
+.back:hover { transform: rotate(-90deg); }
+.back[hidden] { display: none; }
+.sound { position: fixed; z-index: 6; right: var(--pad); bottom: 40px; font: inherit; font-size: 13px; background: none; border: 0;
+  cursor: pointer; color: var(--ink); }
+.progress { position: fixed; left: 0; bottom: 0; height: 4px; width: 100%; background: var(--ink); transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0)); transition: transform 1s var(--ease); z-index: 6; }
+
+@media (max-width: 900px) {
+  :root { --pad: 20px; }
+  .lisa { width: calc(100vw - 40px); justify-content: flex-start; top: 70px; bottom: auto; padding-bottom: 0; }
+  .dialog { font-size: 22px; }
+  .mark { margin-left: 24px; }
+  .head { font-size: 22px; }
+  .gallery div { flex-basis: 64px; }
+  .back { bottom: 24px; } .sound { bottom: 34px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cursor { animation: none; }
+  * { transition-duration: .01s !important; }
+}

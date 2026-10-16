@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/plate-movement.webp",
+  "prompt": "Technical pen-and-ink exploded diagram of a mechanical wristwatch movement on aged cream drafting paper, fine hairlines, gears, springs, dimension arrows, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/plate-case.webp",
+  "prompt": "Orthographic blueprint drawing of an octagonal steel watch case with bezel screws, white lines on deep navy paper, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/bench.webp",
+  "prompt": "Dim watchmaker bench at night, brass loupe, tweezers, tiny screws on a dark leather mat, single warm desk lamp, cinematic, no people",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/dial-macro.webp",
+  "prompt": "Extreme macro of a guilloche engraved watch dial in grey steel, raking light, shallow depth of field, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/hands.webp",
+  "prompt": "Close up of slender blued steel watch hands over a black dial, soft glow, studio photograph, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/sketchbook.webp",
+  "prompt": "Open sketchbook with graphite sketches of watch cases and bracelets, handwritten-looking scribble lines without legible words, dark moody table",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/floorplan.webp",
+  "prompt": "Architectural floor plan of an atelier drawn with thin white lines on black, rooms, benches, doors, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/workshop.webp",
+  "prompt": "Wide shot of a quiet horology workshop, rows of benches and lamps, long shadows, black and steel blue palette, no people",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/bracelet.webp",
+  "prompt": "Studio shot of a brushed steel link bracelet curled on black glass, rim light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/tools.webp",
+  "prompt": "Flat lay of fine watchmaking tools, screwdrivers, case opener, rodico, on matte black, top light, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/crown.webp",
+  "prompt": "Macro of a fluted winding crown and case flank, satin and polished steel, black background, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/night-street.webp",
+  "prompt": "Empty rainy city street at blue hour seen through a workshop window, reflections, bokeh, no signage text",
+  "aspect": "16:9"
+ }
+]

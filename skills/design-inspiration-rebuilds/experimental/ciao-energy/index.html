@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brio Energy – the perfect energy drink</title>
+<meta name="description" content="Fictional study site: a scroll-driven WebGL can carousel.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500&family=Libre+Franklin:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg" aria-hidden="true"><div class="bg__conic"></div></div>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="nav">
+  <a class="nav__scroll" href="#top" aria-label="Back to top"><span class="scroll-dot"></span><span class="btn-roll" data-roll>Brio</span></a>
+  <div class="nav__right">
+    <button class="btn-roll" id="menu-btn" data-roll aria-expanded="false" aria-controls="menu">Menu</button>
+    <a class="btn-roll" href="#join" data-roll>Contact</a>
+  </div>
+</header>
+
+<nav class="menu" id="menu" aria-label="Main" hidden>
+  <a href="#top">Flavours</a><a href="#profile">Taste</a><a href="#range">Range</a><a href="#faq">Questions</a><a href="#join">Join us</a>
+</nav>
+
+<main id="top">
+  <section class="stage hero" data-stage="0">
+    <h1 class="hero__kicker">Brio Energy – the perfect energy drink</h1>
+    <div class="hero__name heading js-name" aria-live="polite">Twin Peach</div>
+    <div class="hero__ui">
+      <button class="arrow" id="prev" aria-label="Previous flavour"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <p class="hero__hint">Drag, swipe or scroll to discover</p>
+      <button class="arrow" id="next" aria-label="Next flavour"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </section>
+
+  <section class="stage profile" id="profile" data-stage="1">
+    <div class="profile__copy">
+      <p class="eyebrow">Flavour <span class="js-count">01 / 06</span></p>
+      <div class="heading profile__name js-name">Twin Peach</div>
+      <p class="profile__desc js-desc"></p>
+    </div>
+    <dl class="profile__facts">
+      <div><dt>Caffeine</dt><dd>32 mg</dd></div>
+      <div><dt>Sugar</dt><dd>4 g</dd></div>
+      <div><dt>Energy</dt><dd>17 kcal</dd></div>
+      <small>per 100 ml</small>
+    </dl>
+  </section>
+
+  <section class="stage benefit" data-stage="2"><div class="benefit__text">
+    <p class="subhead"><i>×</i><span data-anim>11 g sugar</span></p>
+    <h2 class="heading" data-anim>Sweet enough to enjoy, light enough to forget.</h2></div></section>
+  <section class="stage benefit" data-stage="3"><div class="benefit__text">
+    <p class="subhead"><i>×</i><span data-anim>Artificial flavours</span></p>
+    <h2 class="heading" data-anim>Real fruit juice, pressed in small batches.</h2></div></section>
+  <section class="stage benefit" data-stage="4"><div class="benefit__text">
+    <p class="subhead"><i>×</i><span data-anim>Synthetic caffeine</span></p>
+    <h2 class="heading" data-anim>Energy from green tea, nothing from a lab.</h2></div></section>
+  <section class="stage benefit" data-stage="5"><div class="benefit__text">
+    <p class="subhead"><i>×</i><span data-anim>Sweetener cocktail</span></p>
+    <h2 class="heading" data-anim>No aftertaste, because there is nothing to hide.</h2></div></section>
+
+  <section class="stage argument" data-stage="6">
+    <img class="argument__poster" src="./img/argument-poster.webp" alt="" loading="lazy" onerror="this.remove()">
+    <div class="argument__loop"></div>
+    <h2 class="heading argument__title" data-anim>Just the good stuff.</h2>
+  </section>
+
+  <section class="stage range" id="range" data-stage="7">
+    <h2 class="heading range__title" data-anim>The full range</h2>
+    <ul class="range__list" id="range-list"></ul>
+  </section>
+
+  <section class="moods" aria-label="Moods"><ul class="moods__grid" id="moods"></ul></section>
+
+  <section class="faq" id="faq">
+    <p class="eyebrow">Questions</p>
+    <h2 class="heading faq__title" data-anim>Good to know</h2>
+    <div class="faq__list">
+      <details><summary>What makes Brio different?</summary><div><p>One idea: a clean can. Low sugar, plant-based caffeine, real fruit and a loud fizz.</p></div></details>
+      <details><summary>Is it carbonated?</summary><div><p>Yes. We chose a strong, fine bubble so the flavour stays sharp to the last sip.</p></div></details>
+      <details><summary>How much sugar and caffeine?</summary><div><p>4 g of sugar and 32 mg of caffeine per 100 ml, 17 kcal.</p></div></details>
+      <details><summary>Any artificial colours?</summary><div><p>None. The colour comes from fruit and vegetable extracts only.</p></div></details>
+      <details><summary>Who should skip it?</summary><div><p>Children, pregnant women and anyone sensitive to caffeine.</p></div></details>
+      <details><summary>How should I store a can?</summary><div><p>Cool and out of direct sunlight, and best served very cold.</p></div></details>
+    </div>
+  </section>
+
+  <section class="join" id="join">
+    <p class="eyebrow">Join us</p>
+    <h2 class="heading" data-anim>Be first to know</h2>
+    <form class="join__form" id="join-form">
+      <input type="email" required placeholder="Your email" aria-label="Email">
+      <button class="btn btn-roll" data-roll>Subscribe</button>
+    </form>
+    <p class="join__msg" id="join-msg" role="status"></p>
+  </section>
+
+  <footer class="footer">
+    <span>© 2026 Brio Energy – fictional study</span>
+    <span class="footer__social"><a class="btn-roll" data-roll href="#top">Moments</a><a class="btn-roll" data-roll href="#top">Gallery</a></span>
+  </footer>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

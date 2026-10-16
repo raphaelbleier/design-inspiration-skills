@@ -1,0 +1,122 @@
+/* Marmalade Day: retro 70s festival. Cream paper, ink outlines, flat hard shadows.
+   Original type: a bubbly retro display; substitutes: Bagel Fat One (logo/h1), Shrikhand (h2), Quicksand (body). */
+:root {
+  --cream: #f3ecd2; --ink: #121212; --paper: #fffefb;
+  --pink: #f489a3; --orange: #fb7230; --amber: #f4a113; --yellow: #f1bc10;
+  --shadow: 0 .25rem 0 rgba(0,0,0,.15);          /* the hard 3.5px offset shadow on every pill/card */
+  --r: 10rem;
+  --ease: cubic-bezier(.65,.05,0,1);
+}
+* { box-sizing: border-box; margin: 0; }
+html { font-size: clamp(14px, 1vw, 16px); }
+html { overflow-x: clip; }
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+body { background: var(--cream); color: var(--ink); font: 500 1rem/1.3 'Quicksand', Arial, sans-serif; overflow-x: clip; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+figure { margin: 0; }
+
+.bar { position: fixed; inset: 0 0 auto; height: 4.6rem; z-index: 50; display: grid; grid-template-columns: 1fr auto 1fr;
+  align-items: center; padding: 0 4rem; background: var(--cream); border-bottom: 2px solid var(--ink); }
+.bar-l { display: flex; gap: 1.9rem; font-size: 1.1rem; } .bar-l a:hover { text-decoration: underline; }
+.logo { font: 400 2.1rem/1 'Bagel Fat One'; letter-spacing: .02em; text-transform: uppercase; -webkit-text-stroke: .35rem var(--ink); paint-order: stroke fill; color: var(--paper); }
+.pill { justify-self: end; display: inline-block; padding: 1rem 1.4rem; border: 1px solid var(--ink); border-radius: var(--r);
+  box-shadow: var(--shadow); font-size: 1.15rem; line-height: 1; transition: transform .35s var(--ease), box-shadow .35s var(--ease); }
+.pill:hover { transform: translateY(.2rem); box-shadow: 0 .05rem 0 rgba(0,0,0,.15); }
+.pill-pink { background: var(--pink); } .pill-white { background: var(--paper); } .pill-orange { background: var(--orange); width: 100%; padding: 1.5rem; }
+
+.mascot { position: fixed; left: 2rem; bottom: 2rem; width: 4.4rem; height: 4.4rem; z-index: 40; }
+.mascot svg { width: 100%; height: 100%; overflow: visible; }
+
+.h1, .h2 { font-weight: 400; text-wrap: balance; }
+.h1 { font: 400 clamp(3.2rem, 7.4vw, 6rem)/1.06 'Bagel Fat One'; letter-spacing: -.01em; text-align: center; color: var(--ink);
+  -webkit-text-stroke: .5rem var(--paper); paint-order: stroke fill; text-shadow: 0 .35rem 0 rgba(0,0,0,.14); }
+.h1 .line { display: block; }
+.h2 { font: 400 clamp(2.4rem, 4.4vw, 4.4rem)/.92 'Shrikhand'; color: var(--paper); }
+.h2.ink { color: var(--ink); }
+
+/* hero */
+.hero { position: relative; padding: 11rem 1rem 8rem; overflow: clip; min-height: 100vh; }
+.hero-in { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; max-width: 60rem; margin: 0 auto; }
+.badge { display: flex; align-items: center; gap: .3rem; margin-bottom: 2.5rem; }
+.badge-sun { width: 4.4rem; height: 4.4rem; overflow: visible; }
+.bubble { background: var(--orange); color: var(--paper); font-weight: 700; padding: .6rem 1rem; border-radius: 1rem 1rem 1rem .1rem; border: 1px solid var(--ink); }
+.sticker { margin-top: -1.4rem; transform: rotate(-2.5deg); background: var(--amber); border: 1px solid var(--ink); padding: .5rem 1.8rem .9rem;
+  box-shadow: var(--shadow); border-radius: .4rem; }
+.sticker span { font: 400 clamp(2.6rem, 5vw, 4.2rem)/1 'Shrikhand'; color: var(--paper); }
+.arc { position: absolute; width: 18rem; height: 18rem; z-index: 1; --b: 3.4rem; --o: 2px; background: var(--orange);
+  /* concentric ink-outlined bands = stacked box-shadow rings; the box itself sits mostly off-screen */
+  box-shadow: 0 0 0 var(--o) var(--ink), 0 0 0 var(--b) var(--amber), 0 0 0 calc(var(--b) + var(--o)) var(--ink),
+    0 0 0 calc(var(--b)*2) var(--yellow), 0 0 0 calc(var(--b)*2 + var(--o)) var(--ink),
+    0 0 0 calc(var(--b)*3) var(--pink), 0 0 0 calc(var(--b)*3 + var(--o)) var(--ink); }
+.arc-r { right: -9rem; top: -8rem; border-radius: 0 0 0 5rem; }
+.arc-l { left: -9rem; bottom: -9rem; border-radius: 0 5rem 0 0; }
+.stack { position: relative; width: min(26rem, 80vw); aspect-ratio: 4/5; margin: 3.5rem auto 0; z-index: 2; }
+.ph { position: absolute; inset: 0; border: 2px solid var(--ink); border-radius: 2.2rem; overflow: hidden; background: var(--amber); box-shadow: var(--shadow); }
+.ph1 { transform: rotate(-2deg); z-index: 3; } .ph2 { transform: rotate(4deg); z-index: 2; background: var(--pink); } .ph3 { transform: rotate(-6deg); z-index: 1; background: var(--yellow); }
+
+/* speakers */
+.speakers { padding: 8rem 4rem 10rem; }
+.speakers > .h2 { text-align: center; margin-bottom: 5rem; }
+.cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 80rem; margin: 0 auto; align-items: start; }
+.col { display: flex; flex-direction: column; gap: 5rem; } .col-mid { margin-top: 7rem; }
+.card { position: relative; padding-top: 2.4rem; }
+.card figure { position: relative; aspect-ratio: 4/5; background: var(--c); border: 2px solid var(--ink); overflow: hidden; }
+.card::before, .card::after { content: ''; position: absolute; width: .9rem; height: .9rem; background: var(--paper); border: 2px solid var(--ink); z-index: 3; }
+.card::before { left: -.45rem; top: 2.1rem; } .card::after { right: -.45rem; top: 2.1rem; }
+.card p::after { content: ''; }
+.c-amber { --c: var(--amber); } .c-yellow { --c: var(--yellow); } .c-pink { --c: var(--pink); } .c-orange { --c: var(--orange); }
+.tag { position: absolute; top: 0; left: 50%; transform: translateX(-50%); z-index: 4; background: var(--paper); border: 1px solid var(--ink);
+  padding: .5rem 1rem; border-radius: .6rem; font-size: 1.05rem; }
+.cursor { position: absolute; left: 50%; transform: translateX(-30%); margin-top: -3.6rem; z-index: 4; background: var(--orange); color: var(--paper);
+  padding: .55rem 1rem; border-radius: 2rem; border: 1px solid var(--ink); font-weight: 700; white-space: nowrap; }
+.cursor::before { content: ''; position: absolute; left: -1.1rem; top: -.5rem; width: 1.3rem; height: 1.3rem; background: var(--orange); border: 1px solid var(--ink);
+  clip-path: polygon(0 0, 100% 40%, 40% 100%); }
+.card p { background: var(--paper); border: 2px solid var(--ink); border-top: 0; margin: 0 .5rem; padding: 1.2rem 1.3rem; text-align: center; font-size: 1.1rem; line-height: 1.4; }
+.card p b { font-weight: 700; }
+
+/* love */
+.love { position: relative; height: 330vh; }
+.love-pin { position: sticky; top: 0; height: 100vh; overflow: hidden; display: grid; place-items: center; }
+.love-h { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: 2rem; font-weight: 400; white-space: nowrap; }
+.lw1 { font: 400 clamp(5rem, 15vw, 14rem)/1 'Bagel Fat One'; color: var(--ink); }
+.lw2 { font: 400 clamp(5rem, 15vw, 14rem)/1 'Bagel Fat One'; color: var(--paper); background: var(--amber); border: 2px solid var(--ink); padding: 0 2rem; transform: rotate(-1.5deg); box-shadow: var(--shadow); }
+.tweets { position: absolute; left: 50%; top: 50%; width: min(38rem, 86vw); height: 24rem; transform: translate(-50%, -50%); }
+.tweet { position: absolute; inset: 0; display: grid; grid-template-columns: 4rem 1fr; grid-template-rows: auto 1fr auto; column-gap: 1rem; row-gap: .8rem;
+  background: var(--paper); border: 2px solid var(--ink); border-radius: 2rem; padding: 2rem; box-shadow: var(--shadow); will-change: transform; }
+.tweet img { width: 4rem; height: 4rem; border-radius: 50%; background: #c9c3b0; aspect-ratio: 1; }
+.tweet div { display: flex; flex-direction: column; justify-content: center; } .tweet b { font-size: 1.2rem; } .tweet i { font-style: normal; opacity: .55; }
+.tweet p { grid-column: 1/-1; font-size: 1.45rem; line-height: 1.3; } .tweet small { grid-column: 1/-1; opacity: .55; }
+
+/* cta */
+.cta { padding: 4rem 4rem 6rem; }
+.panel { position: relative; max-width: 90rem; margin: 0 auto; min-height: 38rem; border: 2px solid var(--ink); border-radius: 4rem; overflow: hidden;
+  background: var(--pink); box-shadow: var(--shadow); display: grid; place-items: center; }
+.waves { position: absolute; inset: 0; width: 100%; height: 100%; }
+.panel-in { position: relative; z-index: 2; max-width: 46rem; text-align: center; padding: 3rem 1.5rem; display: flex; flex-direction: column; align-items: center; gap: 1.8rem; }
+.panel-in p { color: var(--paper); font-size: 1.1rem; line-height: 1.35; }
+.panel-in .pill { justify-self: center; }
+
+/* footer */
+.foot { padding-top: 6rem; overflow: clip; }
+.foot-top { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 80rem; margin: 0 auto; padding: 0 4rem; align-items: center; }
+.foot-top p { margin-top: 1.4rem; font-size: 1.1rem; }
+.form { display: grid; grid-template-columns: 1fr 1fr; gap: .8rem; }
+.form input { font: inherit; padding: 1.3rem 1.3rem; border: 2px solid var(--ink); border-radius: .6rem; background: var(--paper); box-shadow: var(--shadow); min-width: 0; }
+.form .pill { grid-column: 1/-1; border-radius: .6rem; border-width: 2px; font-weight: 700; }
+.foot-scene { position: relative; height: 32rem; margin-top: 4rem; }
+.big-sun { position: absolute; left: 50%; bottom: -18rem; width: 36rem; height: 36rem; margin-left: -18rem; overflow: visible; }
+.crowd { position: absolute; bottom: 0; width: 38%; aspect-ratio: 16/9; background: var(--pink); border-radius: 2rem 2rem 0 0; overflow: hidden; border: 2px solid var(--ink); border-bottom: 0; }
+.cl { left: 0; } .cr { right: 0; background: var(--yellow); }
+
+@media (max-width: 900px) {
+  .bar { padding: 0 1.2rem; grid-template-columns: auto 1fr auto; } .bar-l { display: none; } .logo { justify-self: start; font-size: 1.7rem; }
+  .arc { --b: 2rem; } .sticker { margin-top: .6rem; }
+  .speakers { padding: 5rem 1.5rem 6rem; } .cols { grid-template-columns: 1fr; gap: 4rem; } .col { gap: 4rem; } .col-mid { margin-top: 0; }
+  .love-h { flex-direction: column; gap: 0; } .tweets { height: 26rem; }
+  .cta { padding: 2rem 1rem 4rem; } .panel { border-radius: 2.5rem; }
+  .foot-top { grid-template-columns: 1fr; padding: 0 1.5rem; gap: 2rem; } .form { grid-template-columns: 1fr; }
+  .big-sun { width: 26rem; height: 26rem; margin-left: -13rem; bottom: -13rem; } .foot-scene { height: 22rem; } .crowd { width: 44%; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }

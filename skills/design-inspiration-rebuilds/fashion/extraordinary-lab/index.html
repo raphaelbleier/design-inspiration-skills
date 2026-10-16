@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Unfinished Atelier</title>
+<meta name="description" content="A fictional immersive story: one night inside a watchmaker's atelier, told as a flight through a blueprint.">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<header class="bar">
+  <a class="back" href="#top" data-hover>Back</a>
+  <div class="mark" aria-label="Halden and Voss"><b>HALDEN</b><i>&times;</i><em>Voss</em></div>
+  <button class="snd" id="snd" type="button" aria-pressed="false" data-hover>Sound <span>off</span></button>
+</header>
+
+<section class="gate" id="gate">
+  <div class="mark big"><b>HALDEN</b><i>&times;</i><em>Voss</em></div>
+  <h1><span>The</span><span>Unfinished</span><span>Atelier</span></h1>
+  <p class="by">Follow a story told by Ines Marlow, watch editor, and Tavi Ross</p>
+  <button class="enter" id="enter" type="button">Click anywhere to enable sound</button>
+  <svg class="phones" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 16v-4a8 8 0 0 1 16 0v4"/><rect x="3" y="14" width="4" height="7" rx="1.5"/><rect x="17" y="14" width="4" height="7" rx="1.5"/></svg>
+  <button class="skip" id="skip" type="button">Continue without sound</button>
+</section>
+
+<main id="top">
+  <section class="ch" data-ch="0">
+    <p class="no">01 / Midnight</p>
+    <h2>Every watch begins as a <em>drawing</em> nobody was meant to finish.</h2>
+    <p class="body">The atelier has no sign. Inside, forty-one plans hang unrolled, each one a promise about time that the maker is still working out.</p>
+    <figure class="fig r" data-ar="4/5"><img src="./img/plate-movement.webp" alt="" loading="lazy"></figure>
+  </section>
+  <section class="ch right" data-ch="1">
+    <p class="no">02 / The bench</p>
+    <h2>Tolerance is measured in <em>breaths</em>.</h2>
+    <p class="body">Tavi presses a loupe to one eye and holds still. A screw the width of an eyelash turns once, and the whole movement agrees to begin.</p>
+    <figure class="fig l" data-ar="16/9"><img src="./img/bench.webp" alt="" loading="lazy"></figure>
+  </section>
+  <section class="ch" data-ch="2">
+    <p class="no">03 / The case</p>
+    <h2>Eight sides, one <em>argument</em> with the light.</h2>
+    <p class="body">Steel is brushed until it refuses to reflect, then polished at the edge until it cannot help it. The octagon is the compromise.</p>
+    <figure class="fig r" data-ar="1/1"><img src="./img/dial-macro.webp" alt="" loading="lazy"></figure>
+  </section>
+  <section class="ch right" data-ch="3">
+    <p class="no">04 / The hands</p>
+    <h2>Two slim blades that must never <em>agree</em> for long.</h2>
+    <p class="body">Ines asks why the hour hand is blued. Because, says Tavi, the sky at six is the only colour that has ever been accurate.</p>
+    <figure class="fig l" data-ar="1/1"><img src="./img/hands.webp" alt="" loading="lazy"></figure>
+  </section>
+  <section class="ch" data-ch="4">
+    <p class="no">05 / Morning</p>
+    <h2>The last drawing is the one you <em>wear</em>.</h2>
+    <p class="body">By the time the street turns grey the plans are rolled away. One watch is left running on the bench, and it is already a little wrong, which is how you know it is alive.</p>
+    <a class="cta" href="#top" data-hover>Discover the collection</a>
+  </section>
+  <section class="plates" aria-label="Plates">
+    <figure data-ar="4/5"><img src="./img/plate-case.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="3/2"><img src="./img/sketchbook.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="16/9"><img src="./img/floorplan.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="16/9"><img src="./img/workshop.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="4/5"><img src="./img/bracelet.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="3/2"><img src="./img/tools.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="1/1"><img src="./img/crown.webp" alt="" loading="lazy"></figure>
+    <figure data-ar="16/9"><img src="./img/night-street.webp" alt="" loading="lazy"></figure>
+  </section>
+  <footer class="foot"><div class="mark"><b>HALDEN</b><i>&times;</i><em>Voss</em></div><p>A fictional story. Not a real brand.</p></footer>
+</main>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

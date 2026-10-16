@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/hero-aerial.webp",
+  "prompt": "Aerial photograph of an invented island exhibition site from the 1960s, pavilions and a geodesic dome among canals, teal water, warm slightly faded film colours, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/poster-rainbow.webp",
+  "prompt": "Swiss-style concert poster, nested rectangles in blue green yellow orange, small dense typographic list inside, flat print texture, no legible text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/poster-orange.webp",
+  "prompt": "Bold orange poster with a duotone photograph of a steel bridge, vertical rotated headline area, grid of small captions, no legible text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/poster-flags.webp",
+  "prompt": "Greyscale poster made of a grid of small waving national flags, paper texture, small caption columns, no legible text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/poster-stamps.webp",
+  "prompt": "Sheet of four postage stamps with perforated edges, purple green orange grey, each with an abstract black glyph ornament, off-white paper, no legible text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/poster-bucketlist.webp",
+  "prompt": "Cream poster with columns of colourful striped tickets in red yellow green grey blue, small icons, printed look, no legible text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/poster-worldwide.webp",
+  "prompt": "Sky blue poster with a photograph of a row of international flags on poles, large red italic headline area, small circular emblem, no legible text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/poster-green.webp",
+  "prompt": "Bright green poster with black abstract type specimen letters scattered, grain, no legible words",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/card-display.webp",
+  "prompt": "Abstract printed card, saturated orange with subtle paper grain, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/card-text.webp",
+  "prompt": "Abstract printed card, saturated green with subtle paper grain, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/card-mono.webp",
+  "prompt": "Abstract printed card, saturated electric blue with halftone dots, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/card-squeezed.webp",
+  "prompt": "Abstract printed card, saturated red with torn paper collage edges, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/card-italic.webp",
+  "prompt": "Abstract printed card, hot pink with a black and white photocopy texture, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/story-street.webp",
+  "prompt": "Documentary photograph of a mid-century city street with painted signage and pedestrians, warm film grain, no readable text",
+  "aspect": "4:5"
+ }
+]

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Verdane Set Breaker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Mona+Sans:wdth,wght@100..125,200..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="bg" id="bg">
+  <div class="bg-img" style="background-image:url(./img/court-hero-1.webp)"></div>
+  <div class="bg-img" style="background-image:url(./img/court-hero-2.webp)"></div>
+  <div class="bg-img" style="background-image:url(./img/court-hero-3.webp)"></div>
+  <div class="bg-img" style="background-image:url(./img/court-hero-4.webp)"></div>
+</div>
+<div class="veil"></div><div class="noise"></div>
+
+<header class="bar">
+  <span class="mark" aria-label="Verdane"><i></i></span>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu"><b></b><b></b><b></b></button>
+</header>
+
+<main id="home" class="home">
+  <h1 class="title" id="title"><span class="t1">VERDANE</span><span class="t2">SET BREAKER</span></h1>
+  <div class="rally" aria-hidden="true"><i class="trail"></i><i class="pad"></i><i class="ball"></i></div>
+  <svg class="rule" viewBox="0 0 1000 8" preserveAspectRatio="none" aria-hidden="true"><path id="rule" d="M0 4 C120 2 240 6 380 4 S640 2 780 5 S940 4 1000 4" fill="none" stroke="currentColor" stroke-width="3" vector-effect="non-scaling-stroke"/></svg>
+  <button class="cta" id="play"><span class="dot"></span>PLAY</button>
+</main>
+
+<section id="game" class="game" aria-hidden="true">
+  <div class="hud"><span>SCORE <b id="score">0</b></span><span>SET <b id="setn">1</b></span><span id="lives"></span></div>
+  <canvas id="cv"></canvas>
+  <p class="hint">Move to aim. Tap or press space to serve.</p>
+</section>
+
+<section id="end" class="end" aria-hidden="true">
+  <p class="kick" id="endKick">GAME, SET</p>
+  <h2 id="endTitle">Match point</h2>
+  <p id="endScore">0</p>
+  <button class="cta" id="again"><span class="dot"></span>AGAIN</button>
+</section>
+
+<nav id="menu" class="menu" aria-hidden="true">
+  <a href="#" data-act="home">Play</a><a href="#" data-act="rules">How to play</a><a href="#" data-act="close">Close</a>
+  <p class="rules" id="rules">Aim the racket, keep the ball alive and break every court tile. Three lives per set.</p>
+</nav>
+<button class="sound" id="sound" aria-pressed="true">SOUND ON</button>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>

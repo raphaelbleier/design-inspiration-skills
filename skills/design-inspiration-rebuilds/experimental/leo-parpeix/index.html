@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teodor Valmont — Art director, motion designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@800&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="loader" id="loader" aria-hidden="true"><i class="card"></i></div>
+  <canvas id="bee" aria-hidden="true"></canvas>
+  <div class="drag" id="drag" aria-hidden="true">DRAG</div>
+
+  <header class="head" id="head">
+    <a class="name" href="#top">Teodor Valmont</a>
+    <span class="role">Art director, motion designer</span>
+    <nav class="nav">
+      <a href="#work">Work</a><a href="#about">About</a><a href="#play">Playground</a>
+      <button class="dots" id="menuBtn" aria-label="Menu" aria-expanded="false">····</button>
+    </nav>
+  </header>
+  <div class="menu" id="menu" aria-hidden="true">
+    <a href="#work">Work</a><a href="#about">About</a><a href="#play">Playground</a><a href="#contact">Contact</a>
+  </div>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <h1 class="title" aria-label="Quiet kinetic designer">
+        <span class="ln"><span>Quiet</span></span>
+        <span class="ln"><span>Kinetic</span></span>
+        <span class="ln"><span>Designer</span></span>
+      </h1>
+      <p class="hint">(Click to feed the bee)</p>
+      <p class="scroll">Scroll down</p>
+    </section>
+
+    <section class="intro" id="about">
+      <p class="split big">Hello,<br>I value calm interfaces, a pinch of mischief and motion that feels inevitable. I design for studios and for people who simply want their site to feel alive.</p>
+      <p class="now">Currently shaping interfaces at <b>Nordlys</b> and in freelance.<br>Former: <b>Fieldwork</b>, <b>Tallow Digital</b></p>
+    </section>
+
+    <section class="work" id="work">
+      <h2 class="big h2">Selected projects</h2>
+      <div id="projects"></div>
+    </section>
+
+    <section class="play" id="play">
+      <h2 class="big">Playground</h2>
+      <p>Small experiments, shaders and toys. Updated whenever something is worth sharing.</p>
+    </section>
+  </main>
+
+  <footer class="foot" id="contact">
+    <a class="mail" href="#top">hello@valmont.example</a>
+    <span>© 2026 Teodor Valmont — fictional portfolio</span>
+  </footer>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

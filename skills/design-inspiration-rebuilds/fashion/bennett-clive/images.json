@@ -1,0 +1,47 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Cinematic fashion-film still, model in oversized white technical jacket walking through fog on a snowy slope, desaturated blue-grey, film grain, wide frame, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Cinematic still, two women with platinum bangs almost touching faces in warm amber low-key light, dark background, fur collar, moody music-video look, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Cinematic still, athlete mid-air on a snowboard, motion blur, saturated blue and purple, sparks of snow, analog film grain, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-4.webp",
+  "prompt": "Editorial fashion still, model in tailored charcoal suit standing in empty concrete atrium, hard daylight shadows, muted greens, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-5.webp",
+  "prompt": "Beauty campaign still, extreme close-up of a face with glossy coral lips and dewy skin against a pale peach backdrop, studio flash, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-6.webp",
+  "prompt": "Streetwear campaign still, group of friends on a Los Angeles rooftop at golden hour, denim and leather, warm haze, 35mm film look, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/service-1.webp",
+  "prompt": "Behind-the-scenes photo of a fashion shoot set, softbox lights, rolling rack of garments, crew silhouettes, high contrast, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/service-2.webp",
+  "prompt": "Colourist suite with large reference monitor showing a graded fashion film frame, dark room, cool glow, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/closing-strip.webp",
+  "prompt": "Black and white photograph, cropped torso of a dancer in sheer fabric against pale grey seamless paper, soft light, no text, no logos",
+  "aspect": "16:9"
+ }
+]

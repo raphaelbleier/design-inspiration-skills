@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="img/og.webp">
+<title>A Room We Stitched — Maison Ostra</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Sometype+Mono:wght@400&family=Work+Sans:wght@400;500;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<section id="intro" class="intro">
+  <p class="intro__sound"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9c1.5 1.8 1.5 4.2 0 6M18.5 7c2.8 3 2.8 7 0 10"/></svg><span>For an optimal experience<br>please turn on your sound</span></p>
+  <h1 class="intro__title" aria-label="Maison Ostra presents A room that we stitched">
+    <span class="row"><span class="w">OSTRA</span><span class="w">PRESENTS</span></span>
+    <span class="row big"><span class="w">A</span><span class="w">ROOM</span></span>
+    <span class="row big"><span class="w">THAT</span><span class="w">WE</span></span>
+    <span class="row big spread"><span class="w">S</span><span class="w">T</span><span class="w">I</span><span class="w">T</span><span class="w">C</span><span class="w">H</span><span class="w">E</span><span class="w">D</span></span>
+  </h1>
+  <p class="intro__sub">Explore the new bag collection and<br>discover something special</p>
+  <button class="intro__enter" id="enter" type="button"><svg viewBox="0 0 16 22" width="14" height="19" fill="none" stroke="currentColor"><rect x="1.5" y="1.5" width="13" height="19"/><path d="M5 3v16"/></svg>Enter</button>
+</section>
+
+<main id="ui" class="ui" hidden>
+  <div class="hotspots" id="hotspots"></div>
+  <p class="subs" id="subs" aria-live="polite"></p>
+  <div class="hint" id="hint"><span class="hint__ico"></span><span id="hint-text"></span></div>
+  <nav class="rooms" id="rooms" aria-label="Rooms"></nav>
+  <button class="sound" id="sound" type="button" aria-label="Toggle sound"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.2"><path d="M4 9h4l5-4v14l-5-4H4z"/><path d="M16 9c1.5 1.8 1.5 4.2 0 6"/></svg></button>
+  <aside class="card" id="card" aria-hidden="true">
+    <button class="card__x" id="card-x" type="button" aria-label="Close">×</button>
+    <div class="card__img"></div>
+    <p class="card__tag">Spring Collection</p>
+    <h2 class="card__name"></h2>
+    <p class="card__note"></p>
+    <a class="card__cta" href="#">Discover the bag</a>
+  </aside>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

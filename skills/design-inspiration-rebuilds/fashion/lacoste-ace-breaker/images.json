@@ -1,0 +1,52 @@
+[
+ {
+  "path": "public/img/court-hero-1.webp",
+  "prompt": "Overhead dusk photograph of an empty green hard tennis court, white lines, long soft shadows, moody dark green grade, no people, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/court-hero-2.webp",
+  "prompt": "Low angle view along the baseline of an empty clay tennis court at twilight, net in the distance, deep green shadows, film grain, no people, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/court-hero-3.webp",
+  "prompt": "Close detail of a white court line meeting a dark green surface, shallow depth of field, a single yellow tennis ball resting on the line, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/court-hero-4.webp",
+  "prompt": "Empty stadium seats and dark green wall panels seen from the court, blurred, cinematic, muted greens, no people, no signage",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/court-game-bg.webp",
+  "prompt": "Top-down abstract view of a dark green tennis court surface with faint white lines and subtle texture, very low contrast, no objects, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/menu-bg.webp",
+  "prompt": "Blurred dark green gradient with soft bokeh of stadium lights, abstract, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/win-bg.webp",
+  "prompt": "Golden hour light across an empty green tennis court, warm yellow highlights on white lines, no people, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/lose-bg.webp",
+  "prompt": "Empty tennis court under cold blue-green evening light after rain, reflective surface, no people, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/ball-macro.webp",
+  "prompt": "Macro photograph of a fluorescent yellow tennis ball felt, shallow focus on dark green background, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/racket-detail.webp",
+  "prompt": "Detail of a tennis racket strings and white frame on a dark green court, shallow depth of field, no brand marks, no text",
+  "aspect": "16:9"
+ }
+]

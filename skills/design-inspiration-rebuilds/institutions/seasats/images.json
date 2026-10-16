@@ -1,0 +1,87 @@
+[
+  {
+    "path": "public/img/hero.webp",
+    "prompt": "Calm dawn ocean, three small dark uncrewed surface vessels floating on glassy water, soft pink-grey sky, long reflections, cinematic, no text, no logos",
+    "aspect": "16:10"
+  },
+  {
+    "path": "public/img/bow.webp",
+    "prompt": "Low first-person view along the solar-panelled deck of a small dark autonomous boat toward a dome antenna on a mast, calm sea, dusk gradient sky, no text",
+    "aspect": "16:10"
+  },
+  {
+    "path": "public/img/fleet.webp",
+    "prompt": "Fishing trawler in pink haze on still water, moody, muted tones, no text",
+    "aspect": "2:3"
+  },
+  {
+    "path": "public/img/sub.webp",
+    "prompt": "Grey submarine silhouette side view in misty grey water, minimal, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/algae.webp",
+    "prompt": "Aerial macro of bright green toxic algal bloom swirling on water, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/storm.webp",
+    "prompt": "Satellite-style view of a hurricane spiral over dark ocean, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/pipeline.webp",
+    "prompt": "Subsea pipeline on seabed lit by a vehicle spotlight, murky teal water, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/ghost.webp",
+    "prompt": "Dark rusted unlit ship hulls anchored at night far offshore, faint moonlight, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/react.webp",
+    "prompt": "Close view of a drone camera looking over the gunwale of a weathered steel ship on bright blue sky, slightly overexposed, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/deploy.webp",
+    "prompt": "Two people lifting a small dark autonomous boat from a pickup truck bed onto a boat ramp at sunrise, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/detect.webp",
+    "prompt": "Wide aerial of a lone small dark boat leaving a white wake across open blue sea, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/lightfish.webp",
+    "prompt": "Side three-quarter product shot of a small dark catamaran-style uncrewed vessel with solar deck, two thin antennas, dome sensor on mast, underwater foil strut, isolated on plain pale mint background, studio light, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/quickfish.webp",
+    "prompt": "Side product shot of a sleek fast dark uncrewed patrol boat hull with low sensor mast, isolated on plain pale mint background, studio light, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/heavyfish.webp",
+    "prompt": "Side product shot of a large dark uncrewed workboat with open deck and crane arm, isolated on plain pale mint background, studio light, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/thumb-sea.webp",
+    "prompt": "Small boat on rough green-grey open sea from a drone, whitecaps, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/thumb-surf.webp",
+    "prompt": "Aerial of waves breaking over a reef, white foam on green water, no text",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/thumb-deep.webp",
+    "prompt": "Underwater view looking up at a hull from below, dark teal water with light rays, no text",
+    "aspect": "3:2"
+  }
+]

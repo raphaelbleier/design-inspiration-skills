@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/harbor-1.webp",
+  "prompt": "Overhead mockup of a laptop on a pale wooden desk showing a pale blue weather dashboard interface, hard window light shadows, soft grey wall, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/harbor-2.webp",
+  "prompt": "Close-up of a phone screen showing a minimal tide chart interface in navy and sand tones on a stone surface, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/kiln-1.webp",
+  "prompt": "Laptop on a dark walnut sideboard displaying a clean ceramics shop website with large product photo, diagonal sunlight shadows, warm tones, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/kiln-2.webp",
+  "prompt": "Still life of handmade speckled stoneware bowls on a linen cloth, soft daylight, muted earthy palette, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/orbit-1.webp",
+  "prompt": "Black screen with a large white outlined futuristic numeral and thin frame corners, minimalist sci-fi interface, no readable text, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/orbit-2.webp",
+  "prompt": "Matte grey rocket module hovering over a deep blue planet horizon, cinematic render, subtle grain, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/pulse-1.webp",
+  "prompt": "Crowd silhouettes at a night festival with magenta and amber stage lights, long exposure, no faces visible, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/pulse-2.webp",
+  "prompt": "Poster-style typographic layout in acid yellow and black on a screen, abstract bold shapes, no readable text, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/atlas-1.webp",
+  "prompt": "Tablet showing an editorial reading app with serif headline and large cropped photograph on a light concrete table, soft shadows, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/atlas-2.webp",
+  "prompt": "Stack of printed magazines with abstract cover art on a pale background, top-down view, no readable text, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/moss-1.webp",
+  "prompt": "Macro photograph of bright green moss with water droplets, shallow depth of field, soft light, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/moss-2.webp",
+  "prompt": "Laptop showing a biotech site with deep green background and a thin line organic diagram, studio shot, dark grey backdrop, no text, no logos",
+  "aspect": "3:2"
+ }
+]

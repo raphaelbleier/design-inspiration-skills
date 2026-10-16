@@ -1,0 +1,60 @@
+/* Tokens measured from the study: Inter 700, impact type 9.25vw (133px @1440), line-height .77,
+   letter-spacing -.07em, 6px page gutter, 19px nav, 13px captions. White page, pure black ink. */
+:root { --fs: 9.25vw; --lh: calc(var(--fs) * .77); --gut: 6px; --ink: #000; }
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: #fff; }
+body { font-family: Inter, system-ui, sans-serif; font-weight: 700; color: var(--ink); overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+a { color: inherit; text-decoration: none; }
+img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+
+.mark { position: fixed; z-index: 20; left: var(--gut); right: var(--gut); top: 50vh; display: flex; justify-content: space-between;
+  font-size: 13px; letter-spacing: -.04em; text-transform: uppercase; color: #fff; mix-blend-mode: difference; pointer-events: none; }
+.nav { position: fixed; z-index: 21; top: 6px; right: var(--gut); display: flex; gap: 12px; font-size: 19px; letter-spacing: -.03em;
+  text-transform: uppercase; color: #fff; mix-blend-mode: difference; }
+.nav a { padding-bottom: 4px; border-bottom: 2px solid transparent; transition: border-color .3s; }
+.nav a.on { border-color: currentColor; }
+
+/* hero: sticky stage inside a tall track; scroll scrubs one float index across the brand list */
+.hero { height: 600vh; position: relative; }
+.hero-pin { position: sticky; top: 0; height: 100vh; overflow: hidden; background: #8a9aa6; color: #fff; }
+.bgs, .bgs img { position: absolute; inset: 0; }
+.bgs > div { position: absolute; inset: 0; background: #555; will-change: opacity; }
+.cur { position: absolute; left: var(--gut); top: 0; height: calc(var(--lh) * 1.08); margin-top: 1.2vw; overflow: hidden; width: 90vw; }
+.big, .cur span, .list a { font-size: var(--fs); line-height: .77; letter-spacing: -.07em; text-transform: uppercase; }
+.cur span, .list a { display: block; height: var(--lh); white-space: nowrap; }
+.cur span { position: absolute; left: 0; top: 0; padding-top: .06em; }
+.list { position: absolute; top: calc(50vh + 1.6vw); right: var(--gut); bottom: 0; width: 70vw; overflow: hidden; text-align: right; }
+.list a { position: absolute; right: 0; top: 0; padding-top: .06em; will-change: transform; }
+
+/* services: image frame opens (clip-path), difference-blended list scrolls through it */
+.services { height: 400vh; position: relative; background: #fff; }
+.svc-pin { position: sticky; top: 0; height: 100vh; overflow: hidden; }
+.frame { position: absolute; inset: 0 7.8vw 20vh 7.8vw; clip-path: inset(50% 50% 50% 50%); background: #bbb; }
+.frame img { position: absolute; inset: 0; opacity: 0; }
+.frame img:first-child { opacity: 1; }
+.svc { list-style: none; position: absolute; left: var(--gut); top: 0; color: #fff; mix-blend-mode: difference; will-change: transform; }
+.svc li { font-size: 4.9vw; line-height: 1.04; letter-spacing: -.05em; text-indent: 0; }
+
+.close { position: relative; height: 100vh; min-height: 560px; background: #fff; overflow: hidden; }
+.strip { position: absolute; left: 0; right: 0; top: 0; height: 12vh; background: #ccc; aspect-ratio: auto; }
+.big { position: absolute; }
+.t1 { left: var(--gut); top: 12vh; } .t2 { left: var(--gut); top: calc(12vh + var(--lh)); } .t3 { left: var(--gut); top: calc(12vh + var(--lh) * 2); }
+.t4 { right: var(--gut); top: 66vh; }
+.blurb { position: absolute; left: 53%; bottom: 3vh; width: 16vw; min-width: 150px; font-size: 21px; line-height: 1; letter-spacing: -.04em; text-transform: uppercase; }
+.foot { position: absolute; left: var(--gut); right: var(--gut); bottom: 6px; display: flex; justify-content: space-between; font: 400 13px/1.1 Inter, sans-serif; letter-spacing: -.05em; }
+.foot p:last-child { text-align: right; }
+
+
+@media (max-width: 800px) {
+  :root { --fs: 12vw; }
+  .cur { margin-top: 34px; }
+  .list { width: calc(100vw - 12px); }
+  .nav { font-size: 14px; gap: 8px; }
+  .svc li { font-size: 9vw; }
+  .frame { inset: 0 4vw 28vh 4vw; }
+  .blurb { left: auto; right: var(--gut); bottom: 8vh; width: 45vw; font-size: 16px; }
+  .t4 { top: 52vh; }
+  .foot { font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) { .nav a { transition: none; } }

@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/city-harbor.webp",
+  "prompt": "Dusk view of a quiet harbour square, soft blue-grey haze, long exposure, people as faint blurs, cinematic, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/city-crossing.webp",
+  "prompt": "Wide pedestrian crossing in a dense city at night, glowing billboards reduced to soft colour fields, shallow depth, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/city-tower.webp",
+  "prompt": "Glass tower plaza at blue hour, reflections dissolving into pale gradients, minimal, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/city-market.webp",
+  "prompt": "Covered night market seen through soft focus, warm amber and green light blooms, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/city-office.webp",
+  "prompt": "Open creative studio interior at evening, long desks, monitors glowing softly, calm, no text",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/record-1.webp",
+  "prompt": "Square sleeve with a blurred radial colour wheel: black, cream and rose segments, white circular hole at centre, flat studio light, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/record-2.webp",
+  "prompt": "Square sleeve with a blurred radial colour wheel: amber, olive, blue and grey segments, white circular hole at centre, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/record-3.webp",
+  "prompt": "Square sleeve with a blurred radial colour wheel: cyan, black, yellow segments, white circular hole at centre, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/record-4.webp",
+  "prompt": "Square sleeve with a blurred radial colour wheel: magenta, navy, silver segments, white circular hole at centre, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/record-5.webp",
+  "prompt": "Square sleeve with a blurred radial colour wheel: orange, brown, light blue segments, white circular hole at centre, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/story-detail.webp",
+  "prompt": "Close macro of a softly lit glass lens projecting a faint gradient of warm light onto a dark wall, abstract, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/story-wide.webp",
+  "prompt": "Abstract installation view: a huge soft-edged disc of light on a black wall in an empty hall, minimal, no text",
+  "aspect": "16:9"
+ }
+]

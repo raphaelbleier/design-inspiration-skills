@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lumen Health | Interactive Body Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600&family=Ubuntu+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+<canvas id="gl"></canvas>
+
+<div class="toggle" id="sex" role="group" aria-label="Body type">
+  <span class="toggle__thumb"></span>
+  <button class="toggle__btn is-on" data-sex="female">FEMALE <i>&#9792;</i></button>
+  <button class="toggle__btn" data-sex="male">MALE <i>&#9794;</i></button>
+</div>
+
+<section class="hero" id="hero">
+  <div class="hero__mark"><svg viewBox="0 0 40 40" aria-hidden="true"><g fill="currentColor"><circle cx="12" cy="9" r="5"/><circle cx="28" cy="9" r="5"/><circle cx="20" cy="22" r="5.5"/><circle cx="20" cy="35" r="3.2"/></g></svg><span><b>Lumen</b>Health</span></div>
+  <h1 class="hero__title" aria-label="Tailored Wellbeing"><i>Tailored</i><i>Wellbeing</i></h1>
+  <button class="cta" id="start"><span class="cta__ring"></span><span class="cta__label"><em>Start Experience</em></span></button>
+  <ul class="hero__facts">
+    <li><img src="./img/lab.webp" alt="" width="40" height="40">High Quality Labs</li>
+    <li>Proprietary Technology</li>
+    <li>Science &amp; Research</li>
+    <li>Advanced Software</li>
+  </ul>
+</section>
+
+<section class="explore" id="explore" aria-hidden="true">
+  <div class="hotspot" id="hotspot"><span></span></div>
+  <div class="explore__panel">
+    <p class="mono explore__label">EXPLORE CATEGORIES</p>
+    <div class="explore__row">
+      <button class="arrow" id="prev" aria-label="Previous category"><span class="mono">PREV</span></button>
+      <div class="explore__names" id="names"></div>
+      <button class="arrow" id="next" aria-label="Next category"><span class="mono">NEXT</span></button>
+    </div>
+    <ul class="tests" id="tests"></ul>
+  </div>
+</section>
+
+<button class="sound" id="sound" aria-pressed="false"><span class="sound__eq"><i></i><i></i><i></i><i></i><i></i></span><span class="mono" id="soundLabel">SOUND OFF</span></button>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

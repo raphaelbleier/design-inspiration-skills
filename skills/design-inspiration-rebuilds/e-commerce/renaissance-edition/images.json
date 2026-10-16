@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/hero-still.webp",
+  "prompt": "Soft-focus still life of a linen-wrapped parcel, dried flowers and brass scales on a plaster table, muted sage and cream tones, film grain, overhead light, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/muse.webp",
+  "prompt": "Abstract portrait bust of a plaster statue half in shadow on cream background, soft grain, editorial, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/envoy.webp",
+  "prompt": "Vintage brass compass and folded map on pale green paper, soft window light, shallow depth of field, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/storefront.webp",
+  "prompt": "Small boutique shopfront at dawn with arched window and pale stone facade, muted palette, film photo, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/counter.webp",
+  "prompt": "Wooden shop counter with a ceramic card reader and wrapped paper bags, warm neutral light, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/campaign.webp",
+  "prompt": "Hands arranging printed paper swatches in sage, bone and ink black on a long table, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/checkout.webp",
+  "prompt": "Close up of a hand holding a linen tote above a small brass bell, soft cream background, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/ledger.webp",
+  "prompt": "Open hand-ruled ledger book with a fountain pen, neutral stone tones, no readable text, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/pocket.webp",
+  "prompt": "Smartphone-sized brass mirror reflecting a window, on olive green velvet, muted, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/trade.webp",
+  "prompt": "Stacked cardboard crates with rope handles in a bright warehouse, calm neutral colours, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/vault.webp",
+  "prompt": "Heavy brass key resting on a folded cream envelope, grainy macro photo, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/parcel.webp",
+  "prompt": "Row of identical kraft parcels tied with twine on a pale shelf, soft light, no text, no logos",
+  "aspect": "3:2"
+ }
+]

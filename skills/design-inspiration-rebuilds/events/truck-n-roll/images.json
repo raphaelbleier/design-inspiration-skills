@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/hero-truck-front.webp",
+  "prompt": "Cinematic low-angle front view of a dark heavy tour truck at night, headlights glowing white-blue in mist, amber marker lights on the cab roof, deep navy-black background, moody film still, no text, no logos, no watermark",
+  "aspect": "5:3"
+ },
+ {
+  "path": "public/img/trailers-sunset.webp",
+  "prompt": "Wide symmetrical view down the narrow gap between two long riveted aluminium trailers, warm low sunset sky at the end, dark foreground, cinematic, no text, no logos, no watermark",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/driver-cab.webp",
+  "prompt": "Bearded middle-aged truck driver seen through the windshield of a dark truck cab, golden hour light, wheat field and sky reflected in mirror, documentary photograph, no text, no logos, no watermark",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/step-execution.webp",
+  "prompt": "Crew in black clothing loading flight cases into an open trailer at dusk, warm work lights, dark industrial yard, editorial photograph, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/step-safety.webp",
+  "prompt": "Close-up of gloved hands securing a ratchet strap over stacked black road cases inside a trailer, safety vest reflective stripe, moody lighting, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/step-solution.webp",
+  "prompt": "Tour manager and dispatcher at a dark control desk with multiple route maps on screens, blue glow on faces, shallow depth of field, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/network-depot.webp",
+  "prompt": "Aerial dusk view of a truck depot with rows of black trailers and orange yard lights, rain-wet asphalt, cinematic wide shot, no text, no logos, no watermark",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/team-portrait.webp",
+  "prompt": "Two men standing in a dark warehouse beside road cases, one grey-haired in black hoodie, one bearded in a denim jacket, bright backlight on wet floor, cinematic portrait, no text, no logos, no watermark",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/case-festival.webp",
+  "prompt": "Open-air festival stage at dusk being assembled, trucks backed up to the stage, rigging and light towers, haze, warm and blue tones, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/case-arena.webp",
+  "prompt": "Empty arena floor with a huge stage and truss rig, crew pushing cases, cool white work lights, wide cinematic, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/case-theatre.webp",
+  "prompt": "Backstage loading dock of an old theatre at night, a truck with open doors and costumes racks being carried, warm yellow light, rain, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/case-expo.webp",
+  "prompt": "Trade-show hall during build-up, forklift moving a large crated exhibit past a half-built booth, high-key daylight from skylights, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/night-highway.webp",
+  "prompt": "Long-exposure night highway with a lone truck, red tail lights streaking, blue hour sky, empty road, no text, no logos, no watermark",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/fleet-green.webp",
+  "prompt": "Modern black electric heavy truck charging at a roadside station in early morning mist, soft green indicator light, minimal composition, no text, no logos, no watermark",
+  "aspect": "16:9"
+ }
+]

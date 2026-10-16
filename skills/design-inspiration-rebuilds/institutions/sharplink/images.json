@@ -1,0 +1,52 @@
+[
+ {
+  "path": "public/img/news-1.webp",
+  "prompt": "Dark navy abstract card artwork, two thin white outlined emblems side by side with a soft blue glow beneath, subtle grid lines, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/news-2.webp",
+  "prompt": "Dark navy abstract card artwork, glowing blue horizon curve over a fine dotted grid, minimal, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/news-3.webp",
+  "prompt": "Dark navy abstract card artwork, floating chrome cube with blue rim light on black, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/card-1.webp",
+  "prompt": "Isometric dotted-line technical illustration of a stacked coin tower, thin white dashed outlines on pale blue, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/card-2.webp",
+  "prompt": "Isometric dotted-line technical illustration of a vault with a shield, thin dashed outlines on pale blue, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/card-3.webp",
+  "prompt": "Isometric dotted-line technical illustration of a rising bar chart with a diamond, thin dashed outlines on pale blue, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/team-1.webp",
+  "prompt": "Studio portrait of a fictional middle-aged executive in a dark suit, soft grey background, shallow depth of field, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/team-2.webp",
+  "prompt": "Studio portrait of a fictional man with glasses and short beard in a navy jacket, soft grey background, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/opportunity.webp",
+  "prompt": "Glossy silver chrome ribbon sculpture twisting in light blue haze, soft studio light, photoreal 3D render, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/vault-3d.webp",
+  "prompt": "Photoreal 3D render of a chrome and glass cylindrical vault with threaded rings and floating faceted crystal inside, pale blue gradient background, no text",
+  "aspect": "3:4"
+ }
+]
