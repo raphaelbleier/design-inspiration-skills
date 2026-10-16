@@ -9,8 +9,8 @@ jobs:
         with: { node-version: 22 }
       - run: node --test scripts/*.test.mjs
       - run: node scripts/studies.mjs
-      - name: INDEX.md is up to date
-        run: git diff --exit-code skills/design-inspiration/INDEX.md
+      - name: INDEX.md and README table are up to date
+        run: git diff --exit-code skills/design-inspiration/INDEX.md README.md
       - name: Build every rebuild
         run: |
           for d in skills/design-inspiration-rebuilds/*/*/; do

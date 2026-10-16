@@ -20,6 +20,9 @@ for size in 1440x900 768x1024 390x844; do
       if [ "$hook" = "true" ]; then
         pw eval "window.__scrollTo($pct / 100)" >/dev/null; sleep 3
         pw screenshot --filename="$out/${size}-${pct}.png" >/dev/null
+      elif [ "$pct" = 0 ]; then
+        # No scroll at all (single-screen WebGL, wheel-driven without hook): at least the first view.
+        pw screenshot --filename="$out/${size}-0.png" >/dev/null
       fi
       continue
     fi

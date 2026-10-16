@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { mkdtempSync, mkdirSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join } from 'node:path';
-import { validateStudy, buildIndex } from './studies.mjs';
+import { validateStudy, buildIndex, buildMosaic } from './studies.mjs';
 
 const VALID = `---
 title: Example Site
@@ -114,4 +114,14 @@ test('a study without a README is reported, not crashed on', () => {
   const dir = study();
   rmSync(join(dir, 'README.md'));
   assert.deepEqual(validateStudy(dir), ['missing README.md']);
+});
+
+test('the README mosaic links every study thumbnail to its gallery page', () => {
+  const mosaic = buildMosaic([
+    { path: 'studies/fashion/b', slug: 'b', title: 'B', category: 'fashion', awards: ['SOTD'] },
+    { path: 'studies/design-agencies/a', slug: 'a', title: 'A', category: 'design-agencies', awards: ['SOTY 2025'] },
+  ], 'https://example.test/g');
+  assert.match(mosaic, /^<table>/);
+  assert.ok(mosaic.indexOf('>A<') < mosaic.indexOf('>B<'), 'sorted by category');
+  assert.match(mosaic, /<a href="https:\/\/example.test\/g\/studies\/design-agencies\/a\/"><img src="site\/public\/thumbs\/a.webp"/);
 });

@@ -60,6 +60,16 @@ export function buildIndex(studies) {
   return `# Study Index\n\n## By category\n\n${byCategory.join('\n')}\n## By technique\n\n${byTechnique.join('\n')}`;
 }
 
+// README gallery: a 4-column grid of rebuild thumbnails, each linking to its gallery page.
+export function buildMosaic(studies, gallery) {
+  const cell = s => `<td width="25%" valign="top"><a href="${gallery}/studies/${s.category}/${s.slug}/">` +
+    `<img src="site/public/thumbs/${s.slug}.webp" alt="${s.title} rebuild"></a><br><b>${s.title}</b><br><sub>${s.awards[0]}</sub></td>`;
+  const sorted = [...studies].sort((a, b) => a.category.localeCompare(b.category) || a.title.localeCompare(b.title));
+  const rows = [];
+  for (let i = 0; i < sorted.length; i += 4) rows.push(`<tr>${sorted.slice(i, i + 4).map(cell).join('')}</tr>`);
+  return `<table>\n${rows.join('\n')}\n</table>`;
+}
+
 // CLI: validate every study, then regenerate the index. CI runs this and fails on a stale INDEX.md via git diff.
 if (import.meta.url === `file://${process.argv[1]}`) {
   const skill = new URL('../skills/design-inspiration/', import.meta.url).pathname;
@@ -78,6 +88,11 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     return errors.includes('missing README.md') ? null : { path, ...parseFrontmatter(readFileSync(join(skill, path, 'README.md'), 'utf8')) };
   });
   writeFileSync(join(skill, 'INDEX.md'), buildIndex(studies.filter(Boolean)));
+  const readme = join(root, 'README.md');
+  const mosaic = buildMosaic(studies.filter(Boolean).map(s => ({ ...s, slug: s.path.split('/').pop() })),
+    'https://raphaelbleier.github.io/design-inspiration-skills');
+  writeFileSync(readme, readFileSync(readme, 'utf8')
+    .replace(/<!-- studies:start -->[\s\S]*<!-- studies:end -->/, `<!-- studies:start -->\n${mosaic}\n<!-- studies:end -->`));
   console.log(`${studies.length} studies, ${failed ? 'FAILED' : 'ok'}`);
   process.exit(failed ? 1 : 0);
 }
