@@ -69,8 +69,8 @@ Two skills, so you choose how much lands in your project:
 
 | Skill | Contains | Size |
 |---|---|---|
-| `design-inspiration` | Index plus every study: tokens, motion spec with code excerpts, why it works | a few MB |
-| `design-inspiration-rebuilds` | The runnable Vite rebuild with images for every study | large |
+| `design-inspiration` | Index plus every study: tokens, motion spec with code excerpts, why it works | under 1 MB |
+| `design-inspiration-rebuilds` | The runnable Vite rebuild with images for every study | about 64 MB |
 
 **Any agent** ([Agent Skills](https://agentskills.io) CLI), pick one or both when prompted:
 
@@ -80,12 +80,16 @@ npx skills add raphaelbleier/design-inspiration-skills
 npx skills add raphaelbleier/design-inspiration-skills --skill design-inspiration
 ```
 
-**Claude Code plugin:**
+**Claude Code plugin:** add the marketplace once, then install one or both plugins:
 
 ```
-/plugin install design-inspiration --marketplace raphaelbleier/design-inspiration-skills
-/plugin install design-inspiration-rebuilds --marketplace raphaelbleier/design-inspiration-skills
+/plugin marketplace add raphaelbleier/design-inspiration-skills
+/plugin install design-inspiration@design-inspiration-skills
+/plugin install design-inspiration-rebuilds@design-inspiration-skills
 ```
+
+The same from a terminal: `claude plugin marketplace add raphaelbleier/design-inspiration-skills`,
+then `claude plugin install design-inspiration@design-inspiration-skills`.
 
 ## How an agent uses it
 
