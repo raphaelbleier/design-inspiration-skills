@@ -1,0 +1,92 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Studio product photo of a slatted outdoor park bench with dark recycled-plastic slats and a coral red steel frame, soft shadow, warm off-white seamless background, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Studio product photo of a tall slim wayfinding signpost with a cream panel and a small green map graphic, warm off-white background, soft shadow, no text, no logos",
+  "aspect": "2:5"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Studio product photo of a black steel litter bin with vertical reddish-brown wooden slats, warm off-white background, soft shadow, no text, no logos",
+  "aspect": "2:5"
+ },
+ {
+  "path": "public/img/hero-4.webp",
+  "prompt": "Studio product photo of a small orange bollard with a bicycle pictogram on a brown base, warm off-white background, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/hero-5.webp",
+  "prompt": "Studio product photo of a woven geometric metal planter basket, pale grey, warm off-white background, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/slide-urban.webp",
+  "prompt": "Wide documentary photo of a grand old city hotel facade on a European boulevard, overcast daylight, a few pedestrians, modern bench and planters in the foreground, muted colours, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/slide-nature.webp",
+  "prompt": "Wide landscape photo of a rocky hillside trail with a timber trailhead information board in soft overcast light, green moorland and clouds, muted colours, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/slide-replastic.webp",
+  "prompt": "Photo of a person in an olive jacket walking away on a timber boardwalk through a dark green forest, shallow depth of field, moody, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/slide-golf.webp",
+  "prompt": "Photo of a rust-coloured weathering steel clubhouse wall with a wooden bench and gravel path, golden afternoon light, succulents in foreground, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/slide-details.webp",
+  "prompt": "Close-up photo of dark wooden directional signboards with white engraved lettering in a garden path setting, blurred bokeh foreground branches, no readable brand text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/manifesto-1.webp",
+  "prompt": "Close-up photo of a recycled-plastic bench slat being inspected by gloved hands, workshop, warm daylight, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/manifesto-2.webp",
+  "prompt": "Photo of a coastal lookout with a slanted interpretive panel on a stone plinth overlooking the sea, soft light, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/product-bench.webp",
+  "prompt": "Studio product photo of a long low backless bench with dark recycled slats and coral red steel legs, three-quarter view, soft cast shadow, warm off-white background, no text",
+  "aspect": "16:10"
+ },
+ {
+  "path": "public/img/product-sign.webp",
+  "prompt": "Studio product photo of a tall wooden golf tee sign post with a cream panel showing a green fairway map and hole number, warm off-white background, soft shadow, no text, no brand",
+  "aspect": "2:3"
+ },
+ {
+  "path": "public/img/quote-landscape.webp",
+  "prompt": "Photo of a coastal viewpoint with a tilted timber interpretive lectern, ocean and rocky cliffs beyond, soft haze, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/journal-1.webp",
+  "prompt": "Flat lay photo of small metal parts, screws and a washer with engraved numbers on a workshop table, cool light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/journal-2.webp",
+  "prompt": "Photo of a CNC drill bit cutting into a timber board, wood shavings, close-up, shallow depth of field, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/journal-3.webp",
+  "prompt": "Photo of a worker in green gloves assembling a steel frame, close-up on hands and tools, no text, no logos",
+  "aspect": "4:5"
+ }
+]

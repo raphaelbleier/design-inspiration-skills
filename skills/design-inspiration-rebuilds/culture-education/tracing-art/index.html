@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Trace of Hands - Provenance Index</title>
+<meta name="description" content="A scroll journey through five centuries of who owned what, and what they paid.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<header class="bar">
+  <a class="mark" href="#top">Marlowe</a>
+  <button class="menu-btn" id="menuBtn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+<nav class="menu" id="menu" aria-hidden="true">
+  <a href="#top">Overview</a><a href="#chapters">The owners</a><a href="#sphere">The network</a><a href="#end">Explore</a>
+</nav>
+<div class="progress" aria-hidden="true"><b></b><b></b><b></b><b></b></div>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <div class="cards" id="cards" aria-hidden="true"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">Millions of records, spanning five centuries</p>
+      <h1>Here is how the Marlowe Provenance Index is changing research on the social life of art.</h1>
+      <button class="pill" id="down"><svg width="10" height="12" viewBox="0 0 10 12"><path d="M5 0v10M1 6l4 4 4-4" fill="none" stroke="#000" stroke-width="1.2"/></svg>Scroll down</button>
+    </div>
+    <p class="hint">Click an artwork to learn more.</p>
+  </section>
+
+  <section class="statement" id="statement">
+    <div class="cards cards-b" id="cardsB" aria-hidden="true"></div>
+    <p class="big">Through it, we can see that painters acquired works from fellow artists, and often how much they paid for them.</p>
+  </section>
+
+  <section class="chapters" id="chapters">
+    <div class="stage">
+      <h2 class="owner o-left"></h2>
+      <figure class="art"><div class="frame"><img alt="" id="artImg"></div>
+        <figcaption><u id="artTitle"></u><span id="artMeta"></span></figcaption></figure>
+      <h2 class="owner o-right"></h2>
+    </div>
+  </section>
+
+  <section class="sphere" id="sphere">
+    <div class="sticky">
+      <canvas id="gl"></canvas>
+      <p class="side">Index data reveals the scale and complexity of their collective influence.</p>
+    </div>
+  </section>
+
+  <section class="end" id="end">
+    <h2>Follow any work back through every hand that held it.</h2>
+    <a class="pill dark" href="#top">Explore the index</a>
+    <p class="fine">Fictional archive. All names, works and figures are invented for this study.</p>
+  </section>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Suber, the unnecessarily sophisticated cork coaster</title>
+  <meta name="description" content="Fictional product site: a clean-room study of a scroll-driven WebGL product page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Literata:ital,wght@1,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#intro">SUBER</a>
+    <nav>
+      <a href="#intro" class="on">Intro</a><a href="#features">Features</a><a href="#product">Product</a><a href="#contact">Contact</a>
+    </nav>
+  </header>
+  <div class="bar" aria-hidden="true"><i></i></div>
+  <canvas id="gl" aria-hidden="true"></canvas>
+
+  <main>
+    <section id="intro" class="hero" data-pose="0,-0.3,0.25,0,0.9">
+      <h1 class="split">Made for mugs.<br>Built for tables.</h1>
+      <p class="lede split">Designed to lift, insulate and grip in all the right ways. Suber makes the simplest moment feel considered.</p>
+      <p class="credit">Designed by Atelier North,<br>the award-winning design studio.</p>
+      <p class="tag">The world's most<br>unnecessarily sophisticated cork coaster.</p>
+    </section>
+
+    <section id="ai" class="ai" data-pose="0,0.18,0.1,0.6,0.62">
+      <p class="eyebrow">Play</p>
+      <h2 class="split big">Isn't just a coaster.</h2>
+      <p class="lede split">Suber isn't just a coaster. It's the result of unprecedented AI* breakthroughs.</p>
+      <div class="powered">
+        <h2 class="powered-h">Powered by AI</h2><span class="model">SUBER-1</span>
+      </div>
+      <img class="hand" src="./img/hand-hover.webp" alt="A hand hovering under the floating coaster" width="900" height="1200">
+      <p class="hint">Try to hover hand</p>
+      <div class="fill">
+        <p class="split">AI fills in the gaps.<br>We said high five.<br>It heard six.</p>
+        <small>* Vector illustration software</small>
+      </div>
+    </section>
+
+    <section id="wear" class="wear" data-pose="0.0,0.1,0.3,0.2,0.5">
+      <div class="pin">
+        <p class="eyebrow">So portable,</p>
+        <div class="giant"><span class="g-main">it's wearable</span>
+          <div class="frame"><i class="dot"></i><span class="g-blur" aria-hidden="true">it's wearable</span></div>
+        </div>
+        <img class="portrait" src="./img/wearable-portrait.webp" alt="Model wearing the coaster as a brooch" width="600" height="800">
+        <p class="warn">Warning. This stunt was performed by professionals.<br>Do not attempt this at home.</p>
+        <p class="scroll">Scroll to continue</p>
+      </div>
+    </section>
+
+    <section class="chat" data-pose="0.62,0.0,0.2,-0.5,0.5">
+      <form class="prompt" onsubmit="return false">
+        <label for="q">Hey @suber, can you put on a bikini?</label>
+        <div><input id="q" placeholder="Ask anything" autocomplete="off"><button>Send</button></div>
+      </form>
+      <div class="news">
+        <p class="issue">Issue no. 00124</p>
+        <h3>AI slop ideas<br>for this winter</h3>
+        <div class="cards">
+          <figure><img src="./img/slop-card-1.webp" alt="" width="640" height="480"></figure>
+          <figure><img src="./img/slop-card-2.webp" alt="" width="640" height="480"></figure>
+          <figure><img src="./img/slop-card-3.webp" alt="" width="640" height="480"></figure>
+        </div>
+        <h2 class="split big cooked">We are so cooked!</h2>
+        <p class="lede">Suber is taking everyone's jobs... and replacing them with AI!</p>
+      </div>
+    </section>
+
+    <section id="features" class="feat">
+      <header class="feat-head split-wrap">
+        <p class="eyebrow">Suber-1</p>
+        <h2 class="split big">An open-weight model designed to be lightweight and easy to carry.</h2>
+      </header>
+
+      <article class="f f-lift" data-pose="-0.42,0.0,0.45,0.9,0.8">
+        <p class="eyebrow">Rise above mediocrity</p>
+        <h3 class="split">Elevate your<br>coffee experience</h3>
+        <p>With a precision-engineered lift (exactly one coaster thick), Suber doesn't just hold your mug, it elevates it. Literally. Above every boring surface you've ever known.</p>
+      </article>
+
+      <article class="f f-temp" data-pose="0.4,0.0,0.4,-0.6,0.8">
+        <p class="eyebrow">Handles extremes with ease</p>
+        <h3 class="split">Thermodynamic<br>stability</h3>
+        <p>From piping-hot mugs to ice-cold drinks, Suber stays perfectly stable. Your coffee table already tapped out three sips ago.</p>
+        <div class="temp" role="group" aria-label="Temperature">
+          <button data-t="10">T = 10<span>Creative</span></button>
+          <button data-t="1" class="on">T = 1<span>Balanced</span></button>
+          <button data-t="0.1">T = 0.1<span>Deterministic</span></button>
+        </div>
+        <div class="heat" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+        <small>Thermal diffusion model (TDM). A visualization, not a warranty.</small>
+      </article>
+
+      <article class="f f-round" data-pose="-0.4,0.0,0.4,0.2,0.8">
+        <p class="eyebrow">Perfectly round, seriously</p>
+        <h3>Now <b class="count" data-to="37.9" data-dec="1">0</b>% more<br>circular</h3>
+        <p>Our engineers recalibrated its circumference with disturbing levels of attention to detail, just because we could.</p>
+        <svg class="ring" viewBox="0 0 120 120" aria-hidden="true"><circle class="c1" cx="60" cy="60" r="50"/><circle class="c2" cx="60" cy="60" r="44"/>
+          <g class="h"><rect x="57" y="8" width="6" height="6"/><rect x="57" y="106" width="6" height="6"/><rect x="8" y="57" width="6" height="6"/><rect x="106" y="57" width="6" height="6"/></g></svg>
+        <small>Circularity (circle = 1.0). RoPE: Roundness Optimization &amp; Perimeter Engineering</small>
+      </article>
+
+      <article class="f f-flip" data-pose="0.6,0.05,0.3,0.5,0.5">
+        <p class="eyebrow">Secure communications simplified</p>
+        <h3 class="split">Smart flip<br>encryption</h3>
+        <p>Write a message. Flip. Instantly secure, until someone flips it back. Genius.</p>
+        <div class="flip">
+          <div class="coin"><span class="face a" id="msg">Meet at the quiet table</span><span class="face b" id="enc"></span></div>
+          <div class="row"><button id="encode" class="on">Encode message</button><button id="decode">Decode message</button></div>
+        </div>
+      </article>
+
+      <article class="f f-grip" data-pose="0.42,0.0,0.45,-0.9,0.8">
+        <p class="eyebrow">Precision grip, zero drama</p>
+        <h3 class="split">Grip-locked<br>antislip technology</h3>
+        <p>Micro-textured cork so grippy your drink files a restraining order against gravity. Spills? Consider them politely discouraged.</p>
+        <p class="stat">Friction coefficient (est): <b class="count" data-to="0.8" data-dec="2">0</b></p>
+        <img src="./img/cork-macro.webp" alt="Macro of cork grain" width="800" height="800">
+      </article>
+
+      <article class="f f-vegan" data-pose="-0.7,-0.55,0.3,0,0.3">
+        <p class="eyebrow">100% plant-based</p>
+        <h3 class="split">Vegan-friendly</h3>
+        <p>Pure cork sourced sustainably. Completely vegan. No cows were harmed, but it might be full of "bull" anyway.</p>
+        <img src="./img/cork-oak-forest.webp" alt="Cork oak forest" width="1280" height="720">
+        <div class="facts">
+          <div><span>Average age of first harvest</span><b class="count" data-to="25" data-dec="0">0</b><p>Cork oaks are typically first harvested at around 25 years, once the bark is thick enough to remove safely.</p></div>
+          <div><span>Harvesting interval</span><b class="count" data-to="9" data-dec="0">0</b><p>After each harvest, the bark takes about 9 years to regrow, making cork a renewable material.</p></div>
+        </div>
+      </article>
+
+      <article class="f f-power">
+        <p class="eyebrow">Power draw while in use</p>
+        <h3 class="split">0 watts</h3>
+        <p>No compute. No tokens. So you can say "please" and "thank you" as much as you like.</p>
+      </article>
+    </section>
+
+    <section id="product" class="buy" data-pose="0,0,0,0,0.0001">
+      <div class="hpin">
+        <p class="scroll">Scroll to continue</p>
+        <div class="track">
+          <article class="panel drop">
+            <p class="meta"><span>Test conditions: hard surface</span><span>Date: 02/29/2026</span><span>Damage: the floor ;)</span></p>
+            <h2>Drop-tested</h2>
+            <img src="./img/drop-test.webp" alt="Coaster bouncing on concrete in a cloud of cork dust" width="1280" height="720">
+          </article>
+          <article class="panel stick">
+            <p class="meta"><span>Sticker-ready</span><span>Pin it. Peel it. Repeat.</span></p>
+            <img src="./img/sticker-board.webp" alt="Cork surface covered in glossy stickers" width="960" height="720">
+          </article>
+          <article class="panel table">
+            <p class="meta"><span>Lifestyle</span><span>Coffee table, not included</span></p>
+            <h2>One coaster.<br>Zero updates.</h2>
+            <img src="./img/mug-on-coaster.webp" alt="Mug on the coaster" width="800" height="1000">
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <footer id="contact" class="foot">
+      <h2 class="split">We caught your attention.</h2>
+      <p>Now catch the coaster.</p>
+      <div class="links"><a href="#intro">Back to top</a><a href="#features">Features</a><a href="#product">Product</a></div>
+      <div class="mega" aria-hidden="true">SUBER</div>
+      <img class="team" src="./img/studio-team.webp" alt="" width="1280" height="720">
+      <p class="fine">Fictional product. Clean-room study build. Made by Atelier North.</p>
+    </footer>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>

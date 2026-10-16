@@ -1,0 +1,495 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Val Oren — Resort Design Hotel in Hallmere</title>
+  <meta name="description" content="Fictional investment project: a timber-and-stone design hotel in the Nordkar valley. Clean-room motion study.">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="/src/styles/main.css">
+</head>
+<body class="theme_on-dark">
+<div class="noise" aria-hidden="true"></div>
+
+<!-- PAGE TRANSITION GRID: 20 x 12 cells, filled by transition-grid.js -->
+<div class="transition" aria-hidden="true"></div>
+
+<!-- PRELOADER -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <div class="preloader_count p5"><span id="pre-pct">0</span>%</div>
+</div>
+
+<!-- HEADER -->
+<header class="header theme_on-light" id="header">
+  <div class="header_bg"></div>
+  <div class="header_in">
+    <div class="header_l">
+      <button class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="menu">
+        <span class="menu-btn_icon"><i></i><i></i><i></i></span>
+        <span class="p5" data-menu-label>Menu</span>
+      </button>
+      <a class="p5 nav-hover" href="#gallery" data-nav-hover>Virtual tour</a>
+    </div>
+    <a class="logo" id="logo" href="#top" aria-label="Val Oren">VAL OREN</a>
+    <div class="header_r">
+      <a class="p5 nav-hover" href="#top" data-nav-hover>DE</a>
+      <button class="btn" data-modal-open data-magnetic="40"><span class="btn_in p5">Consultation</span></button>
+    </div>
+  </div>
+</header>
+
+<!-- MENU OVERLAY -->
+<nav class="menu theme_on-dark" id="menu" aria-label="Main" hidden>
+  <ul class="menu_list">
+    <li><a class="h5" href="#about">About the project</a></li>
+    <li><a class="h5" href="#location">Location</a></li>
+    <li><a class="h5" href="#benefits">Advantages</a></li>
+    <li><a class="h5" href="#apartments">Apartments</a></li>
+    <li><a class="h5" href="#financial">Financial indicators</a></li>
+    <li><a class="h5" href="#gallery">Gallery</a></li>
+    <li><a class="h5" href="#blog">News</a></li>
+    <li><a class="h5" href="#timeline">Construction progress</a></li>
+    <li><a class="h5" href="#contact">Contact</a></li>
+  </ul>
+  <div class="menu_foot p5">
+    <div><span class="muted">Phone</span><br><a href="tel:+000000000000">+00 000 000 0000</a></div>
+    <div><span class="muted">E-mail</span><br><a href="mailto:hi@valoren.example">hi@valoren.example</a></div>
+  </div>
+</nav>
+
+<!-- FIXED UI: sound toggle + cookie card -->
+<button class="sound theme_on-dark" id="sound" aria-pressed="false" aria-label="Toggle ambient sound">
+  <span class="sound_bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+</button>
+<aside class="cookie theme_on-light" id="cookie" hidden>
+  <div class="cookie_top"><span class="h6">Cookies</span><button class="h6" data-cookie-close aria-label="Close">[X]</button></div>
+  <div class="rule"></div>
+  <p class="p5">By continuing to use this website, you agree to our <a href="#" class="u">privacy policy</a></p>
+  <button class="p3 cookie_ok" data-cookie-close>Ok</button>
+</aside>
+
+<!-- FLOATING TIP (cursor follower, desktop) -->
+<div class="tip p6" id="tip" aria-hidden="true"><span id="tip-text">Drag</span></div>
+
+<main id="main">
+
+<!-- 1. HERO: 4 x 100vh scroll area, sticky stage -->
+<section class="hero" id="top" data-hero>
+  <i class="hero_zone" bg="light" style="top:0;height:75%"></i>
+  <i class="hero_zone" bg="dark" style="top:75%;height:25%"></i>
+  <div class="hero_sticky">
+    <div class="hero_wrap theme_on-color">
+      <div class="hero_media"><img id="hero-img" src="./img/hero.webp" alt="Terraced timber and stone hotel among conifer forest at golden hour"></div>
+      <div class="hero_shade"></div>
+      <canvas class="hero_ht" id="hero-ht"></canvas>
+      <div class="hero_t theme_on-light">
+        <p class="p4 hero_eyebrow">Investment project</p>
+        <div class="hero_word"><canvas id="wordmark" aria-label="Val Oren"></canvas></div>
+        <div class="hero_stat hero_stat--a">
+          <p class="hero_stat_v"><span class="p1 f-display">up to</span><span class="h4">9%</span></p>
+          <p class="p5">Expected annual<br>return</p>
+        </div>
+        <div class="hero_stat hero_stat--b">
+          <p class="hero_stat_v"><span class="p1 f-display">up to</span><span class="h4">28%</span></p>
+          <p class="p5">Capitalisation<br>potential</p>
+        </div>
+      </div>
+      <div class="hero_b">
+        <h1 class="h5" data-hero-title>Resort<br>design hotel<br>in Hallmere</h1>
+        <div class="hero_tags p5">
+          <div><span class="chip">Hallmere</span><br>Nordkar valley</div>
+          <div><span class="muted-w">Construction</span><br><span class="chip">2026 – 2029</span></div>
+        </div>
+      </div>
+      <button class="btn-circle p5" data-modal-open data-magnetic="64"><span>Invest in Val Oren</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 2. PROLOGUE -->
+<section class="prologue" id="prologue" bg="dark">
+  <div class="prologue_in">
+    <p class="eyebrow p5" data-reveal="ctn">Prologue</p>
+    <blockquote class="h5 prologue_q" data-highlight>“Among these peaks, where the wind learns to sing and old spruce keep the memory of a thousand winters, alpine heritage comes alive — a quiet force that brings people back to their roots and lets them build a long-held dream.”</blockquote>
+    <button class="btn" data-modal-open data-magnetic="40" data-reveal="ctn"><span class="btn_in p5">Request the brochure</span></button>
+  </div>
+</section>
+
+<!-- 3. ABOUT + CONCEPT -->
+<section class="about" id="about" bg="light">
+  <div class="container grid about_grid">
+    <figure class="about_img"><div class="img-w" data-parallax="scale"><img src="./img/about.webp" alt="Dark timber slats against rough stone"></div></figure>
+    <div class="about_name">
+      <h2 class="h1" data-reveal="h">Val<br>Oren</h2>
+      <p class="p2 about_by" data-reveal="ctn"><span class="mark">Ⅴ</span> by Norrin &amp; Voss</p>
+    </div>
+    <div class="about_a">
+      <h3 class="h4" data-reveal="h">About us</h3>
+      <div class="rule rule--s" data-reveal="line"></div>
+      <p class="p4" data-reveal="p">Val Oren is a new place of calm in the northern Alps, where old shepherd craft meets contemporary design. Every beam, every stone and every terrace is shaped to let the valley in, and to give guests and owners a home that grows more valuable with time.</p>
+    </div>
+    <div class="about_c">
+      <h3 class="h4" data-reveal="h">Concept</h3>
+      <div class="rule rule--s" data-reveal="line"></div>
+      <p class="p4" data-reveal="p">The architecture of the complex grows out of the mountain, keeping its strength in stone and its warmth in wood. Panoramic terraces open onto views where the spirit of the valley lingers, and tradition intertwines with modernity to create a new format of recreation: deep, meaningful, and filled with the energy of nature and local craft.</p>
+    </div>
+    <figure class="about_aerial" data-parallax="img"><img src="./img/aerial.webp" alt="Aerial view of the hotel complex in the forest"></figure>
+  </div>
+</section>
+
+<!-- 4. LOCATION -->
+<section class="location" id="location" bg="dark">
+  <div class="container loc_grid">
+    <h2 class="h1 loc_title" data-parallax="drift">
+      <span class="loc_l1">Where</span>
+      <span class="loc_l2"><small class="p2">The</small> Mountains</span>
+      <span class="loc_l3">Speak</span>
+    </h2>
+    <div class="loc_text">
+      <p class="p2" data-reveal="p">Val Oren sits at the foothills of the Nordkar range, in the very heart of Hallmere, the old capital of alpine craft and clear air.</p>
+      <button class="btn" data-modal-open data-magnetic="40" data-reveal="ctn"><span class="btn_in p5">Consultation</span></button>
+    </div>
+    <div class="loc_map" id="map">
+      <svg viewBox="0 0 760 420" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true">
+        <g opacity=".35">
+          <path d="M60 330C120 250 180 230 240 240S350 150 430 120 560 60 640 40"/>
+          <path d="M40 360C110 290 170 270 250 280S360 190 440 160 570 110 660 80"/>
+          <path d="M20 390C100 330 170 315 260 325S370 235 455 205 585 160 690 125"/>
+          <path d="M120 200C170 160 240 150 290 170S390 190 430 150"/>
+          <path d="M300 300C340 260 400 270 440 300S500 360 560 340"/>
+          <path d="M470 60C520 90 560 150 540 210S470 270 500 330"/>
+        </g>
+        <path d="M70 320C150 300 230 250 330 240S520 180 700 60" stroke-width="2" opacity=".6" stroke-dasharray="2 6"/>
+      </svg>
+      <button class="pin p6" style="left:12%;top:16%"><i></i><span>Alpine miniature park<br><em>3 km</em></span></button>
+      <button class="pin p6" style="left:36%;top:44%"><i></i><span>Wildwater falls</span></button>
+      <button class="pin p6" style="left:27%;top:60%"><i></i><span>Park of legends</span></button>
+      <button class="pin p6" style="left:46%;top:68%"><i></i><span>Craft market</span></button>
+      <button class="pin p6" style="left:15%;top:84%"><i></i><span>Old chapel</span></button>
+      <button class="pin p6 pin--r" style="left:72%;top:96%"><i></i><span>Raven rocks<br><em>1200 m</em></span></button>
+    </div>
+    <aside class="loc_infra theme_on-light">
+      <p class="p5">Infrastructure</p>
+      <ul class="p5">
+        <li><span>Ski lift</span><span>2.5 km</span></li>
+        <li><span>Thermal baths</span><span>4 km</span></li>
+        <li><span>Railway station</span><span>9 km</span></li>
+        <li><span>Regional airport</span><span>46 km</span></li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<!-- 5. BENEFITS: pinned intro (halftone bloom) then pinned horizontal card pass -->
+<section class="ben" id="benefits">
+  <div class="ben_intro" id="ben-intro">
+    <canvas class="ben_ht" id="ben-ht"></canvas>
+    <div class="ben_title">
+      <p class="eyebrow p5">Uniqueness</p>
+      <h2 class="h3" id="ben-h">Why Val Oren<br>captivates</h2>
+    </div>
+  </div>
+  <div class="ben_h theme_on-light" id="ben-h-stage">
+    <div class="ben_track" id="ben-track">
+      <article class="card" data-card>
+        <img src="./img/benefit1.webp" alt="Spa massage room" loading="lazy">
+        <span class="card_tag p6">Spa</span>
+        <button class="card_plus" aria-label="Open details"><i></i></button>
+        <div class="card_info theme_on-dark" data-lenis-prevent>
+          <h3 class="h5">Spa &amp; massage</h3>
+          <div class="hair"></div>
+          <p class="p4">Six treatment rooms wrapped in lime plaster and oak, with a hammam, cold plunge and a resident team trained in alpine herbal therapy.</p>
+        </div>
+      </article>
+      <article class="card" data-card>
+        <img src="./img/benefit2.webp" alt="Dining table before a forest window" loading="lazy">
+        <span class="card_tag p6">Dining</span>
+        <button class="card_plus" aria-label="Open details"><i></i></button>
+        <div class="card_info theme_on-dark" data-lenis-prevent>
+          <h3 class="h5">Forest table</h3>
+          <div class="hair"></div>
+          <p class="p4">A farm-to-table restaurant seating forty, built around one long oak table and a window that frames the spruce line.</p>
+        </div>
+      </article>
+      <article class="card" data-card>
+        <img src="./img/benefit3.webp" alt="Yoga lawn at sunrise" loading="lazy">
+        <span class="card_tag p6">Yoga</span>
+        <button class="card_plus" aria-label="Open details"><i></i></button>
+        <div class="card_info theme_on-dark" data-lenis-prevent>
+          <h3 class="h5">Sunrise lawn</h3>
+          <div class="hair"></div>
+          <p class="p4">An open terrace lawn for morning practice, guided breathwork and quiet evenings above the mist.</p>
+        </div>
+      </article>
+      <article class="card" data-card>
+        <img src="./img/benefit4.webp" alt="Timber sauna with glass wall" loading="lazy">
+        <span class="card_tag p6">Sauna</span>
+        <button class="card_plus" aria-label="Open details"><i></i></button>
+        <div class="card_info theme_on-dark" data-lenis-prevent>
+          <h3 class="h5">Glass sauna</h3>
+          <div class="hair"></div>
+          <p class="p4">Three saunas with floor-to-ceiling glass facing the forest, a snow room and a heated outdoor deck.</p>
+        </div>
+      </article>
+      <article class="card" data-card>
+        <img src="./img/benefit5.webp" alt="Lounge with stone fireplace" loading="lazy">
+        <span class="card_tag p6">Lounge</span>
+        <button class="card_plus" aria-label="Open details"><i></i></button>
+        <div class="card_info theme_on-dark" data-lenis-prevent>
+          <h3 class="h5">Hearth lounge</h3>
+          <div class="hair"></div>
+          <p class="p4">A double-height lounge with a stone hearth, a small library and a bar serving local spirits.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- 6. CONSTRUCTION TIMELINE -->
+<section class="timeline" id="timeline" bg="light">
+  <div class="container">
+    <h2 class="h2 tl_title"><span data-reveal="h">Construction</span><span data-reveal="h">Timeline</span></h2>
+    <figure class="tl_img" data-parallax="img"><img src="./img/timeline.webp" alt="Timber footbridge between stone arches" loading="lazy"></figure>
+    <ol class="tl_steps">
+      <li><p class="p5">Q3 2026</p><div class="rule rule--s" data-reveal="line"></div><p class="h6">Foundations</p><p class="p5" data-reveal="p">Excavation and stone base complete.</p></li>
+      <li><p class="p5">Q2 2027</p><div class="rule rule--s" data-reveal="line"></div><p class="h6">Timber frame</p><p class="p5" data-reveal="p">Main structure rises above the tree line.</p></li>
+      <li><p class="p5">Q1 2028</p><div class="rule rule--s" data-reveal="line"></div><p class="h6">Envelope</p><p class="p5" data-reveal="p">Facades, roof terraces and glazing.</p></li>
+      <li><p class="p5">Q3 2029</p><div class="rule rule--s" data-reveal="line"></div><p class="h6">Opening</p><p class="p5" data-reveal="p">Interiors, landscape and first guests.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 7. APARTMENTS (tabs) -->
+<section class="apts" id="apartments" bg="light">
+  <div class="container apts_grid">
+    <div class="apts_tabs">
+      <p class="p6">Types</p>
+      <ul class="h-tabs" role="tablist">
+        <li><button class="p2 is-active" role="tab" data-tab="0"><i>✦</i>Studio</button></li>
+        <li><button class="p2" role="tab" data-tab="1"><i>✦</i>Deluxe</button></li>
+        <li><button class="p2" role="tab" data-tab="2"><i>✦</i>Superior</button></li>
+        <li><button class="p2" role="tab" data-tab="3"><i>✦</i>Suite</button></li>
+        <li><button class="p2" role="tab" data-tab="4"><i>✦</i>Family</button></li>
+        <li><button class="p2" role="tab" data-tab="5"><i>✦</i>Penthouse</button></li>
+      </ul>
+    </div>
+    <div class="apts_line"><i></i></div>
+    <div class="apts_main">
+      <p class="eyebrow p5" data-reveal="ctn">Apartments</p>
+      <h2 class="h5" data-reveal="h">One- to three-bedroom units designed for solo travellers, couples or families. Panoramic windows, spacious terraces, and natural textures and materials elevate the experience of an alpine getaway.</h2>
+      <p class="p3 apts_note" data-reveal="p">The design carries local craft touches that bring genuine authenticity to the space.</p>
+      <div class="apts_panels" id="apts-panels">
+        <div class="apt_panel is-active"><div class="apt_meta"><p class="h2">37 m<sup>2</sup></p><p class="p5">Open plan · terrace · 1 bath</p></div><figure><img src="./img/apt4.webp" alt="Studio apartment" loading="lazy"></figure></div>
+        <div class="apt_panel"><div class="apt_meta"><p class="h2">52 m<sup>2</sup></p><p class="p5">One bedroom · loggia · 1 bath</p></div><figure><img src="./img/apt2.webp" alt="Deluxe apartment" loading="lazy"></figure></div>
+        <div class="apt_panel"><div class="apt_meta"><p class="h2">64 m<sup>2</sup></p><p class="p5">One bedroom · panoramic living</p></div><figure><img src="./img/apt1.webp" alt="Superior apartment" loading="lazy"></figure></div>
+        <div class="apt_panel"><div class="apt_meta"><p class="h2">81 m<sup>2</sup></p><p class="p5">Two bedrooms · fireplace · terrace</p></div><figure><img src="./img/apt1.webp" class="alt" alt="Suite" loading="lazy"></figure></div>
+        <div class="apt_panel"><div class="apt_meta"><p class="h2">104 m<sup>2</sup></p><p class="p5">Three bedrooms · two baths</p></div><figure><img src="./img/apt2.webp" class="alt" alt="Family apartment" loading="lazy"></figure></div>
+        <div class="apt_panel"><div class="apt_meta"><p class="h2">168 m<sup>2</sup></p><p class="p5">Roof terrace · private plunge pool</p></div><figure><img src="./img/apt3.webp" alt="Penthouse terrace" loading="lazy"></figure></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. FINANCIAL INDICATORS -->
+<section class="fin" id="financial" bg="dark">
+  <div class="marquee" aria-hidden="true">
+    <div class="rule"></div>
+    <div class="marquee_track h5" data-marquee><span>Financial indicators ✦ </span><span>Financial indicators ✦ </span><span>Financial indicators ✦ </span><span>Financial indicators ✦ </span></div>
+    <div class="rule"></div>
+  </div>
+  <div class="container fin_grid">
+    <canvas class="fin_ht" id="fin-ht"></canvas>
+    <div class="fin_a">
+      <p class="p5" data-reveal="p">Dividend payments begin</p>
+      <h2 class="h3" data-reveal="h">In Q2<br>2029</h2>
+    </div>
+    <ul class="fin_kpis">
+      <li><p class="p5">Guaranteed annual return:</p><p class="p2">9%</p></li>
+      <li><p class="p5">Capitalisation: (?)</p><p class="p2">Up to 28%</p></li>
+      <li><p class="p5">Instalment plan</p><p class="p2">Up to 2 years</p></li>
+      <li><p class="p5">Down payment</p><p class="p2">From 30%</p></li>
+    </ul>
+    <div class="fin_b">
+      <h3 class="p2">Our forecast</h3>
+      <ul class="fin_rows p5">
+        <li><span>Estimated payback period:</span><span>≈ 8 years</span></li>
+        <li><span>Average annual occupancy:</span><span>≈ 68%</span></li>
+      </ul>
+    </div>
+    <div class="fin_c">
+      <h3 class="p2">Additional benefits</h3>
+      <ul class="fin_rows fin_rows--stack p5">
+        <li>28 days of complimentary stay per year</li>
+        <li>The complex operates year-round, ensuring stable occupancy and returns</li>
+        <li>Our in-house management company handles your apartment professionally, without any hassle</li>
+      </ul>
+      <button class="btn" data-modal-open data-magnetic="40"><span class="btn_in p5">Consultation</span></button>
+    </div>
+  </div>
+</section>
+
+<!-- 9. SEASONS ("Hold and move") -->
+<section class="seasons" id="seasons" bg="dark">
+  <canvas class="sea_ht" id="sea-ht"></canvas>
+  <div class="sea_knob">
+    <p class="p6">Hold and move</p>
+    <div class="knob" id="knob">
+      <svg viewBox="0 0 400 90" aria-hidden="true">
+        <path id="knob-path" d="M32 20 C90 78 150 82 200 82 S320 78 368 20" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="1 9" stroke-linecap="round"/>
+      </svg>
+      <button class="knob_handle" id="knob-handle" aria-label="Drag between summer and winter">
+        <svg class="ic ic--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="12" r="4" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M5 5l2 2M17 17l2 2M19 5l-2 2M7 17l-2 2"/></svg>
+      </button>
+      <span class="knob_end" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M12 2v20M3.5 7l17 10M20.5 7l-17 10M9 3l3 3 3-3M9 21l3-3 3 3"/></svg></span>
+    </div>
+  </div>
+  <div class="container sea_text">
+    <h2 class="h5" id="sea-copy">Summer turns this area into an exciting adventure map: hiking trails, mountain river rafting, cultural festivals, and culinary journeys.</h2>
+    <button class="btn" data-modal-open data-magnetic="40"><span class="btn_in p5">Consultation</span></button>
+  </div>
+</section>
+
+<!-- 10. DEVELOPER -->
+<section class="dev" id="developer" bg="dark">
+  <div class="container dev_in">
+    <p class="eyebrow p5" data-reveal="ctn">Developer</p>
+    <h2 class="h3 dev_title" data-reveal="h">A legend brought to life in the very heart of the Alps, uniting past and future</h2>
+    <div class="note theme_on-light" data-parallax="ctn-up">
+      <p class="p5">Norrin &amp; Voss is an urban-tech developer that creates a future-ready environment where real estate means more than square metres. It is a combination of services, infrastructure and people-focused care, which shapes a new standard of living.</p>
+      <p class="note_stars">✦✦✦</p>
+      <figure class="note_img"><img src="./img/gallery1.webp" alt="" loading="lazy"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- 11. DEVELOPER STATS -->
+<section class="stats" id="stats" bg="dark">
+  <canvas class="stats_ht" id="stats-ht"></canvas>
+  <div class="container stats_grid">
+    <div><p class="h1" data-count="20" data-suffix="+">20+</p><p class="p5">Years of experience in the real estate market</p></div>
+    <div><p class="h1" data-count="2">2</p><p class="p5">Ranked 2nd among developers nationwide by an industry survey</p></div>
+    <div><p class="h1" data-count="37">37</p><p class="p5">Completed projects</p></div>
+    <div><p class="h1" data-count="7">7</p><p class="p5">International property awards</p></div>
+  </div>
+</section>
+
+<!-- 12. GALLERY -->
+<section class="gallery" id="gallery" bg="light">
+  <div class="container">
+    <h2 class="h2 gal_title"><span data-reveal="h">Project</span><span data-reveal="h">Gallery</span></h2>
+    <div class="slider" id="gal" data-drag-tip="Drag">
+      <figure class="slide is-active"><img src="./img/gallery3.webp" alt="Forest path toward the hotel"></figure>
+      <figure class="slide"><img src="./img/gallery1.webp" alt="Timber lobby"></figure>
+      <figure class="slide"><img src="./img/gallery2.webp" alt="Pool terrace at blue hour"></figure>
+      <figure class="slide"><img src="./img/hero.webp" alt="Hotel facade at golden hour"></figure>
+      <div class="slider_ui p5">
+        <button data-prev aria-label="Previous">←</button><span><b data-cur>01</b> / <span data-total>04</span></span><button data-next aria-label="Next">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. BLOG -->
+<section class="blog" id="blog" bg="dark">
+  <div class="container">
+    <p class="eyebrow p5 blog_eye" data-reveal="ctn">Blog</p>
+    <h2 class="h2 blog_title" data-reveal="h">Latest news and updates</h2>
+    <div class="blog_bar">
+      <p class="p3">Latest update:</p>
+      <div class="pills" id="pills">
+        <i class="pills_hl"></i>
+        <button class="p5 is-active" data-filter="news">News</button>
+        <button class="p5" data-filter="progress">Construction progress</button>
+      </div>
+      <p class="p3">14/8/2026</p>
+    </div>
+  </div>
+  <div class="blog_list" id="blog-list" data-drag-tip="Drag">
+    <article class="post" data-cat="news"><figure><img src="./img/apt3.webp" alt="" loading="lazy"></figure><div class="hair"></div><h3 class="h5">The valley is calling: a new chapter for Hallmere</h3></article>
+    <article class="post" data-cat="news"><figure><img src="./img/blog2.webp" alt="" loading="lazy"></figure><div class="hair"></div><h3 class="h5">Tourism and investment potential of the Nordkar region</h3></article>
+    <article class="post" data-cat="news"><figure><img src="./img/gallery3.webp" alt="" loading="lazy"></figure><div class="hair"></div><h3 class="h5">“Economic returns are better than in residential property”</h3></article>
+    <article class="post" data-cat="progress"><figure><img src="./img/blog1.webp" alt="" loading="lazy"></figure><div class="hair"></div><h3 class="h5">Foundation slab poured: August site report</h3></article>
+    <article class="post" data-cat="progress"><figure><img src="./img/timeline.webp" alt="" loading="lazy"></figure><div class="hair"></div><h3 class="h5">First timber frames arrive on site</h3></article>
+  </div>
+</section>
+
+<!-- 14. CTA CO-OWNER -->
+<section class="cta theme_on-color" id="cta" bg="color">
+  <figure class="cta_img" data-parallax="img-out"><img src="./img/cta.webp" alt="Tall pines against a pale sky" loading="lazy"></figure>
+  <svg class="edge" id="edge" preserveAspectRatio="none" aria-hidden="true"></svg>
+  <div class="note note--cta theme_on-light">
+    <p class="p5">Each investor becomes a co-owner of a premium design hotel that redefines the concept of leisure, elevating it to a level of sensations, aesthetics and meaning.</p>
+    <p class="note_stars">✦✦✦</p>
+    <h2 class="h4" data-reveal="h">Become part of the legend</h2>
+    <button class="btn" data-modal-open data-magnetic="40"><span class="btn_in p5">Become a co-owner</span></button>
+  </div>
+</section>
+
+<!-- 15. FAQ -->
+<section class="faq" id="faq" bg="dark">
+  <div class="container">
+    <div class="faq_head">
+      <span class="h1" data-reveal="h">F</span><span class="p5 faq_s1" data-reveal="p">Answers to<br>key questions</span>
+      <span class="h1" data-reveal="h">A</span><span class="p5 faq_s2" data-reveal="p">All you need<br>to know</span>
+      <span class="h1" data-reveal="h">Q</span>
+    </div>
+    <ul class="acc" id="acc">
+      <li class="acc_i"><button class="acc_q h5" aria-expanded="false"><span>Who manages the apartments?</span><i class="acc_ic"></i></button><div class="acc_a"><p class="p4">Our in-house management company runs bookings, housekeeping, maintenance and guest service, and reports to every co-owner monthly.</p></div></li>
+      <li class="acc_i"><button class="acc_q h5" aria-expanded="false"><span>How is the income calculated?</span><i class="acc_ic"></i></button><div class="acc_a"><p class="p4">Income is a share of the hotel's net revenue, distributed quarterly in proportion to your apartment's area.</p></div></li>
+      <li class="acc_i"><button class="acc_q h5" aria-expanded="false"><span>Can I stay in my apartment?</span><i class="acc_ic"></i></button><div class="acc_a"><p class="p4">Yes. Every owner receives 28 complimentary days per year, with further stays at preferential rates.</p></div></li>
+      <li class="acc_i"><button class="acc_q h5" aria-expanded="false"><span>What are the payment terms?</span><i class="acc_ic"></i></button><div class="acc_a"><p class="p4">A down payment from 30% with the remainder spread over up to two years, in line with construction stages.</p></div></li>
+      <li class="acc_i"><button class="acc_q h5" aria-expanded="false"><span>Can I sell my apartment later?</span><i class="acc_ic"></i></button><div class="acc_a"><p class="p4">Ownership is freely transferable. The management company can also assist with resale to a vetted buyer.</p></div></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- 16. FOOTER (scale reveal) -->
+<footer class="footer" id="contact" bg="dark">
+  <div class="footer-w">
+    <div class="footer-w_bg"></div>
+    <canvas class="foot_ht" id="foot-ht"></canvas>
+    <div class="container foot_grid p5">
+      <div class="foot_l">
+        <p class="muted">Location</p>
+        <p>12 Alder Lane, Hallmere,<br>Nordkar Region</p>
+        <div class="soc"><a href="#" aria-label="Instagram">In</a><a href="#" aria-label="Facebook">Fb</a><a href="#" aria-label="Video">Yt</a></div>
+      </div>
+      <div class="foot_r">
+        <p class="muted">Sales departments</p>
+        <p>Nordkar City<br>Market Street 35</p>
+        <p class="muted foot_gap">Hallmere</p>
+        <p>260 Mill Street</p>
+      </div>
+      <a class="p1 foot_phone" href="tel:+000000000000" data-magnetic="30">+00 000 000 0000</a>
+      <a class="p1 foot_mail" href="mailto:hi@valoren.example" data-magnetic="30">hi@valoren.example</a>
+    </div>
+    <div class="foot_bar theme_on-light p5"><span>© 2026 Val Oren. A fictional study.</span><a href="#">Privacy policy</a></div>
+  </div>
+</footer>
+
+<!-- CTA MODAL -->
+<div class="modal" id="modal" hidden>
+  <div class="modal_backdrop" data-modal-close></div>
+  <div class="modal_card theme_on-light" role="dialog" aria-modal="true" aria-label="Consultation">
+    <button class="modal_x h6" data-modal-close aria-label="Close">[X]</button>
+    <div class="modal_face modal_front">
+      <h2 class="h4">Request a consultation</h2>
+      <form id="form" novalidate>
+        <label class="field"><input type="text" required placeholder=" " name="n"><span class="p5">Name</span></label>
+        <label class="field"><input type="email" required placeholder=" " name="e"><span class="p5">E-mail</span></label>
+        <label class="field"><input type="tel" placeholder=" " name="p"><span class="p5">Phone</span></label>
+        <button class="btn btn--wide" type="submit"><span class="btn_in p5">Send</span></button>
+      </form>
+    </div>
+    <div class="modal_face modal_back">
+      <h2 class="h4">Thank you</h2>
+      <p class="p4">Our team will be in touch within one working day.</p>
+    </div>
+  </div>
+</div>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+[
+  {
+    "path": "public/img/hero-crevasse.webp",
+    "prompt": "Two mountaineers in red jackets roping down inside a narrow blue-grey glacial crevasse, one with a headlamp, desaturated overcast grey-teal ice walls, muted cold palette, cinematic photograph, absolutely no text, no letters, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/hero-window.webp",
+    "prompt": "View through a small aircraft window onto a bright white polar horizon with low cloud, dark cabin frame in the corners, soft haze, photograph, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/ice-crack.webp",
+    "prompt": "Aerial top-down photograph of cracked turquoise sea ice with white fracture lines, snow patches, very detailed, no people, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/camp-lake.webp",
+    "prompt": "White geodesic expedition dome with a dark glazed wing on rocky ground beside a pale freshwater lake, soft dusk light, polar landscape photograph, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/camp-pod.webp",
+    "prompt": "Single low glass-fronted egg-shaped pod shelter on flat white snow, overcast soft light, minimalist polar photograph, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/camp-base.webp",
+    "prompt": "Cluster of small white tents and a long communal dome on a glacier plateau at golden hour, mountains in the distance, photograph, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/trip-penguins.webp",
+    "prompt": "Portrait photograph of emperor penguin chicks huddled on blue-white ice, soft light, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/trip-pole.webp",
+    "prompt": "Aerial portrait photograph of a deep blue meltwater river carving through white glacier ice, tiny skiers at the bottom edge, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/trip-longstay.webp",
+    "prompt": "Portrait photograph of an orange expedition tent on snow with a pale blue sky and a flag pole, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/trip-day.webp",
+    "prompt": "Portrait photograph of a ski-equipped aircraft parked on a vast white snowfield, long shadow, clear sky, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/trip-week.webp",
+    "prompt": "Portrait photograph of hikers in blue jackets walking along a snow ridge toward dark rock peaks, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/trip-plateau.webp",
+    "prompt": "Portrait photograph of wind-sculpted snow dunes (sastrugi) in warm low sun, no people, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/parallax-peaks.webp",
+    "prompt": "Aerial photograph of jagged dark red-brown rock spires rising from smooth white snow, long blue shadows, clear day, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/parallax-ridge.webp",
+    "prompt": "Wide photograph of a snow-covered mountain ridge under a pale sky, subtle pink light, vast and empty, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/film-thumb.webp",
+    "prompt": "Small ski-equipped passenger jet landing on a blue-ice runway, tiny figures, clear sky, photograph, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/banner-glacier.webp",
+    "prompt": "Four tiny hikers in colourful jackets walking down a white glacier with blue crevasses, dark rock outcrop top left, clear blue sky, wide aerial photograph, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/map-continent.webp",
+    "prompt": "Top-down shaded relief render of a polar continent in white and grey on pure black background, bright snow, no text, no borders, no text, no logos",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/menu-bird.webp",
+    "prompt": "Close-up photograph of a large pale seabird head against a soft grey-blue sky, blurred background, no text, no logos",
+    "aspect": "16:9"
+  }
+]

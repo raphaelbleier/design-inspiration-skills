@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/portrait-red.webp",
+  "prompt": "Studio portrait of a young man with calm expression, saturated red duotone, flat flash, magazine cover crop",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/portrait-pink.webp",
+  "prompt": "Playful stylised portrait of a laughing person with pink and orange tones, grainy print look",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/portrait-mono.webp",
+  "prompt": "Black and white portrait of a woman with short hair, soft grain, plain backdrop",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/sneaker.webp",
+  "prompt": "Red and white high-top sneaker on a pale grey seamless backdrop, product photography",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/pearl.webp",
+  "prompt": "A single baroque pearl ring on peach backdrop, macro product photo",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/poster-wave.webp",
+  "prompt": "Abstract risograph poster of wave shapes in orange and navy, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/team.webp",
+  "prompt": "Black and white group photo of five creatives holding a trophy at an awards party, no readable text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/still-desert.webp",
+  "prompt": "Cinematic film still of a lone car on a desert highway at dusk, anamorphic",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/still-theatre.webp",
+  "prompt": "Cinematic still of an empty velvet cinema auditorium with warm light, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/collage-eye.webp",
+  "prompt": "Surreal paper collage of an eye and flowers, muted colours, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/type-specimen.webp",
+  "prompt": "Close crop of bold condensed black letterforms on white paper, abstract, no legible words",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/object-chrome.webp",
+  "prompt": "Chrome balloon dog-like sculpture on a white floor, soft studio light",
+  "aspect": "1:1"
+ }
+]

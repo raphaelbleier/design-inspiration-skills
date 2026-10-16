@@ -1,0 +1,67 @@
+[
+  {
+    "path": "public/img/pilgrim.webp",
+    "prompt": "Side profile of a lone traveller with long dark hair in an ochre wool cloak against a pale cream block, standing tall, gazing right, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/landscape.webp",
+    "prompt": "Wide desert of pale dunes with a long stone staircase climbing toward a monolithic arch holding a dark crimson disc, a cloaked traveller seen from behind at left, huge moon in the sky, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/disc.webp",
+    "prompt": "Giant dark crimson disc with concentric engraved rings filling a trapezoid stone frame, tiny cloaked figure standing at its base, tall grass at the bottom, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/wood.webp",
+    "prompt": "Seamless close-up of dark maroon wooden floorboards with deep black cracks and grain, flat graphic woodcut texture, no objects, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/hand.webp",
+    "prompt": "A single pale hand reaching forward diagonally with fingers curved, wrist in a dark sleeve, isolated on transparent background, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/cathedral.webp",
+    "prompt": "Interior hall of tall red columns seen in symmetrical perspective, black ink hatching, deep crimson light at the end of the hall, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/eye.webp",
+    "prompt": "Extreme close-up of a pair of tired human eyes with heavy engraved wrinkles, framed in a wide horizontal slot, surrounded by red columns, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "21:9"
+  },
+  {
+    "path": "public/img/altar.webp",
+    "prompt": "Cloaked traveller from behind standing at a stone altar holding three glass bottles (blue, green, yellow), red sky behind, hatched stone terrace in the foreground with three oversized bottle stoppers, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/ruins.webp",
+    "prompt": "Ancient colosseum ruin with white columns and arches against a red sky, a figure in a flowing turquoise cloak with wind-blown hem walking on a stone ledge, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/pour.webp",
+    "prompt": "Dramatic close-up of a stone pedestal edge in black and white hatching with a thin stream of liquid falling from the top of the frame, red background, woodcut engraving style, dense parallel hatching, hand-cut black ink lines on cream paper, limited colour, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/bottle-blue.webp",
+    "prompt": "Tall slim glass bottle of pale blue liqueur with a cork stopper and a dark red paper band, studio product shot, isolated on transparent background, flat graphic illustration, no text",
+    "aspect": "1:3"
+  },
+  {
+    "path": "public/img/bottle-green.webp",
+    "prompt": "Tall slim glass bottle of pale green liqueur with a cork stopper and a dark red paper band, studio product shot, isolated on transparent background, flat graphic illustration, no text",
+    "aspect": "1:3"
+  },
+  {
+    "path": "public/img/bottle-yellow.webp",
+    "prompt": "Tall slim glass bottle of warm yellow liqueur with a cork stopper and a dark red paper band, studio product shot, isolated on transparent background, flat graphic illustration, no text",
+    "aspect": "1:3"
+  }
+]

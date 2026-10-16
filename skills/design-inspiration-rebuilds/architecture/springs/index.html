@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alderbrook | Residences by the park</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<div class="loader" id="loader"><p class="loader__word">Alderbrook</p></div>
+
+<header class="bar">
+  <button class="bar__menu" id="menuBtn" aria-expanded="false"><span class="burger"><i></i><i></i></span><span>Menu</span></button>
+  <a class="bar__link" href="#homes">Residences</a>
+  <a class="bar__logo" href="#top">Alderbrook<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10.5" fill="none" stroke="currentColor" stroke-width="1"/><path d="M7 9c4 0 6 2 10 0M7 15c4-2 6 0 10-2" fill="none" stroke="currentColor" stroke-width="1"/></svg></a>
+  <a class="bar__link bar__link--r" href="#contact">Contact us</a>
+  <button class="bar__heart" aria-label="Favourites"><svg viewBox="0 0 24 24"><path d="M12 20s-7-4.6-7-10a4 4 0 0 1 7-2.4A4 4 0 0 1 19 10c0 5.400-7 10-7 10z" fill="none" stroke="currentColor" stroke-width="1.4"/></svg></button>
+</header>
+
+<nav class="menu" id="menu" aria-hidden="true">
+  <a href="#wellness">Wellness</a><a href="#nature">Nature</a><a href="#place">Place</a><a href="#homes">Residences</a><a href="#contact">Contact</a>
+</nav>
+
+<main id="top">
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero__tint"></div>
+    <p class="hero__sub">Exclusive residence with a rich wellness infrastructure next to the&nbsp;Alder Park</p>
+    <h1 class="hero__title" data-split>Quiet&nbsp;light<br>of&nbsp;Morning</h1>
+    <a class="hero__down" href="#intro" aria-label="Scroll down"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="11" fill="none" stroke="currentColor"/><path d="M12 7v10m-4-4 4 4 4-4" fill="none" stroke="currentColor"/></svg></a>
+  </section>
+
+  <section class="intro" id="intro">
+    <p class="eyebrow" data-fade>Premium living with open views</p>
+    <h2 class="display" data-split>Open the doors of Alderbrook and step into your true self</h2>
+    <p class="lede" data-fade>An enclave of peace and quiet, your personal happy place, where deep relaxation helps you connect to your thoughts and feelings. Apartments, terraced townhouses and duplex penthouses in a calm, green neighbourhood.</p>
+    <div class="intro__imgs">
+      <figure class="ph ph--a" data-speed="-.08"><img src="/img/home1.webp" alt="" loading="lazy"></figure>
+      <figure class="ph ph--b" data-speed=".1"><img src="/img/h2.webp" alt="" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="wellness" id="wellness">
+    <div class="wellness__pin">
+      <p class="eyebrow">Wellness</p>
+      <h2 class="giant" data-split>Essence of Self-Care</h2>
+      <div class="wellness__body">
+        <ul class="tabs" id="tabs">
+          <li class="is-on" data-i="0">Spa</li><li data-i="1">Yoga</li><li data-i="2">Fitness</li><li data-i="3">Café</li>
+        </ul>
+        <div class="wellness__imgs" id="wImgs">
+          <figure class="is-on"><img src="/img/spa.webp" alt=""></figure>
+          <figure><img src="/img/yoga.webp" alt=""></figure>
+          <figure><img src="/img/fitness.webp" alt=""></figure>
+          <figure><img src="/img/cafe.webp" alt=""></figure>
+        </div>
+        <div class="wellness__texts" id="wTexts">
+          <p class="is-on">Let your thoughts flow freely as you immerse yourself in a crystal-clear spa pool with a view of the garden. A cup of herbal tea in the fragrant warmth of the hammam, and the day's worries are gone.</p>
+          <p>A slow yoga session mellows the mind and makes the body feel light and responsive. Finding balance is easy.</p>
+          <p>Start the day with a personal trainer in a modern fitness studio. The gym is just a few steps away, right up the stairs.</p>
+          <p>Espresso with creamy foam, a terrace among the plants and soft ambient music, without leaving the house.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nature" id="nature">
+    <p class="eyebrow">Nature</p>
+    <h2 class="giant giant--r" data-split>Lightness of Breathing</h2>
+    <div class="nature__grid">
+      <figure class="ph ph--wide" data-speed="-.06"><img src="/img/nature1.webp" alt="" loading="lazy"><figcaption>Landscaped terraces with topiary trees, framed with glass, a miniature park floating above the city.</figcaption></figure>
+      <figure class="ph ph--tall" data-speed=".1"><img src="/img/nature2.webp" alt="" loading="lazy"><figcaption>A shady conifer garden of winding paths and sunlit glades.</figcaption></figure>
+      <figure class="ph ph--tall2" data-speed="-.04"><img src="/img/nature3.webp" alt="" loading="lazy"><figcaption>Recreation lawns with cascading plants and exotic flowers.</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="place" id="place">
+    <p class="eyebrow">Place</p>
+    <h2 class="giant" data-split>Essence of Contemplation</h2>
+    <figure class="ph ph--full" data-speed="-.05"><img src="/img/place.webp" alt="" loading="lazy"></figure>
+    <div class="stats">
+      <div><b data-count="3">0</b><span>minute walk<br>to Alder Park</span></div>
+      <div><b data-count="9">0</b><span>minute walk<br>to the embankment</span></div>
+      <div><b data-count="16">0</b><span>minutes by car<br>to the centre</span></div>
+    </div>
+    <p class="lede" data-fade>Breathe in the air and open space. Run along the embankment and watch the panoramas shift. Set your pace and change it whenever you like.</p>
+  </section>
+
+  <section class="homes" id="homes">
+    <p class="eyebrow">Residences</p>
+    <h2 class="display" data-split>Apartments, townhouses and duplex penthouses</h2>
+    <div class="homes__row">
+      <figure class="ph ph--h1" data-speed=".06"><img src="/img/home1.webp" alt="" loading="lazy"></figure>
+      <figure class="ph ph--h2" data-speed="-.06"><img src="/img/home2.webp" alt="" loading="lazy"></figure>
+    </div>
+  </section>
+</main>
+
+<footer class="foot" id="contact">
+  <h2 class="giant" data-split>Make a visit</h2>
+  <a class="pill" href="#top">Request a viewing</a>
+  <p class="foot__small">Alderbrook is a fictional development used for a design study.</p>
+</footer>
+
+<dialog class="cookie" id="cookie" open><span>This site collects<br><b>cookies.</b></span><button id="cookieOk">Accept</button></dialog>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

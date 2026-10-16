@@ -1,0 +1,62 @@
+[
+  {
+    "path": "public/img/hero-mascot.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, A chubby cream-furred marmot DJ with yellow angular star-shaped sunglasses and headphones, waving, waist-up, on a plain flat periwinkle blue (#7f7fff) background",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/cover-01.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square album cover: the marmot with yellow sunglasses and a smug smile inside a big pink circle on a lime green background, glossy plastic wrap crinkles, a red round sticker top-left with no text",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/cover-02.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square album cover: extreme close-up of the marmot's face with yellow sunglasses blowing a huge pink bubblegum bubble, beige background, small purple round sticker bottom-right with no text",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/cover-03.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square album cover: the marmot asleep on a pile of cushions at night, moon and stars, deep blue and teal palette, small orange sticker",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/cover-04.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square album cover: the marmot on stage holding a microphone, confetti and spotlights, red and gold palette, small pink sticker",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/page-01.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square comic page on cream paper: 2x2 grid of panels with thick black borders; panel 1 pink burst background with a sleepy marmot, panel 2 red background marmot in sunglasses holding a microphone, panel 3 marmot behind a yellow DJ booth with disco balls, panel 4 marmot arms up on stage with crowd silhouettes, no lettering",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/page-02.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square comic page on cream paper: 2x2 grid of panels with thick black borders; marmot arrives at a neon club door, bouncer rabbit, crowd queue, inside the dancefloor, no lettering",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/page-03.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square comic page on cream paper: 2x2 grid of panels with thick black borders; marmot spinning records, records flying like frisbees, the crowd cheering, marmot bowing, no lettering",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/about-scene.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Wide illustration: two cartoon developers (boy with short hair, girl with long hair, both pink skin, seen from behind) at a retro beige computer showing columns of numbers, sitting inside the open top of a giant sleeping marmot head, orange background, thick outlines",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/team-a.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square portrait illustration of a cartoon boy with short hair and a smartwatch, pink skin, orange background, thick outlines",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/team-b.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square portrait illustration of a cartoon girl with long hair smiling, pink skin, orange background, thick outlines",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/footer-mascot.webp",
+    "prompt": "flat vector comic illustration, thick black outlines, chunky cartoon shapes, flat saturated colours, paper grain, no text, no logos, Square illustration: the marmot's sleepy face peeking up from the bottom edge, only eyes and sunglasses visible, dark background",
+    "aspect": "1:1"
+  }
+]

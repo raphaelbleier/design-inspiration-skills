@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Verdelune Spirits | Ready-to-pour cocktails, pleasure first</title>
+  <meta name="description" content="Fictional study brand: ready-to-pour cocktails told as an illustrated pilgrimage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400&family=Limelight&family=M+PLUS+Rounded+1c:wght@800&family=Pinyon+Script&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <!-- hand-roughened edges for every box (applied to a pseudo element only) -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="2" seed="4" />
+      <feDisplacementMap in="SourceGraphic" scale="5" />
+    </filter>
+  </svg>
+
+  <canvas id="ink" aria-hidden="true"></canvas>
+
+  <header class="top">
+    <a class="logo" href="#" aria-label="Verdelune Spirits">
+      <svg class="seal" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" />
+        <path d="M24 9v30M10 24h28M14 14l20 20M34 14 14 34" stroke="currentColor" stroke-width=".8" />
+        <circle cx="24" cy="24" r="5" fill="currentColor" />
+      </svg>
+      <span class="word">Verdelune<br /><i>spirits</i></span>
+    </a>
+    <nav class="pill box" aria-label="Main">
+      <button data-go="story">Experience</button>
+      <svg class="flourish" viewBox="0 0 40 14" aria-hidden="true"><path d="M2 8c5-8 8 6 14-1s9 5 14-2 6 4 8 0" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" /></svg>
+      <button data-go="collection">Collection</button>
+    </nav>
+  </header>
+
+  <main class="stage" id="stage">
+    <!-- 0 hero -->
+    <section class="panel hero" data-bg="dark">
+      <h1 class="h1"><small>The</small><span class="line">Amberline</span><span class="line">Voyage</span></h1>
+    </section>
+
+    <!-- 1 pilgrim -->
+    <section class="panel framed" data-bg="paper">
+      <div class="frame f-pilgrim"><img src="img/pilgrim.webp" alt="" width="900" height="1200" /></div>
+      <p class="cap c-a box"><span>The wayfarer finally catches a glimpse of what he left home to find.</span></p>
+      <p class="cap c-b box"><span>At the sight of it he stands taller, eyes fixed, resolve burning <b class="r">within</b>.</span></p>
+    </section>
+
+    <!-- 2 landscape -->
+    <section class="panel framed" data-bg="paper">
+      <div class="frame f-wide"><img src="img/landscape.webp" alt="" width="1600" height="900" /></div>
+      <p class="cap c-a box"><span>A tower of pale stone rises from the dunes. A low hum drifts from its <b class="r">crimson</b> doorway. Unbelieving, the wayfarer halts to steady his breath.</span></p>
+    </section>
+
+    <!-- 3 disc -->
+    <section class="panel framed" data-bg="paper">
+      <div class="frame f-disc"><img src="img/disc.webp" alt="" width="1200" height="900" /></div>
+      <p class="cap c-b box"><span>The disc burns at the heart of the arch.</span></p>
+    </section>
+
+    <!-- 4 hand -->
+    <section class="panel bleed hand-panel" data-bg="wood">
+      <div class="full"><img src="img/wood.webp" alt="" width="1600" height="900" /></div>
+      <div class="hand" id="hand"><img src="img/hand.webp" alt="" width="1200" height="800" draggable="false" /></div>
+      <p class="cap c-a box"><span>Slowly, his hand reaches toward the <b class="r">glow</b>.</span></p>
+      <div class="hold" id="hold" aria-hidden="true">Hold &amp;<br />move</div>
+    </section>
+
+    <!-- 5 cathedral -->
+    <section class="panel bleed" data-bg="red">
+      <div class="full"><img src="img/cathedral.webp" alt="" width="1600" height="900" /></div>
+      <p class="cap c-b box"><span>Beyond the door, a hall of red columns waits.</span></p>
+    </section>
+
+    <!-- 6 eye -->
+    <section class="panel bleed" data-bg="red">
+      <div class="full"><img src="img/eye.webp" alt="" width="2100" height="900" /></div>
+      <p class="cap c-a box"><span>Something watches back.</span></p>
+    </section>
+
+    <!-- 7 altar -->
+    <section class="panel bleed" data-bg="red">
+      <div class="full"><img src="img/altar.webp" alt="" width="1600" height="900" /></div>
+      <p class="cap c-b box"><span>Three vessels stand on the altar, each poured for a different kind of <b class="r">pleasure</b>.</span></p>
+    </section>
+
+    <!-- 8 ruins + title -->
+    <section class="panel bleed" data-bg="paper">
+      <div class="full"><img src="img/ruins.webp" alt="" width="1600" height="900" /></div>
+      <h2 class="h1 ruins-title"><small>The</small><span class="line">Amberline</span><span class="line">Voyage</span></h2>
+    </section>
+
+    <!-- 9 select -->
+    <section class="panel select" data-bg="paper" id="select">
+      <h2 class="h3 sel-title">Choose your vessel</h2>
+      <div class="bottles">
+        <button class="bottle" data-i="0" style="--tint:#6ab6ee"><span class="slot"><img src="img/bottle-blue.webp" alt="" width="300" height="900" /></span><span class="lab">N.01</span></button>
+        <button class="bottle" data-i="1" style="--tint:#8fd6a0"><span class="slot"><img src="img/bottle-green.webp" alt="" width="300" height="900" /></span><span class="lab">N.02</span></button>
+        <button class="bottle" data-i="2" style="--tint:#f2cf55"><span class="slot"><img src="img/bottle-yellow.webp" alt="" width="300" height="900" /></span><span class="lab">N.03</span></button>
+      </div>
+      <p class="sel-name body-bold" id="selName" aria-live="polite">&nbsp;</p>
+    </section>
+
+    <!-- 10 pour -->
+    <section class="panel pour" data-bg="red">
+      <div class="full pour-bg"><img src="img/pour.webp" alt="" width="1600" height="900" /></div>
+      <div class="stream"></div>
+      <h2 class="h2 flavour" id="flavour">Pear &amp; Smoked Honey</h2>
+      <div class="pour-bottle"><img id="pourBottle" src="img/bottle-blue.webp" alt="" width="300" height="900" /></div>
+      <p class="meta body-bold" id="pourMeta">N.01 &nbsp; 13% vol &nbsp; 700 ml</p>
+    </section>
+  </main>
+
+  <footer class="foot" id="collection">
+    <div class="soon">
+      <span class="body-bold">Verdelune Spirits</span>
+      <h2 class="h3">Select shops<br />coming soon</h2>
+      <span class="body-bold">Amberline collection</span>
+    </div>
+    <div class="legal">
+      <svg class="seal big" viewBox="0 0 48 48" aria-hidden="true">
+        <circle cx="24" cy="24" r="22" fill="none" stroke="currentColor" stroke-width="1.5" />
+        <circle cx="24" cy="24" r="15" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 3" />
+        <path d="M24 9v30M10 24h28M14 14l20 20M34 14 14 34" stroke="currentColor" stroke-width=".8" />
+        <circle cx="24" cy="24" r="5" fill="currentColor" />
+      </svg>
+      <span class="script">Verdelune spirits</span>
+      <div class="links body-bold"><a href="#">Instagram</a><a class="body-regular" href="#">hello@example.invalid</a></div>
+    </div>
+  </footer>
+
+  <div class="cookie box" id="cookie">
+    <p class="body-regular">This site uses cookies to improve your experience. View our <a href="#">privacy policy</a> for details.</p>
+    <div class="body-bold"><button data-c="yes">Accept</button><button data-c="no" class="dim">Decline</button></div>
+  </div>
+
+  <div class="gate" id="gate">
+    <h2 class="h2 g1">Are you of</h2>
+    <div class="g-mid">
+      <div class="g-actions body-bold" id="gActions"><button data-age="yes">Yes</button><button data-age="no">No</button></div>
+      <p class="g-deny body-bold" id="gDeny" hidden>Please come back when you are of legal age.</p>
+    </div>
+    <h2 class="h2 g2">Legal age?</h2>
+  </div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

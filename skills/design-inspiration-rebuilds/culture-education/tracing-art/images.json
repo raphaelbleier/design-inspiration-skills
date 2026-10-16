@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/portrait-horse.webp",
+  "prompt": "Oil painting of a spotted horse seen from behind in a rolling Dutch-style landscape, towering cumulus clouds, a manor house in the distance, soft museum lighting, fictional, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/codex-figures.webp",
+  "prompt": "Illuminated colonial manuscript page, three standing figures in woven red and green garments on a pale parchment ground, hand-painted, fictional, no text, no logos, no watermark",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/mummy-portrait.webp",
+  "prompt": "Ancient funerary portrait of a woman with a gold wreath, encaustic on wood, warm ochre background, cut-out edge, fictional, no text, no logos, no watermark",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/herbal-folio.webp",
+  "prompt": "Renaissance herbal manuscript folio with a pink flowering plant and insects, small dense calligraphy text block (no legible words), cream vellum, no text, no logos, no watermark",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tiger-snake.webp",
+  "prompt": "Romantic oil painting of a crouching tiger beside a tree with a snake, lush dark foliage, dramatic light, fictional, no text, no logos, no watermark",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/rococo-idyll.webp",
+  "prompt": "Rococo oil painting of reclining nymphs and cupids in a pastel blue and rose sky, soft brushwork, fictional, no text, no logos, no watermark",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/olive-grove.webp",
+  "prompt": "Post-impressionist painting of an olive grove in swirling ochre and blue strokes, thick impasto, fictional, no text, no logos, no watermark",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/pastoral-cattle.webp",
+  "prompt": "Baroque pastoral landscape with cattle and a rider under a vast pale sky, muted greens, fictional, no text, no logos, no watermark",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/still-life.webp",
+  "prompt": "Dutch still life with fruit, a silver ewer and a lemon peel on a dark table, glowing chiaroscuro, fictional, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/harbour-dusk.webp",
+  "prompt": "Oil painting of a harbour at dusk with tall ships and a pink sky, calm water reflections, fictional, no text, no logos, no watermark",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/lady-blue.webp",
+  "prompt": "Portrait of a seated lady in a blue satin gown, grey-green background, 18th century style, fictional, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/ink-landscape.webp",
+  "prompt": "East Asian ink wash landscape with mist-covered peaks and a tiny pavilion on pale silk, fictional, no text, no logos, no watermark",
+  "aspect": "2:3"
+ },
+ {
+  "path": "public/img/sculpture-bust.webp",
+  "prompt": "Marble bust of a young man on a plain pale grey background, soft studio light, museum photograph, fictional, no text, no logos, no watermark",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/winter-skaters.webp",
+  "prompt": "Northern Renaissance winter scene with tiny skaters on a frozen canal, snow-covered roofs, pale sky, fictional, no text, no logos, no watermark",
+  "aspect": "3:2"
+ }
+]

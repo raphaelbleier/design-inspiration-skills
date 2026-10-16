@@ -1,0 +1,62 @@
+[
+ {
+  "path": "src/assets/bg1.webp",
+  "prompt": "Extremely out-of-focus abstract photograph of a tennis player's white pleated skirt and white sleeves in motion against a saturated cobalt blue wall, deep blue and cream tones, soft analog film look, no text, no logos, no faces",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/bg2.webp",
+  "prompt": "Extremely out-of-focus abstract photograph of a player in a crimson red top lunging on a cobalt blue court, motion blur, blues reds and warm cream, film grain, no text, no logos, no faces",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/bg3.webp",
+  "prompt": "Extremely out-of-focus abstract photograph of white tennis shoes with dark socks on a pale grey-lilac court floor under a deep blue wall, soft blur, cool palette, no text, no logos, no faces",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/bg4.webp",
+  "prompt": "Extremely out-of-focus abstract photograph of a white tennis jacket sleeve and a hand holding a racket against a slate grey wall, muted grey and cream, dreamy blur, no text, no logos, no faces",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/bgp1.webp",
+  "prompt": "Extremely out-of-focus vertical abstract photograph of a dark navy and crimson red tennis kit with white shoes below, deep shadows, soft blur, film look, no text, no logos, no faces",
+  "aspect": "9:16"
+ },
+ {
+  "path": "src/assets/bgp2.webp",
+  "prompt": "Extremely out-of-focus vertical abstract photograph of a white pleated skirt and legs in motion on a pale blue court against cobalt wall, soft blur, no text, no logos, no faces",
+  "aspect": "9:16"
+ },
+ {
+  "path": "src/assets/rv1.webp",
+  "prompt": "Sharp editorial flat-lay product photo from above on a slate blue-grey seamless background: one brown leather sneaker with pale grey laces and long brown leather laces untied, soft studio light, subtle shadow, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/rv2.webp",
+  "prompt": "Sharp editorial flat-lay product photo from above on slate grey background: a white twill tennis cap with a small red embroidered wordmark, soft studio light, no readable brand, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/rv3.webp",
+  "prompt": "Sharp editorial flat-lay product photo from above on pale warm grey background: crumpled folded white cotton tennis t-shirts, soft studio light, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/rv4.webp",
+  "prompt": "Sharp editorial flat-lay product photo from above on slate grey background: a white headband with a tie knot and a small folded towel, soft studio light, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "src/assets/rvp1.webp",
+  "prompt": "Sharp vertical editorial fashion portrait in profile of an invented tennis player with braided dark hair wearing a white zip jacket with navy collar, slate grey backdrop, soft light, no text, no logos",
+  "aspect": "9:16"
+ },
+ {
+  "path": "src/assets/rvp2.webp",
+  "prompt": "Sharp vertical editorial flat-lay from above on slate grey: a white tennis cap and folded white shirt, soft studio light, no text, no logos",
+  "aspect": "9:16"
+ }
+]

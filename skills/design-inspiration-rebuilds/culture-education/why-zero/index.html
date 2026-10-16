@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nolla — Cold Start Institute</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@500;700&family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<canvas id="gl" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-num"><div class="digit"><div class="digit-in"></div></div><div class="digit"><div class="digit-in"></div></div></div>
+  <span class="loader-unit">degree</span>
+</div>
+
+<header class="hud">
+  <button class="glass" id="audio" aria-label="Toggle ambience" aria-pressed="false">
+    <svg viewBox="0 0 24 12" width="24" height="12"><polyline id="wave" points="0,6 4,6 8,6 12,6 16,6 20,6 24,6" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+  </button>
+  <div class="hud-title">NOLLA<span> / COLD START</span></div>
+  <div class="glass hud-xp"><b id="xp">0</b> XP</div>
+</header>
+
+<main id="stages">
+  <section class="stage" data-i="0">
+    <p class="kicker">Stage 00 / Ignition</p>
+    <h1>Start from nothing.<br>Nobody else does.</h1>
+    <p class="body">A twelve-week cold-start programme for people with no network, no portfolio and no introduction. We build the missing infrastructure with you.</p>
+    <figure class="plate"><img src="/img/plate-0.webp" alt="" width="800" height="1000"></figure>
+  </section>
+  <section class="stage" data-i="1">
+    <p class="kicker">Stage 01 / Mark</p>
+    <h2>Draw a zero.</h2>
+    <p class="body">Trace a loop anywhere on the ice. Every closed zero cracks the surface and earns experience. It is the smallest possible commitment.</p>
+    <figure class="plate"><img src="/img/plate-1.webp" alt="" width="800" height="1000"></figure>
+  </section>
+  <section class="stage" data-i="2">
+    <p class="kicker">Stage 02 / Thaw</p>
+    <h2>Warmth is a system.</h2>
+    <p class="body">Each cohort of eight is paired with a mentor who has been hired from the same starting line. Introductions are scheduled, not hoped for.</p>
+    <figure class="plate"><img src="/img/plate-2.webp" alt="" width="800" height="1000"></figure>
+  </section>
+  <section class="stage" data-i="3">
+    <p class="kicker">Stage 03 / Proof</p>
+    <h2>Work in public<br>from week two.</h2>
+    <p class="body">Short, honest case studies replace the empty portfolio. By week eight every member has three pieces a hiring manager can open on a phone.</p>
+    <figure class="plate"><img src="/img/plate-3.webp" alt="" width="800" height="1000"></figure>
+  </section>
+  <section class="stage" data-i="4">
+    <p class="kicker">Stage 04 / Zero</p>
+    <h2>Ninety-one percent<br>start a job in a<br>quarter.</h2>
+    <a class="cta glass" href="#apply">Apply for the next cohort</a>
+    <figure class="plate"><img src="/img/plate-4.webp" alt="" width="800" height="1000"></figure>
+  </section>
+</main>
+
+<div class="hud-status" id="status"><span id="temp">-100</span> °Z</div>
+<div class="scroll glass" id="hint"><i></i> SCROLL</div>
+<div class="ticks" id="ticks" aria-hidden="true"></div>
+<div class="next" id="next">
+  <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="30" fill="none" stroke="rgba(255,255,255,.25)" stroke-width="2"/><circle id="ring" cx="32" cy="32" r="30" fill="none" stroke="#fff" stroke-width="2" stroke-dasharray="188.5" stroke-dashoffset="188.5" transform="rotate(-90 32 32)"/></svg>
+  <button id="nextBtn" aria-label="Next stage">↓</button>
+</div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "letterbox-rebuild",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": { "dev": "vite", "build": "vite build", "preview": "vite preview" },
+  "dependencies": {
+    "@fontsource/gaegu": "5.2.7",
+    "@fontsource/rem": "5.2.7",
+    "@fontsource/silkscreen": "5.2.7",
+    "gsap": "3.13.0",
+    "three": "0.180.0"
+  },
+  "devDependencies": { "vite": "7.1.12" }
+}

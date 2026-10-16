@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Fizzo Spritz: clean-room study</title>
+  <meta name="description" content="A fictional sparkling-water brand site: age gate, can pop, foam eruption, falling fruit and stacked can bands. Clean-room study.">
+  <meta property="og:image" content="./img/share.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Gothic&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="d-star" viewBox="0 0 24 24"><path d="M12 1 14 10 23 12 14 14 12 23 10 14 1 12 10 10Z" fill="currentColor"/></symbol>
+  <symbol id="d-bolt" viewBox="0 0 24 24"><path d="M14 1 4 14h6l-2 9 11-15h-6Z" fill="currentColor"/></symbol>
+  <symbol id="d-smile" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M7.5 14c1.2 2.6 7.8 2.6 9 0"/><path d="M8.5 8.5v1.6M15.5 8.5v1.6"/></g></symbol>
+  <symbol id="d-squig" viewBox="0 0 48 24"><path d="M2 18c4-14 8-14 10-4s6 10 10-2 8-12 12-2 8 8 10 4" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></symbol>
+  <symbol id="d-dot" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" fill="currentColor"/></symbol>
+  <symbol id="d-arrow" viewBox="0 0 120 120"><path d="M8 100C20 40 70 14 100 34" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M86 18 102 35 80 46" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<div id="gate" role="dialog" aria-label="Age check">
+  <div class="gate-logo">FIZZO</div>
+  <h1 class="gate-t">THIS IS THE<br>BIG KIDS TABLE</h1>
+  <p class="gate-s mono">Ideally adult in drinking age and child in spirit</p>
+  <button class="pill pill-red" id="enter">I'M READY TO PARTY</button>
+  <p class="gate-f mono">By entering, you agree to be amazed and amused by our spritz brand. (This is <b>not a real</b> product.)</p>
+  <div class="gate-dood" data-dood="7" data-ink="#FF0837"></div>
+  <div class="gate-wipe" id="gateWipe"></div>
+</div>
+
+<header class="top"><a href="#hero" class="logo">FIZZO</a></header>
+<div class="side side-l mono"><span id="sideA">0 GRAMS SUGAR</span><span id="sideB">4 FLAVORS</span></div>
+<div class="side side-r mono"><span id="sideC">GUARANTEED GOOD TIMES</span><span id="sideD">ONLY 20 CALS</span></div>
+
+<canvas id="gl" aria-hidden="true"></canvas>
+
+<main id="page">
+  <section id="hero" class="sec green" data-ink="#FFC1FF">
+    <h2 class="hero-t" aria-label="Fizzo Spritz"><span class="w1">FIZZO</span><span class="w2">SPRITZ</span></h2>
+    <div id="canHero" class="can-anchor"></div>
+    <button class="tag" id="pop"><span>POP THE TOP</span></button>
+    <svg class="hero-arrow" viewBox="0 0 120 120" aria-hidden="true"><use href="#d-arrow"/></svg>
+    <span class="hero-spin mono" aria-hidden="true">GET THE PARTY STARTED</span>
+    <div id="foam" aria-hidden="true"></div>
+    <div class="hero-hint mono">SCROLL DOWN</div>
+    <div class="dood-layer" data-dood="12" data-ink="#FFC1FF"></div>
+  </section>
+
+  <section id="flow" class="sec pink tall" data-ink="#FF0837">
+    <div class="wave"></div>
+    <div class="stage">
+      <div class="bubbles" id="bubbles" aria-hidden="true"></div>
+      <h2 class="flow-t"><span class="ln" id="flowA">GOOD TIMES</span><span class="ln" id="flowB">FLOWING</span></h2>
+      <div class="dood-layer" data-dood="8" data-ink="#FF0837"></div>
+    </div>
+  </section>
+
+  <section id="taste" class="sec yellow tall2" data-ink="#FF5F00">
+    <div class="wave"></div>
+    <div class="stage">
+      <h2 class="taste-t">
+        <span class="row r1"><span class="w">MAKE</span><span class="w sm">TASTEBUDS</span></span>
+        <span class="row r2"><span class="w">YOUR</span><span class="w">DANCE</span></span>
+      </h2>
+      <div id="fruitAnchor" class="fruit-anchor"></div>
+      <div class="dood-layer" data-dood="9" data-ink="#FF5F00"></div>
+    </div>
+  </section>
+
+  <section id="cups" class="sec cream" data-ink="#0069D8">
+    <div class="wave"></div>
+    <div class="cups-in">
+      <svg class="badge" viewBox="0 0 120 120" aria-hidden="true"><defs><path id="circ" d="M60 60m-46 0a46 46 0 1 1 92 0a46 46 0 1 1-92 0"/></defs><circle cx="60" cy="60" r="58" fill="#0069D8"/><text class="mono" fill="#ECE4D5" font-size="10.5" letter-spacing="1.5"><textPath href="#circ">CLICK AND HOLD TO PLAY * CLICK AND HOLD *</textPath></text></svg>
+      <p class="cups-k">SHOOT YOUR SHOT TO</p>
+      <h2 class="cups-t">FIND A FLAVOR</h2>
+      <div class="cups-img"><img id="cupsImg" src="./img/cups-pyramid.webp" alt="A pyramid of party cups" width="1200" height="800"></div>
+      <svg class="cups-arrow" viewBox="0 0 120 120" aria-hidden="true"><use href="#d-arrow"/></svg>
+      <div class="cups-ice"><img src="./img/ice-bucket.webp" alt="Ice bucket full of cans" width="600" height="600"></div>
+      <div class="cups-cta"><span class="mono">NOT FEELING THE GAME?</span><button class="pill pill-blue" id="seeFlavors">SEE FLAVORS &rarr;</button></div>
+      <div class="dood-layer" data-dood="8" data-ink="#0069D8"></div>
+    </div>
+  </section>
+
+  <section id="flavors" class="sec cream flv" data-ink="#00A165">
+    <h2 class="flv-t">FOUR WAYS TO FIZZ</h2>
+    <ul class="cards">
+      <li class="card" style="--c:#FF5F00"><div class="ph"><img src="./img/can-orange.webp" alt="Orange can" width="600" height="800"></div><h3>TANGERINE TWIST</h3><p class="mono">Orange peel, a pinch of ginger</p></li>
+      <li class="card" style="--c:#FF0837"><div class="ph"><img src="./img/can-pink.webp" alt="Pink can" width="600" height="800"></div><h3>BERRY BOUNCE</h3><p class="mono">Strawberry, rose water</p></li>
+      <li class="card" style="--c:#00A165"><div class="ph"><img src="./img/can-green.webp" alt="Green can" width="600" height="800"></div><h3>LIME LIGHTNING</h3><p class="mono">Lime zest, cucumber</p></li>
+      <li class="card" style="--c:#0069D8"><div class="ph"><img src="./img/can-blue.webp" alt="Blue can" width="600" height="800"></div><h3>BLUE RAZZ RIOT</h3><p class="mono">Blueberry, a hint of mint</p></li>
+    </ul>
+  </section>
+
+  <section id="bands" class="sec cream tall4" data-ink="#FFC1FF">
+    <div class="wave"></div>
+    <div class="stage">
+      <div class="band b1"><div class="run"><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span></div></div>
+      <div class="band b2"><div class="run"><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span></div></div>
+      <div class="band b3"><div class="run"><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span></div></div>
+      <div class="band b4"><div class="run"><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span><span>FIZZO SPRITZERS</span></div></div>
+      <div id="canBand" class="can-anchor band-can"></div>
+    </div>
+  </section>
+
+  <section id="party" class="sec blue" data-ink="#FFC1FF">
+    <div class="wave"></div>
+    <h2 class="party-t">PARTY ON</h2>
+    <div class="shots">
+      <figure class="shot s1"><div class="ph"><img src="./img/party-pool.webp" alt="Friends at a pool" width="800" height="1000"></div></figure>
+      <figure class="shot s2"><div class="ph"><img src="./img/party-picnic.webp" alt="Picnic with cans" width="800" height="1000"></div></figure>
+      <figure class="shot s3"><div class="ph"><img src="./img/party-rooftop.webp" alt="Rooftop toast" width="800" height="1000"></div></figure>
+    </div>
+  </section>
+
+  <section id="outro" class="sec cream" data-ink="#00A165">
+    <div class="wave"></div>
+    <div class="sip" aria-hidden="true"><div class="sip-run"><span>SIP</span><span>SIP</span><span>HOORAY</span><span>SIP</span><span>SIP</span><span>HOORAY</span></div></div>
+    <div class="hands"><img id="handsImg" src="./img/hands-cheers.webp" alt="Two hands clinking cans" width="1600" height="900"></div>
+    <div class="outro-cta"><button class="pill pill-green" id="again">START THE PARTY</button></div>
+    <footer class="mono">&copy; 2024 Fizzo Spritz. Fictional brand, made for a design study. Not a real product.</footer>
+    <div class="dood-layer" data-dood="10" data-ink="#00A165"></div>
+  </section>
+</main>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

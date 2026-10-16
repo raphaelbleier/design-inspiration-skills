@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aurelium — Marenne Athletic x Marenne Rugby</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body class="locked">
+
+<!-- fixed top mark + menu -->
+<header class="mark" id="mark" aria-label="Navigation">
+  <span class="mark__crest"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18"/><path d="M12 28 20 10l8 18M15 22h10"/></svg></span>
+  <button class="mark__burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+  <span class="mark__crest"><svg viewBox="0 0 40 40"><path d="M20 3 35 9v13c0 8-7 13-15 16C12 35 5 30 5 22V9z"/><path d="M13 14h14M20 14v14"/></svg></span>
+</header>
+
+<nav class="menu" id="menu" aria-label="Menu principal">
+  <ul>
+    <li><a href="#genese">Genèse</a></li>
+    <li><a href="#collection">Collection</a></li>
+    <li><a href="#medias">Médias</a></li>
+    <li><a href="#stadium">Stades</a></li>
+  </ul>
+  <p class="menu__shops"><a href="#collection">Boutique Marenne Athletic</a><a href="#collection">Boutique Marenne Rugby</a></p>
+</nav>
+
+<!-- chapter pill (fixed) -->
+<div class="pill" id="pill" aria-live="polite"><span>Chapitre I</span></div>
+
+<!-- 1. gate -->
+<section class="gate" id="gate">
+  <div class="gate__bg"></div>
+  <div class="gate__inner">
+    <div class="gate__crests"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="18"/><path d="M12 28 20 10l8 18M15 22h10"/></svg><svg viewBox="0 0 40 40"><path d="M20 3 35 9v13c0 8-7 13-15 16C12 35 5 30 5 22V9z"/><path d="M13 14h14M20 14v14"/></svg></div>
+    <h1 class="gate__title">Aurelium</h1>
+    <p class="script gate__tag">Qui s’unit, s’élève</p>
+    <svg class="gate__swoosh" viewBox="0 0 90 30"><path d="M2 8c20 2 50 8 86 14-30-4-55-3-86-14z"/></svg>
+  </div>
+  <button class="enter" id="enter"><span class="orn">✻</span><span>Entrer</span><span class="orn">✻</span></button>
+</section>
+
+<main id="main">
+<!-- 2. intro: hall facade, text, shrinks into a frame -->
+<section class="intro" id="genese">
+  <div class="intro__stick">
+    <div class="intro__img" id="introImg"><img src="/img/hall-facade.webp" alt="" width="1600" height="900"></div>
+    <p class="intro__txt" id="introTxt"><span class="intro__kick">Aurelium</span>Pour la première fois, l’âme d’une ville réunit deux de ses légendes&nbsp;: sous les arcades de la Maison Commune, l’héritage des Consuls dont s’est drapé le Marenne Rugby, jusqu’à l’ombre des colonnes qui virent naître le Marenne Athletic.</p>
+    <span class="scrollhint">Scroll</span>
+  </div>
+</section>
+
+<!-- 3. shirts on plinths -->
+<section class="shirts" id="shirts">
+  <h2 class="mega" data-split>Notre cité.</h2>
+  <div class="shirts__row">
+    <figure class="shirt"><img src="/img/shirt-a.webp" alt="Maillot Marenne Athletic" width="600" height="800"><div class="plinth"><img src="/img/plinth.webp" alt="" width="400" height="400"></div></figure>
+    <figure class="shirt"><img src="/img/shirt-b.webp" alt="Maillot Marenne Rugby" width="600" height="800"><div class="plinth"><img src="/img/plinth.webp" alt="" width="400" height="400"></div></figure>
+  </div>
+</section>
+
+<!-- 4. chapter I: arches -->
+<section class="chap chap--1" data-chap="Chapitre I" data-title="Les arcades" id="ch1">
+  <div class="band"><span class="band__side">Les arcades</span><span class="band__name">Aurelium</span><span class="band__side">Les arcades</span></div>
+  <div class="arches" id="arches">
+    <div class="arch arch--l"><img src="/img/arch-1.webp" alt="" width="600" height="800"></div>
+    <div class="arch arch--c" id="archC"><img src="/img/arch-2.webp" alt="" width="600" height="800"></div>
+    <div class="arch arch--r"><img src="/img/arch-3.webp" alt="" width="600" height="800"></div>
+    <h2 class="script giant" id="giant">Les arcades.</h2>
+  </div>
+  <div class="track" id="track">
+    <div class="panel panel--lead"><h3 class="h3 h3--lt">Sous les arcades, une histoire est née.</h3></div>
+    <div class="panel panel--img"><img src="/img/lamp-arch.webp" alt="" width="800" height="1000"></div>
+    <div class="panel panel--txt">
+      <h3 class="h3">Le lieu des commencements</h3>
+      <p class="body">Il y a un siècle, une poignée de voisins s’est retrouvée à l’abri de ces voûtes de brique rose pour fonder un club. Les lanternes veillent encore.</p>
+      <h3 class="h3">Populaire dans l’âme</h3>
+      <p class="body">Ici, on ne vient pas voir un match, on vient retrouver les siens. Chaque maillot raconte un quartier, un marché, un dimanche.</p>
+    </div>
+    <div class="panel panel--img"><img src="/img/arcade-wide.webp" alt="" width="800" height="1000"></div>
+    <div class="panel panel--txt">
+      <h3 class="h3">Rendre hommage à la place</h3>
+      <p class="body">Les plafonds peints des arcades inspirent la bande du col&nbsp;: deux rayures grises, un liseré or, la même lumière de fin de journée.</p>
+    </div>
+  </div>
+</section>
+
+<!-- 5. chapter II -->
+<section class="chap chap--2" data-chap="Chapitre II" data-title="Salle du conseil" id="ch2">
+  <div class="band band--dk"><span class="band__side">Salle du conseil</span><span class="band__name">Aurelium</span><span class="band__side">Salle du conseil</span></div>
+  <div class="split">
+    <div class="split__img arch-top"><img src="/img/council-room.webp" alt="" width="800" height="1000"></div>
+    <div class="split__txt">
+      <h3 class="h3 h3--lt">Au cœur de la Maison Commune</h3>
+      <p class="body body--lt">Sous les dorures de la salle du conseil, l’héritage des Consuls se lit dans chaque détail&nbsp;: le grain du velours, la patine du bois, le rouge profond du drapeau.</p>
+      <h3 class="h3 h3--lt">Le lieu où s’écrit la mémoire</h3>
+      <p class="body body--lt">Le col brodé reprend la frise des boiseries. Un fil d’or, cousu à la main, rappelle les cadres des portraits.</p>
+    </div>
+    <div class="split__img split__img--s arch-top"><img src="/img/council-detail.webp" alt="" width="800" height="1000"></div>
+  </div>
+</section>
+
+<!-- 6. chapter III -->
+<section class="chap chap--3" data-chap="Chapitre III" data-title="Salle des Illustres" id="ch3">
+  <div class="band"><span class="band__side">Salle des Illustres</span><span class="band__name">Aurelium</span><span class="band__side">Salle des Illustres</span></div>
+  <div class="split split--rev">
+    <div class="split__img arch-top"><img src="/img/gallery-hall.webp" alt="" width="800" height="1000"></div>
+    <div class="split__txt">
+      <h3 class="h3">Du vestiaire à la grande galerie</h3>
+      <p class="body">Les deux clubs se croisent depuis toujours dans les mêmes couloirs de marbre. Cette fois, ils ont dessiné le même maillot.</p>
+      <h3 class="h3">Le balcon des sacres</h3>
+      <p class="body">C’est de là qu’on salue la foule les soirs de victoire. Une place, un peuple, deux couleurs qui se répondent.</p>
+    </div>
+    <div class="split__img split__img--s arch-top"><img src="/img/balcony.webp" alt="" width="800" height="1000"></div>
+  </div>
+  <p class="script outro">Qui s’unit, s’élève</p>
+</section>
+
+<!-- 7. collection -->
+<section class="coll" id="collection">
+  <h2 class="mega mega--sm"><span>Découvrez</span><span>toute la collection</span></h2>
+  <div class="coll__row">
+    <a class="card" href="#collection"><div class="card__img"><img src="/img/flat-a.webp" alt="" width="600" height="800"></div><p class="card__name">Maillot Marenne Athletic</p><span class="btn">Découvrir la boutique</span></a>
+    <a class="card" href="#collection"><div class="card__img"><img src="/img/flat-b.webp" alt="" width="600" height="800"></div><p class="card__name">Maillot Marenne Rugby</p><span class="btn">Découvrir la boutique</span></a>
+  </div>
+</section>
+
+<!-- 8. stadium + media -->
+<section class="stad" id="stadium">
+  <div class="stad__hero"><img src="/img/stadium.webp" alt="" width="1600" height="900"></div>
+  <h2 class="mega mega--sm"><span>Rendez-vous</span><span>au stade</span></h2>
+  <div class="stad__row">
+    <div class="club"><h3 class="h3">Marenne Athletic</h3><a href="#stadium">Billetterie</a><a href="#stadium">Site officiel</a></div>
+    <div class="club"><h3 class="h3">Marenne Rugby</h3><a href="#stadium">Billetterie</a><a href="#stadium">Site officiel</a></div>
+  </div>
+</section>
+
+<section class="media" id="medias">
+  <h2 class="mega mega--sm gold">Médias</h2>
+  <div class="media__row">
+    <div class="m"><img src="/img/media-1.webp" alt="" width="800" height="600"></div>
+    <div class="m"><img src="/img/media-2.webp" alt="" width="800" height="600"></div>
+  </div>
+  <h2 class="mega mega--sm"><span>Qui s’unit,</span><span>s’élève</span></h2>
+</section>
+</main>
+
+<footer class="foot"><span class="band__name">Aurelium</span><p>Marenne Athletic x Marenne Rugby · Projet fictif d’étude</p></footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

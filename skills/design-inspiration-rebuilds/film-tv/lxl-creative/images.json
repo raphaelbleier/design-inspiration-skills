@@ -1,0 +1,102 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Cinematic still of a candlelit Tudor-style banquet hall, long table with roast meats and pewter jugs, costumed actors in ruffs, rich teal and amber palette, shallow depth of field, film grain",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Moody editorial portrait of a young woman with a dark fringe in a black leather jacket resting her head on a wooden cane, slate blue studio backdrop, soft side light",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Documentary-style photo of a film crew on a rainy London street at dusk, camera on dolly, warm tungsten lights, neon reflections on wet tarmac",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-4.webp",
+  "prompt": "Retro 1970s living room scene, three people posed on a leather armchair in front of patterned wallpaper and a red velvet curtain, warm film look",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-5.webp",
+  "prompt": "Close portrait of a curly-haired redhead in a quilted vest and cream cable-knit sweater, soft grey studio wall, fashion editorial lighting",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-6.webp",
+  "prompt": "Romantic movie key-art frame, two young actors almost kissing in profile against a golden-hour city skyline, teal and orange grade",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/reel.webp",
+  "prompt": "Behind the scenes on a film set: crew around a large cinema camera in a bright white gallery space, director in a hat watching a monitor, natural light",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/service-1.webp",
+  "prompt": "Poster-style key art of two lead actors face to face in warm sunset light, painterly cinematic grade",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/service-2.webp",
+  "prompt": "Behind-the-scenes press kit still, actor laughing with a director on a location set, handheld documentary feel",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/service-3.webp",
+  "prompt": "Vertical social-media campaign still, bold orange backdrop, young cast member holding a clapperboard, playful energy",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/service-4.webp",
+  "prompt": "Magazine editorial portrait of a lead actress in a tailored emerald suit, seamless paper backdrop, glossy lighting",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/service-5.webp",
+  "prompt": "On-set unit stills photograph, two actors in 1940s costume sharing a quiet moment between takes, natural light",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/service-6.webp",
+  "prompt": "Immersive premiere activation: neon-lit installation with a crowd of guests under hanging film strips, dark room, orange glow",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/featured-1.webp",
+  "prompt": "Two soldiers in desert-khaki 1940s uniforms walking down a narrow Mediterranean alley, warm cinematic light",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/featured-2.webp",
+  "prompt": "Stylish crime-drama still, a woman in a camel coat in a dim office corridor with cold blue windows behind her",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/featured-3.webp",
+  "prompt": "Period romance still, a couple dancing in a candlelit ballroom, shallow depth of field",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/featured-4.webp",
+  "prompt": "Quiet coastal thriller still, lone figure on a grey shingle beach under heavy sky, muted green palette",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/why.webp",
+  "prompt": "Contact-sheet style 35mm film strip with sprocket holes and orange edge print, six frames of the same dark-haired model in a metallic jacket, saturated colour",
+  "aspect": "2:3"
+ },
+ {
+  "path": "public/img/studios.webp",
+  "prompt": "Fashion portrait of a young man with ginger curls wearing a grey and gold football-style bomber vest over a white knit, pale lilac studio wall",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cta.webp",
+  "prompt": "Film crew shooting on set, boom operator and camera operator at a camera on sticks in a bright hall, wide cinematic frame",
+  "aspect": "16:9"
+ }
+]

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Zuccotto Pouch Atlas Tour 2026</title>
+<meta name="description" content="A painted scroll journey through Italy with a small striped pouch.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <filter id="rough" x="-5%" y="-5%" width="110%" height="110%">
+    <feTurbulence type="fractalNoise" baseFrequency=".035" numOctaves="3" seed="4" result="n"/>
+    <feDisplacementMap in="SourceGraphic" in2="n" scale="26"/>
+  </filter>
+</svg>
+
+<div class="frame" aria-hidden="true"></div>
+<a class="logo" href="#" aria-label="Zuccotto Pouch, Atlas Tour"><span class="logo-mark">Zuccotto<small>pouch</small></span><span class="logo-tour">ATLAS<br>TOUR<small>Italian roots</small></span></a>
+<button class="round sound" aria-label="Toggle sound" aria-pressed="false">&#9835;</button>
+<button class="round menu-btn" aria-label="Open menu" aria-expanded="false"><i></i><i></i><i></i></button>
+
+<!-- Gate: train compartment, cursor-parallax -->
+<section class="gate" id="gate">
+  <div class="gate-bg img" style="--img:url(./img/compartment.webp)"></div>
+  <div class="gate-intro">
+    <div class="intro-card tilt" hidden>
+      <small class="kick">THE</small>
+      <h1>TUSCAN<br><span>JOURNEY</span></h1>
+      <small class="kick">BEGINS</small>
+      <p>Explore every chapter and receive a small gift.</p>
+    </div>
+  </div>
+  <button class="blob start">Start now</button>
+  <p class="hint"><span aria-hidden="true">&#127911;</span><br>Activate sound for a better experience.</p>
+</section>
+
+<!-- Journey: pinned stage, wheel-driven chapters -->
+<main class="journey" id="journey" hidden>
+  <div class="stage">
+    <section class="scene" data-img="compartment-day" data-n="01" data-name="The Window">
+      <div class="bg img" style="--img:url(./img/compartment-day.webp)"></div>
+    </section>
+    <section class="scene" data-n="02" data-name="The Atelier">
+      <div class="bg img" style="--img:url(./img/scene-atelier.webp)"></div>
+      <button class="spot" style="--x:28%;--y:48%" data-card="fabric" aria-label="Open note: Fabrics"></button>
+      <button class="spot" style="--x:70%;--y:30%" data-card="painting" aria-label="Open note: The painting"></button>
+    </section>
+    <section class="scene" data-n="03" data-name="The Harbour">
+      <div class="bg img" style="--img:url(./img/scene-harbour.webp)"></div>
+      <button class="spot" style="--x:50%;--y:70%" data-card="harbour" aria-label="Open note: The harbour"></button>
+    </section>
+    <section class="scene" data-n="04" data-name="The Market">
+      <div class="bg img" style="--img:url(./img/scene-market.webp)"></div>
+      <button class="spot" style="--x:35%;--y:60%" data-card="market" aria-label="Open note: The market"></button>
+    </section>
+    <section class="scene" data-n="05" data-name="The Station">
+      <div class="bg img" style="--img:url(./img/scene-station.webp)"></div>
+    </section>
+    <section class="scene" data-n="06" data-name="The Orchard">
+      <div class="bg img" style="--img:url(./img/scene-orchard.webp)"></div>
+    </section>
+    <section class="scene" data-n="07" data-name="The Table">
+      <div class="bg img" style="--img:url(./img/scene-finale.webp)"></div>
+    </section>
+
+    <div class="chapter" aria-live="polite">
+      <small class="kick">CHAPTER <b class="ch-n">01</b></small>
+      <h2 class="ch-name">The Window</h2>
+    </div>
+    <div class="rail" aria-hidden="true"><i class="rail-fill"></i></div>
+    <button class="blob join" hidden>Become a traveller</button>
+  </div>
+</main>
+
+<!-- Cards -->
+<div class="overlay" id="card" hidden role="dialog" aria-modal="true">
+  <article class="paper-card tilt">
+    <div class="strip"></div>
+    <div class="card-body">
+      <h3 class="card-title"></h3>
+      <p class="card-text"></p>
+      <img class="card-pouch" alt="" src="./img/pouch-green.webp" width="160" height="160">
+      <button class="blob small close">Close</button>
+    </div>
+    <div class="strip"></div>
+  </article>
+</div>
+
+<div class="overlay" id="form" hidden role="dialog" aria-modal="true">
+  <article class="paper-card tilt wide">
+    <div class="strip"></div>
+    <div class="card-body">
+      <h3 class="card-title big">BECOME A<br>TRAVELLER!</h3>
+      <p class="card-text">Fill in your details to receive your digital gift by email.</p>
+      <form class="fields" onsubmit="return false">
+        <input placeholder="Name" autocomplete="given-name"><input placeholder="Surname" autocomplete="family-name">
+        <input placeholder="name@email.com" type="email" class="full" autocomplete="email">
+        <label class="check full"><input type="checkbox"> I have read the (fictional) privacy notice.</label>
+        <button class="blob small">Receive now!</button>
+        <button type="button" class="skip close">SKIP &#10148;</button>
+      </form>
+    </div>
+    <div class="strip"></div>
+  </article>
+</div>
+
+<nav class="overlay menu" id="menu" hidden aria-label="Chapters"><ol></ol></nav>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

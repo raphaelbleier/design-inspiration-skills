@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/hero-01.webp",
+  "prompt": "Modern alpine chalet with long flat roofs and glass balustrades at blue hour, warm interior lights, deep blue sky, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/hero-02.webp",
+  "prompt": "Artist in a studio painting a colourful pop-art sculpture, graffiti pink and red backdrop, candid editorial photo, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/hero-03.webp",
+  "prompt": "Close-up of a fluffy white long-haired cat lying down looking at camera, soft natural light, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/hero-04.webp",
+  "prompt": "Black running sneaker with orange accents on dark background, product macro photograph, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/proj-01.webp",
+  "prompt": "Close-up of a human eye with pale blue iris, macro beauty photograph, cool tones, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/proj-02.webp",
+  "prompt": "Woman with closed eyes and glowing skin, golden warm light, cosmetics campaign portrait, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/proj-03.webp",
+  "prompt": "Snowy mountain peaks above a sea of clouds at dusk, orange and blue sky, aerial photo, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/proj-04.webp",
+  "prompt": "Minimal product still life of a glass perfume bottle on pastel stone plinth, soft shadow, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/exp-01.webp",
+  "prompt": "Woman in pink top stretching on a white geometric block, pastel green-to-blue gradient sky, fashion editorial, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/exp-02.webp",
+  "prompt": "Profile of a woman's face with warm freckled skin against a peach wall, editorial, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/exp-03.webp",
+  "prompt": "Ski resort village of wooden chalets on a snowy slope at sunrise, pink sky, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/exp-04.webp",
+  "prompt": "Abstract 3D render of a glossy magenta and violet snowboard on a purple gradient field, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/exp-05.webp",
+  "prompt": "Grid of colourful abstract brand identity cards, flat lay, pastel palette, no text, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/exp-06.webp",
+  "prompt": "Laptop showing an online shop with clean product grid on a pastel desk, top view, screen content abstract no text, no text, no logos",
+  "aspect": "4:3"
+ }
+]

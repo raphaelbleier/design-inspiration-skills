@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearpane Glazing | Bespoke architectural glass</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<header class="top">
+  <span class="spacer"></span>
+  <a class="logo" href="#hero">Clearpane</a>
+  <a class="btn btn--ghost" href="#showroom"><i class="arr"></i>Get a quote</a>
+</header>
+
+<main>
+  <section class="hero" id="hero">
+    <div class="hero__media"><img src="/img/hero.webp" alt="" width="1600" height="1000"></div>
+    <h1 class="hero__title" data-split>Exceptional glazing for those who build with vision.</h1>
+  </section>
+
+  <section class="about" id="about">
+    <p class="eyebrow">About Clearpane</p>
+    <p class="about__text" data-words>We bring architecture to life through craft and engineering. Trusted by architects who demand precision, clarity, and care.</p>
+    <a class="btn" href="#projects"><i class="arr"></i>Who we are</a>
+  </section>
+
+  <section class="collection" id="collection">
+    <div class="rule"><p class="eyebrow">Product collection</p></div>
+    <div class="collection__grid">
+      <a class="card card--doors" href="#" data-speed="0"><div class="card__img"><img src="/img/doors.webp" alt="" width="800" height="1000"></div><h3>Doors</h3></a>
+      <a class="card card--windows" href="#" data-speed="-90"><div class="card__img"><img src="/img/windows.webp" alt="" width="700" height="840"></div><h3>Windows</h3></a>
+      <a class="card card--additional" href="#" data-speed="60"><div class="card__img"><img src="/img/additional.webp" alt="" width="700" height="875"></div><h3>Additional</h3></a>
+      <a class="card card--structural" href="#" data-speed="-40"><div class="card__img"><img src="/img/structural.webp" alt="" width="600" height="750"></div><h3>Structural</h3></a>
+      <div class="collection__copy">
+        <p>Our <b>glazing collection</b> is defined by exceptional craftsmanship, refined design, and enduring quality. Made for bold architecture and uncompromising vision.</p>
+        <a class="btn" href="#"><i class="arr"></i>Product overview</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <div class="rule"><p class="eyebrow">Selected projects</p></div>
+    <div class="projects__row">
+      <figure><div class="ph"><img src="/img/project-1.webp" alt="" width="900" height="600"></div><figcaption>Riverbend House</figcaption></figure>
+      <figure><div class="ph"><img src="/img/project-2.webp" alt="" width="900" height="600"></div><figcaption>Terrace Lantern</figcaption></figure>
+      <figure><div class="ph"><img src="/img/project-3.webp" alt="" width="900" height="600"></div><figcaption>Quarry Villa</figcaption></figure>
+    </div>
+  </section>
+
+  <section class="showroom" id="showroom">
+    <div class="rule rule--dark"><p class="eyebrow">Showroom</p></div>
+    <div class="showroom__stage">
+      <div class="showroom__frame">
+        <img class="s1" src="/img/showroom.webp" alt="" width="1600" height="900">
+        <img class="s2" src="/img/showroom-2.webp" alt="" width="1600" height="900">
+        <div class="showroom__shade"></div>
+        <p class="showroom__title">A place where precision and creativity connect.</p>
+        <div class="showroom__info"><span class="eyebrow">Address</span><p>14 Foundry Yard, Unit 3<br>Northbridge NB4 2QT</p><a class="btn btn--ghost" href="#"><i class="arr"></i>Showroom</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="foot">
+  <p class="foot__big">Let's build something clear.</p>
+  <div class="foot__cols">
+    <nav><a href="#about">About</a><a href="#collection">Collection</a><a href="#projects">Projects</a><a href="#showroom">Contact</a></nav>
+    <p>hello@clearpane.example<br>020 0000 0000</p>
+  </div>
+</footer>
+
+<div class="dock"><button class="dock__btn" aria-expanded="false" aria-controls="menu"><span class="dock__mark"></span><span class="dock__label">Home</span><span class="dock__burger"><i></i><i></i></span></button></div>
+
+<div class="menu" id="menu" aria-hidden="true">
+  <nav class="menu__links">
+    <a href="#about">About</a><a href="#collection">Collection</a><a href="#projects">Projects</a><a href="#showroom">Contact</a>
+  </nav>
+  <div class="menu__img"><img src="/img/menu.webp" alt="" width="800" height="1000"></div>
+</div>
+</body>
+</html>

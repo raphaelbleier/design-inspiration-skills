@@ -1,0 +1,122 @@
+[
+  {
+    "path": "public/img/hero.webp",
+    "prompt": "Slender modern wooden lookout tower hotel beside an infinity pool, mountain range behind, blue-hour dusk, cool desaturated blue-grey palette, calm water reflections, wide architectural exterior, no text, no logos, no people, photographic",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/about.webp",
+    "prompt": "Dark timber slats against rough stone wall, close architectural detail, moody, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/aerial.webp",
+    "prompt": "Aerial view of a timber and stone hotel complex in a dense pine forest, drone shot, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "903:570"
+  },
+  {
+    "path": "public/img/benefit1.webp",
+    "prompt": "Quiet spa massage room with warm timber walls, stone basin, candles, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "5:7"
+  },
+  {
+    "path": "public/img/benefit2.webp",
+    "prompt": "Long dining table before a floor-to-ceiling forest window, set for dinner, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "5:7"
+  },
+  {
+    "path": "public/img/benefit3.webp",
+    "prompt": "Yoga lawn at sunrise among pines, mist, empty mats, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "5:7"
+  },
+  {
+    "path": "public/img/benefit4.webp",
+    "prompt": "Timber sauna with a glass wall onto the forest, warm light, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "5:7"
+  },
+  {
+    "path": "public/img/benefit5.webp",
+    "prompt": "Lounge with stone fireplace, leather armchairs, dark timber ceiling, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "5:7"
+  },
+  {
+    "path": "public/img/timeline.webp",
+    "prompt": "Timber footbridge between stone arches in a mountain valley, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "1393:660"
+  },
+  {
+    "path": "public/img/apt1.webp",
+    "prompt": "Superior hotel apartment interior, panoramic living room, oak and stone, large window, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/apt2.webp",
+    "prompt": "Deluxe one-bedroom apartment interior with loggia, pale oak, linen bedding, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/apt3.webp",
+    "prompt": "Penthouse roof terrace with plunge pool overlooking forest valley at dusk, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/apt4.webp",
+    "prompt": "Compact studio apartment, open plan, timber built-ins, terrace door, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/gallery1.webp",
+    "prompt": "Timber hotel lobby with double-height ceiling and stone reception desk, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/gallery2.webp",
+    "prompt": "Pool terrace at blue hour, lit water, timber loungers, forest backdrop, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "1393:783"
+  },
+  {
+    "path": "public/img/gallery3.webp",
+    "prompt": "Forest path leading toward a timber hotel, morning light between pines, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "1393:783"
+  },
+  {
+    "path": "public/img/blog1.webp",
+    "prompt": "Concrete foundation slab on a construction site in a pine valley, overcast, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "328:210"
+  },
+  {
+    "path": "public/img/blog2.webp",
+    "prompt": "Mountain valley village and lake seen from above, calm morning, regional landscape, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "328:210"
+  },
+  {
+    "path": "public/img/cta.webp",
+    "prompt": "Tall pines against a pale overcast sky, low angle, minimal, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/ridge.webp",
+    "prompt": "Mountain ridge silhouette in layered haze, strong value contrast, dark ridge against bright sky, high contrast for halftone, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/tree.webp",
+    "prompt": "Single large pine tree in the centre against a pale plain sky, dark silhouette, very high contrast, centered, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/sheep.webp",
+    "prompt": "Flock of sheep on a pale hillside, simple dark shapes on light ground, high contrast, wide, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/summer.webp",
+    "prompt": "Alpine valley in summer, green meadow, deep blue sky, clear light, high contrast, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/winter.webp",
+    "prompt": "The same alpine valley in winter, snow-covered meadow, pale sky, clear light, high contrast, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "16:9"
+  }
+]

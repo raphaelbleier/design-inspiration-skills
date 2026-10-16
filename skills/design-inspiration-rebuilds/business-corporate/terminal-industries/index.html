@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Yardwell - yard operating system (clean-room study)</title>
+  <meta name="description" content="Fictional yard-logistics site: a clean-room motion study of an award-winning B2B product page.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500;600&family=Inter+Tight:wght@400;450;500;600&display=swap" rel="stylesheet">
+  <script type="module" src="./src/main.js"></script>
+</head>
+<body>
+  <header class="nav" data-nav>
+    <a class="nav__logo" href="#top" aria-label="Yardwell home"><span class="nav__mark">Y</span>Yardwell</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#system">System</a><a href="#markets">Markets</a><a href="#proof">Featured</a><a href="#calc">Resources</a><a href="#about">About</a>
+    </nav>
+    <div class="nav__cta">
+      <a class="btn btn--lime" href="#system">Explore<br>product</a>
+      <a class="btn btn--white" href="#calc">Request<br>demo</a>
+      <a class="btn btn--grey" href="#about">Contact<br>us</a>
+    </div>
+    <button class="nav__burger" aria-label="Menu" aria-expanded="false" data-burger><i></i><i></i></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO: pinned, scrubbed timeline (truck -> yard + particles -> black grid -> statement) -->
+    <section class="hero" data-hero>
+      <div class="hero__stage">
+        <div class="hero__img hero__img--a"><img src="./img/hero-truck.webp" alt="" width="1920" height="1080"></div>
+        <div class="hero__img hero__img--b" data-yard><img src="./img/hero-yard.webp" alt="" width="1920" height="1080"></div>
+        <canvas class="hero__dots" data-dots aria-hidden="true"></canvas>
+        <div class="hero__dark" data-dark>
+          <svg class="hero__notch" viewBox="0 0 1440 38" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H220L268 38H0Z"/><path d="M1440 0H1220L1172 38H1440Z"/></svg>
+        </div>
+        <h1 class="hero__title" data-statement>
+          <span>We reinvented the future of logistics through the yard.</span>
+        </h1>
+        <p class="hero__scroll" data-scrollhint>Scroll to explore</p>
+      </div>
+    </section>
+
+    <!-- THREE ENTRY POINTS -->
+    <section class="paths" id="system">
+      <h2 class="h2" data-split>Fix one yard problem today. Expand on your timetable.</h2>
+      <div class="paths__grid">
+        <article class="card" data-card>
+          <p class="mono">01 Fast start</p>
+          <h3>Fix one problem in the yard</h3>
+          <p class="card__p">Gate, security, dock or dispatch: pick the single problem costing you most and go live in days, with no disruption and at low cost.</p>
+          <div class="ph" style="--ar:3/2"><img src="./img/card-fast.webp" alt="" loading="lazy"></div>
+          <a class="pill" href="#calc">Fix now</a>
+        </article>
+        <article class="card" data-card>
+          <p class="mono">02 Single site &amp; growing</p>
+          <h3>I have a few yards to optimize</h3>
+          <p class="card__p">Start with the applications you need most and expand on your own timeline. No big platform commitment to get started.</p>
+          <div class="ph" style="--ar:3/2"><img src="./img/card-single.webp" alt="" loading="lazy"></div>
+          <a class="pill pill--dark" href="#calc">Learn more</a>
+        </article>
+        <article class="card" data-card>
+          <p class="mono">03 Enterprise network</p>
+          <h3>I run a network of yards</h3>
+          <p class="card__p">One layer of intelligence across every site, with orchestration to manage your whole operation from a single view.</p>
+          <div class="ph" style="--ar:3/2"><img src="./img/card-network.webp" alt="" loading="lazy"></div>
+          <a class="pill" href="#calc">One system for all</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- PINNED FEATURE STEPS -->
+    <section class="feat" data-feat>
+      <div class="feat__pin">
+        <div class="feat__left">
+          <ol class="feat__steps">
+            <li class="feat__step" data-step>
+              <span class="mono">01</span>
+              <h3>Sees every truck at the gate</h3>
+              <p>Cameras read plates, trailers and driver IDs in seconds, so check-in is automatic and every carrier is risk-scored before the barrier lifts.</p>
+            </li>
+            <li class="feat__step" data-step>
+              <span class="mono">02</span>
+              <h3>Eliminates unnecessary labor</h3>
+              <p>Automated workflows remove the need for staff at the gate, in dispatch and between the yard and the dock. Live in 5 days, low IT lift, no third-party devices to support.</p>
+            </li>
+            <li class="feat__step" data-step>
+              <span class="mono">03</span>
+              <h3>Orchestrates the whole yard</h3>
+              <p>Every move is assigned to the nearest free spotter and the right door, and re-planned in real time as the day changes.</p>
+            </li>
+          </ol>
+        </div>
+        <div class="feat__panel" data-panel>
+          <div class="feat__imgs">
+            <img class="feat__img is-on" src="./img/feature-gate.webp" alt="" loading="lazy">
+            <img class="feat__img" src="./img/blueprint.webp" alt="" loading="lazy">
+            <img class="feat__img" src="./img/feature-dock.webp" alt="" loading="lazy">
+          </div>
+          <div class="feat__chip mono" data-chip aria-live="polite">Plate read: 98.7%</div>
+          <span class="feat__bar" data-bar></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETS -->
+    <section class="markets" id="markets">
+      <h2 class="h2" data-split>Built for yards of every shape.</h2>
+      <div class="markets__row">
+        <a class="mk" href="#calc"><div class="ph" style="--ar:4/3"><img src="./img/market-retail.webp" alt="" loading="lazy"></div><span>Retail distribution</span></a>
+        <a class="mk" href="#calc"><div class="ph" style="--ar:4/3"><img src="./img/market-cold.webp" alt="" loading="lazy"></div><span>Cold chain</span></a>
+        <a class="mk" href="#calc"><div class="ph" style="--ar:4/3"><img src="./img/market-port.webp" alt="" loading="lazy"></div><span>Ports &amp; intermodal</span></a>
+        <a class="mk" href="#calc"><div class="ph" style="--ar:4/3"><img src="./img/market-manufacturing.webp" alt="" loading="lazy"></div><span>Manufacturing</span></a>
+      </div>
+    </section>
+
+    <!-- LOGO GRID -->
+    <section class="proof" id="proof">
+      <h2 class="h2 h2--c" data-split>Powering the yards behind the brands you know</h2>
+      <div class="grid" data-grid>
+        <div class="grid__cell" data-cell><b class="wm wm--1">Northvale</b></div>
+        <div class="grid__cell" data-cell><b class="wm wm--2">Kestrel</b></div>
+        <div class="grid__cell" data-cell><b class="wm wm--3">Lumen Cold</b></div>
+        <div class="grid__cell" data-cell><b class="wm wm--4">ORBIS</b></div>
+        <div class="grid__cell" data-cell><b class="wm wm--5">Hatch&amp;Co</b></div>
+      </div>
+    </section>
+
+    <!-- CALCULATOR -->
+    <section class="calc" id="calc">
+      <p class="calc__eyebrow">Yard efficiency calculator</p>
+      <h2 class="h2 h2--c" data-split>What's your yard costing you?</h2>
+      <form class="calc__form" data-calc onsubmit="return false">
+        <h3>Tell us about your yard:</h3>
+        <label>Number of gates <input type="number" name="gates" min="1" max="40" value="4"></label>
+        <label>Shifts per day <input type="number" name="shifts" min="1" max="3" value="2"></label>
+        <label>Trucks per day <input type="number" name="trucks" min="10" max="3000" value="320" step="10"></label>
+        <div class="calc__out"><span class="mono">Estimated yearly savings</span><strong data-out>$0</strong></div>
+      </form>
+    </section>
+
+    <!-- CTA + FOOTER -->
+    <section class="cta" id="about">
+      <svg class="cta__lines" viewBox="0 0 1440 560" preserveAspectRatio="none" aria-hidden="true"><path d="M-10 190L100 330Q140 360 144 330V0M860 0Q870 40 920 48H1240Q1296 48 1296 100V220Q1296 290 1360 290H1440" fill="none" stroke="currentColor" vector-effect="non-scaling-stroke"/></svg>
+      <h2 class="cta__h" data-split>The yard of the future starts today.</h2>
+      <a class="btn-lg" href="#top">Take charge of your yard</a>
+      <footer class="foot">
+        <div class="foot__brand"><a class="nav__logo nav__logo--lg" href="#top"><span class="nav__mark">Y</span>Yardwell</a><p class="foot__small">2025 Market Guide<br>Yard Management<br>Featured Vendor</p></div>
+        <div><p class="mono">Technology</p><a href="#top">Homepage</a><a href="#system">Yard Operating System</a><a href="#system">The Agentic AI Yard</a><a href="#calc">Yard Efficiency Calculator</a></div>
+        <div><p class="mono">Company</p><a href="#about">About</a><a href="#proof">Resources</a><a href="#about">Contact</a></div>
+        <div><p class="mono">Reach us</p><p class="foot__big">Ready for your yard of the future?</p><p class="foot__big">+1 (555) 010-0142</p><p class="foot__big foot__dim">Give us a call today.</p></div>
+        <p class="foot__legal">Copyright Yardwell Systems 2025. Fictional brand for a design study.</p>
+      </footer>
+    </section>
+  </main>
+</body>
+</html>

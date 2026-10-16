@@ -1,0 +1,82 @@
+[
+ {
+  "path": "public/img/hero-1.webp",
+  "prompt": "Dark underground mine tunnel at night, haul truck headlights glowing through dust haze, blue-grey rock walls, cinematic, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-2.webp",
+  "prompt": "Wide underground mining drift with rough rock ceiling, bolted mesh, distant orange work lights, fog, moody blue shadows, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-3.webp",
+  "prompt": "Low angle view of a drilling rig advancing a tunnel face, sparks and dust in beam of light, dark cavern, cinematic, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-4.webp",
+  "prompt": "Miners with helmet lamps walking away down a long dark tunnel, lens flare, cold blue tones with warm orange accents, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/card-services.webp",
+  "prompt": "Miner with headlamp and orange coveralls inspecting rock wall, dark background, blue rim light, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/card-tech.webp",
+  "prompt": "Close-up of a miner in orange hard hat and respirator under warm yellow ceiling lights, dark tunnel, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/about-crew.webp",
+  "prompt": "Two miners in red-orange coveralls with bright headlamps lens flares in dark tunnel, one facing camera, blue and amber light, portrait, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/team-1.webp",
+  "prompt": "Portrait of a smiling underground mine technician in a white hard hat, soft workshop light, shallow depth of field, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/team-2.webp",
+  "prompt": "Portrait of a female mine engineer in orange hi-vis jacket holding a tablet, tunnel entrance behind, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cta-bg.webp",
+  "prompt": "Miner in dark blue coveralls with radio and harness standing in tunnel, red-orange jacket, moody cinematic light, wide, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/min-copper.webp",
+  "prompt": "Isolated copper ore rock specimen on pure white background, studio lighting, soft shadow, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/min-nickel.webp",
+  "prompt": "Isolated nickel ore rock specimen, grey metallic with green tint, on pure white background, studio lighting, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/min-zinc.webp",
+  "prompt": "Isolated zinc ore sphalerite rock specimen on pure white background, studio lighting, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/min-iron.webp",
+  "prompt": "Isolated banded iron ore rock specimen on pure white background, studio lighting, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/min-tin.webp",
+  "prompt": "Isolated cassiterite tin ore rock specimen, dark glossy, on pure white background, studio lighting, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/tech-fleet.webp",
+  "prompt": "Fleet of orange underground loaders and trucks parked in a lit workshop bay, wide, no text",
+  "aspect": "16:9"
+ }
+]

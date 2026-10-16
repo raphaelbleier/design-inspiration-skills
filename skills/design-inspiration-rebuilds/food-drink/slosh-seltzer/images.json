@@ -1,0 +1,57 @@
+[
+  {
+    "path": "public/img/cups-pyramid.webp",
+    "prompt": "A pyramid of ten glossy plastic party cups in green, yellow, blue and red, stacked on a flat warm cream backdrop, soft studio light, top three-quarter view, a small ping-pong ball resting on the top cup, no text, no logos",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/hands-cheers.webp",
+    "prompt": "Two forearms from opposite sides of the frame, each hand holding a slim aluminium drink can (one orange with a yellow top, one bubblegum pink with a red top), clinking cans in the middle, warm cream seamless background, studio photo, generic unbranded cans with blank printed shapes only, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/can-orange.webp",
+    "prompt": "Product shot of a single slim aluminium can, glossy orange with small yellow lightning-bolt pattern, yellow lid, standing upright on a flat cream background with a soft shadow and drops of condensation, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/can-pink.webp",
+    "prompt": "Product shot of a single slim aluminium can, bubblegum pink with tiny red strawberry doodles, red lid, standing upright on a flat cream background with a soft shadow and condensation droplets, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/can-green.webp",
+    "prompt": "Product shot of a single slim aluminium can, emerald green with small white cherry-and-smiley doodles, light pink lid, standing upright on a flat cream background with a soft shadow and condensation droplets, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/can-blue.webp",
+    "prompt": "Product shot of a single slim aluminium can, cobalt blue with small white star doodles, pale cream lid, standing upright on a flat cream background with a soft shadow and condensation droplets, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/party-pool.webp",
+    "prompt": "Candid summer photo of friends laughing at a sunny pool party, one holding a slim pastel drink can up toward the camera, bright saturated colors, inflatable flamingo in the background, shallow depth of field, no text, no logos",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/party-picnic.webp",
+    "prompt": "Candid photo of a colourful picnic blanket in a park seen from above, hands reaching in for slim aluminium drink cans among sliced fruit and snacks, saturated pop colors, no text, no logos",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/party-rooftop.webp",
+    "prompt": "Candid evening photo of a rooftop gathering at golden hour with string lights, a few people toasting with slim drink cans, warm pink and orange sky, shallow depth of field, no text, no logos",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/ice-bucket.webp",
+    "prompt": "A shiny metal ice bucket full of ice cubes and four slim aluminium drink cans in orange, pink, green and blue, on a flat cream background, studio light, unbranded cans, no text, no logos",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/share.webp",
+    "prompt": "Wide playful social-share graphic photo: a bubblegum pink backdrop with a slim green aluminium can in the centre erupting pink foam, scattered fruit slices (orange, lime, strawberry, blueberry) flying around, no text, no logos",
+    "aspect": "1200:628"
+  }
+]

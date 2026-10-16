@@ -1,0 +1,50 @@
+:root {
+  --bg: #f6f6f6; --ink: #0a0a0a; --mute: #b2b2b2; --card: #fff;
+  --ui: 'Michroma', 'Helvetica Neue', Arial, sans-serif;
+  --display: 'Syncopate', 'Michroma', sans-serif;
+  --ease: cubic-bezier(.65, .05, 0, 1);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { background: var(--bg); }
+body { background: var(--bg); color: var(--ink); font: 400 8px/1.1 var(--ui); letter-spacing: .04em; text-transform: uppercase; overflow-x: hidden; }
+a, button { color: inherit; font: inherit; letter-spacing: inherit; text-transform: inherit; text-decoration: none; background: none; border: 0; cursor: pointer; }
+i { font-style: normal; color: var(--mute); }
+#gl { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+.dim { position: fixed; inset: 0; background: #000; opacity: 0; z-index: 1; pointer-events: none; }
+
+.card { position: fixed; z-index: 5; background: var(--card); padding: 10px; transition: background .5s var(--ease), color .5s var(--ease); }
+.logo-card { top: 20px; left: 20px; width: 350px; height: 58px; display: flex; flex-direction: column; justify-content: space-between; }
+.logo { font: italic 700 13px/1 var(--display); letter-spacing: 0; }
+.logo-card nav { display: flex; gap: 8px; align-items: baseline; }
+.logo-card nav a i, .cart i { margin-left: 8px; }
+.cart { margin-left: auto; }
+.pick-card { top: 20px; right: 20px; left: auto; width: 233px; height: 28px; display: flex; align-items: center; gap: 12px; padding: 0 28px 0 10px; }
+.pick-name { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pick-thumb { position: absolute; right: -1px; top: -1px; height: 28px; width: 27px; object-fit: cover; background: #ddd; border: 1px solid var(--ink); }
+.discover { left: 20px; bottom: 20px; width: 350px; height: 28px; display: flex; justify-content: space-between; align-items: center; background: var(--ink); color: #fff; }
+.d-cta { color: var(--mute); }
+body.past-hero .discover { background: var(--card); color: var(--ink); }
+
+.hero { position: relative; z-index: 2; height: 100vh; padding: 140px 30px 0; pointer-events: none; }
+.eyebrow { font-size: 8px; margin-bottom: 8px; }
+h1 { font: 700 30px/1 var(--display); letter-spacing: -.01em; }
+.count { margin-top: 48px; display: flex; gap: 70px; align-items: baseline; }
+.count b { font: 700 8px/1 var(--display); }
+
+.manifesto { position: relative; z-index: 2; height: 100vh; background: var(--bg); display: grid; place-items: center; padding: 0 20px; }
+.mf { font: 700 clamp(18px, 2.3vw, 33px)/1 var(--display); max-width: 14.5em; text-align: center; letter-spacing: -.01em; }
+.ln { padding-bottom: .05em; }
+.manifesto footer { position: absolute; left: 20px; right: 20px; bottom: 20px; display: flex; justify-content: space-between; }
+.links { position: static; display: flex; gap: 0; padding: 0; }
+.links a { padding: 10px; border-left: 1px solid var(--bg); }
+.links a:first-child { border: 0; }
+.links a:nth-child(odd):not(:only-child) { color: var(--mute); }
+
+@media (max-width: 767px) {
+  .logo-card, .discover { width: calc(100vw - 40px); }
+  .pick-card { top: 88px; width: 180px; }
+  .hero { padding-top: 150px; }
+  .manifesto footer { flex-direction: column; gap: 6px; align-items: flex-start; }
+  .links a { padding: 8px; }
+}
+@media (prefers-reduced-motion: reduce) { .card { transition: none; } }

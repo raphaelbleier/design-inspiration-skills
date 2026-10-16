@@ -1,0 +1,62 @@
+[
+ {
+  "path": "public/img/hero-truck.webp",
+  "prompt": "Side-on cinematic photograph of a white semi truck with a long box trailer driving left to right, silhouetted against a warm amber-to-lilac dusk sky, flat dark ground below, headlight glow on the right edge, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-yard.webp",
+  "prompt": "Elevated three-quarter view of a logistics yard at golden hour: a semi truck turning between stacked shipping containers, loading dock building with two parked trucks in the background, warm orange and rust light, cinematic, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/card-fast.webp",
+  "prompt": "Aerial top-down photograph of a truck yard with colourful trailers parked in diagonal rows and a curved lane through them, overcast daylight, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/card-single.webp",
+  "prompt": "Aerial top-down photograph of a small distribution depot with white trailers angled at dock doors, long warm shadows, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/card-network.webp",
+  "prompt": "Aerial top-down photograph of a huge vehicle compound with hundreds of trucks in tidy rows next to farmland, daylight, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/blueprint.webp",
+  "prompt": "Top-down night view rendered as glowing blue wireframe outlines of semi trucks backing into numbered dock bays 8 to 14, dark black background with faint starfield dots, technical HUD feel, no readable text beyond bay numbers, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/feature-gate.webp",
+  "prompt": "Close dark photograph of a security gate lane at a freight yard at night with a camera on a pole and a truck waiting, cool teal light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/feature-dock.webp",
+  "prompt": "Interior view of a loading dock with a trailer backed in and a worker with a tablet, cool white light, shallow depth of field, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/market-retail.webp",
+  "prompt": "Distribution centre yard for retail goods, trailers lined at dock doors, early morning haze, wide photograph, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/market-cold.webp",
+  "prompt": "Cold storage facility exterior with refrigerated trailers, frost on the ground, blue hour, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/market-port.webp",
+  "prompt": "Container port terminal with stacked containers and a straddle carrier, overcast sky, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/market-manufacturing.webp",
+  "prompt": "Manufacturing plant shipping yard with flatbed trucks and pallets of steel coils, late afternoon sun, no text, no logos",
+  "aspect": "4:3"
+ }
+]

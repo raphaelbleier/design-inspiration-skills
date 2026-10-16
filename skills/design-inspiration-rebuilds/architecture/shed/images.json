@@ -1,0 +1,72 @@
+[
+  {
+    "path": "public/img/hero.webp",
+    "prompt": "Low-angle architectural photograph of a timber pergola with glass roof panels against a bright blue sky with wispy clouds, white slatted facade below, crisp daylight, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/intro-atrium.webp",
+    "prompt": "Top-down view of a curved retail atrium with escalators and two planted circular islands set in a blue wave-pattern floor, bright daylight, no text",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/spirit.webp",
+    "prompt": "Warm dramatic interior of a boutique display ring with neon-lit curved shelf holding table tennis paddles with orange rubber, cinematic, no text, no logos",
+    "aspect": "16:10"
+  },
+  {
+    "path": "public/img/svc-retail.webp",
+    "prompt": "Minimal perfume retail wall with white tiles, chrome lab-stand shelves holding amber glass perfume bottles, soft side light, no text, no logos",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/svc-hospitality.webp",
+    "prompt": "Boutique hotel lobby with arched plaster walls, walnut reception desk, terracotta tones, warm evening light, no text",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/svc-workplace.webp",
+    "prompt": "Bright open-plan workplace with timber slat ceiling, long oak tables, plants and cobalt blue accent chairs, no people, no text",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/svc-exhibition.webp",
+    "prompt": "Gallery exhibition hall with a freestanding white sculptural stand lit by spotlights, concrete floor, deep shadows, no text, no logos",
+    "aspect": "4:5"
+  },
+  {
+    "path": "public/img/news-water.webp",
+    "prompt": "Close-up abstract of rippled water reflecting golden seaweed and sky, shallow depth of field, no text",
+    "aspect": "16:10"
+  },
+  {
+    "path": "public/img/news-shopfront.webp",
+    "prompt": "Black-and-white photograph of a traditional timber boutique shopfront on a quiet brick street with a large glass window and shelves inside, no readable signage, no text",
+    "aspect": "16:10"
+  },
+  {
+    "path": "public/img/seework-thumb.webp",
+    "prompt": "Aerial photograph of a coastal resort with a turquoise pool, palm trees, villas and surf breaking on the shore, no text",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/about-studio.webp",
+    "prompt": "Architects' studio table covered with material samples, tracing paper and a small timber massing model, top-down, soft daylight, no text",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/project-store.webp",
+    "prompt": "Luxury shoe boutique interior with sculpted plaster plinths and pale oak shelving, softly lit, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/project-cafe.webp",
+    "prompt": "Compact burger restaurant interior with red booths, chrome counter and neon strip lighting, moody, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/project-arcade.webp",
+    "prompt": "Airy shopping arcade with barrel-vaulted glass roof and pale stone floor, long perspective, no people, no text",
+    "aspect": "4:3"
+  }
+]

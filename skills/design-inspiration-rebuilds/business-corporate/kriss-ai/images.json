@@ -1,0 +1,10 @@
+[
+{"path":"public/img/setup-ui.webp","prompt":"Clean product mockup of a website with a small chat widget open in the bottom right corner, soft mauve and lilac gradient desktop background, pastel UI, no readable text, no logos, studio lighting","aspect":"16:10"},
+{"path":"public/img/about-1.webp","prompt":"Friendly portrait of a woman in her thirties in a bright pastel lilac studio, soft window light, shoulders up, natural smile, editorial photography, no text","aspect":"4:5"},
+{"path":"public/img/about-2.webp","prompt":"Portrait of a man in his forties wearing a plain sweater, warm peach studio backdrop, soft diffuse light, relaxed expression, editorial photography, no text","aspect":"4:5"},
+{"path":"public/img/about-3.webp","prompt":"Portrait of a young person with short hair in a pale blue studio, soft light, gentle smile, editorial photography, no text, no logos","aspect":"4:5"},
+{"path":"public/img/plan-solo.webp","prompt":"Soft 3D render of a single smooth pebble-shaped chat bubble floating on a pale lilac gradient, clay material, studio light, no text","aspect":"1:1"},
+{"path":"public/img/plan-clinic.webp","prompt":"Soft 3D render of three overlapping smooth chat bubbles in peach and lilac on a pale gradient, clay material, studio light, no text","aspect":"1:1"},
+{"path":"public/img/plan-group.webp","prompt":"Soft 3D render of a cluster of many rounded chat bubbles forming a small cloud, mauve and blue clay material, studio light, no text","aspect":"1:1"},
+{"path":"public/img/og-cover.webp","prompt":"Isometric cutaway 3D illustration of a three-storey pastel clinic building with tiny figures at desks, soft clouds around it, mauve gradient sky, clay render, no text, no logos","aspect":"16:9"}
+]

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maren Ashby — The Companion Experience</title>
+  <meta name="description" content="A fictional poet's reading room: mist, ink and slow scroll.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Newsreader:opsz,wght@6..72,200..400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+  <canvas id="fog" aria-hidden="true"></canvas>
+  <div class="cursor" aria-hidden="true"><i></i></div>
+
+  <header class="bar">
+    <a href="#top" class="bar__mark blend">M. Ashby</a>
+    <a href="#join" class="bar__link blend">Become a companion</a>
+  </header>
+
+  <main id="top">
+    <section class="hero" data-ink="0" data-blob="0">
+      <p class="small blend hero__cap" data-reveal>Welcome to the</p>
+      <h1 class="display blend" data-reveal>Maren Ashby<br>Experience</h1>
+      <figure class="tile t1" data-speed="-0.12"><img src="/img/cottage.webp" alt="" width="800" height="600"></figure>
+      <figure class="tile t2" data-speed="-0.28"><img src="/img/oak.webp" alt="" width="600" height="600"></figure>
+      <figure class="tile t3" data-speed="-0.05"><img src="/img/hillside.webp" alt="" width="900" height="600"></figure>
+      <figure class="tile t4" data-speed="-0.2"><img src="/img/stones.webp" alt="" width="500" height="500"></figure>
+      <a href="#poem" class="small hero__open blend">Open the landscape</a>
+    </section>
+
+    <section class="poem" id="poem" data-ink="1" data-blob="0" data-rect="0.22,0.8">
+      <div class="poem__text blend" data-scrub>
+        <p>for the quiet that gathers<br>in the long grass of your hours.<br><em>(from “Salt Before Morning”)</em></p>
+        <p>There is a door in the weather<br>that opens only inward,<br>and a kettle left warm for no one.</p>
+        <p>Stay with the small light.<br>It has walked a great way<br>to find the shape of your window.<br><em>(from “The Late Lamp”)</em></p>
+      </div>
+    </section>
+
+    <section class="join" id="join" data-ink="1" data-blob="0" data-rect="0.12,0.5">
+      <h2 class="title blend" data-reveal>Become a companion<br>to Maren Ashby’s work</h2>
+      <h3 class="title title--s blend" data-reveal>Subscriber<br>Benefits</h3>
+      <ul class="perks">
+        <li class="perk"><figure><img src="/img/window.webp" alt="" width="640" height="800"></figure>
+          <h4 class="blend">Poems and essays</h4><p class="blend">Every published poem and essay, gathered in one unhurried place.</p></li>
+        <li class="perk"><figure><img src="/img/cliff.webp" alt="" width="640" height="800"></figure>
+          <h4 class="blend">Video and talks</h4><p class="blend">An archive of readings and online sessions, including the Three Sundays series.</p></li>
+        <li class="perk"><figure><img src="/img/lantern.webp" alt="" width="640" height="800"></figure>
+          <h4 class="blend">Walks and soundscapes</h4><p class="blend">Recorded walks through the places the poems came from.</p></li>
+      </ul>
+    </section>
+
+    <section class="offer" data-ink="0" data-blob="1">
+      <div class="offer__card">
+        <p class="small">Annual offer</p>
+        <p class="offer__line">Annual membership with one week free</p>
+        <a href="#faq" class="btn">Subscribe</a>
+      </div>
+      <figure class="viaduct"><img src="/img/viaduct.webp" alt="" width="1600" height="500"></figure>
+    </section>
+
+    <section class="faq" id="faq" data-ink="1" data-blob="1" data-rect="0.3,0.95">
+      <h2 class="title blend" data-reveal>Commonly<br>Asked Questions</h2>
+      <ul class="faq__list">
+        <li class="q"><button class="q__head" aria-expanded="false"><span class="blend">Is there a monthly subscription for the Companion?</span><u class="blend">View</u></button>
+          <div class="q__body"><p class="blend">Not yet. Membership is annual so the archive can stay quiet and ad-free.</p></div></li>
+        <li class="q"><button class="q__head" aria-expanded="false"><span class="blend">I already read the newsletter. How is the Companion different?</span><u class="blend">View</u></button>
+          <div class="q__body"><p class="blend">The newsletter is a letter. The Companion is the whole house: archive, recordings and walks.</p></div></li>
+        <li class="q"><button class="q__head" aria-expanded="false"><span class="blend">Can I gift a membership to someone?</span><u class="blend">View</u></button>
+          <div class="q__body"><p class="blend">Yes. Choose “gift” at checkout and we will send a hand-written card by email.</p></div></li>
+        <li class="q"><button class="q__head" aria-expanded="false"><span class="blend">When will more Three Sundays sessions be added?</span><u class="blend">View</u></button>
+          <div class="q__body"><p class="blend">A new session is added each season, usually near the equinox or solstice.</p></div></li>
+        <li class="q"><button class="q__head" aria-expanded="false"><span class="blend">I am having trouble with my subscription. Who do I contact?</span><u class="blend">View</u></button>
+          <div class="q__body"><p class="blend">Write to the keepers of the house at the address in your welcome email.</p></div></li>
+      </ul>
+    </section>
+
+    <footer class="foot" data-ink="1" data-blob="1" data-rect="0.35,0.95">
+      <p class="small blend foot__a">Companion Portal</p>
+      <p class="display blend foot__name" data-reveal>Maren Ashby</p>
+      <button class="small blend foot__restart" id="restart">Restart the experience</button>
+      <p class="small blend foot__note">A fictional study site. Poems, names and images are invented.</p>
+    </footer>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

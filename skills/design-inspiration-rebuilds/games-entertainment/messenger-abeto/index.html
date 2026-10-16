@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Letterbox</title>
+  <meta name="description" content="Clean-room study of a full-screen WebGL courier game: ink-outline cel shading, stepped hand-drawn UI.">
+  <meta name="theme-color" content="#62BEBB">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='7' width='26' height='18' fill='%23F6CF5F' stroke='%23363a3c' stroke-width='2'/%3E%3Cpath d='M3 7l13 11L29 7' fill='none' stroke='%23363a3c' stroke-width='2'/%3E%3C/svg%3E">
+</head>
+<body>
+  <canvas id="gl"></canvas>
+
+  <button id="begin" type="button" aria-label="Begin" hidden>
+    <span class="btn"><span class="shape face"></span><b>Begin</b></span>
+  </button>
+
+  <div id="banner" class="ink-panel" hidden><div class="face"></div><span></span></div>
+  <div id="npc-bubble" class="ink-panel" hidden><div class="face"></div><span>…</span></div>
+  <div id="emote" hidden></div>
+
+  <div id="dlg" hidden>
+    <div class="tab ink-panel"><div class="face"></div><span>Courier</span></div>
+    <div class="box ink-panel"><div class="face"></div><p class="text" aria-live="polite"></p></div>
+    <button class="next ink-panel" type="button" aria-label="Next"><div class="face"></div>
+      <svg viewBox="0 0 24 24"><path d="M7 4l13 8-13 8z" fill="#66BDE6" stroke="#363a3c" stroke-width="1.6" stroke-linejoin="round"/></svg></button>
+  </div>
+
+  <nav id="hud" hidden></nav>
+  <section id="checklist" class="ink-panel" hidden><div class="face"></div><div class="inner"></div></section>
+  <section id="outfit" hidden></section>
+  <section id="wheel" class="ink-panel" hidden><div class="face"></div><div class="grid"></div></section>
+  <div id="joy" hidden><i></i></div>
+
+  <div id="wipe1" class="wipe"></div>
+  <div id="wipe2" class="wipe"></div>
+  <div id="loader"><div class="lw"><svg viewBox="0 0 90 90" width="90" height="90"></svg><p>Loading</p></div></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+[
+ {
+  "path": "public/img/hero-square.webp",
+  "prompt": "aerial dusk view of a grand historic red-brick city hall and its empty cobbled square, terracotta rooftops, warm low light, cinematic, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hall-facade.webp",
+  "prompt": "front facade of a neoclassical red-brick and white-stone city hall under heavy grey clouds, flags on balcony, tiny people on the square, moody, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/marble.webp",
+  "prompt": "seamless pale cream marble texture with faint grey veins, flat top-down, subtle",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/shirt-a.webp",
+  "prompt": "cream football jersey with dark grey striped collar and a small round gold crest, front view, floating, studio shot on flat mid-grey background, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/shirt-b.webp",
+  "prompt": "cream rugby jersey with dark grey striped collar, front view, floating, studio shot on flat mid-grey background, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/plinth.webp",
+  "prompt": "weathered pale marble pedestal column top, front view, flat mid-grey background",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/arch-1.webp",
+  "prompt": "detail of a vintage street lantern mounted on a red-brick wall, warm light",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/arch-2.webp",
+  "prompt": "looking up at the painted ceiling panels of a brick arcade, red and blue vintage illustrations",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/arch-3.webp",
+  "prompt": "weathered gilded jewellery shop sign on a red-brick pillar, oblique angle",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/arcade-wide.webp",
+  "prompt": "long red-brick arcade corridor with painted ceiling, perspective, warm light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/lamp-arch.webp",
+  "prompt": "an ornate black iron lantern hanging inside a brick arch against pale blue sky",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/council-room.webp",
+  "prompt": "opulent historic council chamber with painted ceiling, gilded frames and red velvet, wide view",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/council-detail.webp",
+  "prompt": "close detail of a carved wooden chair and gilded wall painting in a grand hall",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/gallery-hall.webp",
+  "prompt": "grand marble gallery hall with tall paintings and a long polished floor, soft daylight",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/balcony.webp",
+  "prompt": "stone balcony of a historic city hall seen from the square below, crowd, flags",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/flat-a.webp",
+  "prompt": "cream football jersey flat lay on slate grey background, dark grey striped collar, small gold crest, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/flat-b.webp",
+  "prompt": "cream rugby jersey flat lay on slate grey background, dark grey striped collar, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/stadium.webp",
+  "prompt": "floodlit football stadium at dusk from the stands, red and black seats, empty pitch, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/media-1.webp",
+  "prompt": "backstage tunnel of a stadium, players silhouettes walking toward light, cinematic",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/media-2.webp",
+  "prompt": "film crew with camera shooting on a historic cobbled square at golden hour",
+  "aspect": "4:3"
+ }
+]

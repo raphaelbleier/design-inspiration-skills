@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pebble AI</title>
+<meta name="description" content="Fictional study: an AI front desk for clinics, told as a wheel-driven journey through a 3D cutaway building.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+<canvas id="stage" aria-hidden="true"></canvas>
+
+<header class="top">
+  <a class="logo" href="#" data-go="0" aria-label="Pebble AI"><span>PEBBLE</span><i>AI</i></a>
+  <nav class="frame" aria-label="Main">
+    <button data-go="0">Home</button><button data-go="1">Setup</button><button data-go="2">Plans</button><button data-go="3">About</button><button data-go="4">FAQ</button>
+    <a class="cta" href="#" data-demo>Book Demo</a>
+  </nav>
+</header>
+
+<main id="panels">
+  <section class="panel hero" data-i="0">
+    <h1>Hi, I'm Pebble.</h1>
+    <p class="sub">An AI front desk for<br><span id="who"></span></p>
+    <button class="frame btn" data-go="1">Learn More</button>
+  </section>
+
+  <section class="panel side" data-i="1">
+    <p class="type"><span id="typed"></span><b class="caret"></b></p>
+    <h2>Live in one afternoon.</h2>
+    <ol class="steps">
+      <li><b>Paste one line</b> into your site header.</li>
+      <li><b>Upload your price list</b> and opening hours.</li>
+      <li><b>Review the first answers</b>, then switch me on.</li>
+    </ol>
+    <div class="ph shot"><img src="./img/setup-ui.webp" alt="" loading="lazy"></div>
+  </section>
+
+  <section class="panel side" data-i="2">
+    <h2>Plans that grow with the waiting room.</h2>
+    <div class="plans">
+      <article><div class="ph sq"><img src="./img/plan-solo.webp" alt="" loading="lazy"></div><h3>Solo</h3><p class="price">$49<small>/mo</small></p><p>One practice, 500 chats a month.</p></article>
+      <article class="pick"><div class="ph sq"><img src="./img/plan-clinic.webp" alt="" loading="lazy"></div><h3>Clinic</h3><p class="price">$149<small>/mo</small></p><p>Five locations, calendar sync.</p></article>
+      <article><div class="ph sq"><img src="./img/plan-group.webp" alt="" loading="lazy"></div><h3>Group</h3><p class="price">Talk to us</p><p>Unlimited chats, own tone of voice.</p></article>
+    </div>
+  </section>
+
+  <section class="panel side" data-i="3">
+    <h2>Made by people who used to answer the phone.</h2>
+    <p>We spent years at reception desks before writing a line of code. Pebble answers the way a calm colleague would.</p>
+    <div class="team">
+      <figure><div class="ph port"><img src="./img/about-1.webp" alt="" loading="lazy"></div><figcaption>Ines Calder<span>Founder</span></figcaption></figure>
+      <figure><div class="ph port"><img src="./img/about-2.webp" alt="" loading="lazy"></div><figcaption>Tomas Weir<span>Engineering</span></figcaption></figure>
+      <figure><div class="ph port"><img src="./img/about-3.webp" alt="" loading="lazy"></div><figcaption>Sol Ahrens<span>Care lead</span></figcaption></figure>
+    </div>
+  </section>
+
+  <section class="panel side" data-i="4">
+    <h2>Questions, answered.</h2>
+    <div class="faq">
+      <details open><summary>Does Pebble give medical advice?</summary><p>No. It answers logistics and hands anything clinical to your staff.</p></details>
+      <details><summary>Where is data stored?</summary><p>Encrypted, in the region you pick, deleted on request.</p></details>
+      <details><summary>Can I change its tone?</summary><p>Yes. Start from warm, formal or brisk and edit the wording.</p></details>
+      <details><summary>What if it does not know?</summary><p>It says so and books a call-back instead of guessing.</p></details>
+    </div>
+    <a class="cta big" href="#" data-demo>Book Demo</a>
+  </section>
+</main>
+
+<div id="hotspots" aria-label="Floors"></div>
+
+<div class="hint"><span class="mouse"><i></i></span><span>Scroll or click hotspots to explore the experience</span></div>
+
+<aside class="chat" id="chat">
+  <div class="bubble" id="bubble">I live down here on your website. Click to try me!</div>
+  <section class="win" id="win" hidden>
+    <header>Pebble <button id="x" aria-label="Close">&times;</button></header>
+    <div class="log" id="log"><p class="bot">Hello! Ask me about opening hours, prices or booking.</p></div>
+    <form id="form"><input id="msg" placeholder="Type a message" autocomplete="off"><button>Send</button></form>
+  </section>
+  <button class="fab" id="fab" aria-label="Open chat">P</button>
+</aside>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

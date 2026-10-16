@@ -1,0 +1,82 @@
+[
+  {
+    "path": "public/img/hero.webp",
+    "prompt": "Calm architectural photograph of a pale rendered concrete colonnade with three round columns and a deep roof overhang, olive tree and glass balustrade behind, soft overcast coastal light, muted greens and creams, no text, no logos",
+    "aspect": "16:9"
+  },
+  {
+    "path": "public/img/studio-detail.webp",
+    "prompt": "Close detail of a warm sand-coloured rendered wall with a deep recessed shadow line and a slim window reveal, soft raking light, minimal, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/work-1.webp",
+    "prompt": "Three-storey terraced apartment building in blush pink render with planted balconies and timber screens, blue sky, afternoon sun, architectural photography, no text, no logos",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/work-2.webp",
+    "prompt": "Slender white residential tower with vertical fins seen from below against a pale hazy sky, calm and symmetrical, architectural photography, no text, no logos",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/work-3.webp",
+    "prompt": "Charred black timber cabin in dune grass with one warmly lit square window at dusk, eucalyptus trees behind, architectural photography, no text, no logos",
+    "aspect": "3:2"
+  },
+  {
+    "path": "public/img/field-1.webp",
+    "prompt": "Interior of a stone-clad hallway with a dark brass door, soft daylight, architectural interior photography, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/field-2.webp",
+    "prompt": "Minimal kitchen corner with pale terrazzo bench and walnut cabinet, soft light, no text, no logos",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/field-3.webp",
+    "prompt": "Concrete stair with timber handrail climbing beside a tall window onto green foliage, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/field-4.webp",
+    "prompt": "Low white townhouse facade with rounded corner and a single arched door, midday sun, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/field-5.webp",
+    "prompt": "Black steel pergola over an outdoor dining terrace with plants, evening glow, architectural photography, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/field-6.webp",
+    "prompt": "Rammed earth wall detail with two small round brass fittings, warm tone, no text, no logos",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/field-7.webp",
+    "prompt": "Boutique cafe interior with dark stone counter, brass lamps and pale plaster walls, no text, no logos",
+    "aspect": "1:1"
+  },
+  {
+    "path": "public/img/field-8.webp",
+    "prompt": "Aerial-style view of a pale student housing block with courtyard garden, overcast, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/field-9.webp",
+    "prompt": "Hotel lobby with curved oak reception desk, linen curtains and a tall arched window, muted palette, no text, no logos",
+    "aspect": "4:3"
+  },
+  {
+    "path": "public/img/field-10.webp",
+    "prompt": "Corner of a residential living room with built-in timber bench, ceramic vase and diffused light, no text, no logos",
+    "aspect": "3:4"
+  },
+  {
+    "path": "public/img/method.webp",
+    "prompt": "Architects studio table with white card models, tracing paper sketches, pencils and a coffee cup, soft natural window light, top-down slightly angled, muted palette, no text, no logos",
+    "aspect": "16:9"
+  }
+]

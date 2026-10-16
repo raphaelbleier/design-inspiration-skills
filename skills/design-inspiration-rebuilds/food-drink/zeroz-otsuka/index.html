@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="ja" class="js" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/lumo Daily Balance Food — clean-room study</title>
+<meta name="description" content="Clean-room study rebuild: WebGL hero, bloom transition, pinned chapter scroll. Fictional brand and copy.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="#top" aria-label="lumo">/lumo</a>
+  <nav class="nav" aria-label="Primary">
+    <a href="#concept">About</a><a href="#science">Science &amp; Technology</a><a href="#product">Product</a><a href="#interview">Interview</a>
+  </nav>
+  <a class="store" href="#footer"><span>Online store</span><i class="ext"></i></a>
+  <button class="menu-btn" aria-label="Menu" aria-expanded="false"><i></i><i></i></button>
+</header>
+
+<div class="menu" aria-hidden="true">
+  <a href="#concept">About</a><a href="#science">Science &amp; Technology</a><a href="#product">Product</a><a href="#interview">Interview</a><a href="#footer">Online store</a>
+</div>
+
+<ul class="dots" aria-hidden="true"><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+
+<main id="top">
+<!-- HERO -->
+<section class="kv" id="kv" data-theme="dark">
+  <div class="kv-pin">
+    <canvas id="stage" aria-hidden="true"></canvas>
+    <div class="kv-copy">
+      <div class="copy-top"><p class="t-hero">Rise</p><p class="t-hero">Within,</p></div>
+      <p class="brackets" aria-hidden="true"><span class="b-l">(</span><span class="b-r">)</span></p>
+      <div class="copy-bottom"><p class="t-hero">Move</p><p class="t-hero">Freely</p><p class="kv-ja">いつもの力を、静かに目覚めさせる。</p></div>
+    </div>
+    <div class="kw kw-l"><span>Everyday</span><span>Balance</span><span>Food</span></div>
+    <div class="kw kw-r"><span>Quiet</span><span>Inner</span><span>Power</span></div>
+    <button class="scroll-hint" aria-label="Scroll"><i></i></button>
+    <div class="bloom" aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- INTRO -->
+<section class="intro" id="intro" data-theme="light">
+  <div class="intro-pin">
+    <div class="intro-copy">
+      <p class="t-ja-l">からだの内側から、</p>
+      <p class="t-en-l">“Quiet Inner Power”</p>
+      <p class="t-ja-l">という考え方。</p>
+    </div>
+    <div class="summary">
+      <div class="summary-block"><p>アオバ研究所は</p><p>毎日の活動にも</p><p>休息にも欠かせない</p><p>「めぐるエネルギー」に着目。</p><p>内側から力を整える、</p><p>“Quiet Inner Power”</p><p>という考え方に出会いました。</p></div>
+      <div class="summary-block"><p>その考え方を形にしたのが、</p><p>植物由来の成分</p><p>「ヴェルダリン」を配合した</p><p>デイリーバランスフード</p><p>「/lumo（ルーモ）」です。</p></div>
+      <div class="summary-block"><p>もともと備わっている力に</p><p>そっと働きかけ、さまざまな場面で</p><p>あなたの毎日を支えます。</p></div>
+    </div>
+    <div class="intro-logo" aria-hidden="true">/lumo</div>
+  </div>
+</section>
+
+
+<section class="chapter" id="concept" data-theme="light" data-label="About / Concept" style="--len:520vh">
+ <div class="pin">
+  <div class="bg"></div>
+  <div class="photos"><figure class="ph" style="--x:22%;--y:-4%;--w:17vw;--ar:4/5;--r:2deg" data-speed="0.9"><img src="img/headphones.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:50%;--y:-6%;--w:19vw;--ar:3/4;--r:-3deg" data-speed="1.1"><img src="img/hero-run.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:78%;--y:10%;--w:15vw;--ar:3/4;--r:8deg" data-speed="1.4"><img src="img/swim.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:64%;--y:60%;--w:8vw;--ar:1/1;--r:-6deg" data-speed="1.7"><img src="img/cycle.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:82%;--y:52%;--w:11vw;--ar:4/3;--r:-10deg" data-speed="1.3"><img src="img/run-duo.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:50%;--y:68%;--w:7vw;--ar:4/3;--r:4deg" data-speed="2.0"><img src="img/stretch.webp" alt="" loading="lazy" decoding="async"></figure></div>
+  <div class="ch-title"><p class="section-label">Chapter 1</p><h2 class="t-display">めぐるエネルギーは、<br class="sp">毎日の土台。</h2><p class="section-name">( About / Concept )</p></div>
+  <div class="ch-text"><div class="text-block"><p class="text">動いている時も、</p><p class="text">ゆっくり休む時も、</p><p class="text">私たちのからだは休むことなく、</p><p class="text">毎日の土台となるエネルギーを使っています。</p></div>
+<div class="text-block"><p class="text">そのエネルギーをつくるために</p><p class="text">欠かせないのが、水、栄養、</p><p class="text">そして深い呼吸で取り込む「空気」です。</p></div></div>
+  <a class="cta" href="#oxygen"><span>About / Concept</span><i class="arrow"></i></a>
+ </div>
+</section>
+<section class="chapter" id="oxygen" data-theme="dark" data-label="About / Air & Energy" style="--len:520vh">
+ <div class="pin">
+  <div class="bg"></div>
+  <div class="photos"><figure class="ph" style="--x:6%;--y:16%;--w:20vw;--ar:3/4;--r:-3deg" data-speed="1.0"><img src="img/walk-city.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:66%;--y:6%;--w:13vw;--ar:4/3;--r:2deg" data-speed="1.5"><img src="img/scene-sport.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:72%;--y:54%;--w:17vw;--ar:4/3;--r:-2deg" data-speed="1.2"><img src="img/sleep.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:14%;--y:66%;--w:12vw;--ar:4/3;--r:5deg" data-speed="1.8"><img src="img/scene-travel.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:38%;--y:76%;--w:7vw;--ar:1/1;--r:-4deg" data-speed="2.2"><img src="img/cycle.webp" alt="" loading="lazy" decoding="async"></figure></div>
+  <div class="ch-title"><p class="section-label">Chapter 2</p><h2 class="t-display">年齢とともに、<br class="sp">めぐりは変わる。</h2><p class="section-name">( About / Air & Energy )</p></div>
+  <div class="ch-text"><div class="text-block"><p class="text">働く時も、考える時も、眠る時も、</p><p class="text">空気はいつも私たちを支えています。</p></div>
+<div class="text-block"><p class="text">けれど、年齢や日々の習慣によって、</p><p class="text">からだが空気を活かす力は</p><p class="text">少しずつ変わっていきます。</p></div></div>
+  <a class="cta" href="#science"><span>About / Air &amp; Energy</span><i class="arrow"></i></a>
+ </div>
+</section>
+<section class="chapter" id="science" data-theme="light" data-label="Science &amp; Technology" style="--len:520vh">
+ <div class="pin">
+  <div class="bg"></div><canvas id="molecule" aria-hidden="true"></canvas>
+  <div class="photos"></div>
+  <div class="ch-title"><p class="section-label">Chapter 3</p><h2 class="t-display">ひとつの成分が、<br class="sp">めぐりを整える。</h2><p class="section-name">( Science &amp; Technology )</p></div>
+  <div class="ch-text"><div class="text-block"><p class="text">毎日の空気を活かすために、</p><p class="text">アオバ研究所が見つけたのは、</p><p class="text">植物由来の成分「ヴェルダリン」。</p></div>
+<div class="text-block"><p class="text">そのままでは取り込みにくいこの成分を、</p><p class="text">誰もが取り込みやすい形に整える</p><p class="text">独自の製法を確立しました。</p></div></div>
+  <a class="cta" href="#product"><span>Science &amp; Technology</span><i class="arrow"></i></a>
+ </div>
+</section>
+<section class="chapter" id="product" data-theme="light" data-label="Product" style="--len:480vh">
+ <div class="pin">
+  <div class="bg"></div><div class="stack stack-l"><img src="img/scene-music.webp" alt="" loading="lazy" decoding="async"><img src="img/stretch.webp" alt="" loading="lazy" decoding="async"><img src="img/hero-run.webp" alt="" loading="lazy" decoding="async"><img src="img/swim.webp" alt="" loading="lazy" decoding="async"><img src="img/cycle.webp" alt="" loading="lazy" decoding="async"><img src="img/run-duo.webp" alt="" loading="lazy" decoding="async"><img src="img/walk-city.webp" alt="" loading="lazy" decoding="async"><img src="img/sleep.webp" alt="" loading="lazy" decoding="async"></div><div class="stack stack-r"><img src="img/scene-cook.webp" alt="" loading="lazy" decoding="async"><img src="img/scene-sport.webp" alt="" loading="lazy" decoding="async"><img src="img/headphones.webp" alt="" loading="lazy" decoding="async"><img src="img/scene-travel.webp" alt="" loading="lazy" decoding="async"><img src="img/lab-laugh.webp" alt="" loading="lazy" decoding="async"><img src="img/scene-work.webp" alt="" loading="lazy" decoding="async"><img src="img/sleep.webp" alt="" loading="lazy" decoding="async"><img src="img/run-duo.webp" alt="" loading="lazy" decoding="async"></div>
+  <div class="photos"></div>
+  <div class="ch-title"><p class="section-label">Chapter 4</p><h2 class="t-display">選ぶのは、<br class="sp">いつもの一袋。</h2><p class="section-name">( Product )</p></div>
+  <div class="ch-text"><div class="text-block"><p class="text">独自の製法による</p><p class="text">「ヴェルダリン」の力で、</p><p class="text">もともとの力にそっと働きかけます。</p></div>
+<div class="text-block"><p class="text">毎日の習慣として続けやすい</p><p class="text">デイリーバランスフード</p><p class="text">「/lumo（ルーモ）」です。</p></div></div>
+  <a class="cta" href="#interview"><span>Product</span><i class="arrow"></i></a>
+ </div>
+</section>
+<section class="chapter" id="interview" data-theme="light" data-label="Interview" style="--len:520vh">
+ <div class="pin">
+  <div class="bg"></div>
+  <div class="photos"><figure class="ph" style="--x:20%;--y:4%;--w:15vw;--ar:4/5;--r:-1deg" data-speed="1.0"><img src="img/lab-woman.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:66%;--y:6%;--w:20vw;--ar:4/3;--r:1deg" data-speed="1.3"><img src="img/lab-man.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:10%;--y:60%;--w:17vw;--ar:4/3;--r:-2deg" data-speed="1.5"><img src="img/lab-talk.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:74%;--y:64%;--w:14vw;--ar:1/1;--r:3deg" data-speed="1.1"><img src="img/lab-laugh.webp" alt="" loading="lazy" decoding="async"></figure><figure class="ph" style="--x:40%;--y:86%;--w:9vw;--ar:4/5;--r:4deg" data-speed="2.0"><img src="img/lab-woman.webp" alt="" loading="lazy" decoding="async"></figure></div>
+  <div class="ch-title"><p class="section-label">Chapter 5</p><h2 class="t-display">現場の声が、<br class="sp">確かさを支える。</h2><p class="section-name">( Interview )</p></div>
+  <div class="ch-text"><div class="text-block"><p class="text">“Quiet Inner Power”という</p><p class="text">新しい考え方は、</p><p class="text">各分野の第一線の人々から</p><p class="text">静かな注目を集めています。</p></div>
+<div class="text-block"><p class="text">動きたい時も、休みたい時も。</p><p class="text">あなたの可能性を引き出す</p><p class="text">新しい選択肢がここにあります。</p></div></div>
+  <a class="cta" href="#scenes"><span>Interview</span><i class="arrow"></i></a>
+ </div>
+</section>
+
+<!-- SCENES -->
+<section class="scenes" id="scenes" data-theme="light">
+  <div class="scenes-head"><h2 class="t-display">すべての場面で、<br class="sp">自分らしく整うために。</h2></div>
+  <ul class="scene-list">
+    <li class="scene" style="--ar:16/7"><img src="img/scene-sport.webp" alt="" loading="lazy"><span>Move</span></li>
+    <li class="scene" style="--ar:16/7"><img src="img/scene-cook.webp" alt="" loading="lazy"><span>Cook</span></li>
+    <li class="scene" style="--ar:16/7"><img src="img/scene-work.webp" alt="" loading="lazy"><span>Work</span></li>
+    <li class="scene" style="--ar:16/7"><img src="img/scene-music.webp" alt="" loading="lazy"><span>Play</span></li>
+    <li class="scene" style="--ar:16/7"><img src="img/sleep.webp" alt="" loading="lazy"><span>Rest</span></li>
+  </ul>
+</section>
+
+<!-- FOOTER / PRODUCT -->
+<footer class="footer" id="footer" data-theme="dark">
+  <div class="footer-visual"><img src="img/product-set.webp" alt="" loading="lazy"></div>
+  <div class="footer-copy">
+    <p class="footer-logo">/lumo</p>
+    <p class="footer-lead">動きたい時も、<br>しっかり休みたい時も。<br>いつもの力を、今日から。</p>
+    <p class="footer-sub">1日1袋（1粒）目安　1箱30袋入り　※30日分</p>
+    <a class="cta cta-light" href="#top"><span>Online store</span><i class="arrow"></i></a>
+  </div>
+  <p class="fine">Fictional brand for a design study. Not a real product.</p>
+</footer>
+</main>
+
+<div class="wipe" aria-hidden="true"></div>
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

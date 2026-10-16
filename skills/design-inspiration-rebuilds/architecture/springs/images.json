@@ -1,0 +1,102 @@
+[
+ {
+  "path": "public/img/h1.webp",
+  "prompt": "Soft cinematic photo, a woman with closed eyes tilting her face up to a pale blue sky, linen jacket, muted green and teal grade, film grain, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h2.webp",
+  "prompt": "Modern curved terraced residential tower with glass balconies and planted terraces at golden hour, seen from below, hazy blue sky, architectural photography, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h3.webp",
+  "prompt": "Macro of a large dark green leaf with dew droplets and a strong central vein, moody, shallow depth of field, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h4.webp",
+  "prompt": "Calm teal water surface with a gentle ripple, close-up, soft overcast light, cinematic, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h5.webp",
+  "prompt": "Tall pine forest with sunbeams through mist, two tiny figures walking a path far away, warm green and amber, cinematic, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h6.webp",
+  "prompt": "Sunlit olive-like leaves close-up with bokeh, fresh green, soft backlight, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h7.webp",
+  "prompt": "A person crouching in tall meadow grass petting a grey dog, golden evening light, muted film look, no faces in focus, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h8.webp",
+  "prompt": "Woman jogging on a tree-lined park path, blurred green background, soft light, wearing dark sportswear, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h9.webp",
+  "prompt": "Rippling river water with small rapids, teal and silver, long exposure, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/h10.webp",
+  "prompt": "Blurred meadow with lily-of-the-valley flowers in the foreground, deep green, dreamy, no text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/spa.webp",
+  "prompt": "Serene indoor spa pool with glass wall overlooking a garden, soft reflections on water, warm wood, herbal tea on the ledge, editorial interior photography, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/yoga.webp",
+  "prompt": "Bright quiet yoga studio, a woman in a seated stretch on a mat by a large window with trees outside, calm cream and green palette, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/fitness.webp",
+  "prompt": "Minimal modern gym with natural light, wooden floor, a trainer and client doing light stretching, muted tones, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cafe.webp",
+  "prompt": "Wellness cafe terrace with espresso and creamy foam on a stone table, plants, soft morning light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/nature1.webp",
+  "prompt": "Glass-framed rooftop terrace garden with topiary trees above a city skyline, soft haze, architectural photography, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/nature2.webp",
+  "prompt": "Shady conifer garden with winding gravel paths and sunlit clearings, painterly, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/nature3.webp",
+  "prompt": "Residential recreation lawn with asymmetric flowerbeds, cascading green plants and exotic flowers, soft light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/place.webp",
+  "prompt": "Aerial view of a river embankment next to a green park and a quiet residential district, soft morning haze, muted colours, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/home1.webp",
+  "prompt": "Interior of a calm apartment living room with floor-to-ceiling windows onto treetops, cream linen sofa, warm light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/home2.webp",
+  "prompt": "Duplex penthouse terrace with planters and a long view over a green park at sunset, no text, no logos",
+  "aspect": "16:9"
+ }
+]

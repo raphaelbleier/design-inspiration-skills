@@ -1,0 +1,102 @@
+[
+ {
+  "path": "public/img/hero.webp",
+  "prompt": "Cinematic wildlife photo: a large African elephant walking toward the camera under tall riverine trees, thatched lodge roof soft in the background, two smaller elephants at right, overcast soft light, shallow depth of field, muted greens, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/double-1.webp",
+  "prompt": "Editorial photo: a smiling woman in a khaki shirt carrying a basket of fresh herbs beside a stone path at a safari lodge, warm morning light, portrait, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/double-2.webp",
+  "prompt": "Editorial photo: a quiet bend of a sandy African river at dawn, mist over the water, acacia silhouettes, portrait framing, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/lodge-1.webp",
+  "prompt": "Architectural photo at dusk: a timber and thatch safari lodge dining deck glowing with warm lights beneath an enormous old tree, lawn in the foreground, no people, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/lodge-2.webp",
+  "prompt": "Architectural photo: an infinity plunge pool on a wooden deck overlooking a wide African riverbed, tall leafy trees, blue sky with soft clouds, aloe plants in stone pots, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/lodge-3.webp",
+  "prompt": "Aerial photo of a winding river through green African bushveld at golden hour with pale sandbanks, towering storm cloud on the horizon, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/camp-1.webp",
+  "prompt": "Photo of a classic safari camp tent suite with canvas walls, wooden deck and lanterns at sunset, bushveld behind, warm earthy palette, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/camp-2.webp",
+  "prompt": "Photo of a thatched safari camp communal lounge with leather armchairs, wooden beams and open sides facing a river, soft afternoon light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/camp-3.webp",
+  "prompt": "Photo of a rustic stone and timber camp walkway lined with grasses leading to a firepit under a huge tree at dusk, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/gal-1.webp",
+  "prompt": "Wildlife action photo: a pack of painted wolves splashing across a muddy river shallows, droplets frozen, sandy bank, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/gal-2.webp",
+  "prompt": "Wildlife photo: close crop of a leopard paw and spotted flank resting on a rough tree trunk, soft pale green background, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/gal-3.webp",
+  "prompt": "Wildlife photo: a herd of zebra drinking at a waterhole at golden hour, dust in the air, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/gal-4.webp",
+  "prompt": "Wildlife photo: a lioness lying in tall dry grass looking at the camera, warm backlight, no text",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/story.webp",
+  "prompt": "Cinematic photo: two rangers in green uniforms standing on an open safari vehicle at sunrise looking over a plain, long shadows, no text, no logos",
+  "aspect": "3:2"
+ },
+ {
+  "path": "public/img/cloud-1.webp",
+  "prompt": "Close-up nature photo: a white-fronted bee-eater perched on a thin branch, green blurred background, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cloud-2.webp",
+  "prompt": "Close-up nature photo: a leopard tortoise on warm paving stone, shell pattern in detail, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cloud-3.webp",
+  "prompt": "Close-up photo: a hand holding a small blue wildflower against soft green foliage, no face, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cloud-4.webp",
+  "prompt": "Wildlife photo: a young impala standing in flowering green grass, soft light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cloud-5.webp",
+  "prompt": "Wildlife photo: a white rhino grazing in lush green grass with small blue birds around it, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cta.webp",
+  "prompt": "Wide aerial photo of a lush green river floodplain with channels of blue water, a thatched lodge among trees at right and a lone elephant at the bottom edge, bright blue sky, no text",
+  "aspect": "16:9"
+ }
+]

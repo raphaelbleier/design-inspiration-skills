@@ -1,0 +1,70 @@
+/*
+ * BASE: reset, uppercase-everything, type roles, noise overlay, Lenis rules.
+ * Two faces, one weight: Cinzel (display, tight -0.064em tracking) and
+ * Syncopate (UI/body, wide +0.08em tracking). Free stand-ins for KTF Metro
+ * Roman / Blueline.
+ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 1vw; background: var(--ink); -webkit-text-size-adjust: 100%; }
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+body {
+  font-size: 1vw;
+  font-family: var(--font-ui);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background: var(--bg, var(--ink));
+  color: var(--fg, var(--sand));
+  --bg: var(--ink); --fg: var(--sand); --line: var(--sand-50); --hair: var(--sand-10);
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+}
+img, canvas, svg, video { display: block; max-width: 100%; }
+img { object-fit: cover; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4, h5, h6, b, strong { font-weight: 400; }
+::selection { background: var(--fg); color: var(--bg); }
+
+/* type roles: font-size = N design-px; the vars switch at <=991px (tokens.css) */
+.h1, .h2, .h3, .h4, .h5, .h6 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.064em; }
+.h1 { font-size: calc(var(--n-h1) * var(--px)); line-height: 0.833; }
+.h2 { font-size: calc(var(--n-h2) * var(--px)); line-height: 0.917; }
+.h3 { font-size: calc(var(--n-h3) * var(--px)); line-height: 0.889; }
+.h4 { font-size: calc(var(--n-h4) * var(--px)); line-height: 1; }
+.h5 { font-size: calc(var(--n-h5) * var(--px)); line-height: 1; }
+.h6 { font-size: calc(var(--n-h6) * var(--px)); line-height: 1; }
+.p1 { font-size: calc(var(--n-p1) * var(--px)); line-height: 1; }
+.p2 { font-size: calc(var(--n-p2) * var(--px)); line-height: 1.167; }
+.p3 { font-size: calc(var(--n-p3) * var(--px)); line-height: 1.2; }
+.p4 { font-size: calc(var(--n-p4) * var(--px)); line-height: 1.5; }
+.p5 { font-size: calc(var(--n-p5) * var(--px)); line-height: 1.667; }
+.p6 { font-size: calc(var(--n-p6) * var(--px)); line-height: 1.6; }
+@media (max-width: 991px) {
+  .h2 { line-height: 1; } .h3 { line-height: 0.889; }
+  .p1 { line-height: 1.167; } .p2 { line-height: 1.2; } .p3 { line-height: 1.5; } .p4 { line-height: 1.667; }
+}
+
+/* PAPER GRAIN: fixed soft-light overlay on top of everything (original: avif tile at 10%) */
+.noise {
+  position: fixed; inset: 0; z-index: 2147483647; pointer-events: none;
+  opacity: 0.1; mix-blend-mode: soft-light;
+  background: url('/img/noise.png') repeat; background-size: 10%;
+}
+@media (max-width: 991px) { .noise { background-size: 30%; } }
+
+/* eyebrow:  ✦✦✦ LABEL ✦✦✦ */
+.eyebrow { display: inline-flex; align-items: center; gap: calc(16 * var(--px)); font-size: calc(var(--n-p5) * var(--px)); }
+.eyebrow::before, .eyebrow::after { content: '✦✦✦'; font-size: 0.7em; letter-spacing: 0.25em; }
+
+/* rules */
+.rule { height: calc(4 * var(--px)); border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; }
+.hair { border-top: 1px solid var(--line); }
+
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+
+/* an image slot that failed to load keeps its box and shows a quiet tint instead of alt text */
+img { background: var(--hair, var(--sand-10)); color: transparent; }

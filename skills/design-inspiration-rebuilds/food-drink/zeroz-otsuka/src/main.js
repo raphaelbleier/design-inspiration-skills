@@ -1,0 +1,24 @@
+import './style.css';
+import { initScroll } from './scroll.js';
+import { initStage } from './stage.js';
+import { initHero } from './hero.js';
+import { initIntro } from './intro.js';
+import { initChapters } from './chapters.js';
+import { initMolecule } from './molecule.js';
+import { initStack } from './stack.js';
+import { initScenes } from './scenes.js';
+import { initTheme } from './theme.js';
+import { initMenu } from './menu.js';
+import { initTransition } from './transition.js';
+
+initScroll();
+const stage = initStage(document.getElementById('stage'));
+initHero(stage);
+initIntro();
+initChapters();
+initMolecule(document.getElementById('molecule'));
+initStack();
+initScenes();
+initTheme();
+initMenu();
+initTransition();

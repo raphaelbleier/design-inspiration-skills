@@ -1,0 +1,14 @@
+[
+  {"path":"public/img/cottage.webp","prompt":"Soft watercolour of a small stone cottage with a slate roof on a green hillside, pale misty grey sky, loose wet edges that dissolve into white paper, muted palette, no text, no logos","aspect":"4:3"},
+  {"path":"public/img/oak.webp","prompt":"Watercolour of a single large oak tree with a dense green crown, cut-out look with irregular torn edges fading into white, muted greens, no text, no logos","aspect":"1:1"},
+  {"path":"public/img/hillside.webp","prompt":"Watercolour of a rolling moorland hillside in fog, ochre and sage tones fading to pale grey at the top, wet-on-wet bleed, no text, no logos","aspect":"3:2"},
+  {"path":"public/img/stones.webp","prompt":"Watercolour of a small ring of standing stones on grass, soft grey light, edges bleeding into paper white, no text, no logos","aspect":"1:1"},
+  {"path":"public/img/viaduct.webp","prompt":"Very wide panorama of a tall stone railway viaduct with many arches crossing a misty valley, desaturated grey-green, thick low fog at the base, soft faded edges, no text, no logos","aspect":"16:5"},
+  {"path":"public/img/viaduct-fog.webp","prompt":"Very wide panorama of a stone viaduct half hidden in dense white fog, only the upper arches visible, pale grey tones, soft faded edges, no text, no logos","aspect":"16:5"},
+  {"path":"public/img/window.webp","prompt":"Soft light through a tall sash window onto a bare wooden floor, pale grey and cream tones, quiet and still, watercolour texture, no people, no text, no logos","aspect":"4:5"},
+  {"path":"public/img/cliff.webp","prompt":"Watercolour of a sea cliff path at dawn with grey water and a thin pale sun, muted blues and greys, no people, no text, no logos","aspect":"4:5"},
+  {"path":"public/img/lantern.webp","prompt":"A single lantern glowing warmly on a dark stone wall at night, ink wash style, deep charcoal with a small amber light, no people, no text, no logos","aspect":"4:5"},
+  {"path":"public/img/heron.webp","prompt":"Ink and watercolour of a heron standing in shallow water in morning mist, grey tones with one soft ochre accent, torn paper edges, no text, no logos","aspect":"1:1"},
+  {"path":"public/img/moss.webp","prompt":"Close watercolour study of moss on an old stone wall, sage and olive greens, soft bleeding edges, no text, no logos","aspect":"3:4"},
+  {"path":"public/img/path.webp","prompt":"Watercolour of a narrow footpath winding up through ferns into fog, muted green and grey, faded edges into white paper, no text, no logos","aspect":"3:4"}
+]

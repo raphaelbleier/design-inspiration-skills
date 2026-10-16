@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Studio Marguerite — production audiovisuelle &amp; cinéma</title>
+  <meta name="description" content="Clean-room study rebuild: a fictional island production studio and post-production lab." />
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body class="no-scroll">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".8" numOctaves="2" stitchTiles="stitch"/><feColorMatrix values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 .5 0"/></filter>
+  </svg>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="cursor" aria-hidden="true"><p></p></div>
+
+  <!-- loader -->
+  <section class="loader" aria-hidden="true">
+    <div class="stickers">
+      <img class="st s1" src="/img/badge.webp" alt="" />
+      <img class="st s2" src="/img/sticker-clap.webp" alt="" />
+      <img class="st s3" src="/img/sticker-world.webp" alt="" />
+      <img class="st s4" src="/img/sticker-drone.webp" alt="" />
+    </div>
+    <div class="cassette-mask"><div class="cassette-loader">
+      <div class="label">
+        <div class="logo-sq">MRG</div>
+        <div class="label-text"><div>Bienvenue sur studiomarguerite.test</div><div>chargement en cours ...</div></div>
+        <div class="count"><span id="count">0</span>%</div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- nav -->
+  <header class="nav">
+    <a class="brand" href="#top" aria-label="Studio Marguerite">
+      <span class="brand-studio">STUDIO</span><span class="brand-stripes" aria-hidden="true"><i></i><i></i><i></i></span>
+      <span class="brand-name">MARGUERITE</span>
+    </a>
+    <button class="burger" id="open-menu" aria-label="Ouvrir le menu"><i></i><i></i><span>MENU</span></button>
+  </header>
+
+  <!-- menu -->
+  <div class="menu" id="menu" aria-hidden="true">
+    <div class="menu-stripes" aria-hidden="true"><i></i><i></i><i></i></div>
+    <div class="menu-notch" aria-hidden="true"></div>
+    <button class="menu-close" id="close-menu" aria-label="Fermer le menu"><b></b><b></b></button>
+    <img class="menu-sticker" src="/img/badge.webp" alt="" />
+    <nav class="menu-list">
+      <a class="menu-item current" href="#top">Home</a>
+      <a class="menu-item" href="#production">Production</a>
+      <a class="menu-item" href="#labo">Labo de post-production</a>
+      <a class="menu-item" href="#service">Production de service</a>
+      <a class="menu-item" href="#clients">À propos</a>
+      <a class="menu-item" href="#contact">Contact</a>
+    </nav>
+  </div>
+
+  <main class="page" id="top">
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="hero-line hero-top">Studio de production<br />audiovisuelle &amp; cinéma,</h1>
+        <div class="hero-frame" data-cursor="Voir la bande démo"><img src="/img/hero-still.webp" alt="" /></div>
+        <p class="hero-line hero-bottom">&amp; labo de post-production<br /><svg class="mark" viewBox="0 0 60 36" aria-hidden="true"><path d="M0 36V8L60 0v36z"/></svg> basé sur l’île</p>
+      </div>
+    </section>
+
+    <!-- expertises -->
+    <section class="expertises" id="production">
+      <article class="cassette" id="c1">
+        <div class="cassette-top"><span class="logo-sq sm">MRG</span></div>
+        <div class="reel-box"><div class="reel"><i></i></div></div>
+        <div class="ticket">
+          <h2>Production<br />audiovisuelle &amp; cinéma</h2>
+          <ul><li>Écriture</li><li>Développement</li><li>Pré-production</li><li>Production</li><li>Post-production</li></ul>
+          <a class="btn" href="#production">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+      <article class="cassette alt" id="labo">
+        <div class="cassette-top"><span class="logo-sq sm">MRG</span></div>
+        <div class="reel-box"><div class="reel"><i></i></div></div>
+        <div class="ticket">
+          <h2>Labo de<br />post-production</h2>
+          <ul><li>Montage</li><li>Étalonnage</li><li>Mixage</li><li>Effets visuels</li><li>Livraison</li></ul>
+          <a class="btn" href="#labo">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+      <article class="cassette" id="service">
+        <div class="cassette-top"><span class="logo-sq sm">MRG</span></div>
+        <div class="reel-box"><div class="reel"><i></i></div></div>
+        <div class="ticket">
+          <h2>Production<br />de service</h2>
+          <ul><li>Repérages</li><li>Régie</li><li>Équipes locales</li><li>Matériel</li><li>Drone</li></ul>
+          <a class="btn" href="#service">Découvrir <span>↗</span></a>
+        </div>
+      </article>
+    </section>
+
+    <!-- productions en cours (dark) -->
+    <section class="prods" data-theme="dark">
+      <div class="prods-grid">
+        <article data-cursor="Découvrir">
+          <div class="pics"><div class="pic"><img src="/img/prod-1.webp" alt="" /><em>En production</em></div><div class="thumb t1"><img src="/img/prod-1-thumb.webp" alt="" /></div></div>
+          <small>Fiction</small><h3>Le gardien du gué</h3>
+          <a class="btn" href="#">Découvrir <span>↗</span></a>
+        </article>
+        <article data-cursor="Découvrir">
+          <div class="pics"><div class="pic"><img src="/img/prod-2.webp" alt="" /><em>En salle</em></div><div class="thumb t2"><img src="/img/prod-2-thumb.webp" alt="" /></div></div>
+          <small>Fiction</small><h3>Les cendres du Piton</h3>
+          <a class="btn" href="#">Découvrir <span>↗</span></a>
+        </article>
+        <article data-cursor="Découvrir">
+          <div class="pics"><div class="pic"><img src="/img/prod-3.webp" alt="" /><em>En développement</em></div><div class="thumb t3"><img src="/img/prod-3-thumb.webp" alt="" /></div></div>
+          <small>Docu</small><h3>Mon jardin, mes règles</h3>
+          <a class="btn" href="#">Découvrir <span>↗</span></a>
+        </article>
+      </div>
+      <div class="spines" id="spines"></div>
+    </section>
+
+    <!-- citation -->
+    <section class="citation">
+      <div class="cit-row cit-fill">On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod</div>
+      <div class="cit-row cit-stroke">On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod&nbsp;&nbsp;On le verra en post-prod</div>
+    </section>
+
+    <!-- clients -->
+    <section class="clients" id="clients">
+      <h2 class="clients-title">Clients</h2>
+      <img class="drone" src="/img/sticker-drone.webp" alt="" />
+      <div class="band band-a"><div class="track" data-dir="-1"></div></div>
+      <div class="band band-b"><div class="track" data-dir="1"></div></div>
+      <div class="follow-card" aria-hidden="true"><span></span></div>
+    </section>
+  </main>
+
+  <!-- fixed footer -->
+  <footer class="contact" id="contact" data-trail="wrapper">
+    <div class="trail" aria-hidden="true">
+      <img data-trail="item" src="/img/trail-1.webp" alt="" /><img data-trail="item" src="/img/trail-2.webp" alt="" />
+      <img data-trail="item" src="/img/trail-3.webp" alt="" /><img data-trail="item" src="/img/trail-4.webp" alt="" />
+      <img data-trail="item" src="/img/trail-5.webp" alt="" /><img data-trail="item" src="/img/trail-6.webp" alt="" />
+    </div>
+    <div class="contact-row">
+      <span class="ibox">◉</span><span class="ibox">✆</span>
+      <span class="ibox mail"><b>✉</b><span>bonjour@studiomarguerite.test</span><button id="copy">copier</button></span>
+      <img class="badge" src="/img/badge.webp" alt="" />
+    </div>
+    <div class="big"><span class="big-top">STUDIO<span class="stripes" aria-hidden="true"><i></i><i></i><i></i></span></span><span class="big-bottom">MARGUERITE</span></div>
+    <div class="foot"><span>Vimeo&nbsp;&nbsp; Facebook&nbsp;&nbsp; Instagram</span><span>Mentions légales</span><span>Studio Marguerite © 2026 — étude clean-room</span></div>
+  </footer>
+</body>
+</html>

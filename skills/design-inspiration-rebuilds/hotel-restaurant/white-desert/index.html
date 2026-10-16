@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pale Meridian — polar camps and expeditions</title>
+  <meta name="description" content="Fictional luxury polar expedition camp. Clean-room study rebuild.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <div class="intro" id="intro"><span class="intro__mark">PALE MERIDIAN</span></div>
+  <div class="cursor" id="cursor"></div>
+  <div class="cols" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+
+  <header class="nav" id="nav">
+    <div class="nav__l">
+      <button class="pill pill--glass" data-menu="experience">Experience</button>
+      <button class="pill pill--glass" data-menu="operation">Operation</button>
+      <button class="pill pill--glass" data-menu="about">About</button>
+      <button class="pill pill--glass nav__burger" data-menu="experience">Menu</button>
+    </div>
+    <a class="logo" href="#top" aria-label="Pale Meridian">
+      <svg viewBox="0 0 60 26" width="44" height="19" aria-hidden="true"><path d="M0 26 14 8l6 7 9-15 8 12 5-5 18 19z" fill="currentColor"/></svg>
+      <span>PALE MERIDIAN</span>
+    </a>
+    <div class="nav__r">
+      <a class="pill pill--glass nav__rates" href="#route">Rates</a>
+      <a class="pill pill--glass" href="#banner">Enquire</a>
+    </div>
+  </header>
+
+  <aside class="menu" id="menu" aria-hidden="true">
+    <div class="menu__tabs">
+      <button class="pill pill--orange" data-tab="experience">Experience</button>
+      <button class="pill pill--grey" data-tab="operation">Operation</button>
+      <button class="pill pill--grey" data-tab="about">About</button>
+    </div>
+    <div class="menu__body">
+      <a href="#top">Home</a>
+      <h4>Itineraries</h4>
+      <a href="#trips">Little Auks &amp; Blue Tunnels</a>
+      <a href="#trips">The Pole &amp; Penguins</a>
+      <a href="#trips">The Pole &amp; Blue Rivers</a>
+      <a href="#trips">The Long Stay</a>
+      <a href="#trips">Snowfield in a Day</a>
+      <a href="#trips">Discovery Week</a>
+      <h4>Camps</h4>
+      <a href="#camps">Hollow Lake Camp</a>
+      <a href="#camps">Pod Station</a>
+      <a href="#camps">Plateau Base</a>
+    </div>
+    <a class="menu__cta" href="#banner">Enquire now</a>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+  <a class="howto" href="#route">How it works <b>✦</b></a>
+
+  <main id="top">
+    <!-- 1. hero: pinned, scrubbed -->
+    <section class="hero" id="hero">
+      <div class="hero__pin">
+        <div class="hero__media">
+          <div class="img hero__a" style="background-image:url(./img/hero-crevasse.webp)"></div>
+          <div class="img hero__b" style="background-image:url(./img/hero-window.webp)"></div>
+        </div>
+        <p class="hero__tag">Luxury and adventure in the<br>most remote place on Earth</p>
+        <button class="film">Watch Film <span>▶</span></button>
+        <h1 class="hero__word" id="word" aria-label="Snowbound"><span>S</span><span>N</span><span>O</span><span>W</span><span>B</span><span>O</span><span>U</span><span>N</span><span>D</span></h1>
+        <div class="mist" id="mist"></div>
+      </div>
+    </section>
+
+    <!-- 2. tall parallax image -->
+    <section class="tall" id="tall">
+      <div class="tall__img img" style="background-image:url(./img/parallax-peaks.webp)"></div>
+    </section>
+
+    <!-- 3. camps: pinned horizontal scroll over ice -->
+    <section class="camps" id="camps">
+      <div class="camps__pin">
+        <h2 class="camps__title">Three camps,<br><em>one</em> white horizon</h2>
+        <div class="camps__track" id="track">
+          <article class="camp"><div class="camp__in"><h3>HOLLOW LAKE</h3><p>Our original camp, newly reimagined. Bare rock and freshwater lakes: a side of the far south seldom seen.</p><div class="img camp__img" style="background-image:url(./img/camp-lake.webp)"></div><small>[ 71° 12′ 00″ S, 9° 40′ 00″ E ]</small></div></article>
+          <article class="camp"><div class="camp__in"><h3>POD STATION</h3><p>Designed for explorers, tuned for guests. As close as you can get to deep winter without leaving the planet.</p><div class="img camp__img" style="background-image:url(./img/camp-pod.webp)"></div><small>[ 72° 03′ 30″ S, 7° 15′ 00″ E ]</small></div></article>
+          <article class="camp"><div class="camp__in"><h3>PLATEAU BASE</h3><p>A long communal dome and six quiet tents on the high plateau, with the sun circling for weeks.</p><div class="img camp__img" style="background-image:url(./img/camp-base.webp)"></div><small>[ 80° 40′ 12″ S, 12° 00′ 00″ E ]</small></div></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. itineraries: card flick -->
+    <section class="trips" id="trips">
+      <h2 class="trips__title">Our trips</h2>
+      <div class="flick" id="flick">
+        <article class="card is-open"><div class="img card__img" style="background-image:url(./img/trip-penguins.webp)"></div><div class="card__txt"><h3>Little Auks &amp; Blue Tunnels</h3><p class="meta"><b>US $48,000</b><i></i>Early Season</p><p>Walk beneath the glacier, then sit among the colony at the shoreline.</p></div></article>
+        <article class="card"><div class="img card__img" style="background-image:url(./img/trip-pole.webp)"></div><div class="card__txt"><h3>The Pole &amp; Blue Rivers</h3><p class="meta"><b>US $115,500</b><i></i>Late Season</p><p>Our newest itinerary. The geographic pole, fewer than 500 visitors a year, plus the rarely seen meltwater rivers.</p></div></article>
+        <article class="card"><div class="img card__img" style="background-image:url(./img/trip-longstay.webp)"></div><div class="card__txt"><h3>The Long Stay</h3><p class="meta"><b>US $72,000</b><i></i>Mid Season</p><p>Eleven nights to let the place slow you down.</p></div></article>
+        <article class="card"><div class="img card__img" style="background-image:url(./img/trip-day.webp)"></div><div class="card__txt"><h3>Snowfield in a Day</h3><p class="meta"><b>US $29,500</b><i></i>All Season</p><p>Fly in, stand on the ice, be home for the weekend.</p></div></article>
+        <article class="card"><div class="img card__img" style="background-image:url(./img/trip-week.webp)"></div><div class="card__txt"><h3>Discovery Week</h3><p class="meta"><b>US $61,000</b><i></i>Mid Season</p><p>Ridges, rock spires and a different campsite every night.</p></div></article>
+        <article class="card"><div class="img card__img" style="background-image:url(./img/trip-plateau.webp)"></div><div class="card__txt"><h3>The High Plateau</h3><p class="meta"><b>US $88,000</b><i></i>Late Season</p><p>Wind-carved dunes and a sky with no edges.</p></div></article>
+      </div>
+    </section>
+
+    <!-- 5. route: travel map -->
+    <section class="route" id="route">
+      <div class="route__pin">
+        <div class="img route__map" style="background-image:url(./img/map-continent.webp)"></div>
+        <svg class="route__svg" viewBox="0 0 800 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <path id="arc" d="M 640 40 C 450 260, 470 520, 560 700" fill="none" stroke="#6fe3ff" stroke-width="2"/>
+          <circle id="pin" r="9" cx="640" cy="40" fill="#6fe3ff"/>
+          <circle id="pulse" r="20" cx="640" cy="40" fill="none" stroke="#6fe3ff" stroke-opacity=".5"/>
+        </svg>
+        <p class="lbl lbl--a"><em>Starting point</em>HARBOUR TOWN, SOUTH AFRICA</p>
+        <p class="lbl lbl--b"><em>Gale Runway</em>THE FAR SOUTH</p>
+        <div class="stats">
+          <div><em>Flying time</em><strong data-n="5.5" data-fmt="time">05:30 HRS</strong></div>
+          <div><em>Distance</em><strong data-n="4220" data-fmt="km">4,220 KM / 2,622 MI</strong></div>
+          <div><em>Average summer temp. on ice</em><strong>-5°C / 23° F</strong></div>
+        </div>
+        <div class="route__film"><div class="img" style="background-image:url(./img/film-thumb.webp)"></div><span>Watch Film ▶</span></div>
+      </div>
+    </section>
+
+    <!-- quote over glacier -->
+    <section class="quote" id="quote">
+      <div class="quote__img img" style="background-image:url(./img/parallax-ridge.webp)"></div>
+      <blockquote><em>&hellip;the coldest, driest, highest, windiest place on the planet. But its beauty is what will break your heart.</em><cite>A TRAVELLER'S NOTEBOOK</cite></blockquote>
+    </section>
+
+    <!-- 6. banner -->
+    <section class="banner" id="banner">
+      <div class="banner__img img" id="bimg" style="background-image:url(./img/banner-glacier.webp)"></div>
+      <div class="banner__in"><h2>START PLANNING<br>YOUR ADVENTURE</h2><a class="pill pill--glass pill--lg" href="#footer">Get in touch</a></div>
+    </section>
+  </main>
+
+  <footer class="foot" id="footer">
+    <div class="foot__grid">
+      <div class="foot__c foot__c--logo">
+        <svg viewBox="0 0 60 26" width="84" height="36" aria-hidden="true"><path d="M0 26 14 8l6 7 9-15 8 12 5-5 18 19z" fill="currentColor"/></svg>
+        <p>travel@palemeridian.example<br>+00 11 555 0100<br>Schedule a call</p>
+        <h5>Trade Enquiries</h5><p>reservations@palemeridian.example<br>+00 11 555 0111</p>
+        <h5>Other Enquiries</h5><p>press@palemeridian.example<br>careers@palemeridian.example</p>
+      </div>
+      <div class="foot__c"><h5>Itineraries</h5><p>Little Auks &amp; Blue Tunnels<br>The Pole &amp; Penguins<br>The Pole &amp; Blue Rivers<br>The Long Stay<br>Snowfield in a Day<br>Discovery Week</p><h5>Camps</h5><p>Hollow Lake Camp<br>Pod Station<br>Plateau Base</p></div>
+      <div class="foot__c"><h5>Experience</h5><p>The High Plateau<br>Ice Shelf Coast<br>Rock Oasis<br>Aviation</p><h5>About</h5><p>Founders<br>Field Team</p><h5>Social</h5><p>Instagram<br>LinkedIn<br>Video</p></div>
+      <div class="foot__c foot__c--cta">
+        <div class="tile tile--film"><div class="img" style="background-image:url(./img/film-thumb.webp)"></div><span>Watch Film ▶</span></div>
+        <a class="tile" href="#route">Dates &amp; Rates</a><a class="tile" href="#banner">Enquire now</a><a class="tile tile--wide" href="#footer">Newsletter Signup</a>
+      </div>
+    </div>
+    <div class="foot__word" id="fword" aria-hidden="true">PALE MERIDIAN</div>
+    <div class="foot__bar"><span class="star">✦</span><q>We all carry our own white horizon.</q><span class="legal">Fictional study rebuild · © 2026</span><span class="star">✦</span></div>
+  </footer>
+  <div class="cookie" id="cookie"><p>We use cookies to track website interactions and improve your experience. <a href="#">Cookie Policy.</a></p><button onclick="this.parentNode.remove()">Accept</button><button onclick="this.parentNode.remove()">Reject</button></div>
+</body>
+</html>

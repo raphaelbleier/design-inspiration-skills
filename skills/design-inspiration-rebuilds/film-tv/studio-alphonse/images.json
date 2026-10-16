@@ -1,0 +1,19 @@
+[
+  {"path":"public/img/hero-still.webp","prompt":"Cinematic 35mm film still, warm dim living room at night on a tropical island, a young man in an orange t-shirt laughing beside a woman in a pale blue t-shirt leaning back in a wooden chair, oil lamp and bare filament bulb glowing, wooden furniture, shallow depth of field, film grain, no text, no logos","aspect":"16:9"},
+  {"path":"public/img/prod-1.webp","prompt":"Black and white portrait of an elderly man with long white hair, wide-brim felt hat and checked shirt, soft window light, documentary style, neutral grey background, no text","aspect":"1:1"},
+  {"path":"public/img/prod-1-thumb.webp","prompt":"Black and white film still of a footbridge over a river in morning mist, wide shot, grainy, no text","aspect":"3:2"},
+  {"path":"public/img/prod-2.webp","prompt":"Cinematic close portrait of a middle-aged man wearing an olive cap, serious expression, blurred green mountain background, teal and warm colour grade, no text","aspect":"1:1"},
+  {"path":"public/img/prod-2-thumb.webp","prompt":"Vertical film poster collage: misty volcanic mountain at dusk with two small portrait frames below, muted purple tones, no text, no lettering","aspect":"3:4"},
+  {"path":"public/img/prod-3.webp","prompt":"Smiling bearded man with dreadlocks tied up and teal t-shirt in a lush tropical garden with large leaves, natural daylight, candid portrait, no text","aspect":"1:1"},
+  {"path":"public/img/prod-3-thumb.webp","prompt":"Aged paper family document with a small passport photo and handwritten notes, vintage, flat lay, no legible text","aspect":"3:4"},
+  {"path":"public/img/sticker-drone.webp","prompt":"Die-cut vinyl sticker of a cute cartoon mustard-yellow quadcopter drone mascot with worried wide eyes and sweat drops, thick dark outline, white sticker border, flat retro rubber-hose style, transparent background, no text","aspect":"1:1"},
+  {"path":"public/img/sticker-clap.webp","prompt":"Die-cut vinyl sticker of a cartoon yellow film clapperboard character with legs, waving hand, big smile, thick dark outline, white sticker border, retro rubber-hose style, transparent background, no text","aspect":"3:4"},
+  {"path":"public/img/sticker-world.webp","prompt":"Die-cut vinyl sticker of a wireframe globe drawn with thin dark lines, white sticker border, transparent background, no text","aspect":"3:2"},
+  {"path":"public/img/badge.webp","prompt":"Round enamel-style badge: indigo blue circle with a cream-coloured cartoon retro video recorder character with arms and legs waving, thin ring border, transparent background, no text, no letters","aspect":"1:1"},
+  {"path":"public/img/trail-1.webp","prompt":"Film set behind the scenes, camera operator on a beach at golden hour, candid photo, no text","aspect":"4:5"},
+  {"path":"public/img/trail-2.webp","prompt":"Sound engineer wearing headphones in a dark mixing studio with glowing faders, no text","aspect":"4:5"},
+  {"path":"public/img/trail-3.webp","prompt":"Colourist grading footage on a large monitor in a dim room, reflections on glass, no text","aspect":"4:5"},
+  {"path":"public/img/trail-4.webp","prompt":"Aerial view of a green volcanic island coastline with turquoise sea, drone photo, no text","aspect":"4:5"},
+  {"path":"public/img/trail-5.webp","prompt":"Clapperboard held in front of a sugar cane field at sunrise, no text on board, no logos","aspect":"4:5"},
+  {"path":"public/img/trail-6.webp","prompt":"Two actors rehearsing on a wooden veranda in warm evening light, candid film still, no text","aspect":"4:5"}
+]

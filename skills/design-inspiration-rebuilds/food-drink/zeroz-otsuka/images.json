@@ -1,0 +1,97 @@
+[
+ {
+  "path": "public/img/hero-run.webp",
+  "prompt": "Young woman and man jogging away from camera on a tree-lined park path, soft morning light, bright greens, editorial lifestyle photo, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/swim.webp",
+  "prompt": "Swimmer mid freestyle stroke in a bright turquoise pool, water splashes, seen from the side, sunny, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/headphones.webp",
+  "prompt": "Back of a person's head wearing large over-ear headphones at a desk with a laptop, warm window light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cycle.webp",
+  "prompt": "Cyclist drinking from a bottle on a city street in strong sunlight, sun flare, slightly desaturated, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/stretch.webp",
+  "prompt": "Woman stretching on a yoga mat in a bright airy living room, plants, soft light, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/run-duo.webp",
+  "prompt": "Two runners sprinting across a grass field under blue sky, wide shot, motion, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/walk-city.webp",
+  "prompt": "Office worker walking through a modern glass atrium holding a coffee, soft daylight, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/sleep.webp",
+  "prompt": "Person resting on a sofa with eyes closed, calm afternoon light, minimal Scandinavian interior, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/lab-woman.webp",
+  "prompt": "Smiling researcher in a white coat in a bright laboratory, plant on the shelf behind, portrait, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/lab-man.webp",
+  "prompt": "Middle aged scientist in a dark polo shirt typing on a laptop in an office, window light, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/lab-laugh.webp",
+  "prompt": "Close portrait of a laughing young man in a modern office, shallow depth of field, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/lab-talk.webp",
+  "prompt": "Two colleagues in conversation across a white table with notebooks, friendly, bright, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/scene-sport.webp",
+  "prompt": "Woman in sportswear tying shoes on a track at sunrise, crisp light, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/scene-work.webp",
+  "prompt": "Man in a suit on a phone call by a glass window of a high rise, daylight, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/scene-music.webp",
+  "prompt": "Woman smiling at a piano in a sunlit room, soft focus background, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/scene-travel.webp",
+  "prompt": "Traveller with a backpack at a bright train platform, morning haze, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/scene-cook.webp",
+  "prompt": "Hands chopping fresh vegetables on a wooden board, bright kitchen, overhead, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/product-set.webp",
+  "prompt": "Soft sage green studio still life, a flat paper sachet resting on a round concrete podium beside tall fluted columns, matte, gentle shadow, no text, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/molecule-bg.webp",
+  "prompt": "Soft pale mint gradient background with out-of-focus translucent bokeh spheres, clean, no text, no text, no logos",
+  "aspect": "16:9"
+ }
+]

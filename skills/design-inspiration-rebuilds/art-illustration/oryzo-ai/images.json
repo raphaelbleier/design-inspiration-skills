@@ -1,0 +1,72 @@
+[
+ {
+  "path": "public/img/hand-hover.webp",
+  "prompt": "Photoreal dark-skinned human hand reaching up from the bottom of the frame, fingers softly curled as if hovering under an invisible floating object, warm rim light from the upper left, deep espresso-brown background fading to black, cinematic studio lighting, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/hand-sixfingers.webp",
+  "prompt": "Photoreal studio shot of a hand raised for a high five that visibly has six fingers, uncanny AI-generated look, warm brown backdrop, soft side light, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/mug-on-coaster.webp",
+  "prompt": "Top-down lifestyle photo of a steaming ceramic mug on a round cork coaster on a dark walnut table, warm window light, shallow depth of field, amber tones, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cork-macro.webp",
+  "prompt": "Extreme macro photograph of natural cork surface, granular speckled texture in orange-brown tones, raking warm light, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/cork-oak-forest.webp",
+  "prompt": "Cork oak forest in golden hour light, stripped reddish trunks, dry grass, hazy sun rays, editorial landscape photograph, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/bark-harvest.webp",
+  "prompt": "Close view of a worker's hands peeling a sheet of cork bark from an oak trunk with a hand axe, warm light, documentary style, no faces, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/wearable-portrait.webp",
+  "prompt": "Fashion editorial portrait of a model wearing a round cork coaster as a bold brooch pinned to a cream jacket, dark brown studio background, dramatic warm light, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/slop-card-1.webp",
+  "prompt": "Surreal AI-slop style illustration of a cork coaster wearing sunglasses on a beach, glossy over-saturated render, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/slop-card-2.webp",
+  "prompt": "Surreal AI-slop style illustration of a cork coaster as a hot-air balloon above a coffee table landscape, glossy over-saturated render, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/slop-card-3.webp",
+  "prompt": "Surreal AI-slop style illustration of a cork coaster as a tiny planet with mug-shaped mountains, glossy over-saturated render, no text, no logos",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/coffee-table.webp",
+  "prompt": "Moody photo of an empty low coffee table with a single round cork coaster and a cold glass of water, dark room, warm lamp glow, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/studio-team.webp",
+  "prompt": "Candid photo of three designers in a dim studio laughing around a screen, backs and profiles only, warm monitor glow, no readable text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/drop-test.webp",
+  "prompt": "Cork coaster tilted mid-bounce on cracked grey concrete floor, explosion of cork dust and crumbs, dark olive backdrop, high-speed photography, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/sticker-board.webp",
+  "prompt": "Natural cork board covered in glossy cartoon stickers (smiley faces, pills, stars, lollipops), top-down, saturated colours, no text, no logos",
+  "aspect": "4:3"
+ }
+]

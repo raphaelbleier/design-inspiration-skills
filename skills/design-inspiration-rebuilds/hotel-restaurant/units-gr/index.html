@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>burrow. - shared student homes (clean-room study)</title>
+  <meta name="description" content="Fictional student housing brand. A clean-room study of a playful bento-grid site.">
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+  <aside class="rail" id="rail">
+    <a class="logo" href="#top" data-nav="top"><span>burrow.</span><small>SHARED STUDENT HOMES</small></a>
+    <a class="pill t-violet hbook" href="#contact" data-nav="contact">Book your Unit</a>
+    <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><i></i><i></i><i></i></button>
+    <nav class="tiles" id="tiles">
+      <a class="tile t-blue" href="#locations" data-nav="locations"><b>01</b><i class="arr"></i><span>Student Homes</span></a>
+      <a class="tile t-amber" href="#living" data-nav="living"><b>02</b><i class="arr"></i><span>Our way of living</span></a>
+      <a class="tile t-orange" href="#community" data-nav="community"><b>03</b><i class="arr"></i><span>Community</span></a>
+      <a class="tile t-green" href="#contact" data-nav="contact"><b>04</b><i class="arr"></i><span>Contact</span></a>
+      <a class="pill t-violet book" href="#contact" data-nav="contact">Book your Unit</a>
+      <button class="pill t-black lang" type="button">Eesti <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2c3 3 4.5 6.500 4.500 10S15 19 12 22M12 2C9 5 7.500 8.500 7.500 12S9 19 12 22"/></svg></button>
+      <div class="pill t-black social" aria-label="Social"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M14 8V6.300c0-.8.200-1.300 1.400-1.300H17V2h-2.500C11.600 2 10 3.600 10 6v2H7.500v3H10v11h4V11h2.700l.4-3z"/></svg><svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M16 3h-3v12.500a2.500 2.500 0 1 1-2.500-2.500c.3 0 .7.1 1 .2V10a5.600 5.600 0 1 0 4.500 5.500V9a6.500 6.500 0 0 0 4 1.300V7.300A4 4 0 0 1 16 3z"/></svg></div>
+    </nav>
+  </aside>
+
+  <main id="top">
+    <section class="hero" id="hero">
+      <div class="hero-img" role="img" aria-label="Students in a colourful lounge"></div>
+      <div class="hero-copy">
+        <h1 data-split>Home of the quietly brilliant.</h1>
+        <p data-fade>All-inclusive student rooms with everything you need to live, study and connect.</p>
+        <a class="btn" href="#contact" data-nav="contact" data-fade>Book your Unit <i class="arr"></i></a>
+      </div>
+    </section>
+
+    <section class="loc" id="locations">
+      <div class="card c-amber loc-copy">
+        <span class="chip">Locations</span>
+        <div>
+          <h2 data-split>Where your everyday just works</h2>
+          <p>Wake up, step out, you are there. Campus, classes, nights out, all within easy reach. No time wasted. Because at Burrow, location is never random. It is chosen to match your rhythm.</p>
+          <p class="lead">Explore what is</p>
+          <p class="tags"><span class="tag t-soft">Coming soon</span> and <span class="tag t-red">Move-in ready!</span></p>
+        </div>
+      </div>
+      <div class="card map" id="map">
+        <svg viewBox="0 0 720 470" preserveAspectRatio="xMidYMid slice" aria-label="Stylised city map">
+          <rect width="720" height="470" fill="#ffb200"/>
+          <path d="M0 330 C90 300 150 360 230 350 S330 300 400 340 S520 440 720 410 V470 H0Z" fill="#0072e3"/>
+          <path d="M-10 60 C80 90 140 40 240 80 S400 20 520 70 S650 40 740 20 V-10 H-10Z" fill="#ffd33d" opacity=".7"/>
+          <g class="roads" fill="none" stroke="#ff5c38" stroke-width="3" stroke-linecap="round">
+            <path d="M40 0 L120 470 M160 0 L220 470 M300 0 L340 470 M440 0 L400 470 M560 0 L520 470 M680 0 L660 470"/>
+            <path d="M0 80 L720 120 M0 170 L720 150 M0 250 L720 290 M0 330 L720 350"/>
+            <path d="M80 0 L700 440 M0 420 L600 0" stroke-width="2"/>
+          </g>
+          <g font-family="DM Sans" font-size="13" fill="#fff" letter-spacing="1" opacity=".85">
+            <text x="60" y="60">NORTHGATE</text><text x="300" y="130">OLD MILL</text>
+            <text x="470" y="220">HARBOUR ROW</text><text x="120" y="300">TANNERY</text>
+          </g>
+        </svg>
+        <button class="pin pin-a" style="--x:12%;--y:68%">Burrow Theatre</button>
+        <button class="pin pin-b" style="--x:80%;--y:36%">Burrow Parkside</button>
+        <i class="dot" style="--x:34%;--y:62%"></i>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true"><div class="mq-track"></div></div>
+
+    <section class="living" id="living">
+      <div class="pin-wrap">
+        <div class="track" id="track">
+          <article class="card c-orange l-intro">
+            <span class="chip">All-Inclusive Living</span>
+            <img class="plant" src="/img/plant-illustration.webp" alt="" loading="lazy">
+            <div><h2 data-split>Everything is in. Everything is yours.</h2><p>One rent. Fully furnished rooms, shared spaces and support. No hidden fees, no surprises, just design-led spaces that let you get on with life.</p></div>
+          </article>
+          <figure class="ph ph-a"><img src="/img/living-lounge.webp" alt="" loading="lazy"></figure>
+          <div class="stack">
+            <article class="card c-amber2 list"><h3>Security</h3><p class="sub">Day and night</p><ul><li>24/7 CCTV surveillance</li><li>Night patrol, 7 nights a week</li><li>Keypad entrance door</li><li>Smart access control</li></ul></article>
+            <article class="card c-violet2 list"><h3>Community living spaces</h3><p class="sub">Open access, 24/7</p><ul><li>Fully equipped gym</li><li>Self-service laundry room</li><li>Social areas</li></ul></article>
+          </div>
+          <figure class="ph ph-b"><img src="/img/living-door.webp" alt="" loading="lazy"></figure>
+          <div class="stack">
+            <figure class="ph ph-c"><img src="/img/living-desk.webp" alt="" loading="lazy"></figure>
+            <article class="card c-yellow list"><h3>Support</h3><p class="sub">We have got you covered</p><ul><li>24/7 resident support</li><li>Check-in and onboarding help</li><li>Fast request handling</li><li>Fast maintenance support</li><li>Continuous improvements</li></ul></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="units" id="units">
+      <div class="card c-cream units-copy">
+        <span class="chip">Our Units</span>
+        <div>
+          <h2 data-split>Student living, redefined.</h2>
+          <p>A new concept in student living: fully furnished, move-in ready rooms designed for comfort and ease. Burrow is more than a place to stay. It is a place to belong.</p>
+          <ul class="amen">
+            <li>Fully furnished</li><li>Smart TV</li><li>Private workspace</li><li>Air conditioning</li><li>Private kitchen</li><li>Super-fast WiFi</li><li>Private bathroom</li><li>Balcony</li>
+          </ul>
+          <a class="btn" href="#contact" data-nav="contact">Check out our Units <i class="arr"></i></a>
+        </div>
+      </div>
+      <div class="card c-cream tunnel" id="tunnel">
+        <canvas></canvas>
+        <button class="btn start" id="start" type="button">Press to Start</button>
+      </div>
+    </section>
+
+    <section class="community" id="community">
+      <figure class="ph c-ph"><img src="/img/community-entrance.webp" alt="" loading="lazy"></figure>
+      <article class="card c-red">
+        <span class="chip">Community</span>
+        <div><h2 data-split>A shared way of living</h2><p>At Burrow, community happens naturally. Through common spaces, shared moments and evenings that bring people together, with the freedom to join in whenever and however you want.</p>
+        <a class="btn" href="#contact" data-nav="contact">Join our community <i class="arr"></i></a></div>
+      </article>
+      <figure class="ph c-ph"><img src="/img/community-terrace.webp" alt="" loading="lazy"></figure>
+    </section>
+
+    <div class="band c-blue"><span class="darr"></span><h2>What defines us</h2><span class="darr r"></span></div>
+
+    <section class="values">
+      <article class="card c-blue val"><div class="px" data-icon="smile"></div><h3>For People</h3><p>Everything starts with how it feels to live here. From private spaces to shared experiences, people always come first.</p></article>
+      <article class="card c-blue val"><div class="px" data-icon="bolt"></div><h3>By Design</h3><p>Nothing is accidental. Every detail is designed to support the way you live and the way you feel, every day.</p></article>
+      <article class="card c-blue val"><div class="px" data-icon="heart"></div><h3>With Care</h3><p>At the heart of everything we do. We care for the people who live here, the spaces we create, and the city we are part of.</p></article>
+    </section>
+
+    <a class="wide-cta" href="#contact" data-nav="contact">Our way of living <i class="arr"></i></a>
+
+    <footer class="card c-black foot" id="contact">
+      <h2>Ready to move in?</h2>
+      <p>hello@burrow.example &middot; Marenta, Harbour Row 12</p>
+      <p class="fine">Fictional brand for a design study. Not a real business.</p>
+    </footer>
+
+    <section class="card c-yellow news"><h2>Join our newsletter</h2><form onsubmit="return false"><input type="email" placeholder="Your email here" aria-label="Email"><button class="sq" aria-label="Subscribe"><i class="arr"></i></button></form></section>
+    <footer class="bigfoot"><div class="links"><a href="#top">FAQs</a><a href="#top">Privacy Policy</a><a href="#top">Cookies Policy</a><a href="#top">Offer Terms &amp; Conditions</a></div><div class="word" aria-hidden="true">burrow</div><p>&copy; 2026 Burrow Living. Fictional brand for a design study.</p></footer>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Offer">
+    <div class="modal-card">
+      <div class="m-img"><button class="m-close" id="mclose" aria-label="Close">&times;</button><span class="m-badge"><span>Book at Burrow and get <b>-50%</b> discount on your first rent!</span><em>burrow.</em></span></div>
+      <div class="m-body"><h2>Still looking for your student apartment?</h2><small>*Offer valid for new leases completed during the study period. Terms apply.</small><a class="btn" href="#contact" data-nav="contact">Book your Unit</a><a class="tc" href="#contact" data-nav="contact"><u>Terms and conditions</u> of the offer</a></div>
+    </div>
+  </div>
+</body>
+</html>
