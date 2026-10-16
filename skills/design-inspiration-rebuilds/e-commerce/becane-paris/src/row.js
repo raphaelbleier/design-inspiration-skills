@@ -1,6 +1,8 @@
 // Technique: one WebGL canvas, orthographic camera in CSS pixels. Ten cut-out models stand
 // in a row; hover dims the others to 22% + desaturates them, scales the hovered one 1.06 and
 // crossfades to its second pose. Row height = 11vw (desktop), spacing = 8vw, lerp .12 per frame.
+// Images are multiply-blended onto the page (CSS), so their light backdrop disappears.
+// 768-1099px: figures scatter around the viewport instead of standing in a row.
 // Narrow screens: row is wider than the screen and is dragged horizontally.
 import * as THREE from 'three';
 import { products } from './data.js';
@@ -13,6 +15,7 @@ const frag = /* glsl */`
     vec4 c = mix(a, b, uMix);
     // images arrive later: until then show a soft silhouette block
     if (uHas < 0.5) { float s = step(abs(vUv.x - .5), .22) * step(.04, vUv.y) * step(vUv.y, .96); c = vec4(vec3(.74), s * .55); }
+    c.rgb = min(c.rgb / .88, 1.);              // lift the studio backdrop to white; canvas is multiply-blended
     float g = dot(c.rgb, vec3(.299, .587, .114));
     c.rgb = mix(vec3(g), c.rgb, uDim);        // desaturate when dimmed
     c.a *= mix(.22, 1., uDim);                // and fade to 22%
@@ -44,26 +47,27 @@ export function createRow(canvas, onPick) {
     return { mesh, mat, i, mix: 0, dim: 1, scale: 1 };
   });
 
-  const S = { w: 1, h: 1, ih: 0, step: 0, dragX: 0, minDrag: 0, hover: -1, lift: 0, narrow: false };
+  const SC = [[.5,.26],[.31,.29],[.69,.28],[.16,.37],[.84,.38],[.11,.56],[.88,.56],[.23,.67],[.77,.67],[.4,.73]];
+  const S = { w: 1, h: 1, ih: 0, step: 0, dragX: 0, minDrag: 0, hover: -1, scatter: false, narrow: false };
   function layout() {
-    S.w = innerWidth; S.h = innerHeight; S.narrow = S.w < 768;
+    S.w = innerWidth; S.h = innerHeight; S.narrow = S.w < 768; S.scatter = !S.narrow && S.w < 1100;
     renderer.setSize(S.w, S.h, false);
     Object.assign(cam, { left: 0, right: S.w, top: S.h, bottom: 0 }); cam.updateProjectionMatrix();
-    S.ih = S.narrow ? S.w * 0.46 : S.w * 0.11;
-    S.step = S.narrow ? S.w * 0.28 : S.w * 0.08;
+    S.ih = S.narrow ? S.w * 0.46 : S.scatter ? S.w * 0.115 : S.w * 0.097;
+    S.step = S.narrow ? S.w * 0.28 : S.w * 0.0745;
     const rowW = S.step * (items.length - 1);
     S.minDrag = S.narrow ? Math.min(0, S.w - rowW - S.step) : 0;
     S.dragX = Math.max(S.dragX, S.minDrag);
   }
   layout(); addEventListener('resize', layout);
 
-  const rowX = (i) => (S.narrow ? S.step * 0.6 + S.dragX : (S.w - S.step * (items.length - 1)) / 2) + i * S.step;
-  const rowY = () => S.h * 0.5 + S.lift;
+  const rowX = (i) => S.scatter ? SC[i][0] * S.w : (S.narrow ? S.step * 0.6 + S.dragX : (S.w - S.step * (items.length - 1)) / 2) + i * S.step;
+  const rowY = (i) => S.scatter ? S.h * (1 - SC[i][1]) : S.h * 0.5;
 
   function pick(clientX, clientY) {
     if (S.narrow) return -1;
     let best = -1, bd = S.step * 0.55;
-    items.forEach((it, i) => { const d = Math.abs(clientX - rowX(i)); if (d < bd && Math.abs(clientY - (S.h - rowY())) < S.ih * 0.6) { bd = d; best = i; } });
+    items.forEach((it, i) => { const d = Math.hypot(clientX - rowX(i), S.scatter ? clientY - (S.h - rowY(i)) : 0); if (d < bd && Math.abs(clientY - (S.h - rowY(i))) < S.ih * 0.6) { bd = d; best = i; } });
     return best;
   }
   function setHover(i) { if (i !== S.hover) { S.hover = i; onPick(i); } }
@@ -83,7 +87,7 @@ export function createRow(canvas, onPick) {
       const u = it.mat.uniforms; u.uMix.value = it.mix; u.uDim.value = it.dim;
       const h = S.ih * it.scale;
       it.mesh.scale.set(h * 0.5, h, 1);
-      it.mesh.position.set(rowX(it.i), rowY(), 0);
+      it.mesh.position.set(rowX(it.i), rowY(it.i), 0);
     });
     renderer.render(scene, cam);
   }

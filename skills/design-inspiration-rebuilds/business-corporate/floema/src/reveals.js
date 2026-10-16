@@ -1,6 +1,6 @@
 // Headline reveal: SplitText lines inside overflow masks, yPercent 110 -> 0.
 // Values: start 'top 85%', duration 1.1s power3.out, stagger .1, plays once.
-// Quote section recolours the fixed header via ScrollTrigger toggle (dark green panel -> white logo).
+// Quote + journal panels recolour the fixed header via ScrollTrigger toggle (dark green panel -> white logo).
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { SplitText } from 'gsap/SplitText';
@@ -20,7 +20,7 @@ export function initReveals() {
     ScrollTrigger.refresh();
   });
   ScrollTrigger.create({
-    trigger: '.quote', start: 'top 60px', end: 'bottom 60px',
+    trigger: '.quote', endTrigger: '.journal', start: 'top 60px', end: 'bottom 60px',
     onToggle: (s) => document.querySelector('.bar').classList.toggle('on-dark', s.isActive),
   });
 }

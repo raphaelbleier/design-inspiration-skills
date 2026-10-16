@@ -52,7 +52,7 @@ Rebuild: [`design-inspiration-rebuilds/business-corporate/cominvi`](https://gith
 | Block reveals | enters at 88% | big paragraphs and cards slide up 40px and fade in | 1s `power3.out`, stagger .1 | `src/reveals.js` |
 | Stat counters | enters at 90% | numbers count up, comma decimals (`5,1k`) | 1.6s `power2.out` | `src/reveals.js` |
 | Service cards | hover | title lifts, description fades in from below | .6s `cubic-bezier(.65,.05,0,1)` | `src/style.css` |
-| Minerals dial | scroll through a 600vh pinned section | active mineral = progress bucket; 120-tick ring fills per bucket; list greys out others; rock photo cross-fades; code `CU [#29]` updates | .5-.6s ease | `src/minerals.js` |
+| Minerals dial | scroll through a 600vh pinned section | active mineral = progress bucket; 180-tick ring fills per bucket; list greys out others; rock photo cross-fades; code `CU [#29]` updates | .5-.6s ease | `src/minerals.js` |
 | Partner wheel | scroll through a 520vh pinned section | names slide along a vertical axis; scale, opacity and y derive from distance to a float index | scrubbed | `src/wheel.js` |
 | Menu | click | full-screen ink panel opens as a circle clip-path from the burger; links rise in | .9s `power3.inOut` | `src/menu.js` |
 | Quote switcher | timer / dots | cross-fade between two testimonials | .7s `cubic-bezier(.65,.05,0,1)`, 6s auto | `src/quotes.js` |
@@ -85,7 +85,7 @@ gsap.ticker.lagSmoothing(0);
 
 **Dial of ticks**: `src/minerals.js`
 ```js
-const N = 120;
+const N = 180;
 for (let i = 0; i < N; i++)
   ticks.insertAdjacentHTML('beforeend', `<i style="transform:rotate(${(i * 360) / N}deg)"></i>`);
 // ...

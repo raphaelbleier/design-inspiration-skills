@@ -20,10 +20,12 @@ scrollTo(0, 0);
 
 initCursor(); initMenu(); initFooter(); initSpines(); initClients();
 initHero(); initExpertises(); initCitation();
-// Nav goes light over the dark productions block and over the footer.
+// Nav goes light over the dark expertises + productions blocks and over the footer.
 const nav = document.querySelector('.nav');
 const dark = new Set();
 const track = (key) => (st) => { st.isActive ? dark.add(key) : dark.delete(key); nav.classList.toggle('light', dark.size > 0); };
+ScrollTrigger.create({ trigger: '.expertises', start: 'top 30%', end: 'bottom 60px', onToggle: track('exp') });
+gsap.fromTo('.expertises', { backgroundColor: '#e5e2d6' }, { backgroundColor: '#292f33', ease: 'none', scrollTrigger: { trigger: '.expertises', start: 'top 80%', end: 'top 20%', scrub: true } });
 ScrollTrigger.create({ trigger: '.prods', start: 'top 60px', end: 'bottom 60px', onToggle: track('prods') });
 ScrollTrigger.create({ trigger: '.page', start: 'bottom 60px', end: () => '+=' + innerHeight, onToggle: track('footer') });
 runLoader().then(() => { startScroll(); ScrollTrigger.refresh(); });

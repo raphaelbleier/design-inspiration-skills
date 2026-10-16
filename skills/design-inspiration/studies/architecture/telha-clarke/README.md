@@ -12,8 +12,7 @@ stack: [gsap, scrolltrigger, splittext, lenis, wordpress, vite]
 # Telha Clarke — clean-room study
 
 An architecture and interior studio site that is almost entirely white space and photography. One
-move carries the opening: a giant wide wordmark on black, and below it a small portrait window of
-a photo that opens to full-bleed as you scroll. After that the page is quiet: grotesk statements,
+move carries the opening: a full-bleed photograph under a small header, which the page then slides over as you scroll. After that the page is quiet: grotesk statements,
 bracketed project titles, and a floating field of thumbnails.
 
 Rebuild: [`design-inspiration-rebuilds/architecture/telha-clarke`](https://github.com/raphaelbleier/design-inspiration-skills/tree/main/skills/design-inspiration-rebuilds/architecture/telha-clarke) (fictional content, generated images, open-source fonts; installed with the optional `design-inspiration-rebuilds` skill). Run it with `npm install && npm run dev`.
@@ -33,8 +32,8 @@ Rebuild: [`design-inspiration-rebuilds/architecture/telha-clarke`](https://githu
 ```
 
 - **Type:** a neo-grotesk at weight 400-500 (original: Europa Grotesk; substitute: Hanken Grotesk),
-  tight tracking (`-.035em` on statements, `-.04em` on titles). The wordmark is a very wide heavy
-  display face (substitute: Unbounded 800) set at ~11.6vw, letters spread edge to edge.
+  tight tracking (`-.048em` on statements, `-.04em` on titles). The logo stays small in the header;
+  the photography carries the opening, not a display wordmark.
 - **Scale:** statements `clamp(28px, 4.1vw, 60px)`, project titles up to `96px`, UI text 12-14px.
 - **Shape:** no radii, no shadows, no colour. Images are hard-edged rectangles on white.
 
@@ -43,9 +42,8 @@ Rebuild: [`design-inspiration-rebuilds/architecture/telha-clarke`](https://githu
 | What | Trigger | Animation | Duration / easing | Rebuild file |
 |---|---|---|---|---|
 | Smooth scroll | always | Lenis `{ lerp: .1, smoothWheel, syncTouch }` on the GSAP ticker | — | `src/scroll.js` |
-| Loader | page load | black panel counts 0 → 100 %, slides up, wordmark letters rise from masks | 1.4s count, .9s `power3.inOut`, letters `power4.out` stagger .04 | `src/loader.js` |
-| Hero window → full-bleed | scroll, pinned 100% | `clip-path` inset opens from a centred portrait window to the full stage while the image scales 1.25 → 1 | scrubbed, `scrub: .6` | `src/hero.js` |
-| Header drop | first 40% of hero | nav row moves from under the wordmark to the top edge; small logo fades in later | scrubbed | `src/hero.js` |
+| Loader | page load | black panel counts 0 → 100 %, slides up, hero photo settles from scale 1.15 | 1.4s count, .9s `power3.inOut`, photo 1.6s `power3.out` | `src/loader.js` |
+| Hero parallax | scroll | full-bleed photo drifts down 18% and scales 1.12 → 1 while the studio section slides over it; tagline and hint fade | scrubbed, `scrub: true` | `src/hero.js` |
 | Statement reveal | enters at 85% | SplitText lines in masks rise `yPercent 105 → 0` | 1.1s `power3.out`, stagger .1 | `src/reveals.js` |
 | Image wipe | enters at 88% | `clip-path` inset bottom-up | 1.2s `power3.inOut` | `src/reveals.js` |
 | Project image open | scroll | image grows from a thin line, inner parallax ±12% | scrubbed | `src/works.js` |
@@ -55,15 +53,12 @@ Rebuild: [`design-inspiration-rebuilds/architecture/telha-clarke`](https://githu
 
 ### Key excerpts
 
-**Hero window opens to full-bleed**: `src/hero.js`
+**Full-bleed hero parallax**: `src/hero.js`
 ```js
-const from = mobile ? 'inset(52% 12% 0% 12%)' : 'inset(46% 39% 0% 39%)';
-const tl = gsap.timeline({ scrollTrigger: { trigger: '.hero', start: 'top top',
-  end: '+=100%', pin: true, scrub: 0.6 } });
-tl.fromTo('.hero-img', { clipPath: from }, { clipPath: 'inset(0% 0% 0% 0%)', ease: 'none' }, 0)
-  .fromTo('.hero-img img', { scale: 1.25 }, { scale: 1, ease: 'none' }, 0)
-  .to(['.hint', '.tagline'], { opacity: 0, duration: 0.3, ease: 'none' }, 0)
-  .to('.wordmark', { yPercent: -30, ease: 'none' }, 0);
+const st = { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true };
+gsap.timeline({ scrollTrigger: st })
+  .to('.hero-img img', { yPercent: 18, scale: 1.12, ease: 'none' }, 0)
+  .to(['.hint', '.tagline'], { opacity: 0, duration: 0.3, ease: 'none' }, 0);
 ```
 
 **Smooth scroll on the GSAP ticker**: `src/scroll.js`
@@ -101,10 +96,10 @@ imgs.forEach((im) => {
 
 ## Why Award-Worthy
 
-1. **One opening gesture.** The wordmark plus a photo window that opens to full-bleed sets the
-   whole tone in one scroll.
+1. **One opening gesture.** A full-bleed photo that settles in after the loader, then drifts and
+   scales back as the next section slides over it, sets the whole tone in one scroll.
 2. **Restraint.** Black, white and photography only; the buildings supply all the colour.
-3. **Typographic contrast.** An extra-wide display wordmark against a small, quiet grotesk.
+3. **Typographic restraint.** One quiet grotesk, tightly tracked, at very different sizes.
 4. **Brackets as a motif.** Project titles breathe open on scroll, a cheap detail that feels designed.
 5. **Layered depth without WebGL.** The All Work field uses plain transforms and opacity.
 

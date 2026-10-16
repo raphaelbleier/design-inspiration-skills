@@ -1,5 +1,5 @@
 // Technique: scroll-scrubbed curtain. As the manifesto section rises over the fixed canvas,
-// a black veil fades to .65 and the row drifts up 12vh; the "discover" card flips black -> white
+// a black veil fades to .25 (row stays put); the "discover" card flips black -> white
 // at the same moment. Manifesto lines: SplitText lines, yPercent 100 -> 0 in a masked line,
 // .9s power3.out, stagger .06, start 'top 70%'.
 import gsap from 'gsap';
@@ -8,13 +8,12 @@ import { SplitText } from 'gsap/SplitText';
 
 gsap.registerPlugin(ScrollTrigger, SplitText);
 
-export function initReveals(state) {
+export function initReveals() {
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   ScrollTrigger.create({
     trigger: '.manifesto', start: 'top bottom', end: 'top top', scrub: true,
     onUpdate: (self) => {
-      gsap.set('.dim', { opacity: self.progress * 0.65 });
-      state.lift = self.progress * state.h * 0.12;
+      gsap.set('.dim', { opacity: self.progress * 0.25 });
       document.body.classList.toggle('past-hero', self.progress > 0.5);
     },
   });

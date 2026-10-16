@@ -11,11 +11,11 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 export function initReveals() {
   if (reduced) return;
-  document.querySelectorAll('.split').forEach((el) => {
+  document.fonts.ready.then(() => document.querySelectorAll('.split').forEach((el) => {
     SplitText.create(el, { type: 'lines', mask: 'lines', autoSplit: true, onSplit: (self) =>
       gsap.from(self.lines, { yPercent: 105, duration: 1.1, ease: 'power3.out', stagger: 0.1,
         scrollTrigger: { trigger: el, start: 'top 85%', once: true } }) });
-  });
+  }));
   gsap.utils.toArray('.row.label, .small, .work-meta').forEach((el) =>
     gsap.from(el, { opacity: 0, y: 14, duration: 0.8, ease: 'power2.out',
       scrollTrigger: { trigger: el, start: 'top 92%', once: true } }));

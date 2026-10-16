@@ -40,7 +40,7 @@ export function initDisc() {
   const rim = new THREE.DirectionalLight(0xff7a30, 1.6); rim.position.set(4, -2, -3); scene.add(rim);
 
   const tex = corkTexture();
-  const prof = [[0, -0.11], [1, -0.11], [1, 0.11], [0.8, 0.11], [0.74, 0.04], [0, 0.04]].map(([r, y]) => new THREE.Vector2(r, y));
+  const prof = [[0, -0.16], [1, -0.16], [1, 0.17], [0.86, 0.17], [0.8, 0.0], [0, 0.0]].map(([r, y]) => new THREE.Vector2(r, y));
   const geo = new THREE.LatheGeometry(prof, 96);
   // planar UVs on the faces, cylindrical on the rim (lathe UVs pinch at the centre)
   const P = geo.attributes.position, N = geo.attributes.normal, UV = geo.attributes.uv;
@@ -81,11 +81,11 @@ export function initDisc() {
   frameCallbacks.add((t) => {
     mouse.sx += (mouse.x - mouse.sx) * 0.06; mouse.sy += (mouse.y - mouse.sy) * 0.06;
     const k = reduced ? 0 : 1;
-    const sc = pose.s * unit;
+    const sc = pose.s * unit * (W < 800 ? 1.05 : 1.55);
     mesh.visible = pose.s > 0.01;
     group.scale.setScalar(sc);
     group.position.set(pose.x * halfW, pose.y * halfH + Math.sin(t * 0.9) * 0.12 * k, 0);
-    group.rotation.set(pose.tilt + mouse.sy * 0.3 * k, pose.spin + mouse.sx * 0.3 * k + t * 0.35 * k, Math.sin(t * 0.6) * 0.06 * k);
+    group.rotation.set(pose.tilt + mouse.sy * 0.3 * k, pose.spin + mouse.sx * 0.3 * k + Math.sin(t * 0.5) * 0.4 * k, Math.sin(t * 0.6) * 0.06 * k);
     renderer.render(scene, cam);
   });
   ScrollTrigger.addEventListener('refresh', resize);

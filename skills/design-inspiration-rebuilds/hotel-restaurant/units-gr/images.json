@@ -1,16 +1,72 @@
 [
-  {"path":"public/img/hero-lounge.webp","prompt":"Wide photo of a vivid student lounge: deep blue grid ceiling with round white pendant lamps, emerald green and orange walls, low white storage benches with yellow wire cubes, blue stools, three young people chatting and using laptops, large plants, natural light, sharp editorial interior photography, no text, no logos","aspect":"16:9"},
-  {"path":"public/img/popup-room.webp","prompt":"Bright studio apartment seen from the door: a young man reading in an orange bean bag chair by a tall balcony window, small desk with green bottle and plant, blurred person cooking in a compact kitchen at right, soft daylight, no text, no logos","aspect":"4:3"},
-  {"path":"public/img/living-lounge.webp","prompt":"Portrait photo of a colourful common room: blue ceiling with white globe lamps, green pillar, orange wall, white benches with yellow wire cubes, big leafy plants, empty and tidy, no text, no logos","aspect":"3:4"},
-  {"path":"public/img/living-door.webp","prompt":"Portrait photo, close-up of a black smart lock keypad knob on a dark door, a softly blurred bedroom behind with grey bed, yellow armchair and a blue pillow, no text, no logos","aspect":"3:4"},
-  {"path":"public/img/living-desk.webp","prompt":"Portrait photo, macro still life on a dark desk: a small toy figure in red hard hat and blue overalls next to a croissant on a cream plate, a mug and an open laptop with a blurred dashboard, shallow depth of field, no text, no logos","aspect":"3:4"},
-  {"path":"public/img/plant-illustration.webp","prompt":"Flat vector-style illustration of a tall monstera plant with green leaves and a white winding stem in a blue cube planter, casting a thin black shadow, plain tomato-red background, no text","aspect":"3:4"},
-  {"path":"public/img/community-entrance.webp","prompt":"Portrait photo of two young students laughing on the steps in front of a modern black building entrance with a glowing door and large plants, one carrying a green tote bag, midday sun, no text, no logos","aspect":"2:3"},
-  {"path":"public/img/community-terrace.webp","prompt":"High-angle photo of a rooftop terrace party: a dozen young people around long tables covered with colourful plates and cups, white architecture with stairs, bright sun, candid, no text, no logos","aspect":"2:3"},
-  {"path":"public/img/tunnel-1.webp","prompt":"Landscape photo of a cosy furnished student bedroom with white bed, red cushions and a wall poster, daylight, no text","aspect":"16:9"},
-  {"path":"public/img/tunnel-2.webp","prompt":"Landscape photo of a small private kitchen with white cabinets, induction hob and a window, tidy, no text","aspect":"16:9"},
-  {"path":"public/img/tunnel-3.webp","prompt":"Landscape photo of a student desk workspace with chair, lamp and shelves by a window, no text","aspect":"16:9"},
-  {"path":"public/img/tunnel-4.webp","prompt":"Landscape photo of a modern compact bathroom with glass shower and white tiles, no text","aspect":"16:9"},
-  {"path":"public/img/tunnel-5.webp","prompt":"Landscape photo of a sunny balcony with two small chairs and a view over city rooftops, no text","aspect":"16:9"},
-  {"path":"public/img/tunnel-6.webp","prompt":"Landscape photo of a living area with a wall-mounted TV, sofa and teal accent wall, no text","aspect":"16:9"}
+{
+"path": "public/img/hero-lounge.webp",
+"prompt": "Wide photo of a vivid student lounge: deep blue grid ceiling with round white pendant lamps, emerald green and orange walls, low white storage benches with yellow wire cubes, blue stools, three young people chatting and using laptops, large plants, natural light, sharp editorial interior photography, no text, no logos",
+"aspect": "16:9"
+},
+{
+"path": "public/img/popup-room.webp",
+"prompt": "Bright studio apartment seen from the door: a young man reading in an orange bean bag chair by a tall balcony window, small desk with green bottle and plant, blurred person cooking in a compact kitchen at right, soft daylight, no text, no logos",
+"aspect": "4:3"
+},
+{
+"path": "public/img/living-lounge.webp",
+"prompt": "Portrait photo of a colourful common room: blue ceiling with white globe lamps, green pillar, orange wall, white benches with yellow wire cubes, big leafy plants, empty and tidy, no text, no logos",
+"aspect": "3:4"
+},
+{
+"path": "public/img/living-door.webp",
+"prompt": "Portrait photo, close-up of a black smart lock keypad knob on a dark door, a softly blurred bedroom behind with grey bed, yellow armchair and a blue pillow, no text, no logos",
+"aspect": "3:4"
+},
+{
+"path": "public/img/living-desk.webp",
+"prompt": "Portrait photo, macro still life on a dark desk: a small toy figure in red hard hat and blue overalls next to a croissant on a cream plate, a mug and an open laptop with a blurred dashboard, shallow depth of field, no text, no logos",
+"aspect": "3:4"
+},
+{
+"path": "public/img/plant-illustration.webp",
+"prompt": "Flat vector-style illustration of a tall monstera plant with green leaves and a white winding stem in a blue cube planter, casting a thin black shadow, background is a perfectly flat solid #ff5c38 tomato orange-red with no gradient, subject placed centered with generous margin, no text",
+"aspect": "3:4"
+},
+{
+"path": "public/img/community-entrance.webp",
+"prompt": "Portrait photo of two young students laughing on the steps in front of a modern black building entrance with a glowing door and large plants, one carrying a green tote bag, midday sun, no text, no logos",
+"aspect": "2:3"
+},
+{
+"path": "public/img/community-terrace.webp",
+"prompt": "High-angle photo of a rooftop terrace party: a dozen young people around long tables covered with colourful plates and cups, white architecture with stairs, bright sun, candid, no text, no logos",
+"aspect": "2:3"
+},
+{
+"path": "public/img/tunnel-1.webp",
+"prompt": "Landscape photo of a cosy furnished student bedroom with white bed, red cushions and a wall poster, daylight, no text",
+"aspect": "16:9"
+},
+{
+"path": "public/img/tunnel-2.webp",
+"prompt": "Landscape photo of a small private kitchen with white cabinets, induction hob and a window, tidy, no text",
+"aspect": "16:9"
+},
+{
+"path": "public/img/tunnel-3.webp",
+"prompt": "Landscape photo of a student desk workspace with chair, lamp and shelves by a window, no text",
+"aspect": "16:9"
+},
+{
+"path": "public/img/tunnel-4.webp",
+"prompt": "Landscape photo of a modern compact bathroom with glass shower and white tiles, no text",
+"aspect": "16:9"
+},
+{
+"path": "public/img/tunnel-5.webp",
+"prompt": "Landscape photo of a sunny balcony with two small chairs and a view over city rooftops, no text",
+"aspect": "16:9"
+},
+{
+"path": "public/img/tunnel-6.webp",
+"prompt": "Landscape photo of a living area with a wall-mounted TV, sofa and teal accent wall, no text",
+"aspect": "16:9"
+}
 ]

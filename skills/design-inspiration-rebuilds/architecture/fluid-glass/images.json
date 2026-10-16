@@ -1,13 +1,57 @@
 [
-{"path":"public/img/hero.webp","prompt":"Architectural photograph of a two-storey modern house clad in pale vertical timber and dark zinc panels, a large frameless corner glass window showing a cosy lounge with cushions, black steel french doors on the left, wild grasses in the foreground, soft overcast daylight, no text, no logos","aspect":"16:10"},
-{"path":"public/img/doors.webp","prompt":"Close architectural detail of a slim-framed sliding glass door beside a dark walnut wall, polished concrete floor, bright white interior beyond, minimal, soft daylight, vertical composition, no text, no logos","aspect":"4:5"},
-{"path":"public/img/windows.webp","prompt":"A craftsperson in a dark apron adjusting a green powder-coated steel framed window in a grey concrete workshop, reflections in glass, vertical composition, editorial photography, no text, no logos","aspect":"5:6"},
-{"path":"public/img/additional.webp","prompt":"Bright high-rise apartment interior with floor-to-ceiling black framed glazing, sheer curtains, cream sofa, brass coffee table, city skyline view, vertical composition, no text, no logos","aspect":"4:5"},
-{"path":"public/img/structural.webp","prompt":"Gabled brick and timber house with a tall triangular structural glass gable window reflecting trees, afternoon light, vertical composition, no text, no logos","aspect":"4:5"},
-{"path":"public/img/showroom.webp","prompt":"Interior of a glazing showroom at dusk, tall glass door samples in black frames, a woman in dark clothing standing among them, framed picture on wall, moody grey tones, cinematic, no text, no logos","aspect":"16:9"},
-{"path":"public/img/showroom-2.webp","prompt":"A woman in a dark top speaking and gesturing in a modern architectural glazing showroom, shallow depth of field, grey blue tones, cinematic, no text, no logos","aspect":"16:9"},
-{"path":"public/img/project-1.webp","prompt":"Contemporary riverside house with a full-height glass wall and black steel frames at golden hour, reflections of water, wide composition, no text, no logos","aspect":"3:2"},
-{"path":"public/img/project-2.webp","prompt":"Glass-roofed rear extension on a Victorian terrace, slim steel rooflight, evening interior light, wide composition, no text, no logos","aspect":"3:2"},
-{"path":"public/img/project-3.webp","prompt":"Minimal concrete villa with a frameless glass corner and infinity pool, blue hour, wide composition, no text, no logos","aspect":"3:2"},
-{"path":"public/img/menu.webp","prompt":"Abstract close-up of layered glass edges with green-tinted reflections and soft light, dark moody, vertical composition, no text, no logos","aspect":"4:5"}
+{
+"path": "public/img/hero.webp",
+"prompt": "Tight architectural photograph filling the frame edge to edge: corner of a modern house, weathered pale grey vertical timber cladding and dark charcoal zinc standing-seam panels above, huge frameless corner glass window with thin black steel frame reflecting garden foliage and showing a cosy lounge with white cushions and sheer curtains, black steel french doors with glazing bars on the left, wild ornamental grasses in the lower foreground, moody overcast light, dark low-key grading, desaturated cool grey and charcoal palette, no sky, no neighbouring buildings, no text, no logos",
+"aspect": "16:10"
+},
+{
+"path": "public/img/doors.webp",
+"prompt": "Close architectural detail of a slim-framed sliding glass door beside a dark walnut wall, polished concrete floor, bright white interior beyond, minimal, soft daylight, vertical composition, no text, no logos",
+"aspect": "4:5"
+},
+{
+"path": "public/img/windows.webp",
+"prompt": "A craftsperson in a dark apron adjusting a green powder-coated steel framed window in a grey concrete workshop, reflections in glass, vertical composition, editorial photography, no text, no logos",
+"aspect": "5:6"
+},
+{
+"path": "public/img/additional.webp",
+"prompt": "Bright high-rise apartment interior with floor-to-ceiling black framed glazing, sheer curtains, cream sofa, brass coffee table, city skyline view, vertical composition, no text, no logos",
+"aspect": "4:5"
+},
+{
+"path": "public/img/structural.webp",
+"prompt": "Gabled brick and timber house with a tall triangular structural glass gable window reflecting trees, afternoon light, vertical composition, no text, no logos",
+"aspect": "4:5"
+},
+{
+"path": "public/img/showroom.webp",
+"prompt": "Interior of a glazing showroom at dusk, tall glass door samples in black frames, a woman in dark clothing standing among them, framed picture on wall, moody grey tones, cinematic, no text, no logos",
+"aspect": "16:9"
+},
+{
+"path": "public/img/showroom-2.webp",
+"prompt": "A woman in a dark top speaking and gesturing in a modern architectural glazing showroom, shallow depth of field, grey blue tones, cinematic, no text, no logos",
+"aspect": "16:9"
+},
+{
+"path": "public/img/project-1.webp",
+"prompt": "Contemporary riverside house with a full-height glass wall and black steel frames at golden hour, reflections of water, wide composition, no text, no logos",
+"aspect": "3:2"
+},
+{
+"path": "public/img/project-2.webp",
+"prompt": "Glass-roofed rear extension on a Victorian terrace, slim steel rooflight, evening interior light, wide composition, no text, no logos",
+"aspect": "3:2"
+},
+{
+"path": "public/img/project-3.webp",
+"prompt": "Minimal concrete villa with a frameless glass corner and infinity pool, blue hour, wide composition, no text, no logos",
+"aspect": "3:2"
+},
+{
+"path": "public/img/menu.webp",
+"prompt": "Abstract close-up of layered glass edges with green-tinted reflections and soft light, dark moody, vertical composition, no text, no logos",
+"aspect": "4:5"
+}
 ]

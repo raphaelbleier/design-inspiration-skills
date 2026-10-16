@@ -28,7 +28,9 @@ h1, h2, h3 { font-family: 'Archivo Variable', Impact, sans-serif; font-stretch: 
 .logo .word { font-weight: 700; letter-spacing: -.04em; font-size: 1.7rem; }
 .links { display: flex; gap: 1rem; font-weight: 600; font-size: .98rem; margin-left: auto; }
 .links a { transition: opacity .3s var(--osmo); } .links a:hover { opacity: .6; }
-.menu-btn { display: none; font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .08em; }
+.menu-btn { display: none; width: 48px; height: 48px; border-radius: 50%; background: rgb(255 255 255 / .12); backdrop-filter: blur(8px); place-content: center; gap: 7px; }
+.menu-btn i { display: block; width: 22px; height: 1.5px; background: currentColor; }
+.social { display: flex; gap: 1.1rem; color: var(--brand); } .social svg { width: 1.5rem; height: 1.5rem; }
 .menu { position: fixed; inset: 0; z-index: 80; background: var(--brand); color: var(--dark); display: flex; flex-direction: column; justify-content: center; gap: .6rem; padding: var(--gutter); clip-path: inset(0 0 100% 0); visibility: hidden; }
 .menu a { font: 800 clamp(2rem, 9vw, 3.4rem)/1 'Archivo Variable'; font-stretch: 125%; text-transform: uppercase; }
 .menu-close { position: absolute; top: 1.2rem; right: var(--gutter); font-weight: 700; text-transform: uppercase; font-size: .8rem; letter-spacing: .08em; }
@@ -56,7 +58,7 @@ h1, h2, h3 { font-family: 'Archivo Variable', Impact, sans-serif; font-stretch: 
 .reel-box { width: 22vw; height: 15svh; border-radius: var(--r); overflow: hidden; background: #3a2e29; }
 
 /* services */
-.services { height: 420svh; position: relative; }
+.services { height: 600svh; position: relative; }
 .stack-pin { position: sticky; top: 0; height: 100svh; display: grid; grid-template-columns: 1fr 1fr; align-items: center; padding: 0 var(--gutter); perspective: 1200px; overflow: hidden; }
 .stack-copy { text-align: center; max-width: 24rem; justify-self: center; display: grid; justify-items: center; gap: 1.3rem; color: #d9cd9e; }
 .display-script { font-size: var(--h2); color: var(--light); line-height: .85; }
@@ -147,13 +149,20 @@ h1, h2, h3 { font-family: 'Archivo Variable', Impact, sans-serif; font-stretch: 
   .studios-word { left: 0; top: 4vh; }
   .squiggle.foot { width: 50vw; }
   .cta h2 { max-width: 100%; }
-  .links { display: none; } .menu-btn { display: block; margin-left: auto; }
+  .links { display: none; } .menu-btn { display: grid; margin-left: auto; }
   .logo { opacity: 1; }
 }
 @media (max-width: 600px) {
+  .nav { padding: 1.3rem 1.3rem 1rem; } .logo .mark { font-size: 2.6rem; } .logo .word { font-size: 2rem; letter-spacing: -.03em; }
+  .hero { padding: 164px 49px 0; grid-template-rows: auto auto; align-content: start; }
+  .hero-card { height: auto; aspect-ratio: 292 / 366; }
+  .hero-title { margin-top: 3rem; font-size: 1.9rem; }
+  .hero-word { display: none; }
+  .stack-pin { display: flex; flex-direction: column-reverse; justify-content: center; gap: 4rem; }
+  .stack-cards { width: 54vw; aspect-ratio: 1; }
+  .cta footer { flex-direction: row; align-items: center; gap: .9rem; } .f-links { margin-right: auto; margin-left: 1rem; }
   .f-copy { bottom: 10rem; }
   .f-cards { left: var(--gutter); right: var(--gutter); width: auto; bottom: 3svh; }
-  .cta footer { flex-direction: column; gap: .3rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }

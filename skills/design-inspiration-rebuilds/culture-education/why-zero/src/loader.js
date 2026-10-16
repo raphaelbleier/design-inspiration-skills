@@ -12,7 +12,7 @@ export function runLoader(reduced) {
   return new Promise((done) => {
     gsap.timeline({ onComplete: () => { el.remove(); done(); } })
       .to(o, { v: 99, duration: 2.2, ease: 'power2.inOut', onUpdate() {
-        const n = Math.round(o.v);
+        const n = Math.round(o.v); el.style.setProperty('--f', 105 - o.v);
         // tens rolls once per 10, ones rolls continuously
         gsap.set(ins[0], { yPercent: -Math.floor(n / 10) * 10 });
         gsap.set(ins[1], { yPercent: -(n % 10) * 10 });

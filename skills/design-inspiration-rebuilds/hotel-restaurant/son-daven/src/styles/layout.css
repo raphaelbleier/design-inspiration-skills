@@ -302,7 +302,7 @@ figure { overflow: hidden; }
   .faq { padding-block: calc(140 * var(--px)); }
   .faq_head { gap: calc(16 * var(--px)); } .faq_head .p5 { width: calc(70 * var(--px)); font-size: calc(9 * var(--px)); }
   .acc { margin-top: calc(72 * var(--px)); }
-  .foot_ht { width: calc(240 * var(--px)); height: calc(440 * var(--px)); bottom: calc(100 * var(--px)); }
+  .foot_ht { width: calc(240 * var(--px)); height: min(calc(440 * var(--px)), 55vh); bottom: calc(100 * var(--px)); }
   .foot_phone, .foot_mail { top: auto; font-size: calc(14 * var(--px)); }
   .foot_phone { bottom: calc(80 * var(--px)); } .foot_mail { bottom: calc(30 * var(--px)); right: auto; left: calc(16 * var(--px)); }
   .foot_bar { height: calc(56 * var(--px)); padding-left: calc(80 * var(--px)); font-size: calc(8 * var(--px)); }

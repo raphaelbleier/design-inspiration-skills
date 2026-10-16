@@ -28,7 +28,7 @@ Rebuild: [`design-inspiration-rebuilds/e-commerce/becane-paris`](https://github.
 | Ink / black card | `#0a0a0a` |
 | Cards | `#ffffff` |
 | Muted text (counts, secondary links) | `#b2b2b2` |
-| Veil on scroll | black at 0 → .65 opacity |
+| Veil on scroll | black at 0 → .25 opacity |
 
 ```css
 :root {
@@ -51,10 +51,10 @@ h1   { font: 700 30px/1 var(--display); }
 | What | Trigger | Animation | Duration / easing | Rebuild file |
 |---|---|---|---|---|
 | Smooth scroll | always | Lenis `{ lerp: .1, smoothWheel }` on the `gsap.ticker`, `lagSmoothing(0)` | — | `src/scroll.js` |
-| Model row | always | WebGL planes in an orthographic pixel camera, row height 11vw, spacing 8vw | — | `src/row.js` |
+| Model row | always | WebGL planes in an orthographic pixel camera, row height 9.7vw, spacing 7.45vw (768-1099px: scattered) | — | `src/row.js` |
 | Hover focus | pointer near a figure | others desaturate and fade to 22%, hovered scales 1.06 and crossfades to pose B | per-frame lerp .12 | `src/row.js` |
 | Product card | hover | name, `nn / 10` counter and a thumbnail update in the top-right card | instant | `src/main.js` |
-| Scroll curtain | manifesto enters | black veil to .65, row drifts up 12vh, bottom card flips black to white | scrubbed; card .5s `cubic-bezier(.65,.05,0,1)` | `src/reveals.js` |
+| Scroll curtain | manifesto enters | black veil to .25, bottom card flips black to white | scrubbed; card .5s `cubic-bezier(.65,.05,0,1)` | `src/reveals.js` |
 | Manifesto reveal | enters at 70% | SplitText lines in masks, `yPercent: 100 → 0` | .9s `power3.out`, stagger .06 | `src/reveals.js` |
 | Narrow screens | drag | the row is wider than the screen and pans horizontally | — | `src/row.js` |
 
@@ -95,8 +95,7 @@ Nothing is tweened with GSAP here: three exponential lerps per item, once per fr
 ScrollTrigger.create({
   trigger: '.manifesto', start: 'top bottom', end: 'top top', scrub: true,
   onUpdate: (self) => {
-    gsap.set('.dim', { opacity: self.progress * 0.65 });
-    state.lift = self.progress * state.h * 0.12;     // row drifts up, read by the render loop
+    gsap.set('.dim', { opacity: self.progress * 0.25 });
     document.body.classList.toggle('past-hero', self.progress > 0.5);
   },
 });

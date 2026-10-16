@@ -1,7 +1,7 @@
 [
   {
     "path": "public/img/hero.webp",
-    "prompt": "Slender modern wooden lookout tower hotel beside an infinity pool, mountain range behind, blue-hour dusk, cool desaturated blue-grey palette, calm water reflections, wide architectural exterior, no text, no logos, no people, photographic",
+    "prompt": "Slender modern timber hotel stepping down a forested mountain slope, sunset golden hour, warm amber sun low on the right horizon, misty layered blue-grey ridges, dark pine forest in foreground, glowing warm windows, small pool terrace, dark foreground fading to near black at the bottom, warm earthy palette, wide architectural exterior, no text, no logos, no people, photographic",
     "aspect": "16:9"
   },
   {
@@ -106,8 +106,8 @@
   },
   {
     "path": "public/img/sheep.webp",
-    "prompt": "Flock of sheep on a pale hillside, simple dark shapes on light ground, high contrast, wide, no text, no logos, no people, photographic, soft natural light",
-    "aspect": "16:9"
+    "prompt": "Single sheep standing in profile, centred, dark silhouette against a plain pale sky, very high contrast, simple bold shape, no ground clutter, no text, no logos, no people, photographic, soft natural light",
+    "aspect": "3:4"
   },
   {
     "path": "public/img/summer.webp",

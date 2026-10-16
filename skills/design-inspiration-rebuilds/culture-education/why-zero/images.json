@@ -1,12 +1,52 @@
 [
- {"path":"public/img/plate-0.webp","prompt":"macro photograph of cracked pale-green ice sheet seen from above, deep fissures glowing mint white, cold teal tint, shallow depth, no text, no logos","aspect":"4:5"},
- {"path":"public/img/plate-1.webp","prompt":"a translucent frozen human hand pointing one finger upward, made of clear green ice with bubbles, studio backlight on a teal gradient, no text, no logos","aspect":"4:5"},
- {"path":"public/img/plate-2.webp","prompt":"close-up of frost crystals spreading across dark teal glass, soft bokeh highlights, no text, no logos","aspect":"4:5"},
- {"path":"public/img/plate-3.webp","prompt":"empty university lecture hall at dawn, cold green light through tall windows, mist on the floor, cinematic, no people, no text, no logos","aspect":"4:5"},
- {"path":"public/img/plate-4.webp","prompt":"water droplets thawing from an ice block, warm mint light, macro, no text, no logos","aspect":"4:5"},
- {"path":"public/img/hero-ice.webp","prompt":"seamless pale green marble-like ice texture with fine white veins, top-down, high detail, no text, no logos","aspect":"16:9"},
- {"path":"public/img/hand-ice.webp","prompt":"3D render of a glossy neon-green and ice-blue liquid hand with raised index finger, isolated on transparent-looking teal background, no text, no logos","aspect":"3:4"},
- {"path":"public/img/grain.webp","prompt":"subtle monochrome film grain noise texture, mid grey, no text, no logos","aspect":"1:1"},
- {"path":"public/img/cohort-1.webp","prompt":"portrait of a young adult in a thin white jacket against a teal frosted wall, soft cold light, fictional person, no text, no logos","aspect":"4:5"},
- {"path":"public/img/cohort-2.webp","prompt":"portrait of a mentor with short grey hair in a dark turtleneck, teal studio background, fictional person, no text, no logos","aspect":"4:5"}
+ {
+  "path": "public/img/plate-0.webp",
+  "prompt": "macro photograph of cracked pale mint-green ice sheet seen from above, deep fissures glowing white-green, strictly green-teal palette with no blue or cyan, shallow depth, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/plate-1.webp",
+  "prompt": "a translucent frozen human hand pointing one finger upward, made of clear green ice with bubbles, studio backlight on a teal gradient, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/plate-2.webp",
+  "prompt": "close-up of frost crystals spreading across dark teal glass, soft bokeh highlights, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/plate-3.webp",
+  "prompt": "empty university lecture hall at dawn, cold green light through tall windows, mist on the floor, cinematic, no people, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/plate-4.webp",
+  "prompt": "water droplets thawing from an ice block, warm mint light, macro, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/hero-ice.webp",
+  "prompt": "seamless pale green marble-like ice texture with fine white veins, top-down, high detail, no text, no logos",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hand-ice.webp",
+  "prompt": "3D render of a glossy neon-green and ice-blue liquid hand with raised index finger, isolated on a pure solid black background (#000000), no backdrop gradient, no text, no logos",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/grain.webp",
+  "prompt": "subtle monochrome film grain noise texture, mid grey, no text, no logos",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/cohort-1.webp",
+  "prompt": "portrait of a young adult in a thin white jacket against a teal frosted wall, soft cold light, fictional person, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/cohort-2.webp",
+  "prompt": "portrait of a mentor with short grey hair in a dark turtleneck, teal studio background, fictional person, no text, no logos",
+  "aspect": "4:5"
+ }
 ]

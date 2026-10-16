@@ -32,22 +32,32 @@ function pouchTexture() {
 export function initStage(canvas) {
   const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
   renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
-  renderer.setClearColor(0x0b2a1a);
+  renderer.setClearColor(0x06160e);
   const scene = new THREE.Scene();
-  scene.fog = new THREE.Fog(0x0b2a1a, 9, 20);
+  scene.fog = new THREE.Fog(0x06160e, 8, 17);
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 40);
 
   // room: two walls meeting at x=0 (seen as a corner) + floor
-  const wallMat = new THREE.MeshStandardMaterial({ map: noiseTexture('#3f9a63', 40), roughness: 0.95, color: 0x6f9f82 });
+  const wallMat = new THREE.MeshStandardMaterial({ map: noiseTexture('#3f9a63', 40), roughness: 0.95, color: 0x3d5a49 });
   const wl = new THREE.Mesh(new THREE.PlaneGeometry(10, 9), wallMat); wl.position.set(-3.5, 1, -3.5); wl.rotation.y = Math.PI / 4;
   const wr = wl.clone(); wr.position.x = 3.5; wr.rotation.y = -Math.PI / 4;
   const floor = new THREE.Mesh(new THREE.PlaneGeometry(14, 12), wallMat); floor.rotation.x = -Math.PI / 2; floor.position.set(0, -2.6, -1);
   scene.add(wl, wr, floor);
 
-  scene.add(new THREE.AmbientLight(0x6fd6a0, 0.65));
-  const front = new THREE.DirectionalLight(0xffffff, 1.2); front.position.set(1.5, 2, 6); scene.add(front);
+  scene.add(new THREE.AmbientLight(0x6fd6a0, 0.22));
+  const front = new THREE.DirectionalLight(0xffffff, 0.8); front.position.set(1.5, 2, 6); scene.add(front);
   const spot = new THREE.SpotLight(0xeaffe6, 60, 14, 0.55, 0.7, 1.2); spot.position.set(0, 2.3, 0.3);
   const target = new THREE.Object3D(); target.position.set(0, -1.2, 0); scene.add(target); spot.target = target; scene.add(spot);
+
+  // light pooled on the corner walls + floor, falling off to dark
+  const wash = new THREE.PointLight(0x58ff9c, 38, 9, 1.6); wash.position.set(0, 1.2, -1.3); scene.add(wash);
+  // glow sprite behind the lamp (radial gradient, additive = bloom)
+  const gc = document.createElement('canvas'); gc.width = gc.height = 128; const gg = gc.getContext('2d');
+  const grad = gg.createRadialGradient(64, 64, 0, 64, 64, 64);
+  grad.addColorStop(0, 'rgba(255,255,255,1)'); grad.addColorStop(0.25, 'rgba(190,255,205,.7)'); grad.addColorStop(1, 'rgba(60,255,130,0)');
+  gg.fillStyle = grad; gg.fillRect(0, 0, 128, 128);
+  const glow = new THREE.Sprite(new THREE.SpriteMaterial({ map: new THREE.CanvasTexture(gc), blending: THREE.AdditiveBlending, depthWrite: false, transparent: true }));
+  glow.position.set(0, 1.55, 0.4); glow.scale.set(3.6, 2.8, 1); scene.add(glow);
 
   // visible lamp + light shaft
   const lamp = new THREE.Mesh(new THREE.BoxGeometry(0.85, 0.05, 0.85), new THREE.MeshBasicMaterial({ color: 0xffffff }));
@@ -93,7 +103,7 @@ export function initStage(canvas) {
     group.position.y = Math.sin(time * 1.1) * 0.08;
     pouch.rotation.y = p * Math.PI * 3.2 + state.cx * 0.4;
     pill.rotation.y = time * 0.6; pill.position.x = 0.72 + Math.sin(time * 0.8) * 0.05;
-    spot.intensity = 60 + p * 120; shaft.material.opacity = 0.012 + p * 0.3; lamp.scale.setScalar(1 + p * 2);
+    spot.intensity = 60 + p * 120; shaft.material.opacity = 0.012 + p * 0.3; lamp.scale.setScalar(1 + p * 2); glow.scale.set(3.6 + p * 9, 2.8 + p * 7, 1);
     dust.position.y = (time * 0.05) % 1 - 0.5;
     renderer.render(scene, camera);
   };

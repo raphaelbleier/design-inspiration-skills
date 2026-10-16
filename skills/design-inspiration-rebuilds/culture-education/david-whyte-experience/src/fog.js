@@ -31,17 +31,19 @@ void main(){
   vec2 h = vec2((uX.y - uX.x) * .5 * asp, (uY.y - uY.x) * .5);
   vec2 d2 = abs(q - c) - h;
   float d = length(max(d2, 0.)) + min(max(d2.x, d2.y), 0.);
-  float n = fbm(q * 3.2 + vec2(0., -t * .05));
-  float edge = d + (n - .42) * .32;
+  float n = fbm(q * vec2(5.5, 7.0) + vec2(0., -t * .05));
+  float edge = d + (n - .5) * .15;
   float ink = (1.0 - smoothstep(-.015, .03, edge)) * uInk;
-  float rim = smoothstep(-.2, .0, edge) * (1. - smoothstep(.0, .05, edge));
+  float rim = smoothstep(-.12, .0, edge) * (1. - smoothstep(.0, .05, edge));
   float wisp = smoothstep(.52, .72, fbm(q * 5.5 + vec2(t * .04, t * .02)));
   vec3 inkCol = mix(vec3(.012), vec3(.93), wisp * rim * .9);
   col = mix(col, inkCol, ink);
   // cursor blob
   vec2 m = (uv - uMouse) * vec2(asp, 1.0);
-  float b = exp(-pow(length(m) * 3.6, 2.0)) * (.65 + .6 * fbm(q * 3.0 - t * .06)) * uBlob;
-  col = mix(col, vec3(.13), clamp(b, 0., .5));
+  float streak = fbm(vec2(q.x * 1.6, q.y * 7.0) + vec2(t * .03, 0.));
+  float wide = smoothstep(.25, .75, uv.x) * smoothstep(1.0, .35, uv.y);
+  float b = (exp(-pow(length(m) * 3.4, 2.0)) * 1.1 + wide * .55) * (.35 + 1.1 * streak) * uBlob;
+  col = mix(col, vec3(.2), clamp(b, 0., .6));
   gl_FragColor = vec4(col, 1.0);
 }`;
 
@@ -63,7 +65,7 @@ export function initFog() {
     u.uRes.value.set(canvas.width, canvas.height);
     // narrow screens: the ink panel gets wider so text still sits on it
     const narrow = innerWidth < 900;
-    gsap.set(u.uX.value, { x: narrow ? .02 : .02, y: narrow ? .98 : .44 });
+    gsap.set(u.uX.value, { x: .02, y: innerWidth < 600 ? .98 : narrow ? .74 : .44 });
     render();
   };
 
@@ -78,6 +80,10 @@ export function initFog() {
     };
     ScrollTrigger.create({ trigger: sec, start: 'top 55%', end: 'bottom 55%', onEnter: go, onEnterBack: go });
   });
+
+  // viaduct strip (fixed, bottom-middle) shows only from the FAQ to the end of the page
+  const via = document.querySelector('.viaduct');
+  ScrollTrigger.create({ trigger: '#faq', start: 'top 60%', endTrigger: 'footer', end: 'bottom bottom', toggleClass: { targets: via, className: 'is-on' } });
 
   const target = { x: .5, y: .5 };
   addEventListener('pointermove', (e) => { target.x = e.clientX / innerWidth; target.y = e.clientY / innerHeight; });

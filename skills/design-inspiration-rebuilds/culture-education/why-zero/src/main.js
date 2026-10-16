@@ -30,6 +30,7 @@ const stages = createStages(N, (p, cur, settled) => {
   if (idx !== lastIdx) { lastIdx = idx; tickEls.forEach((t, i) => t.classList.toggle('on', i === idx)); if (idx > 0) hint.style.opacity = 0; }
   ring.style.strokeDashoffset = 188.5 * (1 - (cur - Math.floor(cur)));   // progress to next stage
 });
+window.__scrollTo = (p) => stages.go(p * (N - 1)); // capture hook
 $('nextBtn').onclick = () => stages.go(stages.index + 1);
 
 const wave = $('wave');

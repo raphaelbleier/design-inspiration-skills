@@ -45,6 +45,7 @@ document.querySelector('[data-age=yes]').addEventListener('click', () => {
     gsap.to(state.splash, { v: 1, duration: 2.2, ease: 'power2.out', delay: 0.4 });
     const lines = new SplitText('.hero .line', { type: 'chars' });
     gsap.from(lines.chars, { yPercent: 110, rotate: 6, duration: 1.1, ease: 'power3.out', stagger: 0.04, delay: 0.5 });
+    gsap.from('.splash', { yPercent: 100, duration: 1.6, ease: 'power3.out', delay: 0.5 });
     gsap.from('.hero small', { autoAlpha: 0, y: 14, duration: 0.8, delay: 0.4 });
   }
 });

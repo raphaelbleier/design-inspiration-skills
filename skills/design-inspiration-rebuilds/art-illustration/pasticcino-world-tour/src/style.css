@@ -15,12 +15,12 @@ button { font: inherit; color: inherit; cursor: pointer; border: 0; background: 
 h1, h2, .card-title, .blob, .skip { font-stretch: 125%; font-weight: 800; text-transform: uppercase; }
 .kick { font-weight: 700; letter-spacing: .5em; font-size: clamp(.8rem, 1.1vw, 1.1rem); text-shadow: 1px 1px 0 var(--olive-d); }
 
-.img { background: var(--ochre) var(--img) center / cover no-repeat; }
+.img { background: var(--ochre) center / cover no-repeat; }
 
 /* Rough painted frame: border run through feTurbulence + displacement */
-.frame { position: fixed; inset: 0; z-index: 30; pointer-events: none; border: clamp(10px, 1.4vw, 22px) solid var(--brown); filter: url(#rough); }
+.frame { position: fixed; inset: 0; z-index: 30; pointer-events: none; border: clamp(12px, 2vw, 30px) solid var(--brown); filter: url(#rough); }
 
-.logo { position: fixed; z-index: 20; left: clamp(20px, 4.5vw, 60px); top: clamp(20px, 4vw, 44px); display: flex; gap: 14px; align-items: center; color: var(--cream); text-decoration: none; }
+.logo { text-shadow: 0 1px 6px #0007; position: fixed; z-index: 20; left: clamp(20px, 4.5vw, 60px); top: clamp(20px, 4vw, 44px); display: flex; gap: 14px; align-items: center; color: var(--cream); text-decoration: none; }
 .logo-mark { font-weight: 800; font-stretch: 125%; text-transform: uppercase; font-size: .8rem; line-height: .95; text-align: center; padding: 10px 12px; border: 2px solid currentColor; border-radius: 50% / 60%; }
 .logo-mark small, .logo-tour small { display: block; font-size: .5rem; letter-spacing: .12em; font-weight: 600; }
 .logo-tour { font-weight: 800; font-stretch: 125%; font-size: 1.1rem; line-height: .95; }
@@ -43,7 +43,7 @@ h1, h2, .card-title, .blob, .skip { font-stretch: 125%; font-weight: 800; text-t
 .start { position: absolute; left: 50%; bottom: 14%; translate: -50% 0; font-size: 1.15rem; }
 .hint { position: absolute; left: 50%; bottom: 5%; translate: -50% 0; text-align: center; font-weight: 700; font-size: clamp(.8rem, 1vw, 1rem); width: min(90%, 360px); text-shadow: 0 1px 4px #0008; }
 .gate-intro { position: absolute; inset: 0; display: grid; place-items: center; pointer-events: none; padding-bottom: 12vh; }
-.intro-card { width: min(66vw, 920px); aspect-ratio: 920 / 380; background: var(--olive); text-align: center; display: grid; align-content: center; justify-items: center; gap: .6rem; padding: 1.5rem; clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%); border-radius: 1.4rem; }
+.intro-card { width: min(72vw, 1040px); aspect-ratio: 1040 / 420; background: var(--olive); text-align: center; display: grid; align-content: center; justify-items: center; gap: .6rem; padding: 1.5rem; clip-path: polygon(0 4%, 100% 0, 100% 96%, 0 100%); border-radius: 1.4rem; }
 .intro-card h1 { font-size: clamp(2.2rem, 7.4vw, 6.4rem); line-height: .92; text-align: left; color: var(--cream); text-shadow: 4px 4px 0 var(--olive-d); }
 .intro-card h1 span { display: block; padding-left: 12%; }
 .intro-card p { font-weight: 600; }
@@ -65,10 +65,17 @@ h1, h2, .card-title, .blob, .skip { font-stretch: 125%; font-weight: 800; text-t
 @keyframes pulse { from { transform: scale(1); opacity: 1; } to { transform: scale(1.9); opacity: 0; } }
 
 /* Overlays (above frame + fixed marks so nothing floats over them) */
-.overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: var(--olive) url(./img/pouch-pattern.webp) center / 220px; background-blend-mode: soft-light; padding: 24px; overflow: auto; }
-.paper-card { width: min(92vw, 900px); background: var(--paper) url(./img/paper.webp) center / 300px; background-blend-mode: multiply; color: var(--olive); transform: rotate(-1.4deg); box-shadow: 0 30px 60px #0005; }
-.paper-card.wide { width: min(92vw, 880px); }
-.strip { height: 54px; background: var(--ink) url(./img/pouch-pattern.webp) center / 120px; border-block: 6px double var(--cream); }
+.overlay { position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; background: linear-gradient(#46501ae6, #46501ae6), url(/img/pouch-pattern.webp) center / 260px; padding: 24px; overflow: auto; }
+.paper-card { width: min(92vw, 900px); background: var(--paper) url(/img/paper.webp) center / 300px; background-blend-mode: multiply; color: var(--olive); transform: rotate(-1.4deg); box-shadow: 0 30px 60px #0005; }
+.paper-card.wide { width: min(92vw, 1100px); min-height: min(86vh, 760px); display: grid; grid-template-rows: auto 1fr auto; }
+.form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(20px, 4vw, 56px); width: 100%; align-items: start; }
+.legal { display: grid; gap: .8rem; font-size: .72rem; line-height: 1.35; font-weight: 500; }
+.yn { display: flex; gap: 8px; }
+.yn span { padding: .35em 1.4em; border: 2px solid #46501a66; border-radius: .7rem; background: #fff6; font-weight: 700; }
+.opt { font-weight: 700; font-size: .75rem; margin-bottom: -6px; }
+.cc { max-width: 110px; }
+.strip { position: relative; height: 54px; background: var(--ink) radial-gradient(circle, var(--cream) 2px, transparent 2.5px) 0 50% / 36px 100%; border-block: 6px double var(--cream); }
+.strip::before { content: ''; position: absolute; inset: 0; background: url(/img/pouch-pattern.webp) center / 90px; opacity: .22; mix-blend-mode: screen; }
 .card-body { padding: clamp(24px, 5vw, 56px); display: grid; gap: 1rem; justify-items: start; }
 .card-title { font-size: clamp(1.6rem, 4vw, 3rem); line-height: .95; color: var(--olive); text-shadow: 3px 3px 0 #0002; }
 .card-title.big { font-size: clamp(2rem, 5vw, 3.6rem); }
@@ -90,7 +97,8 @@ h1, h2, .card-title, .blob, .skip { font-stretch: 125%; font-weight: 800; text-t
   .menu-btn { right: 20px; top: 24px; width: 84px; }
   .logo-tour { font-size: .9rem; }
   .intro-card { width: 90vw; aspect-ratio: auto; padding: 2.2rem 1rem; }
-  .fields { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .cc { max-width: none; }
   .join { right: 50%; translate: 50% 0; bottom: 74px; }
   .chapter { bottom: 150px; }
 }

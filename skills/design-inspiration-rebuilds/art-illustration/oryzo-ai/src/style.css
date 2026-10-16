@@ -158,8 +158,8 @@ section, footer { position: relative; padding-inline: var(--pad); }
 
 @media (max-width: 768px) {
   .hero { min-height: 120vh; }
-  .hero .lede { top: 76vh; font-size: 13px; max-width: 12rem; }
-  .hero .tag { top: 76vh; font-size: 12px; max-width: 9rem; }
+  .hero .lede { top: 84vh; font-size: 13px; max-width: 12rem; }
+  .hero .tag { top: 84vh; font-size: 12px; max-width: 9rem; }
   .hero .credit { bottom: 14vh; }
   .nav nav a:nth-child(1) { display: none; }
   .g-main, .g-blur { font-size: 17vw; }

@@ -19,7 +19,7 @@ export const FLAVORS = [
   { name: 'Berry Punch', bg: '#f6b1cf', can: '#ff7fb7', dark: '#e72f63', btn: 'red' },
 ];
 
-const pose = { x: 0, y: 0, s: 1.3, tab: 0, z: 0, spin: 0, mx: 0, my: 0 };
+const pose = { x: 0, y: 0, s: 1.15, tab: 0, z: 0, spin: 0, mx: 0, my: 0 };
 let can, tab, mats = [], textures = [], renderer, scene, camera, canvasEl;
 
 function label(f) {

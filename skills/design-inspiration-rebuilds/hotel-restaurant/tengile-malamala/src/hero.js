@@ -3,7 +3,7 @@
  * Technique: cover image "appear-scale-in" (scale 1.2 -> 1, 1.8s expo.out); each headline line rises from
  * its mask with a blur-in (y 60 -> 0, blur 12px -> 0, 1.4s expo.out, stagger .18); description blur-in at .7s.
  * On scroll the two title lines drift at different speeds (-18% / -42% of hero height) and the cover moves 12%.
- * Header turns ink-coloured once the hero is left.
+ * Header turns ink-coloured once the hero is left, slides away on scroll down and returns on scroll up.
  */
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -12,6 +12,7 @@ import { reduced } from './scroll.js';
 export function initHero() {
   const hdr = document.getElementById('hdr');
   ScrollTrigger.create({ trigger: '.hero', start: 'bottom 60px', endTrigger: 'body', end: 'bottom bottom', toggleClass: { targets: hdr, className: 'is-solid' } });
+  ScrollTrigger.create({ start: 0, end: 'max', onUpdate: (s) => hdr.classList.toggle('is-hidden', s.direction === 1 && s.scroll() > 120) });
   if (reduced) return;
 
   gsap.from('.hero__cover', { scale: 1.2, duration: 1.8, ease: 'expo.out' });

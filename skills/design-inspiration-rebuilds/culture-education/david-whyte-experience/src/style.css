@@ -56,9 +56,9 @@ section, footer { position: relative; padding: 0 var(--pad); }
 
 /* join */
 .join { padding-top: 22vh; padding-bottom: 14vh; }
-.join .title { max-width: 14em; margin-left: 28vw; }
-.title--s { margin: 14vh 0 6vh 28vw; }
-.perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-left: 28vw; }
+.join .title { max-width: 14em; margin-left: 4vw; }
+.join .title--s { margin: 14vh 0 6vh 33vw; }
+.perks { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; margin-left: 33vw; }
 .perk figure { aspect-ratio: 4 / 5; background: #cfd1c7; margin-bottom: 1.2rem; -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%); mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 62%, transparent 100%); }
 .perk h4 { font-family: var(--serif); font-weight: 300; font-size: 1.6rem; margin: 0 0 .5rem; letter-spacing: -.015em; }
 .perk p { font-size: .875rem; line-height: 1.5; margin: 0; max-width: 20em; }
@@ -70,19 +70,22 @@ section, footer { position: relative; padding: 0 var(--pad); }
 .offer__line { font-family: var(--serif); font-weight: 250; font-size: 1.9rem; letter-spacing: -.02em; line-height: 1.1; }
 .btn { justify-self: start; background: #fff; color: var(--ink); text-decoration: none; padding: .85rem 1.6rem; font-size: .8125rem; transition: background .5s var(--ease), color .5s var(--ease); }
 .btn:hover { background: var(--ink); color: #fff; }
-.viaduct { margin: 10vh calc(var(--pad) * -1) 0; aspect-ratio: 16 / 5; background: #cfd1c7;
-  -webkit-mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 60%, transparent), linear-gradient(to right, transparent, #000 15%, #000 85%, transparent); -webkit-mask-composite: source-in;
-  mask-image: linear-gradient(to bottom, transparent, #000 30%, #000 60%, transparent), linear-gradient(to right, transparent, #000 15%, #000 85%, transparent); mask-composite: intersect; }
+.viaduct { position: fixed; left: 44vw; top: 60vh; width: 44vw; aspect-ratio: 16 / 5; z-index: -1; pointer-events: none; opacity: 0; transition: opacity 1.2s var(--ease);
+  -webkit-mask-image: linear-gradient(to bottom, #000 60%, transparent), linear-gradient(to right, transparent, #000 8%, #000 90%, transparent); -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(to bottom, #000 60%, transparent), linear-gradient(to right, transparent, #000 8%, #000 90%, transparent); mask-composite: intersect; }
+.viaduct img { filter: grayscale(.7) contrast(.8) brightness(1.25); }
+.viaduct.is-on { opacity: .8; }
 
 /* faq */
 .faq { padding-top: 14vh; padding-bottom: 12vh; display: grid; grid-template-columns: 1fr; }
+.faq .title { font-size: clamp(2.2rem, 3.9vw, 3.9rem); margin-left: 9.3%; }
 .faq__list { margin: 12vh 0 0; border-top: 1px solid rgba(0,0,0,.25); }
 .q { border-bottom: 1px solid rgba(0,0,0,.25); }
-.q__head { width: 100%; display: grid; grid-template-columns: minmax(0, 26rem) 1fr; gap: 6rem; padding: 3.2rem 0 3.2rem 8%; align-items: start; }
-.q__head span { font-family: var(--serif); font-weight: 250; font-size: clamp(1.4rem, 2.1vw, 2rem); line-height: 1.12; letter-spacing: -.02em; }
+.q__head { width: 100%; display: grid; grid-template-columns: minmax(0, 26rem) 1fr; gap: 8rem; padding: 3.2rem 0 3.2rem 9.3%; align-items: start; }
+.q__head span { font-family: var(--serif); font-weight: 250; font-size: clamp(1.4rem, 2.5vw, 2.4rem); line-height: 1.08; letter-spacing: -.02em; }
 .q__head u { font-size: .875rem; justify-self: start; margin-left: 2rem; }
 .q__body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .8s var(--ease); }
-.q__body > p { overflow: hidden; margin: 0 0 0 calc(8% + 26rem + 6rem + 2rem); max-width: 28rem; font-size: .9375rem; line-height: 1.55; }
+.q__body > p { overflow: hidden; margin: 0 0 0 calc(9.3% + 26rem + 8rem + 2rem); max-width: 28rem; font-size: .9375rem; line-height: 1.55; }
 .q.is-open .q__body { grid-template-rows: 1fr; }
 .q.is-open .q__body > p { padding-bottom: 2.4rem; }
 
@@ -104,7 +107,8 @@ section, footer { position: relative; padding: 0 var(--pad); }
 
 @media (max-width: 900px) {
   .poem__text { width: 78vw; margin-left: 0; top: 18vh; }
-  .join .title, .title--s, .perks, .offer__card { margin-left: 0; }
+  .join .title, .join .title--s, .perks, .offer__card, .faq .title { margin-left: 0; }
+  .viaduct { left: 10vw; width: 90vw; top: 70vh; }
   .perks { grid-template-columns: 1fr; }
   .perk figure { aspect-ratio: 16 / 10; }
   .q__head { grid-template-columns: 1fr auto; gap: 1rem; padding: 2rem 0; }

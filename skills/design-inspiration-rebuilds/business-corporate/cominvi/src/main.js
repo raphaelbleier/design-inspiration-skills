@@ -7,3 +7,4 @@ import { initWheel } from './wheel.js';
 import { initMenu } from './menu.js';
 import { initQuotes } from './quotes.js';
 initScroll(); initMenu(); initQuotes(); initMinerals(); initWheel(); initSequence(); initReveals();
+let y = 0; addEventListener('scroll', () => { const n = scrollY; document.querySelector('.bar').classList.toggle('hide', n > y && n > 80); y = n; }, { passive: true });

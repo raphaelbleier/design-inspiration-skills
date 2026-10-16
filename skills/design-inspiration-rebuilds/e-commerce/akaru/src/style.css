@@ -35,12 +35,12 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .top-nav a{display:flex;align-items:center;gap:.9rem}
 .top-nav i{width:.5rem;height:.5rem;border-radius:50%;background:var(--c)}
 .hero-mid{margin-top:auto}
-.wordmark{font:400 clamp(7rem,22vw,22rem)/.8;font-size:min(13.4vw,40vh);letter-spacing:.01em;white-space:nowrap}
-.hero-mid p{text-align:center;font-size:1.1rem;line-height:1.25;letter-spacing:-.02em;margin:1rem 0 7vh}
+.wordmark{font:400 min(21vw,42vh)/.8 Anton;letter-spacing:.01em;white-space:nowrap;text-transform:uppercase}
+.hero-mid p{text-align:center;font-size:1.1rem;line-height:1.25;letter-spacing:-.03em;margin:.9rem 0 7vh}
 .socials{display:flex;justify-content:space-between;border-top:3px solid var(--ink);padding-top:1.1rem;font:500 .65rem 'Space Grotesk';text-transform:uppercase}
 .strips{display:flex;height:100%;overflow:hidden}
-.strip{background:var(--bg);flex:0 0 auto;width:36%;height:100%;position:relative;display:flex;align-items:center}
-.strip:first-child{width:36%}
+.strip{background:var(--bg);flex:0 0 auto;width:21.4%;height:100%;position:relative;display:flex;align-items:center}
+.strip:first-child{width:71.2%}.strip:nth-child(3){width:10%}
 .strip .ph{width:100%}
 .strip b{position:absolute;left:.9rem;bottom:1.2rem;font:500 .65rem 'Space Grotesk'}
 /* projets */
@@ -63,7 +63,7 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .aw-count small{display:none}
 .aw-list{position:relative;z-index:1;grid-column:1/-1;grid-row:4;font:500 .65rem 'Space Grotesk';text-transform:uppercase}
 .awards{grid-template-rows:auto 1fr auto auto}
-.aw-list li{display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;border-top:1px solid rgba(255,255,255,.6);padding:1rem 0;transition:background .4s var(--ease),color .4s var(--ease);cursor:pointer}
+.aw-list li{display:grid;grid-template-columns:1fr 1fr auto;gap:1rem;border-top:1px solid rgba(255,255,255,.6);padding:1.5rem 0;transition:background .4s var(--ease),color .4s var(--ease);cursor:pointer}
 .aw-list li:hover{background:#fff;color:var(--ink);padding-inline:.8rem}
 .aw-list li:last-child{border-bottom:1px solid rgba(255,255,255,.6)}
 /* expertises */
@@ -84,14 +84,15 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
 .foot .big:hover{background:#fff;color:var(--ink)}
 .foot-info{width:100%;display:grid;grid-template-columns:1fr 1fr 1fr 1fr;font:500 .6rem/1.5 'Space Grotesk';text-transform:uppercase;border-bottom:1px solid #fff;padding-bottom:2rem}
 .foot-info .r{text-align:right}
-.giant{font:400 28.2vw/.8 Anton;letter-spacing:.01em;margin-top:2rem;white-space:nowrap;line-height:.82;height:30vw;overflow:hidden;text-align:center;width:100%}
+.giant{font:400 36vw/.8 Anton;letter-spacing:.01em;margin-top:2rem;white-space:nowrap;line-height:.82;height:28vw;overflow:hidden;text-align:center;width:100%}
 /* reveals */
 .line-i{display:block;overflow:hidden}.line-i>span{display:block}
 @media(max-width:900px){
  :root{--pad:1.2rem}
  .hero{grid-template-columns:1fr;grid-template-rows:auto 38vh;height:auto}
  .hero-l{min-height:62vh}.top-nav{font-size:.9rem}
- .wordmark{font-size:min(26vw,40vh)}
+ .wordmark{font-size:min(37vw,40vh)}
+ .top-nav{display:none}.hero-l{justify-content:flex-end}.bar .logo,.bar .menu-btn{opacity:1;transform:none;pointer-events:auto}.logo{color:var(--ink)}
  .strips{height:38vh}.strip{width:44%}
  .projets{grid-template-columns:1fr}.proj-imgs{flex-direction:row;overflow:hidden}.proj-imgs .ph{flex:0 0 70%}
  .awards{grid-template-columns:1fr;padding-top:6rem}.aw-list li{grid-template-columns:1fr 1.4fr auto}
@@ -101,6 +102,6 @@ a{color:inherit;text-decoration:none}ul,ol{list-style:none}
  .exp .ph{grid-column:1;grid-row:auto;width:70%;margin:1.5rem 0 0 auto}
  .exp-nav li:not(.on){display:none}.exp-nav{justify-content:flex-start}
  .foot-info{grid-template-columns:1fr 1fr;gap:1rem}.foot-info .r{text-align:left}
- .logo{font-size:2.2rem}.cta{display:none}
+ .giant{font-size:48vw;height:40vw}.logo{font-size:2.2rem}.cta{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important}}

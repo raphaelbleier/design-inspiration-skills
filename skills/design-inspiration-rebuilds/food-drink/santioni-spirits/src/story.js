@@ -55,7 +55,7 @@ export function buildStory() {
   const st = ScrollTrigger.create({
     animation: tl, trigger: '#stage', start: 'top top', end: () => '+=' + innerHeight * 14,
     pin: true, scrub: 0.6, invalidateOnRefresh: true,
-    onUpdate: (self) => document.body.classList.toggle('on-light', [1, 2, 3, 8, 9].includes(Math.round(tl.time() / UNIT))),
+    onUpdate: (self) => document.body.classList.toggle('on-light', self.progress > 0.999 || [1, 2, 3, 6, 8, 9].includes(Math.round(tl.time() / UNIT))),
   });
 
   const goTo = (t) => {

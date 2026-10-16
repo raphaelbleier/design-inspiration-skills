@@ -64,7 +64,6 @@ i, em { font-style: normal; }
 
 /* hero */
 .page { position: relative; z-index: 2; background: var(--smoke); margin-bottom: 100svh; }
-.hero { height: 100svh; }
 .hero-inner { height: 100svh; display: flex; flex-direction: column; align-items: center; justify-content: center; }
 .hero-line { font-size: 3.5vw; line-height: 1.15; text-align: center; font-stretch: 150%; }
 .hero-line .mark { width: 3.2vw; height: 1.9vw; display: inline-block; vertical-align: baseline; fill: var(--ink); }
@@ -72,13 +71,15 @@ i, em { font-style: normal; }
 .hero-frame img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/9; background: #6b4a3a; }
 
 /* expertises: stacked sticky cassettes */
-.expertises { padding: 10vh 0 18vh; }
-.cassette { position: sticky; top: 12vh; margin: 0 auto 14vh; width: 72vw; height: 36vw; max-height: 74vh; background: var(--ink); border: 2px solid #3f464b; border-radius: 10px; padding: 6vw 5vw 3vw; display: grid; grid-template-columns: 1fr 1.4fr; gap: 3vw; transform-origin: 50% 100%; }
+.expertises { padding: 10vh 0 14vh; background: var(--ink); }
+.prods-title { text-align: center; font: 900 11vw/.9 var(--body); font-stretch: 70%; text-transform: uppercase; color: var(--purple); padding-top: 14vh; }
+.cassette { position: sticky; top: 15.5vh; margin: 0 auto 14vh; width: 72vw; height: 36vw; max-height: 74vh; background: var(--ink); border: 2px solid #3f464b; border-radius: 10px; padding: 6vw 5vw 3vw; display: grid; grid-template-columns: 1fr 1.4fr; gap: 3vw; transform-origin: 50% 100%; }
 .cassette.alt { transform: rotate(-1.5deg); }
 .cassette-top { position: absolute; inset: 0 0 auto 0; height: 4vw; background: #3d4448; border-radius: 10px 10px 0 0; display: grid; place-items: center; }
 .reel-box { background: #3a4145; align-self: center; aspect-ratio: 1; display: grid; place-items: center; overflow: hidden; background-image: linear-gradient(165deg, #4a5155 0 38%, #3a4145 38%); }
 .reel { width: 85%; aspect-ratio: 1; border-radius: 50%; border: 5vw solid #565d60; display: grid; place-items: center; }
-.reel i { width: 70%; aspect-ratio: 1; border-radius: 50%; border: .5vw dotted #bfb9a8; transform: scale(1.8); }
+.reel i { width: 70%; aspect-ratio: 1; border-radius: 50%; background: var(--ink); display: grid; place-items: center; }
+.reel i::after { content: ''; width: 30%; aspect-ratio: 1; border-radius: 50%; border: .35vw dashed #bfb9a8; }
 .ticket { background: var(--smoke); border-radius: 3px; padding: 2vw; display: flex; flex-direction: column; gap: 1.2vw; }
 .ticket h2 { font-size: 2vw; line-height: .95; font-stretch: 150%; color: var(--purple); padding-bottom: 1.2vw; border-bottom: var(--b2) solid var(--ink); }
 .cassette.alt .ticket h2 { color: var(--yellow-d, #c29230); }
@@ -90,7 +91,7 @@ i, em { font-style: normal; }
 .logo-sq.sm { font-size: .9vw; color: #bdb7a8; border-color: #bdb7a8; }
 
 /* productions */
-.prods { background: var(--ink); color: var(--smoke); padding: 12vh 0 0; margin-top: -2vh; }
+.prods { background: var(--ink); color: var(--smoke); padding: 6vh 0 0; }
 .prods-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid #5a6166; border-bottom: 1px solid #5a6166; }
 .prods article { padding: 3vw 2.5vw; border-right: 1px solid #5a6166; display: flex; flex-direction: column; gap: .6vw; }
 .prods article:last-child { border: 0; }
@@ -170,7 +171,10 @@ i, em { font-style: normal; }
   .cursor { display: none; }
   .hero-line { font-size: 5.6vw; } .hero-line .mark { width: 5vw; height: 3vw; }
   .hero-frame { width: 90vw; height: 1.4vw; }
-  .expertises { padding: 8vh 0 10vh; }
+  .expertises { padding: 8vh 0 6vh; }
+  .expertises { background: var(--smoke) !important; } .prods-title { display: none; }
+  .cassette, .cassette.alt { background: var(--smoke); border-color: var(--ink); transform: none; filter: none !important; }
+  .cassette-top { background: none; border-bottom: 2px solid var(--ink); } .logo-sq.sm { color: var(--ink); border-color: var(--ink); }
   .cassette { width: 90vw; height: auto; max-height: none; grid-template-columns: 1fr; padding: 14vw 4vw 4vw; top: 10vh; }
   .cassette-top { height: 9vw; } .logo-sq.sm { font-size: 3vw; }
   .reel-box { display: none; }

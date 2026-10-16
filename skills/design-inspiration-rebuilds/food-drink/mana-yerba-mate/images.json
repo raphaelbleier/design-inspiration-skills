@@ -1,17 +1,77 @@
 [
-  {"path":"public/img/hero-art-1.webp","prompt":"Flat vector editorial illustration on a soft sage green background: a stylised red-orange hand-drawn figure with doodle patterns on the left, gradient orange flowers on climbing green vines, a yellow starburst with a striped green melon slice on the right, mint leaves, a pale blue oval with white clouds, a green striped ball at top. Bold flat shapes, no text, no logos, empty centre column for a product can","aspect":"16:9"},
-  {"path":"public/img/hero-art-2.webp","prompt":"Flat vector editorial illustration on a warm yellow background: playful cartoon characters in navy and coral with wavy hair, big orange grapefruit halves, scattered rounded pill shapes and dots, a small pink cloud. Bold flat shapes with thin black outlines, no text, no logos, empty centre column for a product can","aspect":"16:9"},
-  {"path":"public/img/hero-art-3.webp","prompt":"Flat vector editorial illustration on a bright sky blue background: a big pink hibiscus flower with navy drop shadow on the left, a blue blackberry, a navy rocket with yellow fins flying right leaving a pink, red and yellow ribbon trail, a pale blue planet at bottom right, white four-point sparkles. Bold flat shapes, no text, no logos, empty centre column for a product can","aspect":"16:9"},
-  {"path":"public/img/hero-art-4.webp","prompt":"Flat vector editorial illustration on a soft pink background: tropical punch theme with a coral flamingo, red hibiscus, yellow pineapple slices, turquoise leaves, white sparkles and little circles. Bold flat shapes with thin black outlines, no text, no logos, empty centre column for a product can","aspect":"16:9"},
-  {"path":"public/img/tile-1.webp","prompt":"Studio product photo of a single slim 355 ml aluminium beverage can with a green illustrated label and a bold white vertical wave-letter wordmark, on a saturated lime green seamless background, soft shadow, centred, no readable text","aspect":"3:4"},
-  {"path":"public/img/tile-2.webp","prompt":"Studio product photo of a single slim aluminium beverage can with a yellow and orange illustrated label and bold white vertical wordmark, on a warm yellow-orange background with playful cartoon figures and rounded shapes behind it, centred, no readable text","aspect":"3:4"},
-  {"path":"public/img/tile-3.webp","prompt":"Studio product photo of a single slim aluminium beverage can with a blue illustrated label with a comet and bold white vertical wordmark, on a cobalt blue seamless background with soft gradient floor, centred, no readable text","aspect":"3:4"},
-  {"path":"public/img/tile-4.webp","prompt":"Studio product photo of a single slim aluminium beverage can with a pink and red illustrated label and bold white vertical wordmark, on a bubblegum pink seamless background, soft shadow, centred, no readable text","aspect":"3:4"},
-  {"path":"public/img/duo-1.webp","prompt":"Lifestyle photo, warm editorial style: a hand holding a cold colourful slim beverage can in a sunlit kitchen, glass of ice and mint on the counter, shallow depth of field, no text, no logos","aspect":"4:5"},
-  {"path":"public/img/duo-2.webp","prompt":"Lifestyle photo, warm editorial style: two friends laughing on a rooftop at golden hour, one holding a slim colourful beverage can, candid, film grain, no text, no logos","aspect":"4:5"},
-  {"path":"public/img/feed-1.webp","prompt":"Square social-media style photo: a yellow-orange slim beverage can on a bathroom shelf beside jewellery and a lipstick, water running from a tap, warm flash photography, no text","aspect":"1:1"},
-  {"path":"public/img/feed-2.webp","prompt":"Social-media style photo: three slim colourful beverage cans (pink, blue, yellow) hanging from a washing line with wooden clothes pegs against a grey wall, top-down angle, no text","aspect":"4:3"},
-  {"path":"public/img/feed-3.webp","prompt":"Social-media style photo: hands sewing fabric on a vintage sewing machine with a small beverage can next to it, cosy workshop, warm light, no text","aspect":"4:5"},
-  {"path":"public/img/feed-4.webp","prompt":"Social-media style photo: a skateboarder holding a green slim beverage can at a sunny skatepark, motion blur background, no text","aspect":"1:1"},
-  {"path":"public/img/feed-5.webp","prompt":"Social-media style photo: a picnic blanket in a park with cans of sparkling tea, fruit and flowers, overhead, saturated colours, no text","aspect":"4:5"}
+ {
+  "path": "public/img/hero-art-1.webp",
+  "prompt": "Flat vector editorial illustration on a solid flat sage green background, exactly #acd084, no cream, no beige, no white background, no vignette: on the left a large chunky tomato-red (#e8503a) blob-shaped character with a small pale yellow face and pink cheeks, covered in tiny doodle hearts, flowers, squiggles and sparkles, two raised red hands on top, standing on climbing dark green vines with gradient orange-to-yellow five-petal flowers; top centre a big pale yellow starburst with a dark green striped basketball-like ball; on the right a tall pale blue oval with white clouds, more orange flowers on dark green vines, a yellow starburst with a dark green melon slice at bottom right, dark green mint leaves. Palette only sage green, tomato red, orange, pale yellow, dark forest green, sky blue, white. Bold flat shapes, no text, no logos, empty centre column for a product can",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-art-2.webp",
+  "prompt": "Flat vector editorial illustration on a warm yellow background: playful cartoon characters in navy and coral with wavy hair, big orange grapefruit halves, scattered rounded pill shapes and dots, a small pink cloud. Bold flat shapes with thin black outlines, no text, no logos, empty centre column for a product can",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-art-3.webp",
+  "prompt": "Flat vector editorial illustration on a bright sky blue background: a big pink hibiscus flower with navy drop shadow on the left, a blue blackberry, a navy rocket with yellow fins flying right leaving a pink, red and yellow ribbon trail, a pale blue planet at bottom right, white four-point sparkles. Bold flat shapes, no text, no logos, empty centre column for a product can",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/hero-art-4.webp",
+  "prompt": "Flat vector editorial illustration on a soft pink background: tropical punch theme with a coral flamingo, red hibiscus, yellow pineapple slices, turquoise leaves, white sparkles and little circles. Bold flat shapes with thin black outlines, no text, no logos, empty centre column for a product can",
+  "aspect": "16:9"
+ },
+ {
+  "path": "public/img/tile-1.webp",
+  "prompt": "Studio product photo of a single slim 355 ml aluminium beverage can with a green illustrated label and a bold white vertical wave-letter wordmark, on a saturated lime green seamless background, soft shadow, centred, no readable text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tile-2.webp",
+  "prompt": "Studio product photo of a single slim aluminium beverage can with a yellow and orange illustrated label and bold white vertical wordmark, on a warm yellow-orange background with playful cartoon figures and rounded shapes behind it, centred, no readable text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tile-3.webp",
+  "prompt": "Studio product photo of a single slim aluminium beverage can with a blue illustrated label with a comet and bold white vertical wordmark, on a cobalt blue seamless background with soft gradient floor, centred, no readable text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/tile-4.webp",
+  "prompt": "Studio product photo of a single slim aluminium beverage can with a pink and red illustrated label and bold white vertical wordmark, on a bubblegum pink seamless background, soft shadow, centred, no readable text",
+  "aspect": "3:4"
+ },
+ {
+  "path": "public/img/duo-1.webp",
+  "prompt": "Lifestyle photo, warm editorial style: a hand holding a cold colourful slim beverage can in a sunlit kitchen, glass of ice and mint on the counter, shallow depth of field, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/duo-2.webp",
+  "prompt": "Lifestyle photo, warm editorial style: two friends laughing on a rooftop at golden hour, one holding a slim colourful beverage can, candid, film grain, no text, no logos",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/feed-1.webp",
+  "prompt": "Square social-media style photo: a yellow-orange slim beverage can on a bathroom shelf beside jewellery and a lipstick, water running from a tap, warm flash photography, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/feed-2.webp",
+  "prompt": "Social-media style photo: three slim colourful beverage cans (pink, blue, yellow) hanging from a washing line with wooden clothes pegs against a grey wall, top-down angle, no text",
+  "aspect": "4:3"
+ },
+ {
+  "path": "public/img/feed-3.webp",
+  "prompt": "Social-media style photo: hands sewing fabric on a vintage sewing machine with a small beverage can next to it, cosy workshop, warm light, no text",
+  "aspect": "4:5"
+ },
+ {
+  "path": "public/img/feed-4.webp",
+  "prompt": "Social-media style photo: a skateboarder holding a green slim beverage can at a sunny skatepark, motion blur background, no text",
+  "aspect": "1:1"
+ },
+ {
+  "path": "public/img/feed-5.webp",
+  "prompt": "Social-media style photo: a picnic blanket in a park with cans of sparkling tea, fruit and flowers, overhead, saturated colours, no text",
+  "aspect": "4:5"
+ }
 ]

@@ -7,7 +7,7 @@
   --wood: #55201f;
   --line: 3px;
   /* display sizes: fluid between 390 and 1440, capped */
-  --h1: clamp(56px, calc(22vw - 28px), 190px);
+  --h1: clamp(56px, 10vw, 150px);
   --h2: clamp(44px, calc(9vw + 12px), 150px);
   --h3: clamp(36px, calc(7vw + 8px), 84px);
 }
@@ -34,11 +34,11 @@ img { display: block; }
 /* ---------- header ---------- */
 .top { position: fixed; inset: 0 0 auto 0; z-index: 30; display: flex; justify-content: space-between; align-items: flex-start; padding: 20px 22px; pointer-events: none; color: #fff; mix-blend-mode: normal; }
 .top > * { pointer-events: auto; }
-.logo { display: flex; align-items: center; gap: 8px; text-decoration: none; transition: color .3s; }
+.logo { filter: drop-shadow(0 0 6px rgba(0,0,0,.55)); display: flex; align-items: center; gap: 8px; text-decoration: none; transition: color .3s; }
 .logo .seal { width: 52px; height: 52px; }
 .logo .word { font-family: 'Pinyon Script', cursive; font-size: 26px; line-height: .8; }
 .logo .word i { margin-left: 14px; }
-body.on-light .logo { color: var(--ink); }
+body.on-light .logo { color: var(--ink); filter: none; }
 .pill { color: var(--ink); display: flex; align-items: center; gap: 16px; padding: 10px 24px; background: transparent; }
 .pill button { font-family: 'M PLUS Rounded 1c', sans-serif; font-weight: 800; text-transform: uppercase; font-size: 15px; }
 .pill .flourish { width: 40px; color: var(--red); }
@@ -73,6 +73,14 @@ body.on-light .logo { color: var(--ink); }
 .line { white-space: nowrap; display: block; overflow: hidden; padding: 0 .06em; }
 .ruins-title { position: absolute; left: 0; right: 0; top: 4vh; color: #fff; text-shadow: none; mix-blend-mode: normal; }
 .ruins-title .line { -webkit-text-stroke: 0; }
+
+/* eye: framed band on the red ink, like the framed pictures */
+.eye .full { inset: auto; left: 9vw; right: 9vw; top: 50%; translate: 0 -50%; aspect-ratio: 21 / 9; border: var(--line) solid var(--ink); }
+.eye .full img { height: 100%; }
+
+/* ink splash: paper-coloured blob rising behind the hero title */
+.splash { position: absolute; left: 50%; bottom: -2px; width: min(70vw, 900px); translate: -50% 0; color: var(--paper); filter: url(#rough); pointer-events: none; }
+.splash svg { display: block; width: 100%; height: auto; }
 
 /* hand panel */
 .hand-panel { touch-action: pan-y; cursor: grab; }
@@ -113,8 +121,8 @@ body.on-light .logo { color: var(--ink); }
 .links a { text-decoration: none; }
 
 /* cookie + gate */
-.cookie { position: fixed; right: 22px; bottom: 22px; z-index: 40; width: min(370px, calc(100vw - 44px)); padding: 16px 22px; display: flex; flex-direction: column; gap: 14px; color: var(--ink); }
-.cookie p { margin: 0; font-size: 12px; }
+.cookie { position: fixed; right: 22px; bottom: 22px; z-index: 40; width: min(400px, calc(100vw - 44px)); padding: 16px 22px; display: flex; flex-direction: column; gap: 14px; color: var(--ink); }
+.cookie p { margin: 0; font-size: 12px; text-wrap: balance; }
 .cookie button { margin-right: 18px; font-size: 14px; }
 .cookie .dim { opacity: .4; }
 .cookie .dim:hover { opacity: 1; }
@@ -129,7 +137,7 @@ body.on-light .logo { color: var(--ink); }
 
 /* ---------- small screens ---------- */
 @media (max-width: 767px) {
-  :root { --h1: 10.6vw; }
+  :root { --h1: 14vw; }
   .top { padding: 14px; }
   .logo .seal { width: 40px; height: 40px; }
   .logo .word { font-size: 20px; }
@@ -146,7 +154,9 @@ body.on-light .logo { color: var(--ink); }
   .soon .body-bold:last-child, .soon .body-bold:first-child { justify-self: center; }
   .legal { flex-direction: column; text-align: center; }
   .links { margin: 0; text-align: center; }
-  .cookie { right: 10px; bottom: 10px; width: calc(100vw - 20px); padding: 12px 16px; }
+  .cookie { right: 10px; bottom: 10px; width: calc(100vw - 20px); padding: 10px 14px; gap: 8px; }
+  .cookie p { font-size: 11px; line-height: 1.35; }
+  .eye .full { left: 3vw; right: 3vw; }
   .flavour { top: 18vh; }
   .pour-bottle { height: 56vh; top: 24vh; }
 }
@@ -159,7 +169,7 @@ body.on-light .logo { color: var(--ink); }
 .rm .panel[data-bg='paper'] { background: var(--paper); }
 .rm .panel[data-bg='red'] { background: var(--red); }
 .rm .panel[data-bg='wood'] { background: var(--wood); }
-.rm .stream, .rm .hold { display: none; }
+.rm .stream, .rm .hold, .rm .splash { display: none; }
 .rm .select { padding-top: 14vh; }
 .rm .framed .frame { position: relative; inset: auto; margin: 0 auto; translate: none; }
 .rm .framed .cap, .rm .bleed .cap { position: relative; inset: auto; margin: 16px auto; }

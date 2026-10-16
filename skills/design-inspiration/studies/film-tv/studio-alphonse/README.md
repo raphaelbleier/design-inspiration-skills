@@ -54,8 +54,8 @@ Rebuild: [`design-inspiration-rebuilds/film-tv/studio-alphonse`](https://github.
 | Smooth scroll | after loader, desktop only | Lenis `{ lerp: .07, wheelMultiplier: .7 }`, driven by `gsap.ticker`; scroll locked until the loader ends | — | `src/scroll.js` |
 | Cassette loader | page load | counter 0 → 100 inside a tape label, 12 die-cut stickers pop in at staggered times, the screen lifts away | 3s `power2.inOut`; stickers `back.out(2)` | `src/loader.js` |
 | Hero slit | scroll 0 → 130% (pinned) | headline split around a thin slit; the slit grows to 50vh and pushes the lines apart, the still scales 1.35 → 1 | scrub 1 | `src/hero.js` |
-| Cassette stack | scroll | sticky tape cards stack at `top: 12vh`; the covered one scales to .94 and dims; reels rotate 360deg | scrubbed | `src/expertises.js` |
-| Spine strip | always | VHS spines (year, wordmark, vertical title) as an infinite row | 40s linear | `src/spines.js` |
+| Cassette stack | scroll | sticky tape cards stack at `top: 15.5vh`; the covered one scales to .94 and dims; reels rotate 360deg | scrubbed | `src/expertises.js` |
+| Spine strip | always + scroll | VHS spines (year, wordmark, vertical title) as an infinite row; scroll velocity speeds it up | 40s linear, timeScale 1-7 | `src/spines.js` |
 | Citation | scroll through section | same line twice, filled and outlined, moving in opposite directions | scrub 1 | `src/citation.js` |
 | Client bands | always | two tilted bands (2deg, -3deg), logo cells as opposite marquees | 40s / 32s linear | `src/clients.js` |
 | Follow card | pointer in clients | card follows the cursor, tilts by horizontal speed, resets after 66ms stillness | `quickTo` 1s `power4` | `src/clients.js` |
@@ -104,7 +104,7 @@ const next = cards[i + 1];
 gsap.to(card, { scale: 0.94, filter: 'brightness(.7)', ease: 'none',
   scrollTrigger: { trigger: next, start: 'top 80%', end: 'top 20%', scrub: true } });
 ```
-`position: sticky; top: 12vh` does the pinning; GSAP only handles the dimming of the covered card.
+`position: sticky; top: 15.5vh` does the pinning; GSAP only handles the dimming of the covered card.
 
 **Filled and outlined citation lines**: `src/citation.js`
 ```js

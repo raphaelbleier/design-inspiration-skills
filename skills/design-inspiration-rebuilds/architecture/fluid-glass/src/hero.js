@@ -16,5 +16,5 @@ export function initHero(reduced) {
   });
   gsap.fromTo('.hero__media', { scale: 1.12 }, { scale: 1, duration: 2, ease: 'power3.out' });
   gsap.to('.hero__media', { yPercent: 18, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: true } });
-  gsap.to('.hero__title', { yPercent: -40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: '70% top', scrub: true } });
+  gsap.to('.hero__title', { yPercent: -40, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: '30% top', scrub: true } });
 }

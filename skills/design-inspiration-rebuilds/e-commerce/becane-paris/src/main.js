@@ -17,4 +17,4 @@ const row = createRow(document.getElementById('gl'), (i) => {
 });
 thumb.addEventListener('error', () => { thumb.hidden = true; });
 onFrame(row.frame);
-initReveals(row.state);
+initReveals();

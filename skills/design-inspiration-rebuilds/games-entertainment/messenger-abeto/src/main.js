@@ -71,7 +71,7 @@ function layout() {
   if (mode === 'intro') {
     const tan = Math.tan(THREE.MathUtils.degToRad(camera.fov / 2));
     const blockPx = Math.min(0.54 * H, (0.9 * W) / (BLOCK_W / BLOCK_H));
-    planetPx = blockPx * 1.33;
+    planetPx = Math.min(blockPx * 1.12, 0.8 * W);
     introD = ((2 * (R + 3) * H) / planetPx) / (2 * tan);
     if (!started) orbit.r = introD;
     const Dl = introD * 0.8;
@@ -153,7 +153,7 @@ function enterGame() {
   mode = 'game';
   gsap.killTweensOf([world.position, world.scale, world.rotation]);
   world.position.set(0, 0, 0); world.scale.setScalar(1); world.rotation.set(0, 0, 0); spin.rotation.set(0, 0, 0);
-  title.root.visible = false; particles.visible = false; bBtn.hidden = true;
+  planet.sea.visible = true; title.root.visible = false; particles.visible = false; bBtn.hidden = true;
   camera.fov = 62; camera.near = 0.1; camera.far = 500; camera.roll = 0; layout(); skyGame();
   game.me.group.visible = true; game.npcs.forEach((n) => (n.c.group.visible = true));
   game.locked = true; game.start();

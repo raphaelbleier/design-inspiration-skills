@@ -1,7 +1,7 @@
 [
  {
   "path": "public/img/hero-truck.webp",
-  "prompt": "Side-on cinematic photograph of a white semi truck with a long box trailer driving left to right, silhouetted against a warm amber-to-lilac dusk sky, flat dark ground below, headlight glow on the right edge, no text, no logos",
+  "prompt": "Strict flat side profile (orthographic, camera level with the wheels) of a white semi truck pulling a long dark box trailer, truck facing right, the whole rig spans the full image width and sits low in frame on a flat horizon at 58% height, warm amber-to-pale-lilac dusk sky above, solid near-black ground below with a warm headlight glow spilling right, no text, no logos",
   "aspect": "16:9"
  },
  {

@@ -1,6 +1,7 @@
 // Spine strip. Technique: a row of VHS-spine cards built from data (year, wordmark, vertical title)
 // and moved as an infinite marquee (xPercent 0 -> -50, 40s linear). Each spine is 6.4vw wide, 20vw tall.
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { reduced } from './scroll.js';
 
 const rows = [
@@ -20,5 +21,10 @@ export function initSpines() {
   track.innerHTML = html + html;
   el.appendChild(track);
   if (reduced) return;
-  gsap.to(track, { xPercent: -50, duration: 40, ease: 'none', repeat: -1 });
+  const tw = gsap.to(track, { xPercent: -50, duration: 40, ease: 'none', repeat: -1 });
+  // scroll speeds the strip up, then it eases back to idle
+  ScrollTrigger.create({ trigger: el, start: 'top bottom', end: 'bottom top', onUpdate: (st) => {
+    gsap.to(tw, { timeScale: 1 + Math.min(Math.abs(st.getVelocity()) / 300, 6), duration: 0.2, overwrite: true });
+    gsap.to(tw, { timeScale: 1, duration: 1.2, delay: 0.2 });
+  } });
 }

@@ -10,13 +10,13 @@ import { reduced } from './scroll.js';
 
 export function initCloud() {
   const imgs = [...document.querySelectorAll('.cloud__i')];
-  const base = imgs.map((_, i) => (i / imgs.length) * Math.PI * 2 - Math.PI / 2 + 0.35);
+  const base = imgs.map((_, i) => (i / imgs.length) * Math.PI * 2 - Math.PI / 2 + (innerWidth < 768 ? 0 : 0.35));
   const ease = gsap.parseEase('expo.out');
 
   function place(p) {
     const k = ease(Math.min(p / 0.45, 1));
     const orbit = Math.max(0, (p - 0.45) / 0.55) * (70 * Math.PI) / 180;
-    const rx = innerWidth * 0.38 * (1 + 0.12 * Math.max(0, p - 0.45)), ry = innerHeight * (innerWidth < 768 ? 0.42 : 0.34);
+    const rx = innerWidth * (innerWidth < 768 ? 0.5 : 0.38) * (1 + 0.12 * Math.max(0, p - 0.45)), ry = innerHeight * (innerWidth < 768 ? 0.44 : 0.34);
     imgs.forEach((el, i) => {
       const a = base[i] + orbit;
       gsap.set(el, { xPercent: -50, yPercent: -50, x: Math.cos(a) * rx * k, y: Math.sin(a) * ry * k,

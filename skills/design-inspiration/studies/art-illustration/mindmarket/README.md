@@ -49,7 +49,7 @@ h1,h2{ font-weight:500; line-height:.95; letter-spacing:-.06em; }
 | What | Trigger | Animation | Duration / easing | Rebuild file |
 |---|---|---|---|---|
 | Smooth scroll | always | Lenis `{ lerp: .1 }` on the GSAP ticker, anchor links use `lenis.scrollTo` | 1.4s anchor | `src/scroll.js` |
-| Colour flood | scroll through pinned scene | a 140vmax cream circle scales .18 → 1 from 60% height, flooding the green | scrubbed, `power2.in` | `src/scene.js` |
+| Colour flood | scroll through pinned scene | a 140vmax green circle over the cream stage shrinks 1 → .62 from 60% height, revealing cream at the corners | scrubbed, `power2.out` | `src/scene.js` |
 | Character drift | same scrub | each illustration moves from +45vh to -18vh with its own speed factor and a small rotation | scrubbed, linear | `src/scene.js` |
 | Message card | same scrub | white card rises from below the fold | scrubbed, `power3.out` | `src/scene.js` |
 | Headline reveal | enters at 88% | words clipped in `overflow:hidden`, inner span `yPercent 110 → 0` | .9s `power3.out`, stagger .06 | `src/reveals.js` |
@@ -64,7 +64,7 @@ h1,h2{ font-weight:500; line-height:.95; letter-spacing:-.06em; }
 ```js
 const tl = gsap.timeline({ defaults: { ease: 'none' },
   scrollTrigger: { trigger: '#scene', start: 'top top', end: '+=180%', scrub: 0.6, pin: true } });
-tl.fromTo('.blob', { scale: 0.18 }, { scale: 1, ease: 'power2.in', duration: 1 }, 0)
+tl.fromTo('.blob', { scale: 1 }, { scale: 0.62, ease: 'power2.out', duration: 1 }, 0)
   .fromTo('.card', { yPercent: 100 }, { yPercent: 0, ease: 'power3.out', duration: 0.6 }, 0.4);
 stage.querySelectorAll('.fl').forEach((f) => {
   const s = +f.dataset.speed;                      // per-character speed factor
@@ -77,7 +77,7 @@ One pinned timeline drives colour, cards and every character, so the illustratio
 **Flood circle**: `src/style.css`
 ```css
 .blob{ position:absolute; left:50%; top:60%; width:140vmax; aspect-ratio:1;
-  margin:-70vmax 0 0 -70vmax; border-radius:50%; background:var(--cream); transform:scale(.18); }
+  margin:-70vmax 0 0 -70vmax; border-radius:50%; background:var(--green); transform:scale(1); }
 ```
 Oversized and centred by negative margin, so scaling only needs `transform` (no layout).
 

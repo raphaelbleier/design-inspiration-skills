@@ -9,7 +9,7 @@ import { initChapter1 } from './chapter1.js';
 import { initReveals } from './reveals.js';
 
 // CSS backgrounds from public/ (base-safe; Vite does not rewrite absolute urls in CSS)
-const B = import.meta.env.BASE_URL;
+const B = new URL(import.meta.env.BASE_URL, document.baseURI).href;
 document.documentElement.style.setProperty('--marble', `url(${B}img/marble.webp)`);
 document.documentElement.style.setProperty('--hero', `url(${B}img/hero-square.webp)`);
 

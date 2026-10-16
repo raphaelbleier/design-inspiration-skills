@@ -25,15 +25,16 @@ vec2 vor(vec2 p){ // x = distance to nearest edge
 void main(){
   vec2 uv=vUv; float asp=uRes.x/uRes.y; vec2 p=vec2(uv.x*asp,uv.y);
   float t=texture2D(uTrail,uv).r;
-  vec2 w=p*5.+vec2(fbm(p*2.+uTime*.03),fbm(p*2.+7.))*.9 + t*.25;
+  vec2 w=p*3.4+vec2(fbm(p*2.+uTime*.03),fbm(p*2.+7.))*.9 + t*.25;
   vec2 v=vor(w);
-  float crack=1.-smoothstep(0.,.07+t*.05,v.x);
+  float crack=1.-smoothstep(0.,.016+t*.05,v.x);
+  float fine=1.-smoothstep(0.,.025,vor(w*2.3+3.).x);
   float mottled=fbm(p*9.+uTime*.02);
   float frostLine=-.15+1.3*uTemp+(fbm(p*4.)-.5)*.35;
   float frost=smoothstep(frostLine-.04,frostLine+.04,uv.y);
-  vec3 deep=vec3(.18,.56,.46), mint=vec3(.78,.94,.88);
+  vec3 deep=vec3(.27,.55,.47), mint=vec3(.8,.92,.88);
   vec3 water=mix(deep,mint,pow(1.-uv.y,2.2)*.9);
-  vec3 ice=mix(deep*.85,mint,mottled*.55+.1)+crack*vec3(.75,1.,.9)*(.28+uBurst);
+  vec3 ice=mix(deep*.85,mint,mottled*.7+.05)+(crack*.11+fine*.05)*vec3(.8,1.,.93)*(1.+uBurst*3.);
   ice+=t*vec3(.5,.8,.7);
   vec3 col=mix(water,ice,frost);
   col+=uBurst*.25*vec3(.7,1.,.9);

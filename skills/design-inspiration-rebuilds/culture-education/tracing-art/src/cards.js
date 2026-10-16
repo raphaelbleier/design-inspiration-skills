@@ -7,8 +7,8 @@ import { reduced } from './scroll.js';
 
 // x/y = centre in % of the section, w = width in px (desktop), idx = artwork
 const heroSet = [
-  [58, 8, 168, 1.1, 2], [3, 38, 84, .9, 5], [14, 55, 146, 1.4, 1], [93, 38, 90, .8, 7],
-  [84, 68, 126, 1.2, 2], [24, 80, 164, .9, 9], [52, 98, 116, 1.5, 3], [97, 96, 84, 1, 6], [4, 97, 120, .8, 13],
+  [58, 14, 150, 1.1, 2], [3, 38, 84, .9, 5], [14, 52, 130, 1.4, 1], [93, 38, 90, .8, 7],
+  [84, 68, 126, 1.2, 4], [31, 85, 150, .9, 9], [52, 98, 116, 1.5, 3], [97, 96, 84, 1, 6], [4, 97, 120, .8, 13],
 ];
 const stmtSet = [
   [7, 18, 92, 1, 12], [24, 14, 122, 1.2, 8], [72, 6, 112, .8, 10], [88, 28, 170, 1, 13],
@@ -16,7 +16,7 @@ const stmtSet = [
 ];
 
 export function buildCards(host, set, hint) {
-  const small = innerWidth < 700 ? 0.55 : 1;
+  const small = innerWidth < 1000 ? 0.55 : 1;
   const els = set.map(([x, y, w, depth, i]) => {
     const wk = works[i % works.length];
     const el = document.createElement('div');

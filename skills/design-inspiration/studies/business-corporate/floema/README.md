@@ -56,7 +56,7 @@ Rebuild: [`design-inspiration-rebuilds/business-corporate/floema`](https://githu
 | Pinned slideshow | scroll, 5 × 100vh | next image wipes up via `clip-path`, inner image scale 1.2 → 1, copy swaps, counter 01 → 05 | scrubbed, `power2.inOut` | `src/slides.js` |
 | Manifesto reveal | enters at 85% | SplitText lines in masks, `yPercent 110 → 0` | 1.1s `power3.out`, stagger .1 | `src/reveals.js` |
 | Header recolour | slideshow / quote active | logo and menu icon switch ink → white | .5s default curve | `src/slides.js`, `src/reveals.js` |
-| Collection hover | pointer over a row | other rows dim to .25, a small image follows the cursor | `quickTo` .5s `power3.out` | `src/collections.js` |
+| Collection hover | pointer over a row | other rows dim to .25; each row carries an inline thumbnail | opacity .4s `--ease` | `src/style.css` |
 | Menu (small screens) | click | yellow panel wipes down with `clip-path` | .8s `cubic-bezier(.65,.05,0,1)` | `src/menu.js` |
 
 ### Key excerpts
@@ -110,12 +110,10 @@ SplitText.create(el, {
 ```
 `autoSplit` re-splits on resize and the animation is rebuilt from `onSplit`.
 
-**Hover preview that follows the cursor**: `src/collections.js`
-```js
-const x = gsap.quickTo(pop, 'x', { duration: 0.5, ease: 'power3.out' });
-const y = gsap.quickTo(pop, 'y', { duration: 0.5, ease: 'power3.out' });
-addEventListener('pointermove', (e) => { x(e.clientX + 24); y(e.clientY - 60); });
-li.addEventListener('pointerenter', () => { pop.src = li.dataset.img; gsap.to(pop, { opacity: 1, duration: 0.3 }); });
+**Dimming siblings on hover**: `src/style.css`
+```css
+.coll:hover h3, .coll:hover svg { opacity: .25; }
+.coll li:hover h3, .coll li:hover svg { opacity: 1; }
 ```
 
 `prefers-reduced-motion`: smooth scroll, pinning, parallax and reveals are not initialised;
@@ -129,8 +127,8 @@ content is simply visible.
    yellow. Colour is saved for product tags and the footer, so it signals instead of decorating.
 3. **Playful but ordered hero.** Floating cut-outs with depth-scaled parallax make the page feel
    alive without hiding the one sentence that matters.
-4. **A collections list that previews.** Big type rows with counts, dimming siblings and a
-   cursor-following thumbnail turn navigation into a small interaction.
+4. **A collections list that previews.** Big type rows with counts, dimming siblings and
+   inline thumbnails turn navigation into a small interaction.
 5. **A closing brand gesture.** The logo mark cropped huge on yellow gives the footer an identity
    instead of a link dump.
 

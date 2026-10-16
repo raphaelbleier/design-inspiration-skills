@@ -8,7 +8,7 @@
  *       - ink where view-space normals differ between neighbours (crease lines) or linear depth jumps (silhouettes);
  *         lines are only drawn on geometry pixels (depth < 1) so they hug the object, colour #363a3c
  *       - the neighbour sample offset is jittered every 1/8s ("boil": lines wobble like stop-motion)
- *       - thickness = 2.3 * clamp(height/900, 0.7, 1.4) buffer pixels (original: scale = min(1, h/1300), thickness 1)
+ *       - thickness = 3.2 * clamp(height/900, 0.7, 1.4) buffer pixels (original: scale = min(1, h/1300), thickness 1)
  *       - sky pixels (depth == 1) get a posterised fbm cloud field (two hard thresholds, no gradients)
  *         plus an optional "atmosphere" blob around the planet with a noisy hard edge
  *       - uFlash = vibrance + brightness/contrast kick used by the intro->game transition
@@ -74,7 +74,7 @@ export class InkPipeline {
     const u = (v) => ({ value: v });
     this.u = {
       tColor: u(this.rtColor.texture), tNormal: u(this.rtNormal.texture), tDepth: u(this.rtNormal.depthTexture),
-      uRes: u(new THREE.Vector2(1, 1)), uThick: u(2.3), uTime: u(0), uNear: u(1), uFar: u(1000), uFlash: u(0),
+      uRes: u(new THREE.Vector2(1, 1)), uThick: u(3.2), uTime: u(0), uNear: u(1), uFar: u(1000), uFlash: u(0),
       uAtmo: u(0), uAspect: u(1), uInk: u(new THREE.Color('#363a3c')),
       uSkyA: u(new THREE.Color('#62BEBB')), uSkyB: u(new THREE.Color('#68c6c0')), uSkyC: u(new THREE.Color('#70cdc3')),
       uAtmoCol: u(new THREE.Color('#6ccbc2')), uCloudOff: u(new THREE.Vector2()), uAtmoC: u(new THREE.Vector2(.5, .5)), uAtmoR: u(.3),
@@ -95,7 +95,7 @@ export class InkPipeline {
     const W = Math.round(w * dpr), H = Math.round(h * dpr);
     this.rtColor.setSize(W, H); this.rtNormal.setSize(W, H);
     this.u.uRes.value.set(W, H); this.u.uAspect.value = W / H;
-    this.u.uThick.value = 2.3 * THREE.MathUtils.clamp(H / 900, 0.7, 1.4);
+    this.u.uThick.value = 3.2 * THREE.MathUtils.clamp(H / 900, 0.7, 1.4);
   }
   render(scene, camera, time) {
     const r = this.r;

@@ -1,7 +1,7 @@
 [
  {
   "path": "public/img/hero-square.webp",
-  "prompt": "aerial dusk view of a grand historic red-brick city hall and its empty cobbled square, terracotta rooftops, warm low light, cinematic, no text",
+  "prompt": "aerial view of a grand historic red-brick and white-stone city hall and its empty square at golden hour, warm terracotta rooftops, dusty amber haze, muted desaturated warm palette, no blue sky, no text",
   "aspect": "16:9"
  },
  {
@@ -16,17 +16,17 @@
  },
  {
   "path": "public/img/shirt-a.webp",
-  "prompt": "cream football jersey with dark grey striped collar and a small round gold crest, front view, floating, studio shot on flat mid-grey background, no text, no logos",
+  "prompt": "cream football jersey with dark grey striped collar and a small round gold crest, front view, floating, studio shot on flat slate grey (#58595b) background, no text, no logos",
   "aspect": "3:4"
  },
  {
   "path": "public/img/shirt-b.webp",
-  "prompt": "cream rugby jersey with dark grey striped collar, front view, floating, studio shot on flat mid-grey background, no text, no logos",
+  "prompt": "cream rugby jersey with dark grey striped collar, front view, floating, studio shot on flat slate grey (#58595b) background, no text, no logos",
   "aspect": "3:4"
  },
  {
   "path": "public/img/plinth.webp",
-  "prompt": "weathered pale marble pedestal column top, front view, flat mid-grey background",
+  "prompt": "weathered pale cream marble pedestal column top, front view, flat slate grey (#58595b) background",
   "aspect": "1:1"
  },
  {
@@ -36,7 +36,7 @@
  },
  {
   "path": "public/img/arch-2.webp",
-  "prompt": "looking up at the painted ceiling panels of a brick arcade, red and blue vintage illustrations",
+  "prompt": "looking up at faded painted ceiling panels of a terracotta brick arcade, muted ochre, cream and dusty red vintage illustrations, warm desaturated palette, no text",
   "aspect": "3:4"
  },
  {
@@ -46,7 +46,7 @@
  },
  {
   "path": "public/img/arcade-wide.webp",
-  "prompt": "long red-brick arcade corridor with painted ceiling, perspective, warm light, no text",
+  "prompt": "long terracotta red-brick arcade corridor with muted painted ceiling, warm desaturated ochre light, perspective, no text",
   "aspect": "4:5"
  },
  {

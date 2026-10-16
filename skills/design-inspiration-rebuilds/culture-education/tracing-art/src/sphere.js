@@ -1,4 +1,4 @@
-// Technique: Three.js - 150 image planes on a Fibonacci sphere (radius 2.3). Scroll progress drives
+// Technique: Three.js - 420 image planes on a Fibonacci sphere (radius 2.3). Scroll progress drives
 // assembly (random scatter -> sphere over the first 35%) and rotation (one full turn on Y).
 // Planes always face the camera; opacity falls with depth (back side .15, front 1). Cursor tilts the group.
 import * as THREE from 'three';
@@ -15,11 +15,11 @@ export function initSphere() {
   const loader = new THREE.TextureLoader();
   const mats = [];   // materials per artwork; the map is attached only once the image really loads
   const tex = works.map((w, k) => { const t = loader.load(src(w), () => { mats[k].forEach((m) => { m.map = t; m.color.set(0xffffff); m.needsUpdate = true; }); }, undefined, () => {}); t.colorSpace = THREE.SRGBColorSpace; mats[k] = []; return t; });
-  const N = 150, items = [];
+  const N = 420, items = [];
   const rnd = (a) => (Math.sin(a * 91.7) * 43758.5453) % 1;   // deterministic scatter
   for (let i = 0; i < N; i++) {
     const k = i % works.length, w = works[k], [a, b] = w.ar.split('/').map(Number);
-    const h = 0.34, wd = h * (a / b);
+    const h = 0.2, wd = h * (a / b);
     const mat = new THREE.MeshBasicMaterial({ color: 0xd8d3cb, transparent: true });
     mats[k].push(mat);
     const m = new THREE.Mesh(new THREE.PlaneGeometry(wd, h), mat);

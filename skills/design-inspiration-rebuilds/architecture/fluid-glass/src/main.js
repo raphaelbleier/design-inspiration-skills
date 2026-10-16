@@ -11,3 +11,5 @@ initHero(reduced);
 initReveals(reduced);
 initShowroom(reduced);
 initMenu(reduced);
+
+document.querySelectorAll('[data-cookie]').forEach((b) => b.addEventListener('click', () => { document.getElementById('cookie').hidden = true; }));

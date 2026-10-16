@@ -24,7 +24,7 @@
 
 <!-- Gate: train compartment, cursor-parallax -->
 <section class="gate" id="gate">
-  <div class="gate-bg img" style="--img:url(./img/compartment.webp)"></div>
+  <div class="gate-bg img" style="background-image:url(./img/compartment.webp)"></div>
   <div class="gate-intro">
     <div class="intro-card tilt" hidden>
       <small class="kick">THE</small>
@@ -41,29 +41,29 @@
 <main class="journey" id="journey" hidden>
   <div class="stage">
     <section class="scene" data-img="compartment-day" data-n="01" data-name="The Window">
-      <div class="bg img" style="--img:url(./img/compartment-day.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/compartment-day.webp)"></div>
     </section>
     <section class="scene" data-n="02" data-name="The Atelier">
-      <div class="bg img" style="--img:url(./img/scene-atelier.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-atelier.webp)"></div>
       <button class="spot" style="--x:28%;--y:48%" data-card="fabric" aria-label="Open note: Fabrics"></button>
       <button class="spot" style="--x:70%;--y:30%" data-card="painting" aria-label="Open note: The painting"></button>
     </section>
     <section class="scene" data-n="03" data-name="The Harbour">
-      <div class="bg img" style="--img:url(./img/scene-harbour.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-harbour.webp)"></div>
       <button class="spot" style="--x:50%;--y:70%" data-card="harbour" aria-label="Open note: The harbour"></button>
     </section>
     <section class="scene" data-n="04" data-name="The Market">
-      <div class="bg img" style="--img:url(./img/scene-market.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-market.webp)"></div>
       <button class="spot" style="--x:35%;--y:60%" data-card="market" aria-label="Open note: The market"></button>
     </section>
     <section class="scene" data-n="05" data-name="The Station">
-      <div class="bg img" style="--img:url(./img/scene-station.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-station.webp)"></div>
     </section>
     <section class="scene" data-n="06" data-name="The Orchard">
-      <div class="bg img" style="--img:url(./img/scene-orchard.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-orchard.webp)"></div>
     </section>
     <section class="scene" data-n="07" data-name="The Table">
-      <div class="bg img" style="--img:url(./img/scene-finale.webp)"></div>
+      <div class="bg img" style="background-image:url(./img/scene-finale.webp)"></div>
     </section>
 
     <div class="chapter" aria-live="polite">
@@ -95,13 +95,24 @@
     <div class="card-body">
       <h3 class="card-title big">BECOME A<br>TRAVELLER!</h3>
       <p class="card-text">Fill in your details to receive your digital gift by email.</p>
-      <form class="fields" onsubmit="return false">
-        <input placeholder="Name" autocomplete="given-name"><input placeholder="Surname" autocomplete="family-name">
-        <input placeholder="name@email.com" type="email" class="full" autocomplete="email">
-        <label class="check full"><input type="checkbox"> I have read the (fictional) privacy notice.</label>
-        <button class="blob small">Receive now!</button>
-        <button type="button" class="skip close">SKIP &#10148;</button>
-      </form>
+      <div class="form-grid">
+        <form class="fields" onsubmit="return false">
+          <input placeholder="Name" autocomplete="given-name"><input placeholder="Surname" autocomplete="family-name">
+          <input placeholder="name@email.com" type="email" class="full" autocomplete="email">
+          <small class="full opt">Phone number (optional)</small>
+          <input value="+39 IT" aria-label="Country code" class="cc"><input placeholder="Phone" type="tel" autocomplete="tel">
+          <label class="check full"><input type="checkbox"> I have read the (fictional) privacy notice.</label>
+          <button class="blob small">Receive now!</button>
+          <button type="button" class="skip close">SKIP &#10148;</button>
+        </form>
+        <div class="legal">
+          <p>This is a fictional study page; nothing you type here is stored or sent anywhere.</p>
+          <p>With my consent I agree to be contacted by post, email or message about invented seasonal editions of the pouch, in the way a real notice would describe it at some length.</p>
+          <div class="yn"><span>Yes</span><span>No</span></div>
+          <p>Send me the imaginary newsletter about journeys, markets, harbours and the folded wool that makes the pouches, tailored to the places I have already visited in this atlas.</p>
+          <div class="yn"><span>Yes</span><span>No</span></div>
+        </div>
+      </div>
     </div>
     <div class="strip"></div>
   </article>

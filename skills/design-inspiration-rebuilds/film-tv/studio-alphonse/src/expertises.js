@@ -1,4 +1,4 @@
-// Expertise cassettes. Technique: position: sticky (top 12vh) so each cassette stacks over the last;
+// Expertise cassettes. Technique: position: sticky (top 15.5vh) so each cassette stacks over the last;
 // as the next one arrives the previous scales to .94 and dims (scrub). Reels rotate 360deg per section.
 import { gsap } from 'gsap';
 import { reduced } from './scroll.js';

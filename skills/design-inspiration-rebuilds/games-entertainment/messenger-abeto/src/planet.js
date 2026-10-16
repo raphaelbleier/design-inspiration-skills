@@ -83,11 +83,15 @@ export function buildPlanet() {
     else if (id === 'beach') hex = h < 0.35 ? p[0] : h < 0.6 ? p[1] : p[2];
     else if (h > 3.2) hex = '#9a937f';
     else hex = p[(r * 3) | 0];
-    k.copy(col(hex, 0.96 + r * 0.08));
+    k.copy(col(hex, 0.99 + r * 0.02));
     for (let j = 0; j < 3; j++) { colors[(f + j) * 3] = k.r; colors[(f + j) * 3 + 1] = k.g; colors[(f + j) * 3 + 2] = k.b; }
+    if (h < SEA) for (let j = 0; j < 3; j++) pos.setXYZ(f + j, 0, 0, 0); // open water = no terrain: islands sit on the sky like the original
   }
   g.setAttribute('color', new THREE.BufferAttribute(colors, 3));
   g.computeVertexNormals();
+  { // painterly: smooth-shaded terrain (faceting is only for props)
+    const nrm = g.attributes.normal; for (let i = 0; i < pos.count; i++) { d.fromBufferAttribute(pos, i); if (d.lengthSq()) { d.normalize(); nrm.setXYZ(i, d.x, d.y, d.z); } }
+  }
 
   // ---- props ---------------------------------------------------------------------------------------------
   const rnd = mulberry32(2025), parts = [], obstacles = [];
@@ -146,7 +150,7 @@ export function buildPlanet() {
   }
   const GREENS = ['#4f9a62', '#468a58', '#5aa86a', '#3f7d52'];
   place(1, 300, 0.55, 0, (v, b) => {
-    const s = 0.8 + rnd() * 0.9;
+    const s = 0.45 + rnd() * 0.45;
     add(cyl(0.2 * s, 0.28 * s, 2 * s, 5), '#6b5a46', b, L(0, s, 0));
     add(ico(1.5 * s, 0), pick(GREENS), b, L(0, 3 * s, 0, 0, 0, 0, 1, 1.25, 1));
     add(ico(1.0 * s, 0), pick(GREENS), b, L(0, 4.4 * s, 0));
@@ -163,7 +167,7 @@ export function buildPlanet() {
     else { add(ico(0.9 + rnd() * 0.8, 0), '#9a937f', b, L(0, 0.4, 0, 0, 0, 0, 1.3, 0.8, 1)); obs(v, 1.2); }
   });
   place(4, 60, 0.4, 0, (v, b) => {
-    const s = 1 + rnd();
+    const s = 0.6 + rnd() * 0.6;
     add(cyl(0.15 * s, 0.22 * s, 1.4 * s, 5), '#6b5a46', b, L(0, 0.7 * s, 0));
     add(cone(1.2 * s, 3.4 * s, 6), '#3a726b', b, L(0, 3 * s, 0)); obs(v, 0.5 * s);
   });
@@ -188,5 +192,7 @@ export function buildPlanet() {
   const mat = new THREE.MeshToonMaterial({ vertexColors: true, gradientMap: toon });
   const group = new THREE.Group();
   group.add(new THREE.Mesh(g, mat), new THREE.Mesh(mergedGeo, mat));
-  return { group, obstacles, toon };
+  const sea = new THREE.Mesh(new THREE.IcosahedronGeometry(R - 0.2, 4), new THREE.MeshToonMaterial({ color: '#6facb2', gradientMap: toon }));
+  sea.visible = false; group.add(sea);
+  return { group, obstacles, toon, sea };
 }

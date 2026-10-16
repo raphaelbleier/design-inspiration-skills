@@ -1,6 +1,6 @@
 /**
  * hero.js - flavor carousel in the hero. Background colour tweens .6s power2.inOut, the illustration
- * crossfades with a scale 1.06 -> 1 settle, the pill button recolours + relabels, the can spins (can.js).
+ * crossfades (in-delay .3s so the bg colour tween shows) with a scale 1.06 -> 1 settle, the pill button recolours + relabels, the can spins (can.js).
  * Header logo is white while the hero is on screen.
  */
 import gsap from 'gsap';
@@ -19,7 +19,7 @@ export function initHero() {
     switchFlavor(n, () => { label.textContent = f.name; btn.className = `btn-shadow ${f.btn} hero-btn`; });
     gsap.to(hero, { backgroundColor: f.bg, duration: 0.6, ease: 'power2.inOut' });
     gsap.to(arts[i], { opacity: 0, duration: 0.5 });
-    gsap.fromTo(arts[n], { opacity: 0, scale: 1.06 }, { opacity: 1, scale: 1, duration: 0.8, ease: 'power2.out' });
+    gsap.fromTo(arts[n], { opacity: 0, scale: 1.06 }, { opacity: 1, scale: 1, duration: 0.8, delay: 0.3, ease: 'power2.out' });
     i = n;
   };
   document.getElementById('prev').addEventListener('click', () => go(-1));

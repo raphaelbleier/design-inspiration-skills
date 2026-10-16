@@ -38,7 +38,7 @@ main { margin-left: calc(var(--rail) + var(--edge) + var(--gap)); }
 ```
 
 - **Type:** a heavy grotesk with quirky ligatures for headings (original: Alfabet; substitute:
-  Bricolage Grotesque 800, tracking `-.02em`, line-height `.95`), a neutral grotesk for body
+  Archivo variable 900 at wdth 104%, tracking `-.03em`, line-height `.95`), a neutral grotesk for body
   (original: Aeonik Pro; substitute: DM Sans).
 - **Layout:** left rail of four full-colour nav tiles that share the column height (`flex: 1`), plus
   pill buttons below. No shadows, no gradients; separation is gap and colour only. Lists inside
@@ -55,7 +55,7 @@ main { margin-left: calc(var(--rail) + var(--edge) + var(--gap)); }
 | Heading reveal | enters at 85% | SplitText lines in a mask, `yPercent 105 → 0` | 1.2s `expo.out`, stagger .1 | `src/reveals.js` |
 | Card entrance | enters at 90% | `y 60 → 0` + fade | 1.2s `expo.out` | `src/reveals.js` |
 | Feature marquee | always | red pill, infinite linear row | 28s loop | `src/marquee.js` |
-| Horizontal living track | scroll | wrapper pinned, row of cards translates left | scrub 1 | `src/living.js` |
+| Horizontal living track | scroll | wrapper (red marquee + track) pinned, row of cards translates left | scrub 1 | `src/living.js` |
 | Room tunnel | click "Press to Start" | camera flies down a gridded corridor, pointer parallax | 9s `power2.inOut` | `src/tunnel.js` |
 | Pixel icons | enters at 80% | lit cells of a 20×17 grid switch on in random order | 4ms stagger | `src/pixels.js` |
 | Tile hover | hover | tile nudges 6px right and rounds further | .6s `expo.out` | `src/style.css` |
@@ -87,7 +87,7 @@ SplitText.create(el, {
 mm.add('(min-width: 901px)', () => {
   const dist = () => Math.max(0, track.scrollWidth - wrap.clientWidth);
   gsap.to(track, { x: () => -dist(), ease: 'none',
-    scrollTrigger: { trigger: wrap, start: 'top 10px', end: () => '+=' + dist(), pin: true,
+    scrollTrigger: { trigger: wrap, start: 'top 22px', end: () => '+=' + dist(), pin: true,
       scrub: 1, anticipatePin: 1, invalidateOnRefresh: true } });
 });
 ```
